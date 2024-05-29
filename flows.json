@@ -155,7 +155,7 @@
         "type": "mqtt in",
         "z": "bca4771a12cb11e6",
         "name": "",
-        "topic": "iota238/#",
+        "topic": "iota238/data",
         "qos": "2",
         "datatype": "auto-detect",
         "broker": "a013c007d1f80409",
@@ -163,7 +163,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 100,
+        "x": 110,
         "y": 80,
         "wires": [
             [
