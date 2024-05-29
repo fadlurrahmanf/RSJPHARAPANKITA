@@ -361,7 +361,7 @@
         "z": "57a8e6e09724ec39",
         "g": "6b4d024ab7b25c4c",
         "name": "Query",
-        "func": "// msg.topic = \"SELECT Temp_Machine FROM monitoringdata ORDER BY ID DESC LIMIT 1\";\nmsg.topic = \"SELECT * FROM MonitoringData ORDER BY ID DESC LIMIT 1\";\n\nreturn msg;",
+        "func": "// msg.topic = \"SELECT Temp_Machine FROM monitoringdata ORDER BY ID DESC LIMIT 1\";\nmsg.topic = \"SELECT * FROM monitoringdata ORDER BY ID DESC LIMIT 1\";\n\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
