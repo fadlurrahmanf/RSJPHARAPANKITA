@@ -6,5 +6,674 @@
         "disabled": false,
         "info": "",
         "env": []
+    },
+    {
+        "id": "ce6092360da2da00",
+        "type": "group",
+        "z": "57a8e6e09724ec39",
+        "name": "Developer Debug",
+        "style": {
+            "label": true,
+            "fill": "#e3f3d3"
+        },
+        "nodes": [
+            "e1f5480776bb23d2",
+            "679d1f1d321ffb54",
+            "64b8533b0b2f03ad",
+            "4b43c6dce1977e9c"
+        ],
+        "x": 54,
+        "y": 59,
+        "w": 792,
+        "h": 82
+    },
+    {
+        "id": "6b4d024ab7b25c4c",
+        "type": "group",
+        "z": "57a8e6e09724ec39",
+        "name": "Get Data From MySQL",
+        "style": {
+            "label": true,
+            "fill": "#bfdbef"
+        },
+        "nodes": [
+            "537397df410d682a",
+            "6a4a06a45fb80d04",
+            "5b08597283a9c34f",
+            "4dbe83f2e3ecf6f0",
+            "04f4b623aa95ece0",
+            "03eda52da48cfdbb",
+            "b3cade89519d6d84",
+            "62276a9f2eb4a7c4"
+        ],
+        "x": 54,
+        "y": 179,
+        "w": 792,
+        "h": 142
+    },
+    {
+        "id": "525e434a306529fc",
+        "type": "group",
+        "z": "57a8e6e09724ec39",
+        "name": "Set Thermostats",
+        "style": {
+            "label": true,
+            "fill": "#dbcbe7"
+        },
+        "nodes": [
+            "3b27314051618ab0",
+            "438b8b5fb2428a49",
+            "3b7f62e540788fca",
+            "f8431f71d42202f0",
+            "58982a5216ccf1d1",
+            "069d507abaacbd5a",
+            "676bf34c056ee6d4",
+            "391b6164f4fe416c",
+            "c433113f1901e9f8",
+            "a775b6857b7fe93a",
+            "3636da8784705a68",
+            "fb33186f80d938cb",
+            "f5584635e347aee0",
+            "9984221615af2d3c"
+        ],
+        "x": 54,
+        "y": 359,
+        "w": 1122,
+        "h": 202
+    },
+    {
+        "id": "f748addfc5106e47",
+        "type": "group",
+        "z": "57a8e6e09724ec39",
+        "name": "Insert Database",
+        "style": {
+            "label": true,
+            "fill": "#ffbfbf"
+        },
+        "nodes": [
+            "7b7a09cf.1e6d24",
+            "fde57690.944ea8",
+            "810bb31b564b3d49",
+            "801c75c13c587a80"
+        ],
+        "x": 54,
+        "y": 619,
+        "w": 1132,
+        "h": 82
+    },
+    {
+        "id": "3b8e5eb93b7526d7",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "rsjpharapankita",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "e1f5480776bb23d2",
+        "type": "debug",
+        "z": "57a8e6e09724ec39",
+        "g": "ce6092360da2da00",
+        "name": "debug 32",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "679d1f1d321ffb54",
+        "type": "mysql",
+        "z": "57a8e6e09724ec39",
+        "g": "ce6092360da2da00",
+        "mydb": "3b8e5eb93b7526d7",
+        "name": "",
+        "x": 540,
+        "y": 100,
+        "wires": [
+            [
+                "e1f5480776bb23d2"
+            ]
+        ]
+    },
+    {
+        "id": "64b8533b0b2f03ad",
+        "type": "function",
+        "z": "57a8e6e09724ec39",
+        "g": "ce6092360da2da00",
+        "name": "Select Value",
+        "func": "msg.topic = \"SELECT * FROM MonitoringData\";\n// msg.topic = \"SELECT Temp_Cathlab FROM monitoringdata ORDER BY ID DESC LIMIT 1\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 100,
+        "wires": [
+            [
+                "679d1f1d321ffb54"
+            ]
+        ]
+    },
+    {
+        "id": "4b43c6dce1977e9c",
+        "type": "inject",
+        "z": "57a8e6e09724ec39",
+        "g": "ce6092360da2da00",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 100,
+        "wires": [
+            [
+                "64b8533b0b2f03ad"
+            ]
+        ]
+    },
+    {
+        "id": "537397df410d682a",
+        "type": "http in",
+        "z": "57a8e6e09724ec39",
+        "g": "6b4d024ab7b25c4c",
+        "name": "",
+        "url": "/getData",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 220,
+        "wires": [
+            [
+                "5b08597283a9c34f"
+            ]
+        ]
+    },
+    {
+        "id": "6a4a06a45fb80d04",
+        "type": "mysql",
+        "z": "57a8e6e09724ec39",
+        "g": "6b4d024ab7b25c4c",
+        "mydb": "3b8e5eb93b7526d7",
+        "name": "",
+        "x": 580,
+        "y": 220,
+        "wires": [
+            [
+                "4dbe83f2e3ecf6f0"
+            ]
+        ]
+    },
+    {
+        "id": "5b08597283a9c34f",
+        "type": "function",
+        "z": "57a8e6e09724ec39",
+        "g": "6b4d024ab7b25c4c",
+        "name": "Query",
+        "func": "// msg.topic = \"SELECT Temp_Machine FROM monitoringdata ORDER BY ID DESC LIMIT 1\";\nmsg.topic = \"SELECT * FROM MonitoringData ORDER BY ID DESC LIMIT 1\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 220,
+        "wires": [
+            [
+                "6a4a06a45fb80d04"
+            ]
+        ]
+    },
+    {
+        "id": "4dbe83f2e3ecf6f0",
+        "type": "http response",
+        "z": "57a8e6e09724ec39",
+        "g": "6b4d024ab7b25c4c",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 770,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "04f4b623aa95ece0",
+        "type": "http in",
+        "z": "57a8e6e09724ec39",
+        "g": "6b4d024ab7b25c4c",
+        "name": "",
+        "url": "/getDataSetting",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 280,
+        "wires": [
+            [
+                "03eda52da48cfdbb"
+            ]
+        ]
+    },
+    {
+        "id": "03eda52da48cfdbb",
+        "type": "function",
+        "z": "57a8e6e09724ec39",
+        "g": "6b4d024ab7b25c4c",
+        "name": "Query",
+        "func": "// msg.topic = \"SELECT Temp_Machine FROM monitoringdata ORDER BY ID DESC LIMIT 1\";\nmsg.topic = \"SELECT * FROM setting  LIMIT 1\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 280,
+        "wires": [
+            [
+                "62276a9f2eb4a7c4"
+            ]
+        ]
+    },
+    {
+        "id": "b3cade89519d6d84",
+        "type": "http response",
+        "z": "57a8e6e09724ec39",
+        "g": "6b4d024ab7b25c4c",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 770,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "62276a9f2eb4a7c4",
+        "type": "mysql",
+        "z": "57a8e6e09724ec39",
+        "g": "6b4d024ab7b25c4c",
+        "mydb": "3b8e5eb93b7526d7",
+        "name": "",
+        "x": 580,
+        "y": 280,
+        "wires": [
+            [
+                "b3cade89519d6d84"
+            ]
+        ]
+    },
+    {
+        "id": "3b27314051618ab0",
+        "type": "mysql",
+        "z": "57a8e6e09724ec39",
+        "g": "525e434a306529fc",
+        "mydb": "3b8e5eb93b7526d7",
+        "name": "",
+        "x": 950,
+        "y": 400,
+        "wires": [
+            [
+                "438b8b5fb2428a49"
+            ]
+        ]
+    },
+    {
+        "id": "438b8b5fb2428a49",
+        "type": "http response",
+        "z": "57a8e6e09724ec39",
+        "g": "525e434a306529fc",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1100,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "3b7f62e540788fca",
+        "type": "http in",
+        "z": "57a8e6e09724ec39",
+        "g": "525e434a306529fc",
+        "name": "",
+        "url": "/setDataTemp",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 400,
+        "wires": [
+            [
+                "f8431f71d42202f0"
+            ]
+        ]
+    },
+    {
+        "id": "f8431f71d42202f0",
+        "type": "function",
+        "z": "57a8e6e09724ec39",
+        "g": "525e434a306529fc",
+        "name": "Extract Value",
+        "func": "var value = parseInt(msg.req.query.value);\nmsg.payload = { value: value };\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 400,
+        "wires": [
+            [
+                "58982a5216ccf1d1"
+            ]
+        ]
+    },
+    {
+        "id": "58982a5216ccf1d1",
+        "type": "function",
+        "z": "57a8e6e09724ec39",
+        "g": "525e434a306529fc",
+        "name": "UPDATE setting SET TempCathlab",
+        "func": "var value = msg.payload.value;\nvar query = `UPDATE setting SET TempCathlab = ${value}`;\nmsg.topic = query;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 400,
+        "wires": [
+            [
+                "3b27314051618ab0"
+            ]
+        ]
+    },
+    {
+        "id": "069d507abaacbd5a",
+        "type": "http in",
+        "z": "57a8e6e09724ec39",
+        "g": "525e434a306529fc",
+        "name": "",
+        "url": "/setDataRH",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 440,
+        "wires": [
+            [
+                "676bf34c056ee6d4"
+            ]
+        ]
+    },
+    {
+        "id": "676bf34c056ee6d4",
+        "type": "function",
+        "z": "57a8e6e09724ec39",
+        "g": "525e434a306529fc",
+        "name": "Extract Value",
+        "func": "var value = parseInt(msg.req.query.value);\nmsg.payload = { value: value };\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 440,
+        "wires": [
+            [
+                "391b6164f4fe416c"
+            ]
+        ]
+    },
+    {
+        "id": "391b6164f4fe416c",
+        "type": "function",
+        "z": "57a8e6e09724ec39",
+        "g": "525e434a306529fc",
+        "name": "UPDATE setting SET RHCathlab",
+        "func": "var value = msg.payload.value;\nvar query = `UPDATE setting SET RHCathlab = ${value}`;\nmsg.topic = query;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 440,
+        "wires": [
+            [
+                "3b27314051618ab0"
+            ]
+        ]
+    },
+    {
+        "id": "c433113f1901e9f8",
+        "type": "http in",
+        "z": "57a8e6e09724ec39",
+        "g": "525e434a306529fc",
+        "name": "",
+        "url": "/setDataTempM",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 480,
+        "wires": [
+            [
+                "a775b6857b7fe93a"
+            ]
+        ]
+    },
+    {
+        "id": "a775b6857b7fe93a",
+        "type": "function",
+        "z": "57a8e6e09724ec39",
+        "g": "525e434a306529fc",
+        "name": "Extract Value",
+        "func": "var value = parseInt(msg.req.query.value);\nmsg.payload = { value: value };\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 480,
+        "wires": [
+            [
+                "3636da8784705a68"
+            ]
+        ]
+    },
+    {
+        "id": "3636da8784705a68",
+        "type": "function",
+        "z": "57a8e6e09724ec39",
+        "g": "525e434a306529fc",
+        "name": "UPDATE setting SET TempMachine ",
+        "func": "var value = msg.payload.value;\nvar query = `UPDATE setting SET TempMachine = ${value}`;\nmsg.topic = query;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 480,
+        "wires": [
+            [
+                "3b27314051618ab0"
+            ]
+        ]
+    },
+    {
+        "id": "fb33186f80d938cb",
+        "type": "http in",
+        "z": "57a8e6e09724ec39",
+        "g": "525e434a306529fc",
+        "name": "",
+        "url": "/setDataRHM",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 520,
+        "wires": [
+            [
+                "f5584635e347aee0"
+            ]
+        ]
+    },
+    {
+        "id": "f5584635e347aee0",
+        "type": "function",
+        "z": "57a8e6e09724ec39",
+        "g": "525e434a306529fc",
+        "name": "Extract Value",
+        "func": "var value = parseInt(msg.req.query.value);\nmsg.payload = { value: value };\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 520,
+        "wires": [
+            [
+                "9984221615af2d3c"
+            ]
+        ]
+    },
+    {
+        "id": "9984221615af2d3c",
+        "type": "function",
+        "z": "57a8e6e09724ec39",
+        "g": "525e434a306529fc",
+        "name": "UPDATE setting SET RHMachine",
+        "func": "var value = msg.payload.value;\nvar query = `UPDATE setting SET RHMachine = ${value}`;\nmsg.topic = query;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 520,
+        "wires": [
+            [
+                "3b27314051618ab0"
+            ]
+        ]
+    },
+    {
+        "id": "7b7a09cf.1e6d24",
+        "type": "function",
+        "z": "57a8e6e09724ec39",
+        "g": "f748addfc5106e47",
+        "name": "Prepare data for inserting into the database",
+        "func": "// Generate sample data to insert\nconst data = {\n    Timestamp: new Date(),\n    Temp_Cathlab: 25.5,\n    RH_Cathlab: 60,\n    Temp_Machine: 27.8,\n    RH_Machine: 55.5,\n    Outdoor_Unit: 1,\n    AHU_Status: 1,\n    Pre_Filter: 155,\n    HEPA_Filter: 155,\n    Booster_Fan: 1,\n    Exhaust_Fan: 1,\n    Heater_1: 1,\n    Heater_2: 1\n};\n\n// Construct the SQL query\nconst keys = Object.keys(data);\nconst values = Object.values(data).map(value => typeof value === 'string' ? '${value}' : value);\nconst placeholders = keys.map(() => '?').join(',');\nconst query = `INSERT INTO monitoringdata (${keys.join(',')}) VALUES (${placeholders})`;\n\n// Set the query as payload for the next node\nmsg.topic = query;\nmsg.payload = values;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 660,
+        "wires": [
+            [
+                "801c75c13c587a80"
+            ]
+        ]
+    },
+    {
+        "id": "fde57690.944ea8",
+        "type": "inject",
+        "z": "57a8e6e09724ec39",
+        "g": "f748addfc5106e47",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 660,
+        "wires": [
+            [
+                "7b7a09cf.1e6d24"
+            ]
+        ]
+    },
+    {
+        "id": "810bb31b564b3d49",
+        "type": "debug",
+        "z": "57a8e6e09724ec39",
+        "g": "f748addfc5106e47",
+        "name": "debug 35",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "801c75c13c587a80",
+        "type": "mysql",
+        "z": "57a8e6e09724ec39",
+        "g": "f748addfc5106e47",
+        "mydb": "3b8e5eb93b7526d7",
+        "name": "",
+        "x": 880,
+        "y": 660,
+        "wires": [
+            [
+                "810bb31b564b3d49"
+            ]
+        ]
     }
 ]
