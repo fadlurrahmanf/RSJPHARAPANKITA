@@ -209,7 +209,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "func": "var data = msg.payload;\ndata.networkid = msg.data.substring(0,2);\ndata.devid = msg.data.substring(2,4);\ndata.typeid = msg.data.substring(4,6);\ndata.epo = Date.now();\nmsg.payload = data;\nreturn msg;",
+        "func": "var data = msg.payload;\ndata.networkid = msg.data.substring(0,2);\ndata.devid = msg.data.substring(2,4);\ndata.typeid = msg.data.substring(4,6);\ndata.epoch = (Date.now());\nmsg.payload = data;\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
