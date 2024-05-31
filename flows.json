@@ -167,8 +167,7 @@
         "y": 80,
         "wires": [
             [
-                "83efeb6b5a73d7c6",
-                "2147fe0dca633a59"
+                "94514e5dd76e1b4a"
             ]
         ]
     },
@@ -184,7 +183,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 250,
+        "x": 610,
         "y": 80,
         "wires": [
             [
@@ -197,7 +196,7 @@
         "type": "cayennelpp-decoder",
         "z": "bca4771a12cb11e6",
         "name": "",
-        "x": 440,
+        "x": 800,
         "y": 80,
         "wires": [
             [
@@ -216,7 +215,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 620,
+        "x": 980,
         "y": 80,
         "wires": [
             [
@@ -236,7 +235,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 780,
+        "x": 1140,
         "y": 80,
         "wires": []
     },
@@ -252,9 +251,53 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 280,
+        "x": 400,
         "y": 140,
         "wires": []
+    },
+    {
+        "id": "f41842a72cb70323",
+        "type": "switch",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nnull"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 390,
+        "y": 80,
+        "wires": [
+            [
+                "83efeb6b5a73d7c6",
+                "2147fe0dca633a59"
+            ]
+        ]
+    },
+    {
+        "id": "94514e5dd76e1b4a",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "func": "if(msg.payload.substring(0,2)==\"02\" || msg.payload.substring(0,2)==\"03\"){\n    return msg;\n}else{\n    msg.payload = null;\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 250,
+        "y": 80,
+        "wires": [
+            [
+                "f41842a72cb70323"
+            ]
+        ]
     },
     {
         "id": "e1f5480776bb23d2",
