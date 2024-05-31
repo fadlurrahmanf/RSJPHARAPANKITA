@@ -208,7 +208,7 @@
         "id": "91c1d36297a0c7fd",
         "type": "function",
         "z": "bca4771a12cb11e6",
-        "name": "",
+        "name": " ",
         "func": "var data = msg.payload;\ndata.networkid = msg.data.substr(0,2);\ndata.devid = msg.data.substr(2,4);\ndata.typeid = msg.data.substr(4,6);\ndata.epo = Date.now();\nmsg.payload = data;\nreturn msg;",
         "outputs": 1,
         "timeout": "",
@@ -216,7 +216,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 980,
+        "x": 970,
         "y": 80,
         "wires": [
             [
