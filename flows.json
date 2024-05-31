@@ -167,7 +167,8 @@
         "y": 80,
         "wires": [
             [
-                "83efeb6b5a73d7c6"
+                "83efeb6b5a73d7c6",
+                "2147fe0dca633a59"
             ]
         ]
     },
@@ -176,7 +177,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "func": "var data = msg.payload;\nvar numBytes = data.length / 2;\nvar byteArray = new Uint8Array(numBytes);\nfor (var i=0; i<numBytes; i++) {\n    byteArray[i] = parseInt(data.substr(i*2, 2), 16);\n}\nvar len = byteArray[5];\nvar byteData = new Uint8Array(len);\nfor (i=0; i<len; i++) {\n    byteData[i] = byteArray[i+6];\n}\nmsg.payload = byteData;\nmsg.data = data.substr(0,10);\nreturn msg;",
+        "func": "var data = msg.payload;\nvar numBytes = data.length / 2;\nvar byteArray = new Uint8Array(numBytes);\nfor (var i=0; i<numBytes; i++) {\n    byteArray[i] = parseInt(data.substr(i*2, 2), 16);\n}\nvar len = byteArray[3];\nvar byteData = new Uint8Array(len);\nfor (i=0; i<len; i++) {\n    byteData[i] = byteArray[i+4];\n}\nmsg.payload = byteData;\nmsg.data = data.substr(0,6);\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -237,6 +238,22 @@
         "statusType": "auto",
         "x": 780,
         "y": 80,
+        "wires": []
+    },
+    {
+        "id": "2147fe0dca633a59",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "debug 37",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 280,
+        "y": 140,
         "wires": []
     },
     {
