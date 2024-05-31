@@ -183,7 +183,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 610,
+        "x": 550,
         "y": 80,
         "wires": [
             [
@@ -196,7 +196,7 @@
         "type": "cayennelpp-decoder",
         "z": "bca4771a12cb11e6",
         "name": "",
-        "x": 800,
+        "x": 740,
         "y": 80,
         "wires": [
             [
@@ -216,7 +216,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 970,
+        "x": 930,
         "y": 80,
         "wires": [
             [
@@ -236,7 +236,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1140,
+        "x": 1080,
         "y": 80,
         "wires": []
     },
