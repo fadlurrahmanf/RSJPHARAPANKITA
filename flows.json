@@ -369,9 +369,58 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "04020100000000",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 240,
+        "wires": [
+            [
+                "0e8b8a734bfa9a66"
+            ]
+        ]
+    },
+    {
+        "id": "0e8b8a734bfa9a66",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "func": "var arr = [];\narr.push(\"04020100000000\");\narr.push(\"04020100000001\");\narr.push(\"04020100000002\");\narr.push(\"04020100000003\");\narr.push(\"04020100000004\");\narr.push(\"04020100000005\");\narr.push(\"04020100000006\");\narr.push(\"04020100000007\");\narr.push(\"04020100000008\");\narr.push(\"04020100000009\");\narr.push(\"0402010000000A\");\narr.push(\"0402010000000B\");\narr.push(\"0402010000000C\");\narr.push(\"0402010000000D\");\narr.push(\"0402010000000E\");\narr.push(\"0402010000000F\");\nmsg.delay = 10000;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 250,
+        "y": 240,
+        "wires": [
+            [
+                "1ec9c25db1122edf"
+            ]
+        ]
+    },
+    {
+        "id": "2a696606bd3a56ba",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "04020100000001",
         "payloadType": "str",
-        "x": 210,
+        "x": 250,
         "y": 200,
         "wires": [
             [
