@@ -372,7 +372,123 @@
         "payload": "04020100000008",
         "payloadType": "str",
         "x": 210,
+        "y": 360,
+        "wires": [
+            [
+                "1ec9c25db1122edf"
+            ]
+        ]
+    },
+    {
+        "id": "e6e9ebe776d1201a",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "04020100000004",
+        "payloadType": "str",
+        "x": 210,
+        "y": 320,
+        "wires": [
+            [
+                "1ec9c25db1122edf"
+            ]
+        ]
+    },
+    {
+        "id": "988f48fae39f3ada",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "04020100000002",
+        "payloadType": "str",
+        "x": 210,
+        "y": 280,
+        "wires": [
+            [
+                "1ec9c25db1122edf"
+            ]
+        ]
+    },
+    {
+        "id": "af2098445b001253",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "04020100000001",
+        "payloadType": "str",
+        "x": 210,
         "y": 240,
+        "wires": [
+            [
+                "1ec9c25db1122edf"
+            ]
+        ]
+    },
+    {
+        "id": "65ca7d641eefb53c",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "04020100000000",
+        "payloadType": "str",
+        "x": 210,
+        "y": 200,
         "wires": [
             [
                 "1ec9c25db1122edf"
