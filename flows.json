@@ -514,9 +514,9 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "04020100001111",
+        "payload": "04020100000016",
         "payloadType": "str",
-        "x": 200,
+        "x": 210,
         "y": 400,
         "wires": [
             [
