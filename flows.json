@@ -198,7 +198,8 @@
         "y": 80,
         "wires": [
             [
-                "94514e5dd76e1b4a"
+                "94514e5dd76e1b4a",
+                "2147fe0dca633a59"
             ]
         ]
     },
@@ -329,6 +330,51 @@
             [
                 "f41842a72cb70323"
             ]
+        ]
+    },
+    {
+        "id": "1ec9c25db1122edf",
+        "type": "mqtt out",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "topic": "iota238/cmd",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "415d098faf23ad7c",
+        "x": 530,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "6cbd0bc14a8b9a83",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "04020100000001",
+        "payloadType": "str",
+        "x": 210,
+        "y": 240,
+        "wires": [
+            []
         ]
     },
     {
