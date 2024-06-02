@@ -369,8 +369,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "04020100000003",
-        "payloadType": "num",
+        "payload": "04020100000001",
+        "payloadType": "str",
         "x": 210,
         "y": 240,
         "wires": [
