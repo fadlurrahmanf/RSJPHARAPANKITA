@@ -396,7 +396,7 @@
         "wires": [
             [
                 "94514e5dd76e1b4a",
-                "2147fe0dca633a59"
+                "4c80d3fd31ff5440"
             ]
         ]
     },
@@ -656,6 +656,96 @@
         "x": 600,
         "y": 180,
         "wires": []
+    },
+    {
+        "id": "4c80d3fd31ff5440",
+        "type": "link out",
+        "z": "bca4771a12cb11e6",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [
+            "0cbc509033550b7f"
+        ],
+        "x": 215,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "0cbc509033550b7f",
+        "type": "link in",
+        "z": "bca4771a12cb11e6",
+        "name": "link in 1",
+        "links": [
+            "4c80d3fd31ff5440"
+        ],
+        "x": 55,
+        "y": 320,
+        "wires": [
+            [
+                "caf3da4c04862df7"
+            ]
+        ]
+    },
+    {
+        "id": "caf3da4c04862df7",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": "Check Device",
+        "func": "msg.networkid = msg.payload.substring(0,2);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 180,
+        "y": 320,
+        "wires": [
+            [
+                "5b8d8dea5122397e"
+            ]
+        ]
+    },
+    {
+        "id": "ed77b13627de379d",
+        "type": "mysql",
+        "z": "bca4771a12cb11e6",
+        "mydb": "3b8e5eb93b7526d7",
+        "name": " ",
+        "x": 450,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5b8d8dea5122397e",
+        "type": "switch",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "property": "networkid",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "04",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "04",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 330,
+        "y": 360,
+        "wires": [
+            [],
+            []
+        ]
     },
     {
         "id": "e1f5480776bb23d2",
