@@ -16,6 +16,48 @@
         "env": []
     },
     {
+        "id": "e9b71a55.b25c68",
+        "type": "subflow",
+        "name": "Loops",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 40,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "9f7aa00f.d31ab"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 640,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "f2a7b456.1521f8",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 460,
+                "y": 220,
+                "wires": [
+                    {
+                        "id": "6b0c2d4d.1d2934",
+                        "port": 1
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "color": "#DDAA99"
+    },
+    {
         "id": "ce6092360da2da00",
         "type": "group",
         "z": "57a8e6e09724ec39",
@@ -180,6 +222,161 @@
         "willMsg": {},
         "userProps": "",
         "sessionExpiry": ""
+    },
+    {
+        "id": "9f7aa00f.d31ab",
+        "type": "function",
+        "z": "e9b71a55.b25c68",
+        "name": "InitiateLoop",
+        "func": "var data = msg.payload;\nvar limit = data.length;\nflow.set(\"data\",data);\nflow.set(\"limit\",limit);\nmsg.topic = \"0\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 170,
+        "y": 40,
+        "wires": [
+            [
+                "f2a7b456.1521f8"
+            ]
+        ]
+    },
+    {
+        "id": "f2a7b456.1521f8",
+        "type": "function",
+        "z": "e9b71a55.b25c68",
+        "name": "Loop",
+        "func": "var data = flow.get(\"data\");\nvar count = parseInt(msg.topic);\nmsg.payload = data[count];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 310,
+        "y": 40,
+        "wires": [
+            [
+                "31bc9e4a.f0c962"
+            ]
+        ]
+    },
+    {
+        "id": "26ad85dd.1a426a",
+        "type": "link in",
+        "z": "e9b71a55.b25c68",
+        "name": "",
+        "links": [
+            "6e495066.b7de"
+        ],
+        "x": 215,
+        "y": 80,
+        "wires": [
+            [
+                "f2a7b456.1521f8"
+            ]
+        ]
+    },
+    {
+        "id": "31bc9e4a.f0c962",
+        "type": "link out",
+        "z": "e9b71a55.b25c68",
+        "name": "",
+        "links": [
+            "4642e834.27d108"
+        ],
+        "x": 395,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "6e495066.b7de",
+        "type": "link out",
+        "z": "e9b71a55.b25c68",
+        "name": "",
+        "links": [
+            "26ad85dd.1a426a"
+        ],
+        "x": 615,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "4642e834.27d108",
+        "type": "link in",
+        "z": "e9b71a55.b25c68",
+        "name": "",
+        "links": [
+            "31bc9e4a.f0c962"
+        ],
+        "x": 95,
+        "y": 180,
+        "wires": [
+            [
+                "db2b7400.81c1e8"
+            ]
+        ]
+    },
+    {
+        "id": "db2b7400.81c1e8",
+        "type": "function",
+        "z": "e9b71a55.b25c68",
+        "name": "Increment",
+        "func": "var limit = flow.get(\"limit\");\nvar count = parseInt(msg.topic);\ncount++;\nif(count>=limit){\n    msg.payload = null;\n}\nmsg.topic = String(count);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 200,
+        "y": 180,
+        "wires": [
+            [
+                "6b0c2d4d.1d2934"
+            ]
+        ]
+    },
+    {
+        "id": "6b0c2d4d.1d2934",
+        "type": "switch",
+        "z": "e9b71a55.b25c68",
+        "name": "Continue?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nnull"
+            },
+            {
+                "t": "null"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 350,
+        "y": 180,
+        "wires": [
+            [
+                "f20c27b7.bee1c8"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "f20c27b7.bee1c8",
+        "type": "delay",
+        "z": "e9b71a55.b25c68",
+        "name": "",
+        "pauseType": "delayv",
+        "timeout": "1",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 180,
+        "wires": [
+            [
+                "6e495066.b7de"
+            ]
+        ]
     },
     {
         "id": "61569cd1264aebef",
@@ -395,7 +592,7 @@
         "y": 240,
         "wires": [
             [
-                "1ec9c25db1122edf"
+                "e7a95168250bfa6e"
             ]
         ]
     },
@@ -426,6 +623,20 @@
             [
                 "1ec9c25db1122edf"
             ]
+        ]
+    },
+    {
+        "id": "e7a95168250bfa6e",
+        "type": "subflow:e9b71a55.b25c68",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "x": 410,
+        "y": 240,
+        "wires": [
+            [
+                "1ec9c25db1122edf"
+            ],
+            []
         ]
     },
     {
