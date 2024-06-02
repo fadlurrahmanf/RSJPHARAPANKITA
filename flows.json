@@ -370,7 +370,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "payload": "04020100000003",
-        "payloadType": "str",
+        "payloadType": "num",
         "x": 210,
         "y": 240,
         "wires": [
