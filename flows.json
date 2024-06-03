@@ -975,8 +975,7 @@
         "y": 80,
         "wires": [
             [
-                "a421582f2823dadb",
-                "a5d2621db1c2dbaf"
+                "a421582f2823dadb"
             ]
         ]
     },
@@ -985,7 +984,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": "Init Global Variable",
-        "func": "\nreturn msg;",
+        "func": "var json = {};\nfor (let index = 0; index < Object.keys(msg.payload[0]).length ; index++) {\n    json[String(Object.keys(msg.payload[0])[index])] = msg.payload[0][Object.keys(msg.payload[0])[index]];\n    flow.set(Object.keys(msg.payload[0])[index],msg.payload[0][Object.keys(msg.payload[0])[index]])   \n}\nmsg.payload = json;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -995,14 +994,16 @@
         "x": 1130,
         "y": 80,
         "wires": [
-            []
+            [
+                "62a153d4d974c23e"
+            ]
         ]
     },
     {
-        "id": "a5d2621db1c2dbaf",
+        "id": "62a153d4d974c23e",
         "type": "debug",
         "z": "bca4771a12cb11e6",
-        "name": "debug 42",
+        "name": "debug 43",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -1010,8 +1011,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1110,
-        "y": 20,
+        "x": 1290,
+        "y": 40,
         "wires": []
     },
     {
