@@ -651,7 +651,7 @@
             },
             {
                 "p": "query",
-                "v": "show databases",
+                "v": "show",
                 "vt": "str"
             }
         ],
@@ -680,7 +680,7 @@
         "rawOutput": false,
         "precision": "",
         "retentionPolicy": "",
-        "org": "organisation",
+        "org": "Deviota",
         "x": 540,
         "y": 440,
         "wires": [
