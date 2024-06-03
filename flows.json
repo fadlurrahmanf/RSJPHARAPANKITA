@@ -723,7 +723,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": "Query",
-        "func": "msg.topic = \"INSERT INTO `recorddevice`(`epoch`, `networkid`, `devid`, `typeid`, `temp`, `val`) VALUES (\";\nmsg.topic += String(msg.payload.epoch)+\",\";\nmsg.topic += \"'\" + String(msg.payload.networkid) + \"',\";\nmsg.topic += \"'\" + String(msg.payload.devid) + \"',\";\nmsg.topic += \"'\" + String(msg.payload.typeid) + \"',\";\nmsg.topic += String(msg.payload.temperature_1) + \",\";\nif(msg.payload.networkid == \"02\"){\n    msg.topic += String(msg.payload.barometric_pressure_1);\n}else if(msg.payload.networkid == \"03\"){\n    msg.topic += String(msg.payload.relative_humidity_1);\n}\nmsg.topic += \")\";\nreturn msg;",
+        "func": "var d = msg.deviceinfo;\nmsg.topic = \"UPDATE `monitoringdata` SET \";\nif(d.keterangan.split(\",\")[0] == \"Temp/RH\"){\n    if(d.keterangan.split(\",\")[1] == \"CathLab\"){\n        msg.topic += \"`Temp_Cathlab` = \"+String(msg.payload.temperature_1)+\",\";\n        msg.topic += \"`RH_Cathlab` = \"+String(msg.payload.relative_humidity_1)+\";\";\n    } else if (d.keterangan.split(\",\")[1] == \"Machine\"){\n        msg.topic += \"`Temp_Machine` = \" + String(msg.payload.temperature_1) + \",\";\n        msg.topic += \"`RH_Machine` = \" + String(msg.payload.relative_humidity_1) + \";\";\n    }\n} else if (d.keterangan.split(\",\")[0] == \"Pressure\"){\n    if (d.keterangan.split(\",\")[1] == \"MediumFilter\") {\n        msg.topic += \"`Pre_Filter` = \" + String(msg.payload.barometric_pressure_1) + \";\";\n    } else if (d.keterangan.split(\",\")[1] == \"HepaFilter\") {\n        msg.topic += \"`HEPA_Filter` = \" + String(msg.payload.barometric_pressure_1) + \";\";\n    }\n}\n\nmsg.topic += \"INSERT INTO `recorddevice`(`epoch`, `networkid`, `devid`, `typeid`, `temp`, `val`) VALUES (\";\nmsg.topic += String(msg.payload.epoch)+\",\";\nmsg.topic += \"'\" + String(msg.payload.networkid) + \"',\";\nmsg.topic += \"'\" + String(msg.payload.devid) + \"',\";\nmsg.topic += \"'\" + String(msg.payload.typeid) + \"',\";\nmsg.topic += String(msg.payload.temperature_1) + \",\";\nif(msg.payload.networkid == \"02\"){\n    msg.topic += String(msg.payload.barometric_pressure_1);\n}else if(msg.payload.networkid == \"03\"){\n    msg.topic += String(msg.payload.relative_humidity_1);\n}\nmsg.topic += \");\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -927,17 +927,19 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "func": "var d = msg.deviceinfo;\nmsg.topic = \"UPDATE `monitoringdata` SET \";\nif(d.keterangan.split(\",\")[0] == \"Temp/RH\"){\n    if(d.keterangan.split(\",\")[1] == \"CathLab\"){\n        msg.topic += \"`Temp_Cathlab` = \"+String(msg.payload.)\n    }\n}\nreturn msg;",
+        "func": "var d = msg.deviceinfo;\nmsg.topic = \"UPDATE `monitoringdata` SET \";\nif(d.keterangan.split(\",\")[0] == \"Temp/RH\"){\n    if(d.keterangan.split(\",\")[1] == \"CathLab\"){\n        msg.topic += \"`Temp_Cathlab` = \"+String(msg.payload.temperature_1)+\",\";\n        msg.topic += \"`RH_Cathlab` = \"+String(msg.payload.relative_humidity_1)+\";\";\n    } else if (d.keterangan.split(\",\")[1] == \"Machine\"){\n        msg.topic += \"`Temp_Machine` = \" + String(msg.payload.temperature_1) + \",\";\n        msg.topic += \"`RH_Machine` = \" + String(msg.payload.relative_humidity_1) + \";\";\n    }\n} else if (d.keterangan.split(\",\")[0] == \"Pressure\"){\n    if (d.keterangan.split(\",\")[1] == \"MediumFilter\") {\n        msg.topic += \"`Pre_Filter` = \" + String(msg.payload.barometric_pressure_1) + \";\";\n    } else if (d.keterangan.split(\",\")[1] == \"HepaFilter\") {\n        msg.topic += \"`HEPA_Filter` = \" + String(msg.payload.barometric_pressure_1) + \";\";\n    }\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
-        "noerr": 1,
+        "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 1230,
         "y": 320,
         "wires": [
-            []
+            [
+                "a647954ae4d429aa"
+            ]
         ]
     },
     {
