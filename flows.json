@@ -518,8 +518,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 850,
-        "y": 280,
+        "x": 890,
+        "y": 120,
         "wires": [
             [
                 "df5d05325874622c"
@@ -580,13 +580,11 @@
         "type": "switch",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "property": "payload[0].res",
+        "property": "payload",
         "propertyType": "msg",
         "rules": [
             {
-                "t": "neq",
-                "v": "0",
-                "vt": "str"
+                "t": "nempty"
             }
         ],
         "checkall": "true",
@@ -596,7 +594,6 @@
         "y": 280,
         "wires": [
             [
-                "83efeb6b5a73d7c6",
                 "bb33fcd9b4367379"
             ]
         ]
@@ -858,7 +855,8 @@
         "y": 280,
         "wires": [
             [
-                "bb33fcd9b4367379"
+                "bb33fcd9b4367379",
+                "f41842a72cb70323"
             ]
         ]
     },
