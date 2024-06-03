@@ -618,6 +618,51 @@
         ]
     },
     {
+        "id": "09cadf8846fbce47",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "Pressure",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{ temperature_1 : 27.3, barometric_pressure_1 : 1.6, networkid : \"02\", devid : \"03\", typeid : \"02\", epo:1 }",
+        "payloadType": "str",
+        "x": 250,
+        "y": 420,
+        "wires": [
+            [
+                "93bddb3e223a6f43"
+            ]
+        ]
+    },
+    {
+        "id": "93bddb3e223a6f43",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "debug 37",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 470,
+        "y": 420,
+        "wires": []
+    },
+    {
         "id": "e1f5480776bb23d2",
         "type": "debug",
         "z": "57a8e6e09724ec39",
