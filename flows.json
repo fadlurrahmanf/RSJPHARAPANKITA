@@ -606,7 +606,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": "Check ID",
-        "func": "msg.realdata = msg.payload;\nvar networkid = msg.payload.substring(0,2);\nvar devid = msg.payload.substring(2,4);\nvar typeid = msg.payload.substring(4,6);\nmsg.topic = \"SELECT count(`devid`) as res from `devicelist` WHERE \";\nmsg.topic += \"`networkid` = '\"+networkid+\"' AND \";\nmsg.topic += \"`devid` = '\" + devid +\"' AND \";\nmsg.topic += \"`typeid` = '\" + typeid +\"';\";\nreturn msg;",
+        "func": "msg.realdata = msg.payload;\nvar networkid = msg.payload.substring(0,2);\nvar devid = msg.payload.substring(2,4);\nvar typeid = msg.payload.substring(4,6);\nmsg.topic = \"SELECT * from `devicelist` WHERE \";\nmsg.topic += \"`networkid` = '\"+networkid+\"' AND \";\nmsg.topic += \"`devid` = '\" + devid +\"' AND \";\nmsg.topic += \"`typeid` = '\" + typeid +\"';\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -858,7 +858,7 @@
         "y": 280,
         "wires": [
             [
-                "f41842a72cb70323"
+                "bb33fcd9b4367379"
             ]
         ]
     },
@@ -923,6 +923,24 @@
         "x": 900,
         "y": 340,
         "wires": []
+    },
+    {
+        "id": "a9a44848d9e6ae53",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1230,
+        "y": 320,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "e1f5480776bb23d2",
