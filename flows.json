@@ -711,7 +711,7 @@
         "z": "bca4771a12cb11e6",
         "influxdb": "e7691dfa6e339e7c",
         "name": "",
-        "measurement": "",
+        "measurement": "Testings",
         "precision": "",
         "retentionPolicy": "",
         "database": "database",
@@ -719,7 +719,7 @@
         "retentionPolicyV18Flux": "",
         "org": "Deviota",
         "bucket": "Deviota",
-        "x": 900,
+        "x": 920,
         "y": 500,
         "wires": []
     },
