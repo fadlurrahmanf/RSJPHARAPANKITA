@@ -645,7 +645,7 @@
         "z": "bca4771a12cb11e6",
         "influxdb": "e7691dfa6e339e7c",
         "name": "",
-        "query": "",
+        "query": "import \"experimental/aggregate\"\nfrom(bucket: \"Deviota\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"Testings\")\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> yield(name: \"mean\")\n  |> aggregate.rate(every: 1m, unit: 1s)\n  |> chandeMomentumOscillator(n: 10)\n  |> columns(column: \"_value\")\n",
         "rawOutput": false,
         "precision": "",
         "retentionPolicy": "",
