@@ -706,6 +706,24 @@
         "wires": []
     },
     {
+        "id": "5b8b2b16c1614c22",
+        "type": "influxdb out",
+        "z": "bca4771a12cb11e6",
+        "influxdb": "e7691dfa6e339e7c",
+        "name": "",
+        "measurement": "",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "Deviota",
+        "bucket": "Deviota",
+        "x": 900,
+        "y": 500,
+        "wires": []
+    },
+    {
         "id": "e1f5480776bb23d2",
         "type": "debug",
         "z": "57a8e6e09724ec39",
