@@ -617,11 +617,6 @@
             {
                 "p": "topic",
                 "vt": "str"
-            },
-            {
-                "p": "query",
-                "v": "select * from Testings",
-                "vt": "str"
             }
         ],
         "repeat": "",
@@ -635,7 +630,7 @@
         "y": 440,
         "wires": [
             [
-                "e084239852f24137"
+                "2fba8823436759a6"
             ]
         ]
     },
@@ -738,26 +733,6 @@
         "wires": [
             [
                 "5b8b2b16c1614c22"
-            ]
-        ]
-    },
-    {
-        "id": "e084239852f24137",
-        "type": "function",
-        "z": "bca4771a12cb11e6",
-        "name": "function 2",
-        "func": "msg.payload = {\n    \"test\":134,\n    \"tesfd\":\"Asd\"\n}\nmsg.query = \"SELECT * FROM Deviota.Testings\";\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 360,
-        "y": 440,
-        "wires": [
-            [
-                "2fba8823436759a6"
             ]
         ]
     },
