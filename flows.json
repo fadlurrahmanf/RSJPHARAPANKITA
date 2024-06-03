@@ -651,7 +651,7 @@
             },
             {
                 "p": "query",
-                "v": "show",
+                "v": "show databases",
                 "vt": "str"
             }
         ],
