@@ -686,7 +686,7 @@
         "id": "a489b477160810b5",
         "type": "inject",
         "z": "bca4771a12cb11e6",
-        "name": "Temperature",
+        "name": "Temp",
         "props": [
             {
                 "p": "payload"
@@ -703,7 +703,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 250,
+        "x": 270,
         "y": 460,
         "wires": [
             [
