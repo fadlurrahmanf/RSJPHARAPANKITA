@@ -630,7 +630,7 @@
         "y": 440,
         "wires": [
             [
-                "2fba8823436759a6"
+                "92bf5d6a23c16777"
             ]
         ]
     },
@@ -733,6 +733,26 @@
         "wires": [
             [
                 "5b8b2b16c1614c22"
+            ]
+        ]
+    },
+    {
+        "id": "92bf5d6a23c16777",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": "function 2",
+        "func": "msg.query = `from(bucket: \"Deviota\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_field\"] == \"tesfd\" or r[\"_field\"] == \"test\")\n  |> filter(fn: (r) => r[\"_field\"] == \"tesfd\" or r[\"_field\"] == \"test\")\n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: false)\n  |> yield(name: \"last\")`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 440,
+        "wires": [
+            [
+                "2fba8823436759a6"
             ]
         ]
     },
