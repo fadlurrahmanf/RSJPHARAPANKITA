@@ -648,6 +648,11 @@
             {
                 "p": "topic",
                 "vt": "str"
+            },
+            {
+                "p": "query",
+                "v": "show databases",
+                "vt": "str"
             }
         ],
         "repeat": "",
