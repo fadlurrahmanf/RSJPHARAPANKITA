@@ -510,14 +510,14 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": "Parse",
-        "func": "var data = msg.payload;\nvar numBytes = data.length / 2;\nvar byteArray = new Uint8Array(numBytes);\nfor (var i=0; i<numBytes; i++) {\n    byteArray[i] = parseInt(data.substr(i*2, 2), 16);\n}\nvar len = byteArray[3];\nvar byteData = new Uint8Array(len);\nfor (i=0; i<len; i++) {\n    byteData[i] = byteArray[i+4];\n}\nmsg.payload = byteData;\nmsg.data = data.substr(0,6);\nreturn msg;",
+        "func": "var data = msg.realdata;\nvar numBytes = data.length / 2;\nvar byteArray = new Uint8Array(numBytes);\nfor (var i=0; i<numBytes; i++) {\n    byteArray[i] = parseInt(data.substr(i*2, 2), 16);\n}\nvar len = byteArray[3];\nvar byteData = new Uint8Array(len);\nfor (i=0; i<len; i++) {\n    byteData[i] = byteArray[i+4];\n}\nmsg.payload = byteData;\nmsg.data = data.substr(0,6);\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 750,
+        "x": 850,
         "y": 280,
         "wires": [
             [
@@ -530,7 +530,7 @@
         "type": "cayennelpp-decoder",
         "z": "bca4771a12cb11e6",
         "name": "decoder",
-        "x": 880,
+        "x": 980,
         "y": 280,
         "wires": [
             [
@@ -550,7 +550,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1010,
+        "x": 1110,
         "y": 280,
         "wires": [
             [
@@ -579,17 +579,19 @@
         "type": "switch",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "property": "payload",
+        "property": "payload[0].res",
         "propertyType": "msg",
         "rules": [
             {
-                "t": "nnull"
+                "t": "neq",
+                "v": "0",
+                "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 630,
+        "x": 730,
         "y": 280,
         "wires": [
             [
@@ -602,7 +604,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": "Check ID",
-        "func": "var networkid = msg.payload.substring(0,2);\nvar devid = msg.payload.substring(2,4);\nvar typeid = msg.payload.substring(4,6);\nmsg.topic = \"SELECT count(`devid`) as res from `devicelist` WHERE \";\nmsg.topic += \"`networkid` = '\"+networkid+\"' AND \";\nmsg.topic += \"`devid` = '\" + devid +\"' AND \";\nmsg.topic += \"`typeid` = '\" + typeid +\"';\";\nreturn msg;",
+        "func": "msg.realdata = msg.payload;\nvar networkid = msg.payload.substring(0,2);\nvar devid = msg.payload.substring(2,4);\nvar typeid = msg.payload.substring(4,6);\nmsg.topic = \"SELECT count(`devid`) as res from `devicelist` WHERE \";\nmsg.topic += \"`networkid` = '\"+networkid+\"' AND \";\nmsg.topic += \"`devid` = '\" + devid +\"' AND \";\nmsg.topic += \"`typeid` = '\" + typeid +\"';\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -613,8 +615,7 @@
         "y": 280,
         "wires": [
             [
-                "92b7c675366c9d8d",
-                "9fe81fa64c8b4bc8"
+                "92b7c675366c9d8d"
             ]
         ]
     },
@@ -728,7 +729,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1130,
+        "x": 1230,
         "y": 280,
         "wires": [
             [
@@ -746,7 +747,7 @@
         "links": [
             "2b3434178f0ac999"
         ],
-        "x": 1215,
+        "x": 1315,
         "y": 280,
         "wires": []
     },
@@ -846,32 +847,16 @@
         "wires": []
     },
     {
-        "id": "ba9d658b9392a329",
-        "type": "debug",
-        "z": "bca4771a12cb11e6",
-        "name": "debug 38",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 700,
-        "y": 340,
-        "wires": []
-    },
-    {
         "id": "92b7c675366c9d8d",
         "type": "mysql",
         "z": "bca4771a12cb11e6",
         "mydb": "3b8e5eb93b7526d7",
         "name": " ",
-        "x": 550,
-        "y": 320,
+        "x": 610,
+        "y": 280,
         "wires": [
             [
-                "ba9d658b9392a329"
+                "f41842a72cb70323"
             ]
         ]
     },
@@ -900,26 +885,9 @@
         "y": 220,
         "wires": [
             [
-                "94514e5dd76e1b4a",
-                "9fe81fa64c8b4bc8"
+                "94514e5dd76e1b4a"
             ]
         ]
-    },
-    {
-        "id": "9fe81fa64c8b4bc8",
-        "type": "debug",
-        "z": "bca4771a12cb11e6",
-        "name": "debug 39",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 630,
-        "y": 180,
-        "wires": []
     },
     {
         "id": "e1f5480776bb23d2",
