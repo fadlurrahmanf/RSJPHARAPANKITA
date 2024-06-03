@@ -409,7 +409,7 @@
         "correl": "",
         "expiry": "",
         "broker": "415d098faf23ad7c",
-        "x": 410,
+        "x": 370,
         "y": 80,
         "wires": []
     },
@@ -762,6 +762,20 @@
         "wires": [
             [
                 "ed77b13627de379d"
+            ]
+        ]
+    },
+    {
+        "id": "dd1e1bf4fa001f32",
+        "type": "link in",
+        "z": "bca4771a12cb11e6",
+        "name": "link in 3",
+        "links": [],
+        "x": 255,
+        "y": 80,
+        "wires": [
+            [
+                "1ec9c25db1122edf"
             ]
         ]
     },
