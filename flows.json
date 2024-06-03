@@ -511,7 +511,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": "Parse",
-        "func": "var data = msg.realdata;\nvar numBytes = data.length / 2;\nvar byteArray = new Uint8Array(numBytes);\nfor (var i=0; i<numBytes; i++) {\n    byteArray[i] = parseInt(data.substr(i*2, 2), 16);\n}\nvar len = byteArray[3];\nvar byteData = new Uint8Array(len);\nfor (i=0; i<len; i++) {\n    byteData[i] = byteArray[i+4];\n}\nmsg.payload = byteData;\nmsg.data = data.substr(0,6);\nreturn msg;",
+        "func": "msg.deviceinfo = msg.payload[0];\nvar data = msg.realdata;\nvar numBytes = data.length / 2;\nvar byteArray = new Uint8Array(numBytes);\nfor (var i=0; i<numBytes; i++) {\n    byteArray[i] = parseInt(data.substr(i*2, 2), 16);\n}\nvar len = byteArray[3];\nvar byteData = new Uint8Array(len);\nfor (i=0; i<len; i++) {\n    byteData[i] = byteArray[i+4];\n}\nmsg.payload = byteData;\nmsg.data = data.substr(0,6);\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -555,7 +555,8 @@
         "y": 280,
         "wires": [
             [
-                "f20849a9ab1503b2"
+                "f20849a9ab1503b2",
+                "a9a44848d9e6ae53"
             ]
         ]
     },
@@ -744,7 +745,8 @@
         "name": "link out 2",
         "mode": "link",
         "links": [
-            "2b3434178f0ac999"
+            "2b3434178f0ac999",
+            "9b0d96a526b14c55"
         ],
         "x": 1315,
         "y": 280,
@@ -761,9 +763,7 @@
         "x": 585,
         "y": 80,
         "wires": [
-            [
-                "ed77b13627de379d"
-            ]
+            []
         ]
     },
     {
@@ -926,10 +926,10 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "func": "\nreturn msg;",
+        "func": "var d = msg.deviceinfo;\nmsg.topic = \"UPDATE `monitoringdata` SET \";\nif(d.keterangan.split(\",\")[0] == \"Temp/RH\"){\n    if(d.keterangan.split(\",\")[1] == \"CathLab\"){\n        msg.topic += \"`Temp_Cathlab` = \"+String(msg.payload.)\n    }\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
-        "noerr": 0,
+        "noerr": 1,
         "initialize": "",
         "finalize": "",
         "libs": [],
