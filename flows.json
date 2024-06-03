@@ -984,7 +984,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": "Init Global Variable",
-        "func": "var json = {};\nfor (let index = 0; index < Object.keys(msg.payload[0]).length ; index++) {\n    json[String(Object.keys(msg.payload[0])[index])] = msg.payload[0][Object.keys(msg.payload[0])[index]];\n    flow.set(Object.keys(msg.payload[0])[index],msg.payload[0][Object.keys(msg.payload[0])[index]])   \n}\nmsg.payload = json;\nreturn msg;",
+        "func": "var json = {};\nfor (let index = 0; index < Object.keys(msg.payload[0]).length ; index++) {\n    flow.set(Object.keys(msg.payload[0])[index],msg.payload[0][Object.keys(msg.payload[0])[index]]) \n    json[String(Object.keys(msg.payload[0])[index])] = flow.get(Object.keys(msg.payload[0])[index]);  \n}\nmsg.payload = json;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
