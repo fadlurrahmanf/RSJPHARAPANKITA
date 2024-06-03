@@ -231,9 +231,9 @@
         "protocol": "http",
         "database": "DatabaseUtama",
         "name": "",
-        "usetls": false,
+        "usetls": true,
         "tls": "",
-        "influxdbVersion": "1.x",
+        "influxdbVersion": "2.0",
         "url": "http://localhost:8086",
         "timeout": "10",
         "rejectUnauthorized": true
@@ -681,7 +681,7 @@
         "precision": "",
         "retentionPolicy": "",
         "org": "organisation",
-        "x": 570,
+        "x": 540,
         "y": 440,
         "wires": [
             [
