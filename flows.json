@@ -706,7 +706,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": "Query",
-        "func": "var d = msg.deviceinfo;\nmsg.topic = \"UPDATE `monitoringdata` SET \";\nif(d.keterangan.split(\",\")[0] == \"Temp/RH\"){\n    if(d.keterangan.split(\",\")[1] == \"CathLab\"){\n        msg.topic += \"`Temp_Cathlab` = \"+String(msg.payload.temperature_1)+\",\";\n        msg.topic += \"`RH_Cathlab` = \"+String(msg.payload.relative_humidity_1)+\";\";\n    } else if (d.keterangan.split(\",\")[1] == \"Machine\"){\n        msg.topic += \"`Temp_Machine` = \" + String(msg.payload.temperature_1) + \",\";\n        msg.topic += \"`RH_Machine` = \" + String(msg.payload.relative_humidity_1) + \";\";\n    }\n} else if (d.keterangan.split(\",\")[0] == \"Pressure\"){\n    if (d.keterangan.split(\",\")[1] == \"MediumFilter\") {\n        msg.topic += \"`Pre_Filter` = \" + String(msg.payload.barometric_pressure_1) + \";\";\n    } else if (d.keterangan.split(\",\")[1] == \"HepaFilter\") {\n        msg.topic += \"`HEPA_Filter` = \" + String(msg.payload.barometric_pressure_1) + \";\";\n    }\n}\n\nmsg.topic += \"INSERT INTO `recorddevice`(`epoch`, `networkid`, `devid`, `typeid`, `temp`, `val`) VALUES (\";\nmsg.topic += String(msg.payload.epoch)+\",\";\nmsg.topic += \"'\" + String(msg.payload.networkid) + \"',\";\nmsg.topic += \"'\" + String(msg.payload.devid) + \"',\";\nmsg.topic += \"'\" + String(msg.payload.typeid) + \"',\";\nmsg.topic += String(msg.payload.temperature_1) + \",\";\nif(msg.payload.networkid == \"02\"){\n    msg.topic += String(msg.payload.barometric_pressure_1);\n}else if(msg.payload.networkid == \"03\"){\n    msg.topic += String(msg.payload.relative_humidity_1);\n}\nmsg.topic += \");\";\nreturn msg;",
+        "func": "var d = msg.deviceinfo;\nmsg.topic = \"UPDATE `monitoringdata` SET \";\nif(d.keterangan.split(\",\")[0] == \"Temp/RH\"){\n    if(d.keterangan.split(\",\")[1] == \"CathLab\"){\n        msg.topic += \"`Temp_Cathlab` = \"+String(msg.payload.temperature_1)+\",\";\n        msg.topic += \"`RH_Cathlab` = \"+String(msg.payload.relative_humidity_1)+\";\";\n        flow.set(\"Temp_Cathlab\",msg.payload.temperature_1);\n        flow.set(\"RH_Cathlab\", msg.payload.relative_humidity_1);\n    } else if (d.keterangan.split(\",\")[1] == \"Machine\"){\n        msg.topic += \"`Temp_Machine` = \" + String(msg.payload.temperature_1) + \",\";\n        msg.topic += \"`RH_Machine` = \" + String(msg.payload.relative_humidity_1) + \";\";\n        flow.set(\"Temp_Machine\", msg.payload.temperature_1);\n        flow.set(\"RH_Machine\", msg.payload.relative_humidity_1);\n    }\n} else if (d.keterangan.split(\",\")[0] == \"Pressure\"){\n    if (d.keterangan.split(\",\")[1] == \"MediumFilter\") {\n        msg.topic += \"`Pre_Filter` = \" + String(msg.payload.barometric_pressure_1) + \";\";\n        flow.set(\"Pre_Filter\", msg.payload.barometric_pressure_1);\n    } else if (d.keterangan.split(\",\")[1] == \"HepaFilter\") {\n        msg.topic += \"`HEPA_Filter` = \" + String(msg.payload.barometric_pressure_1) + \";\";\n        flow.set(\"HEPA_Filter\", msg.payload.barometric_pressure_1);\n    }\n}\n\nmsg.topic += \"INSERT INTO `recorddevice`(`epoch`, `networkid`, `devid`, `typeid`, `temp`, `val`) VALUES (\";\nmsg.topic += String(msg.payload.epoch)+\",\";\nmsg.topic += \"'\" + String(msg.payload.networkid) + \"',\";\nmsg.topic += \"'\" + String(msg.payload.devid) + \"',\";\nmsg.topic += \"'\" + String(msg.payload.typeid) + \"',\";\nmsg.topic += String(msg.payload.temperature_1) + \",\";\nif(msg.payload.networkid == \"02\"){\n    msg.topic += String(msg.payload.barometric_pressure_1);\n}else if(msg.payload.networkid == \"03\"){\n    msg.topic += String(msg.payload.relative_humidity_1);\n}\nmsg.topic += \");\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -934,6 +934,84 @@
         "statusType": "auto",
         "x": 1140,
         "y": 200,
+        "wires": []
+    },
+    {
+        "id": "7a37686efd1c39c5",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "  ",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "select * from monitoringdata",
+        "payload": "",
+        "payloadType": "date",
+        "x": 850,
+        "y": 80,
+        "wires": [
+            [
+                "4958a8f1dc7bf670"
+            ]
+        ]
+    },
+    {
+        "id": "4958a8f1dc7bf670",
+        "type": "mysql",
+        "z": "bca4771a12cb11e6",
+        "mydb": "3b8e5eb93b7526d7",
+        "name": " ",
+        "x": 970,
+        "y": 80,
+        "wires": [
+            [
+                "a421582f2823dadb",
+                "a5d2621db1c2dbaf"
+            ]
+        ]
+    },
+    {
+        "id": "a421582f2823dadb",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": "Init Global Variable",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a5d2621db1c2dbaf",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "debug 42",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1110,
+        "y": 20,
         "wires": []
     },
     {
