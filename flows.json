@@ -875,6 +875,35 @@
         ]
     },
     {
+        "id": "fd65d131d5f88239",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "020202",
+        "payloadType": "str",
+        "x": 280,
+        "y": 220,
+        "wires": [
+            [
+                "94514e5dd76e1b4a"
+            ]
+        ]
+    },
+    {
         "id": "e1f5480776bb23d2",
         "type": "debug",
         "z": "57a8e6e09724ec39",
