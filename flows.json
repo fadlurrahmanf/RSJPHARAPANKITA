@@ -863,7 +863,7 @@
         "id": "fd65d131d5f88239",
         "type": "inject",
         "z": "bca4771a12cb11e6",
-        "name": "",
+        "name": "RH_Cathlab",
         "props": [
             {
                 "p": "payload"
@@ -880,7 +880,7 @@
         "topic": "",
         "payload": "0303030B0167010E0168780173DC4F97",
         "payloadType": "str",
-        "x": 270,
+        "x": 290,
         "y": 220,
         "wires": [
             [
