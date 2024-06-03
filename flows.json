@@ -642,7 +642,7 @@
         "y": 420,
         "wires": [
             [
-                "93bddb3e223a6f43"
+                "5f9f6b38940d4cbc"
             ]
         ]
     },
@@ -658,9 +658,29 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 470,
+        "x": 540,
         "y": 420,
         "wires": []
+    },
+    {
+        "id": "5f9f6b38940d4cbc",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": "Pressure",
+        "func": "msg.payload = { temperature_1 : 27.3, barometric_pressure_1 : 1.6, networkid : \"02\", devid : \"03\", typeid : \"02\", epo:1 }\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 420,
+        "wires": [
+            [
+                "93bddb3e223a6f43"
+            ]
+        ]
     },
     {
         "id": "e1f5480776bb23d2",
