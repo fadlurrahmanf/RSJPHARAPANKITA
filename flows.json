@@ -636,9 +636,9 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "{ temperature_1 : 27.3, barometric_pressure_1 : 1.6, networkid : \"02\", devid : \"03\", typeid : \"02\", epo:1 }",
-        "payloadType": "str",
-        "x": 250,
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
         "y": 420,
         "wires": [
             [
@@ -681,6 +681,71 @@
                 "93bddb3e223a6f43"
             ]
         ]
+    },
+    {
+        "id": "a489b477160810b5",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "Temperature",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 250,
+        "y": 460,
+        "wires": [
+            [
+                "dde053031226823c"
+            ]
+        ]
+    },
+    {
+        "id": "dde053031226823c",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": "Temp",
+        "func": "msg.payload = {\ntemperature_1: 27,\nrelative_humidity_1:60,\nbarometric_pressure_1: -913.7,\nnetworkid: \"03\",\ndevid : \"05\",\ntypeid : \"03\",\nepo:2\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 460,
+        "wires": [
+            [
+                "3b677775206bc163"
+            ]
+        ]
+    },
+    {
+        "id": "3b677775206bc163",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "debug 38",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 460,
+        "wires": []
     },
     {
         "id": "e1f5480776bb23d2",
