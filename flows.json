@@ -879,13 +879,13 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "020902",
+        "payload": "0305030B0167010E0168780173DC4F97",
         "payloadType": "str",
-        "x": 280,
+        "x": 270,
         "y": 220,
         "wires": [
             [
-                "94514e5dd76e1b4a"
+                "caf3da4c04862df7"
             ]
         ]
     },
