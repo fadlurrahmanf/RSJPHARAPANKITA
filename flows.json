@@ -894,7 +894,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "020202",
+        "payload": "020902",
         "payloadType": "str",
         "x": 280,
         "y": 220,
