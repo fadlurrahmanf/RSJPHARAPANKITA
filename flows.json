@@ -760,7 +760,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": "function 2",
-        "func": "msg.query = `from(bucket: \"Deviota\")\n  |> range(start: -5m)\n  |> filter(fn: (r) => r[\"_field\"] == \"tesfd\" or r[\"_field\"] == \"test\")`\n\nreturn msg;",
+        "func": "msg.payload = {\"query\":\"SELECT * FROM your_measurement\",\"database\":\"your_database\"}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
