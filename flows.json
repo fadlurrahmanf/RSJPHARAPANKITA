@@ -651,7 +651,7 @@
             },
             {
                 "p": "query",
-                "v": "SHOW DATABASES",
+                "v": "select * from Testings",
                 "vt": "str"
             }
         ],
