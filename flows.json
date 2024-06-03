@@ -726,7 +726,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": "function 1",
-        "func": "msg.payload = {\n    \"test\":134,\n    \"tesfd\":\"Asd\"\n}\nreturn msg;",
+        "func": "msg.payload = {\n    \"test\":134,\n    \"tesfd\":123\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
