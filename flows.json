@@ -543,7 +543,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " Build",
-        "func": "var data = msg.payload;\ndata.networkid = msg.data.substring(0,2);\ndata.devid = msg.data.substring(2,4);\ndata.typeid = msg.data.substring(4,6);\ndata.epoch = (Date.now());\nmsg.payload = data;\nmsg.topic = \"INSERT INTO `recorddevice`(`epoch`, `networkid`, `devid`, `typeid`, `temp`, `val`) VALUES (\";\nmsg.topic += String(msg.payload.epo)+\",\";\nmsg.topic += \",\" + String(msg.payload.networkid) + \"',\";\nmsg.topic += \",\" + String(msg.payload.devid) + \"',\";\nmsg.topic += \",\" + String(msg.payload.typeid) + \"',\";\nmsg.topic += String(msg.payload.temperature_1) + \",\";\nif(msg.payload.networkid == \"02\"){\n    msg.topic += String(msg.payload.barometric_pressure_1) + \",\";\n}else if(msg.payload.networkid == \"03\"){\n    msg.topic += String(msg.payload.relative_humidity) + \",\";\n}\nmsg.topic += \")\";\nreturn msg;",
+        "func": "var data = msg.payload;\ndata.networkid = msg.data.substring(0,2);\ndata.devid = msg.data.substring(2,4);\ndata.typeid = msg.data.substring(4,6);\ndata.epoch = (Date.now());\nmsg.payload = data;\n\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -554,7 +554,7 @@
         "y": 280,
         "wires": [
             [
-                "31263501b4812d07"
+                "f20849a9ab1503b2"
             ]
         ]
     },
@@ -570,7 +570,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1140,
+        "x": 1280,
         "y": 280,
         "wires": []
     },
@@ -708,7 +708,29 @@
         "x": 910,
         "y": 200,
         "wires": [
-            []
+            [
+                "f20849a9ab1503b2"
+            ]
+        ]
+    },
+    {
+        "id": "f20849a9ab1503b2",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": "Query",
+        "func": "msg.topic = \"INSERT INTO `recorddevice`(`epoch`, `networkid`, `devid`, `typeid`, `temp`, `val`) VALUES (\";\nmsg.topic += String(msg.payload.epo)+\",\";\nmsg.topic += \",\" + String(msg.payload.networkid) + \"',\";\nmsg.topic += \",\" + String(msg.payload.devid) + \"',\";\nmsg.topic += \",\" + String(msg.payload.typeid) + \"',\";\nmsg.topic += String(msg.payload.temperature_1) + \",\";\nif(msg.payload.networkid == \"02\"){\n    msg.topic += String(msg.payload.barometric_pressure_1) + \",\";\n}else if(msg.payload.networkid == \"03\"){\n    msg.topic += String(msg.payload.relative_humidity) + \",\";\n}\nmsg.topic += \")\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 280,
+        "wires": [
+            [
+                "31263501b4812d07"
+            ]
         ]
     },
     {
