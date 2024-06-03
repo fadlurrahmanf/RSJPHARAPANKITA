@@ -601,19 +601,19 @@
         "id": "94514e5dd76e1b4a",
         "type": "function",
         "z": "bca4771a12cb11e6",
-        "name": " Temp/DiffP",
-        "func": "if(msg.payload.substring(0,2)==\"02\" || msg.payload.substring(0,2)==\"03\"){\n    return msg;\n}else{\n    msg.payload = null;\n    return msg;\n}",
+        "name": "Check ID",
+        "func": "var networkid = msg.payload.substring(0,2);\nvar devid = msg.payload.substring(2,4);\nvar typeid = msg.payload.substring(4,6);\nmsg.topic = \"SELECT count(`devid`) as res from `devicelist` WHERE \";\nmsg.topic += \"`networkid` = '\"+networkid+\"' AND \";\nmsg.topic += \"`devid` = '\" + devid +\"' AND \";\nmsg.topic += \"`typeid` = '\" + typeid +\"';\";",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 490,
+        "x": 480,
         "y": 280,
         "wires": [
             [
-                "f41842a72cb70323"
+                "92b7c675366c9d8d"
             ]
         ]
     },
@@ -843,6 +843,36 @@
         "x": 750,
         "y": 420,
         "wires": []
+    },
+    {
+        "id": "ba9d658b9392a329",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "debug 38",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "92b7c675366c9d8d",
+        "type": "mysql",
+        "z": "bca4771a12cb11e6",
+        "mydb": "3b8e5eb93b7526d7",
+        "name": " ",
+        "x": 550,
+        "y": 320,
+        "wires": [
+            [
+                "ba9d658b9392a329"
+            ]
+        ]
     },
     {
         "id": "e1f5480776bb23d2",
