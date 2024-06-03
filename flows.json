@@ -720,7 +720,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": "Query",
-        "func": "msg.topic = \"INSERT INTO `recorddevice`(`epoch`, `networkid`, `devid`, `typeid`, `temp`, `val`) VALUES (\";\nmsg.topic += String(msg.payload.epo)+\",\";\nmsg.topic += \",\" + String(msg.payload.networkid) + \"',\";\nmsg.topic += \",\" + String(msg.payload.devid) + \"',\";\nmsg.topic += \",\" + String(msg.payload.typeid) + \"',\";\nmsg.topic += String(msg.payload.temperature_1) + \",\";\nif(msg.payload.networkid == \"02\"){\n    msg.topic += String(msg.payload.barometric_pressure_1) + \",\";\n}else if(msg.payload.networkid == \"03\"){\n    msg.topic += String(msg.payload.relative_humidity) + \",\";\n}\nmsg.topic += \")\";\nreturn msg;",
+        "func": "msg.topic = \"INSERT INTO `recorddevice`(`epoch`, `networkid`, `devid`, `typeid`, `temp`, `val`) VALUES (\";\nmsg.topic += String(msg.payload.epo)+\",\";\nmsg.topic += \"'\" + String(msg.payload.networkid) + \"',\";\nmsg.topic += \"'\" + String(msg.payload.devid) + \"',\";\nmsg.topic += \"'\" + String(msg.payload.typeid) + \"',\";\nmsg.topic += String(msg.payload.temperature_1) + \",\";\nif(msg.payload.networkid == \"02\"){\n    msg.topic += String(msg.payload.barometric_pressure_1) + \",\";\n}else if(msg.payload.networkid == \"03\"){\n    msg.topic += String(msg.payload.relative_humidity) + \",\";\n}\nmsg.topic += \")\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
