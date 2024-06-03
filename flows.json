@@ -224,6 +224,21 @@
         "sessionExpiry": ""
     },
     {
+        "id": "e7691dfa6e339e7c",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "DatabaseUtama",
+        "name": "",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "1.x",
+        "url": "http://localhost:8086",
+        "timeout": "10",
+        "rejectUnauthorized": true
+    },
+    {
         "id": "9f7aa00f.d31ab",
         "type": "function",
         "z": "e9b71a55.b25c68",
@@ -395,137 +410,7 @@
         "y": 80,
         "wires": [
             [
-                "94514e5dd76e1b4a",
                 "4c80d3fd31ff5440"
-            ]
-        ]
-    },
-    {
-        "id": "83efeb6b5a73d7c6",
-        "type": "function",
-        "z": "bca4771a12cb11e6",
-        "name": " ",
-        "func": "var data = msg.payload;\nvar numBytes = data.length / 2;\nvar byteArray = new Uint8Array(numBytes);\nfor (var i=0; i<numBytes; i++) {\n    byteArray[i] = parseInt(data.substr(i*2, 2), 16);\n}\nvar len = byteArray[3];\nvar byteData = new Uint8Array(len);\nfor (i=0; i<len; i++) {\n    byteData[i] = byteArray[i+4];\n}\nmsg.payload = byteData;\nmsg.data = data.substr(0,6);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 550,
-        "y": 80,
-        "wires": [
-            [
-                "df5d05325874622c"
-            ]
-        ]
-    },
-    {
-        "id": "df5d05325874622c",
-        "type": "cayennelpp-decoder",
-        "z": "bca4771a12cb11e6",
-        "name": "",
-        "x": 740,
-        "y": 80,
-        "wires": [
-            [
-                "91c1d36297a0c7fd"
-            ]
-        ]
-    },
-    {
-        "id": "91c1d36297a0c7fd",
-        "type": "function",
-        "z": "bca4771a12cb11e6",
-        "name": " ",
-        "func": "var data = msg.payload;\ndata.networkid = msg.data.substring(0,2);\ndata.devid = msg.data.substring(2,4);\ndata.typeid = msg.data.substring(4,6);\ndata.epoch = (Date.now());\nmsg.payload = data;\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 930,
-        "y": 80,
-        "wires": [
-            [
-                "31263501b4812d07"
-            ]
-        ]
-    },
-    {
-        "id": "31263501b4812d07",
-        "type": "debug",
-        "z": "bca4771a12cb11e6",
-        "name": "debug 36",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1080,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "2147fe0dca633a59",
-        "type": "debug",
-        "z": "bca4771a12cb11e6",
-        "name": "debug 37",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 400,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "f41842a72cb70323",
-        "type": "switch",
-        "z": "bca4771a12cb11e6",
-        "name": " ",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "nnull"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 390,
-        "y": 80,
-        "wires": [
-            [
-                "83efeb6b5a73d7c6",
-                "2147fe0dca633a59"
-            ]
-        ]
-    },
-    {
-        "id": "94514e5dd76e1b4a",
-        "type": "function",
-        "z": "bca4771a12cb11e6",
-        "name": " ",
-        "func": "if(msg.payload.substring(0,2)==\"02\" || msg.payload.substring(0,2)==\"03\"){\n    return msg;\n}else{\n    msg.payload = null;\n    return msg;\n}",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 250,
-        "y": 80,
-        "wires": [
-            [
-                "f41842a72cb70323"
             ]
         ]
     },
@@ -543,103 +428,8 @@
         "correl": "",
         "expiry": "",
         "broker": "415d098faf23ad7c",
-        "x": 650,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "65ca7d641eefb53c",
-        "type": "inject",
-        "z": "bca4771a12cb11e6",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 100,
-        "y": 240,
-        "wires": [
-            [
-                "0e8b8a734bfa9a66"
-            ]
-        ]
-    },
-    {
-        "id": "0e8b8a734bfa9a66",
-        "type": "function",
-        "z": "bca4771a12cb11e6",
-        "name": " ",
-        "func": "var arr = [];\narr.push(\"04020100000000\");\narr.push(\"04020100000001\");\narr.push(\"04020100000002\");\narr.push(\"04020100000003\");\narr.push(\"04020100000004\");\narr.push(\"04020100000005\");\narr.push(\"04020100000006\");\narr.push(\"04020100000007\");\narr.push(\"04020100000008\");\narr.push(\"04020100000009\");\narr.push(\"0402010000000A\");\narr.push(\"0402010000000B\");\narr.push(\"0402010000000C\");\narr.push(\"0402010000000D\");\narr.push(\"0402010000000E\");\narr.push(\"0402010000000F\");\nmsg.payload = arr;\nmsg.delay = 10000;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 250,
-        "y": 240,
-        "wires": [
-            [
-                "37b3247758841b8d",
-                "e7a95168250bfa6e"
-            ]
-        ]
-    },
-    {
-        "id": "2a696606bd3a56ba",
-        "type": "inject",
-        "z": "bca4771a12cb11e6",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "04020100000000",
-        "payloadType": "str",
-        "x": 250,
-        "y": 200,
-        "wires": [
-            [
-                "1ec9c25db1122edf"
-            ]
-        ]
-    },
-    {
-        "id": "37b3247758841b8d",
-        "type": "debug",
-        "z": "bca4771a12cb11e6",
-        "name": "debug 38",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 600,
-        "y": 180,
+        "x": 410,
+        "y": 80,
         "wires": []
     },
     {
@@ -652,7 +442,7 @@
             "0cbc509033550b7f"
         ],
         "x": 215,
-        "y": 120,
+        "y": 80,
         "wires": []
     },
     {
@@ -697,8 +487,8 @@
         "z": "bca4771a12cb11e6",
         "mydb": "3b8e5eb93b7526d7",
         "name": " ",
-        "x": 450,
-        "y": 320,
+        "x": 370,
+        "y": 680,
         "wires": [
             []
         ]
@@ -726,24 +516,167 @@
         "repair": false,
         "outputs": 2,
         "x": 330,
-        "y": 360,
+        "y": 320,
         "wires": [
-            [],
+            [
+                "94514e5dd76e1b4a"
+            ],
             []
         ]
     },
     {
-        "id": "e7a95168250bfa6e",
-        "type": "subflow:e9b71a55.b25c68",
+        "id": "83efeb6b5a73d7c6",
+        "type": "function",
         "z": "bca4771a12cb11e6",
-        "name": "",
-        "x": 410,
-        "y": 240,
+        "name": "Parse",
+        "func": "var data = msg.payload;\nvar numBytes = data.length / 2;\nvar byteArray = new Uint8Array(numBytes);\nfor (var i=0; i<numBytes; i++) {\n    byteArray[i] = parseInt(data.substr(i*2, 2), 16);\n}\nvar len = byteArray[3];\nvar byteData = new Uint8Array(len);\nfor (i=0; i<len; i++) {\n    byteData[i] = byteArray[i+4];\n}\nmsg.payload = byteData;\nmsg.data = data.substr(0,6);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 280,
         "wires": [
             [
-                "1ec9c25db1122edf",
-                "37b3247758841b8d"
-            ],
+                "df5d05325874622c"
+            ]
+        ]
+    },
+    {
+        "id": "df5d05325874622c",
+        "type": "cayennelpp-decoder",
+        "z": "bca4771a12cb11e6",
+        "name": "decoder",
+        "x": 880,
+        "y": 280,
+        "wires": [
+            [
+                "91c1d36297a0c7fd"
+            ]
+        ]
+    },
+    {
+        "id": "91c1d36297a0c7fd",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": " Build",
+        "func": "var data = msg.payload;\ndata.networkid = msg.data.substring(0,2);\ndata.devid = msg.data.substring(2,4);\ndata.typeid = msg.data.substring(4,6);\ndata.epoch = (Date.now());\nmsg.payload = data;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 280,
+        "wires": [
+            [
+                "31263501b4812d07"
+            ]
+        ]
+    },
+    {
+        "id": "31263501b4812d07",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "debug 36",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "f41842a72cb70323",
+        "type": "switch",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nnull"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 630,
+        "y": 280,
+        "wires": [
+            [
+                "83efeb6b5a73d7c6"
+            ]
+        ]
+    },
+    {
+        "id": "94514e5dd76e1b4a",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": " Temp/DiffP",
+        "func": "if(msg.payload.substring(0,2)==\"02\" || msg.payload.substring(0,2)==\"03\"){\n    return msg;\n}else{\n    msg.payload = null;\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 280,
+        "wires": [
+            [
+                "f41842a72cb70323"
+            ]
+        ]
+    },
+    {
+        "id": "7340dff1e0dd40fd",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 300,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2fba8823436759a6",
+        "type": "influxdb in",
+        "z": "bca4771a12cb11e6",
+        "influxdb": "e7691dfa6e339e7c",
+        "name": "",
+        "query": "",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "organisation",
+        "x": 570,
+        "y": 440,
+        "wires": [
             []
         ]
     },
