@@ -724,6 +724,55 @@
         "wires": []
     },
     {
+        "id": "870d8202d7067e0f",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 320,
+        "y": 500,
+        "wires": [
+            [
+                "e50d5b5a9e089d14"
+            ]
+        ]
+    },
+    {
+        "id": "e50d5b5a9e089d14",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": "function 1",
+        "func": "msg.payload = {\n    \"test\":134,\n    \"tesfd\":\"Asd\"\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 500,
+        "wires": [
+            [
+                "5b8b2b16c1614c22"
+            ]
+        ]
+    },
+    {
         "id": "e1f5480776bb23d2",
         "type": "debug",
         "z": "57a8e6e09724ec39",
