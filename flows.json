@@ -16,6 +16,13 @@
         "env": []
     },
     {
+        "id": "b40cf36e.d57038",
+        "type": "tab",
+        "label": "InfluxDB Query",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "e9b71a55.b25c68",
         "type": "subflow",
         "name": "Loops",
@@ -206,6 +213,18 @@
         "url": "http://localhost:8086",
         "timeout": "10",
         "rejectUnauthorized": true
+    },
+    {
+        "id": "b9cc59e6.7e5e68",
+        "type": "influxdb",
+        "hostname": "localhost",
+        "port": "8086",
+        "protocol": "http",
+        "database": "your_database",
+        "name": "InfluxDB",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "1.x"
     },
     {
         "id": "9f7aa00f.d31ab",
@@ -1320,5 +1339,66 @@
                 "810bb31b564b3d49"
             ]
         ]
+    },
+    {
+        "id": "7a585fc1.d95a4",
+        "type": "inject",
+        "z": "b40cf36e.d57038",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"query\":\"SELECT * FROM your_measurement\",\"database\":\"your_database\"}",
+        "payloadType": "json",
+        "x": 140,
+        "y": 120,
+        "wires": [
+            [
+                "e441e443.95b33"
+            ]
+        ]
+    },
+    {
+        "id": "e441e443.95b33",
+        "type": "influxdb out",
+        "z": "b40cf36e.d57038",
+        "influxdb": "b9cc59e6.7e5e68",
+        "name": "InfluxDB",
+        "measurement": "",
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "",
+        "bucket": "",
+        "x": 370,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "c38901b9.5353d8",
+        "type": "debug",
+        "z": "b40cf36e.d57038",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 180,
+        "wires": []
     }
 ]
