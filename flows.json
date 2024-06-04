@@ -1792,7 +1792,9 @@
         "z": "bca4771a12cb11e6",
         "name": "link out 9",
         "mode": "link",
-        "links": [],
+        "links": [
+            "694bf36843b2868e"
+        ],
         "x": 175,
         "y": 500,
         "wires": []
@@ -1802,7 +1804,9 @@
         "type": "link in",
         "z": "bca4771a12cb11e6",
         "name": "link in 8",
-        "links": [],
+        "links": [
+            "b07e4e6ebad074fb"
+        ],
         "x": 885,
         "y": 600,
         "wires": [
