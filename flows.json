@@ -1416,7 +1416,8 @@
         "wires": [
             [
                 "6c88cbac6c1e1314",
-                "c7d1752efe372b78"
+                "c7d1752efe372b78",
+                "f76630c041b6c74a"
             ]
         ]
     },
@@ -1520,10 +1521,78 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 330,
+        "x": 450,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "14f91a50d6904e88",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": "Request Temp",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
         "y": 800,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "f76630c041b6c74a",
+        "type": "switch",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "property": "cmd",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 330,
+        "y": 800,
+        "wires": [
+            [
+                "8f99e09dae854b85"
+            ]
+        ]
+    },
+    {
+        "id": "8f99e09dae854b85",
+        "type": "trigger",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "op1": "1",
+        "op2": "",
+        "op1type": "str",
+        "op2type": "nul",
+        "duration": "15",
+        "extend": true,
+        "overrideDelay": true,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 450,
+        "y": 800,
+        "wires": [
+            [
+                "14f91a50d6904e88"
+            ]
         ]
     },
     {
