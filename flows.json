@@ -1095,7 +1095,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 250,
-        "y": 840,
+        "y": 940,
         "wires": [
             [
                 "624c82fc1ad9708f"
@@ -1115,7 +1115,7 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 840,
+        "y": 940,
         "wires": [
             [
                 "c09b7f80e5ac0a0c"
@@ -1135,7 +1135,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 540,
-        "y": 840,
+        "y": 940,
         "wires": []
     },
     {
@@ -1238,7 +1238,9 @@
         "x": 350,
         "y": 560,
         "wires": [
-            []
+            [
+                "53ef936abb21b675"
+            ]
         ]
     },
     {
@@ -1268,6 +1270,29 @@
             [
                 "4c80d3fd31ff5440"
             ]
+        ]
+    },
+    {
+        "id": "53ef936abb21b675",
+        "type": "trigger",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "op1": "1",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "0",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 470,
+        "y": 560,
+        "wires": [
+            []
         ]
     },
     {
