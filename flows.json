@@ -1700,7 +1700,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": "Requesting",
-        "func": "var d = msg.payload[0];\nvar cmd = \"\";\nfor (let index = 0; index < Object.keys(d).length-2; index++) {\n    cmd += String(Object.keys(d)[index]);\n}\ncmd += \"00\";\ncmd += \"\"\nmsg.payload = cmd;\nreturn msg;",
+        "func": "var d = msg.payload[0];\nvar cmd = \"\";\nfor (let index = 0; index < Object.keys(d).length-2; index++) {\n    cmd += String(Object.keys(d)[index]);\n}\ncmd += \"00\";\ncmd += \"00000000\";\nmsg.payload = cmd;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
