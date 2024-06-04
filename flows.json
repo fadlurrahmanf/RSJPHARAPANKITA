@@ -664,7 +664,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 160,
+        "y": 200,
         "wires": [
             [
                 "5f9f6b38940d4cbc"
@@ -684,7 +684,7 @@
         "finalize": "",
         "libs": [],
         "x": 240,
-        "y": 160,
+        "y": 200,
         "wires": [
             [
                 "797d03be49f87377"
@@ -713,7 +713,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 110,
-        "y": 200,
+        "y": 240,
         "wires": [
             [
                 "dde053031226823c"
@@ -733,7 +733,7 @@
         "finalize": "",
         "libs": [],
         "x": 230,
-        "y": 200,
+        "y": 240,
         "wires": [
             [
                 "797d03be49f87377"
@@ -863,7 +863,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 400,
-        "y": 160,
+        "y": 200,
         "wires": []
     },
     {
@@ -982,6 +982,35 @@
         "x": 390,
         "y": 360,
         "wires": []
+    },
+    {
+        "id": "254b9d7070f0e133",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "RelayInputChannel1",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "04020000FF000000F9",
+        "payloadType": "str",
+        "x": 130,
+        "y": 160,
+        "wires": [
+            [
+                "4c80d3fd31ff5440"
+            ]
+        ]
     },
     {
         "id": "e1f5480776bb23d2",
