@@ -152,6 +152,61 @@
         "h": 82
     },
     {
+        "id": "cbbdeba1125ca19b",
+        "type": "group",
+        "z": "bca4771a12cb11e6",
+        "name": "Gateway",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "61569cd1264aebef",
+            "1ec9c25db1122edf",
+            "4c80d3fd31ff5440",
+            "dd1e1bf4fa001f32"
+        ],
+        "x": 14,
+        "y": 39,
+        "w": 452,
+        "h": 82
+    },
+    {
+        "id": "1cbfcd06637d48ad",
+        "type": "group",
+        "z": "bca4771a12cb11e6",
+        "name": "initiate",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "62a153d4d974c23e",
+            "7a37686efd1c39c5",
+            "4958a8f1dc7bf670",
+            "a421582f2823dadb"
+        ],
+        "x": 704,
+        "y": 39,
+        "w": 662,
+        "h": 82
+    },
+    {
+        "id": "aadd16a462e83be5",
+        "type": "group",
+        "z": "bca4771a12cb11e6",
+        "name": "Execute SQL",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "ed77b13627de379d",
+            "2b3434178f0ac999"
+        ],
+        "x": 484,
+        "y": 39,
+        "w": 202,
+        "h": 82
+    },
+    {
         "id": "3b8e5eb93b7526d7",
         "type": "MySQLdatabase",
         "name": "",
@@ -378,6 +433,7 @@
         "id": "61569cd1264aebef",
         "type": "mqtt in",
         "z": "bca4771a12cb11e6",
+        "g": "cbbdeba1125ca19b",
         "name": "",
         "topic": "iota238/data",
         "qos": "2",
@@ -399,6 +455,7 @@
         "id": "1ec9c25db1122edf",
         "type": "mqtt out",
         "z": "bca4771a12cb11e6",
+        "g": "cbbdeba1125ca19b",
         "name": "",
         "topic": "iota238/cmd",
         "qos": "",
@@ -417,6 +474,7 @@
         "id": "4c80d3fd31ff5440",
         "type": "link out",
         "z": "bca4771a12cb11e6",
+        "g": "cbbdeba1125ca19b",
         "name": "link out 1",
         "mode": "link",
         "links": [
@@ -434,11 +492,11 @@
         "links": [
             "4c80d3fd31ff5440"
         ],
-        "x": 55,
+        "x": 45,
         "y": 320,
         "wires": [
             [
-                "caf3da4c04862df7"
+                "94514e5dd76e1b4a"
             ]
         ]
     },
@@ -446,15 +504,15 @@
         "id": "caf3da4c04862df7",
         "type": "function",
         "z": "bca4771a12cb11e6",
-        "name": "Check Device",
-        "func": "msg.networkid = msg.payload.substring(0,2);\nreturn msg;",
+        "name": "Check Network",
+        "func": "msg.deviceinfo = msg.payload[0];\nmsg.networkid = msg.realdata.substring(0,2);\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 180,
+        "x": 540,
         "y": 320,
         "wires": [
             [
@@ -466,9 +524,10 @@
         "id": "ed77b13627de379d",
         "type": "mysql",
         "z": "bca4771a12cb11e6",
+        "g": "aadd16a462e83be5",
         "mydb": "3b8e5eb93b7526d7",
         "name": " ",
-        "x": 690,
+        "x": 610,
         "y": 80,
         "wires": [
             []
@@ -496,13 +555,15 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 330,
+        "x": 690,
         "y": 320,
         "wires": [
             [
-                "94514e5dd76e1b4a"
+                "83efeb6b5a73d7c6"
             ],
-            []
+            [
+                "fb1bf2e163b3c7a9"
+            ]
         ]
     },
     {
@@ -510,14 +571,14 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": "Parse",
-        "func": "msg.deviceinfo = msg.payload[0];\nvar data = msg.realdata;\nvar numBytes = data.length / 2;\nvar byteArray = new Uint8Array(numBytes);\nfor (var i=0; i<numBytes; i++) {\n    byteArray[i] = parseInt(data.substr(i*2, 2), 16);\n}\nvar len = byteArray[3];\nvar byteData = new Uint8Array(len);\nfor (i=0; i<len; i++) {\n    byteData[i] = byteArray[i+4];\n}\nmsg.payload = byteData;\nmsg.data = data.substr(0,6);\nreturn msg;",
+        "func": "\nvar data = msg.realdata;\nvar numBytes = data.length / 2;\nvar byteArray = new Uint8Array(numBytes);\nfor (var i=0; i<numBytes; i++) {\n    byteArray[i] = parseInt(data.substr(i*2, 2), 16);\n}\nvar len = byteArray[3];\nvar byteData = new Uint8Array(len);\nfor (i=0; i<len; i++) {\n    byteData[i] = byteArray[i+4];\n}\nmsg.payload = byteData;\nmsg.data = data.substr(0,6);\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 850,
+        "x": 830,
         "y": 280,
         "wires": [
             [
@@ -573,11 +634,11 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 730,
-        "y": 280,
+        "x": 390,
+        "y": 320,
         "wires": [
             [
-                "83efeb6b5a73d7c6"
+                "caf3da4c04862df7"
             ]
         ]
     },
@@ -593,8 +654,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 480,
-        "y": 280,
+        "x": 140,
+        "y": 320,
         "wires": [
             [
                 "92b7c675366c9d8d"
@@ -737,11 +798,12 @@
         "id": "2b3434178f0ac999",
         "type": "link in",
         "z": "bca4771a12cb11e6",
+        "g": "aadd16a462e83be5",
         "name": "link in 2",
         "links": [
             "a647954ae4d429aa"
         ],
-        "x": 585,
+        "x": 525,
         "y": 80,
         "wires": [
             [
@@ -753,6 +815,7 @@
         "id": "dd1e1bf4fa001f32",
         "type": "link in",
         "z": "bca4771a12cb11e6",
+        "g": "cbbdeba1125ca19b",
         "name": "link in 3",
         "links": [],
         "x": 265,
@@ -769,8 +832,8 @@
         "z": "bca4771a12cb11e6",
         "mydb": "3b8e5eb93b7526d7",
         "name": " ",
-        "x": 610,
-        "y": 280,
+        "x": 270,
+        "y": 320,
         "wires": [
             [
                 "f41842a72cb70323"
@@ -826,6 +889,7 @@
         "id": "7a37686efd1c39c5",
         "type": "inject",
         "z": "bca4771a12cb11e6",
+        "g": "1cbfcd06637d48ad",
         "name": "  ",
         "props": [
             {
@@ -843,7 +907,7 @@
         "topic": "select * from monitoringdata",
         "payload": "",
         "payloadType": "date",
-        "x": 850,
+        "x": 800,
         "y": 80,
         "wires": [
             [
@@ -855,9 +919,10 @@
         "id": "4958a8f1dc7bf670",
         "type": "mysql",
         "z": "bca4771a12cb11e6",
+        "g": "1cbfcd06637d48ad",
         "mydb": "3b8e5eb93b7526d7",
         "name": " ",
-        "x": 970,
+        "x": 920,
         "y": 80,
         "wires": [
             [
@@ -869,6 +934,7 @@
         "id": "a421582f2823dadb",
         "type": "function",
         "z": "bca4771a12cb11e6",
+        "g": "1cbfcd06637d48ad",
         "name": "Init Global Variable",
         "func": "var json = {};\nfor (let index = 0; index < Object.keys(msg.payload[0]).length ; index++) {\n    flow.set(Object.keys(msg.payload[0])[index],msg.payload[0][Object.keys(msg.payload[0])[index]]) \n    json[String(Object.keys(msg.payload[0])[index])] = flow.get(Object.keys(msg.payload[0])[index]);  \n}\njson[\"Timestamp\"] = toEpochTimeInSeconds(json.Timestamp);\nmsg.payload = json;\nreturn msg;\n\nfunction toEpochTimeInSeconds(dateString) {\n    return Math.floor(new Date(dateString).getTime());\n}",
         "outputs": 1,
@@ -877,7 +943,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1130,
+        "x": 1080,
         "y": 80,
         "wires": [
             [
@@ -889,6 +955,7 @@
         "id": "62a153d4d974c23e",
         "type": "debug",
         "z": "bca4771a12cb11e6",
+        "g": "1cbfcd06637d48ad",
         "name": "debug 43",
         "active": true,
         "tosidebar": true,
@@ -897,9 +964,27 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1290,
-        "y": 40,
+        "x": 1260,
+        "y": 80,
         "wires": []
+    },
+    {
+        "id": "fb1bf2e163b3c7a9",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 340,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "e1f5480776bb23d2",
