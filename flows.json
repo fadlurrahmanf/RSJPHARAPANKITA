@@ -956,7 +956,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "func": "msg.deviceinfo = msg.payload[0][0];\nmsg.topic = \"\";\nif(msg.deviceinfo.keterangan == \"RelayInput\"){\n    msg.deviceinfo[\"InputVal\"] = msg.realdata.substring(8,10);\n    if(msg.deviceinfo.InputVal == \"FF\"){\n\n    }else{\n        msg.deviceinfo[\"Channel\"] = msg.payload[1][0].keterangan;\n        msg.topic += \"UPDATE `Input` SET `Stat` = 1 WHERE `keterangan` = '\"+String(msg.deviceinfo.Channel)+\"';\"\n        var RelayInput = flow.get(\"RelayInput\");\n        RelayInput[(msg.payload[1][0].Number)] = RelayInput[(msg.payload[1][0].Number)][\"Stat\"] = 1;\n        flow.set(\"RelayInput\",RelayInput);\n    }\n    \n}\nreturn msg;",
+        "func": "msg.deviceinfo = msg.payload[0][0];\nmsg.topic = \"\";\nif(msg.deviceinfo.keterangan == \"RelayInput\"){\n    msg.deviceinfo[\"InputVal\"] = msg.realdata.substring(8,10);\n    if(msg.deviceinfo.InputVal == \"FF\"){\n\n    }else{\n        msg.deviceinfo[\"Channel\"] = msg.payload[1][0].keterangan;\n        msg.topic += \"UPDATE `Input` SET `Stat` = 1 WHERE `keterangan` = '\"+String(msg.deviceinfo.Channel)+\"';\"\n        var RelayInput = flow.get(\"RelayInput\");\n        RelayInput[(msg.payload[1][0].Number)][\"Stat\"] = 1;\n        flow.set(\"RelayInput\",RelayInput);\n    }\n    \n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
