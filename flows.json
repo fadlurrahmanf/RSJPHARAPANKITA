@@ -547,7 +547,7 @@
         "type": "switch",
         "z": "bca4771a12cb11e6",
         "g": "8be50af1826bf3eb",
-        "name": "( networkID)",
+        "name": "(networkID)",
         "property": "networkid",
         "propertyType": "msg",
         "rules": [
@@ -1152,6 +1152,51 @@
         "x": 795,
         "y": 400,
         "wires": []
+    },
+    {
+        "id": "cc64b14b4d983e3f",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 90,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fa3bcb095fdfb9a7",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 500,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "e1f5480776bb23d2",
