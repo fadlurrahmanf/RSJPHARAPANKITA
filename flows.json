@@ -1190,7 +1190,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " Check",
-        "func": "var RelayInput = flow.get(\"RelayInput\");\nvar RelayOutput = flow.get(\"RelayOutput\");\nvar RunningTime = secondsToHumanReadable(Math.round((Date.now()-flow.get(\"InitTime\"))/1000));\nfor (let index = 0; index < RelayInput.length; index++) {\n    if(RelayInput[index].keterangan == \"StatusIndoor\" && RelayInput[index].Stat == 1){\n        msg[\"StatusIndoor\"] = true;\n        msg.payload = \"O-RUN-O(\"+String(RunningTime)+\")\";\n        return msg;\n    }else if(RelayInput[index].keterangan == \"StatusIndoor\" && RelayInput[index].Stat == 0){\n        msg[\"StatusIndoor\"] = false;\n        flow.set(\"statloop\",false);\n    }\n}\nmsg.payload = \"-IDLE- (\"+String(RunningTime)+\")\";\nreturn msg;\n\nfunction secondsToHumanReadable(seconds) {\n    const units = [\n        { label: 'year', value: 60 * 60 * 24 * 365 },  // Approximate, not accounting for leap years\n        { label: 'month', value: 60 * 60 * 24 * 30 },  // Approximate\n        { label: 'day', value: 60 * 60 * 24 },\n        { label: 'hour', value: 60 * 60 },\n        { label: 'minute', value: 60 },\n        { label: 'second', value: 1 }\n    ];\n\n    const result = [];\n\n    for (const unit of units) {\n        const unitValue = Math.floor(seconds / unit.value);\n        if (unitValue > 0) {\n            result.push(`${unitValue} ${unit.label}${unitValue > 1 ? 's' : ''}`);\n            seconds -= unitValue * unit.value;\n        }\n    }\n\n    return result.length > 0 ? result.join(' ') : '0 seconds';\n}",
+        "func": "var RelayInput = flow.get(\"RelayInput\");\nvar RelayOutput = flow.get(\"RelayOutput\");\nvar RunningTime = secondsToHumanReadable(Math.round((Date.now()-flow.get(\"InitTime\"))/1000));\nfor (let index = 0; index < RelayInput.length; index++) {\n    if(RelayInput[index].keterangan == \"StatusIndoor\" && RelayInput[index].Stat == 1){\n        msg[\"StatusIndoor\"] = true;\n        msg.payload = \"O-RUN-O(\"+String(RunningTime)+\")\";\n        return msg;\n    }else if(RelayInput[index].keterangan == \"StatusIndoor\" && RelayInput[index].Stat == 0){\n        msg[\"StatusIndoor\"] = false;\n        flow.set(\"cmd\",\"None\");\n    }\n}\nmsg.payload = \"-IDLE- (\"+String(RunningTime)+\")\";\nreturn msg;\n\nfunction secondsToHumanReadable(seconds) {\n    const units = [\n        { label: 'year', value: 60 * 60 * 24 * 365 },  // Approximate, not accounting for leap years\n        { label: 'month', value: 60 * 60 * 24 * 30 },  // Approximate\n        { label: 'day', value: 60 * 60 * 24 },\n        { label: 'hour', value: 60 * 60 },\n        { label: 'minute', value: 60 },\n        { label: 'second', value: 1 }\n    ];\n\n    const result = [];\n\n    for (const unit of units) {\n        const unitValue = Math.floor(seconds / unit.value);\n        if (unitValue > 0) {\n            result.push(`${unitValue} ${unit.label}${unitValue > 1 ? 's' : ''}`);\n            seconds -= unitValue * unit.value;\n        }\n    }\n\n    return result.length > 0 ? result.join(' ') : '0 seconds';\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1406,7 +1406,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "func": "msg.cmd = flow.get(\"cmdauto\");\nmsg.statloop = flow.get(\"statloop\");\nvar BatasAtasRH = 58;\nvar BatasBawahRH = 52;\nif(!msg.statloop){\n    msg.cmd = \"None\";\n    flow.set(\"cmdauto\", msg.cmd);\n}\nif(msg.cmd = \"Init\"){\n    msg.cmd = \"RequestTemp\";\n    flow.set(\"cmdauto\", msg.cmd);\n}\nif(msg.cmd == \"RequestTemp\"){\n    if ((Date.now() - flow.get(\"Temp_Cathlab\")[1]) / 1000 < 10 && (Date.now() - flow.get(\"RH_Cathlab\")[1])/1000<10){\n        \n    }\n}\n\n\nreturn msg;\n",
+        "func": "msg.cmd = flow.get(\"cmdauto\");\nvar BatasAtasRH = 58;\nvar BatasBawahRH = 52;\nif(msg.cmd = \"Init\"){\n    msg.cmd = \"RequestTemp\";\n    flow.set(\"cmdauto\", msg.cmd);\n}\nif(msg.cmd == \"RequestTemp\"){\n    if ((Date.now() - flow.get(\"Temp_Cathlab\")[1]) / 1000 < 10 && (Date.now() - flow.get(\"RH_Cathlab\")[1])/1000<10){\n        \n    }\n}\n\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1753,7 +1753,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "func": "flow.set(\"cmdauto\",\"Init\");\nflow.set(\"statloop\",true);\nreturn msg;",
+        "func": "flow.set(\"cmdauto\",\"Init\");\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1930,11 +1930,13 @@
         "type": "switch",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "property": "statloop",
+        "property": "cmd",
         "propertyType": "msg",
         "rules": [
             {
-                "t": "true"
+                "t": "neq",
+                "v": "None",
+                "vt": "str"
             }
         ],
         "checkall": "true",
