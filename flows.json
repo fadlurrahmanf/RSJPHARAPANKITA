@@ -1198,7 +1198,7 @@
         "y": 500,
         "wires": [
             [
-                "6b0dbecee3dd961c"
+                "ae03f26ebfda2cf1"
             ]
         ]
     },
@@ -1215,9 +1215,32 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 360,
+        "x": 540,
         "y": 500,
         "wires": []
+    },
+    {
+        "id": "ae03f26ebfda2cf1",
+        "type": "switch",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "property": "StatusIndoor",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 350,
+        "y": 500,
+        "wires": [
+            [
+                "6b0dbecee3dd961c"
+            ]
+        ]
     },
     {
         "id": "e1f5480776bb23d2",
