@@ -1106,7 +1106,7 @@
         "id": "624c82fc1ad9708f",
         "type": "function",
         "z": "bca4771a12cb11e6",
-        "name": "function 1",
+        "name": " ",
         "func": "flow.set(\"cmdauto\",\"RequestTemp\");\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
@@ -1114,7 +1114,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 400,
+        "x": 390,
         "y": 1020,
         "wires": [
             [
@@ -1594,6 +1594,71 @@
                 "14f91a50d6904e88"
             ]
         ]
+    },
+    {
+        "id": "765b5c52fe3e866b",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 1080,
+        "wires": [
+            [
+                "6173c03eee9cbf78"
+            ]
+        ]
+    },
+    {
+        "id": "6173c03eee9cbf78",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "func": "flow.set(\"cmdauto\",\"Waiting\");\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 1080,
+        "wires": [
+            [
+                "5bdb2b04bcd78a1f"
+            ]
+        ]
+    },
+    {
+        "id": "5bdb2b04bcd78a1f",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "debug 49",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 1080,
+        "wires": []
     },
     {
         "id": "e1f5480776bb23d2",
