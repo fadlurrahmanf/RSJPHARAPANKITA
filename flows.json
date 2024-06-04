@@ -782,7 +782,8 @@
         "g": "aadd16a462e83be5",
         "name": "link in 2",
         "links": [
-            "a647954ae4d429aa"
+            "a647954ae4d429aa",
+            "f653f7df10385059"
         ],
         "x": 525,
         "y": 80,
@@ -956,7 +957,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "func": "msg.deviceinfo = msg.payload[0][0];\nmsg.topic = \"\";\nif(msg.deviceinfo.keterangan == \"RelayInput\"){\n    msg.deviceinfo[\"InputVal\"] = msg.realdata.substring(8,10);\n    if(msg.deviceinfo.InputVal == \"FF\"){\n\n    }else{\n        msg.deviceinfo[\"Channel\"] = msg.payload[1][0].keterangan;\n        msg.topic += \"UPDATE `Input` SET `Stat` = 1 WHERE `keterangan` = '\"+String(msg.deviceinfo.Channel)+\"';\"\n        var RelayInput = flow.get(\"RelayInput\");\n        RelayInput[(msg.payload[1][0].Number)][\"Stat\"] = 1;\n        flow.set(\"RelayInput\",RelayInput);\n    }\n    \n}\nreturn msg;",
+        "func": "msg.deviceinfo = msg.payload[0][0];\nmsg.topic = \"\";\nif(msg.deviceinfo.keterangan == \"RelayInput\"){\n    msg.deviceinfo[\"InputVal\"] = msg.realdata.substring(8,10);\n    if(msg.deviceinfo.InputVal == \"FF\"){\n        \n    }else{\n        msg.deviceinfo[\"Channel\"] = msg.payload[1][0].keterangan;\n        msg.topic += \"UPDATE `Input` SET `Stat` = 1 WHERE `keterangan` = '\"+String(msg.deviceinfo.Channel)+\"';\";\n        var RelayInput = flow.get(\"RelayInput\");\n        RelayInput[(msg.payload[1][0].Number)][\"Stat\"] = 1;\n        flow.set(\"RelayInput\",RelayInput);\n    }\n    \n}\nreturn msg;\n\nfunction hexToBinary(hexString) {\n    // Parse the hexadecimal string to an integer\n    const intValue = parseInt(hexString, 16);\n\n    // Convert the integer to a binary string\n    let binaryString = intValue.toString(2);\n\n    // Pad the binary string with leading zeros if necessary\n    // Assuming each hex digit should be represented by 4 binary digits\n    const hexLength = hexString.length;\n    const expectedBinaryLength = hexLength * 4;\n    while (binaryString.length < expectedBinaryLength) {\n        binaryString = '0'.concat(binaryString);\n    }\n\n    return binaryString;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -967,7 +968,8 @@
         "y": 320,
         "wires": [
             [
-                "cbe77e3b5f568059"
+                "cbe77e3b5f568059",
+                "f653f7df10385059"
             ]
         ]
     },
@@ -1099,7 +1101,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": "function 1",
-        "func": "msg.payload = flow.get(\"RelayInput\");\nreturn msg;",
+        "func": "msg.payload = hexToBinary(\"FF\");\nreturn msg;\n\nfunction hexToBinary(hexString) {\n    // Parse the hexadecimal string to an integer\n    const intValue = parseInt(hexString, 16);\n\n    // Convert the integer to a binary string\n    let binaryString = intValue.toString(2);\n\n    // Pad the binary string with leading zeros if necessary\n    // Assuming each hex digit should be represented by 4 binary digits\n    const hexLength = hexString.length;\n    const expectedBinaryLength = hexLength * 4;\n    while (binaryString.length < expectedBinaryLength) {\n        binaryString = '0'.concat(binaryString);\n    }\n\n    return binaryString;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1128,6 +1130,20 @@
         "statusType": "auto",
         "x": 910,
         "y": 460,
+        "wires": []
+    },
+    {
+        "id": "f653f7df10385059",
+        "type": "link out",
+        "z": "bca4771a12cb11e6",
+        "name": "link out 3",
+        "mode": "link",
+        "links": [
+            "2b3434178f0ac999",
+            "9b0d96a526b14c55"
+        ],
+        "x": 775,
+        "y": 360,
         "wires": []
     },
     {
