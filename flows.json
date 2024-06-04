@@ -1107,7 +1107,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": "function 1",
-        "func": "var one = 0\nmsg.payload = !one;\nmsg.topic = \"\";\nfor (let index = 0; index < 9; index++) {\n    msg.topic += \"UPDATE `Output` SET `Dec` = '\"+String(index)+\"' WHERE `Number` = \"+String(index)+\";\";\n    \n}\nreturn msg;\n\nfunction hexToBinary(hexString) {\n    // Parse the hexadecimal string to an integer\n    const intValue = parseInt(hexString, 16);\n\n    // Convert the integer to a binary string\n    let binaryString = intValue.toString(2);\n\n    // Pad the binary string with leading zeros if necessary\n    // Assuming each hex digit should be represented by 4 binary digits\n    const hexLength = hexString.length;\n    const expectedBinaryLength = hexLength * 4;\n    while (binaryString.length < expectedBinaryLength) {\n        binaryString = '0'.concat(binaryString);\n    }\n\n    return binaryString;\n}",
+        "func": "flow.set(\"cmdauto\",\"RequestTemp\");\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1404,7 +1404,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "func": "\nreturn msg;",
+        "func": "msg.cmd = flow.get(\"cmdauto\");\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1555,7 +1555,7 @@
         "rules": [
             {
                 "t": "eq",
-                "v": "",
+                "v": "RequestTemp",
                 "vt": "str"
             }
         ],
