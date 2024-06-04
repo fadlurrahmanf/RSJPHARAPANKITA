@@ -1094,8 +1094,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 450,
-        "y": 760,
+        "x": 250,
+        "y": 840,
         "wires": [
             [
                 "624c82fc1ad9708f"
@@ -1114,8 +1114,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 590,
-        "y": 760,
+        "x": 390,
+        "y": 840,
         "wires": [
             [
                 "c09b7f80e5ac0a0c"
@@ -1134,8 +1134,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 740,
-        "y": 760,
+        "x": 540,
+        "y": 840,
         "wires": []
     },
     {
@@ -1187,7 +1187,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "func": "var RelayInput = flow.get(\"RelayInput\");\nvar RelayOutput = flow.get(\"RelayOutput\");\nif(RelayInput){\n    \n}\nreturn msg;",
+        "func": "var RelayInput = flow.get(\"RelayInput\");\nvar RelayOutput = flow.get(\"RelayOutput\");\nfor (let index = 0; index < RelayInput.length; index++) {\n    if(RelayInput[index].keterangan == \"StatusIndoor\" && RelayInput[index].Stat == 1){\n        msg[\"StatusIndoor\"] = true;\n    }\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1215,7 +1215,7 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 540,
+        "x": 360,
         "y": 500,
         "wires": []
     },
