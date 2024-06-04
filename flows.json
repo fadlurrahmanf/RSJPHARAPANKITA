@@ -881,7 +881,7 @@
         "payload": "0303030B0167010E0168780173DC4F97",
         "payloadType": "str",
         "x": 110,
-        "y": 120,
+        "y": 160,
         "wires": [
             [
                 "4c80d3fd31ff5440"
@@ -1032,7 +1032,7 @@
         "payload": "04020000DF",
         "payloadType": "str",
         "x": 130,
-        "y": 160,
+        "y": 200,
         "wires": [
             [
                 "4c80d3fd31ff5440"
@@ -1271,7 +1271,7 @@
         "payload": "04020000FF",
         "payloadType": "str",
         "x": 120,
-        "y": 200,
+        "y": 240,
         "wires": [
             [
                 "4c80d3fd31ff5440"
