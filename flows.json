@@ -493,7 +493,7 @@
             "4c80d3fd31ff5440"
         ],
         "x": 45,
-        "y": 320,
+        "y": 300,
         "wires": [
             [
                 "94514e5dd76e1b4a"
@@ -536,7 +536,7 @@
         "repair": false,
         "outputs": 2,
         "x": 550,
-        "y": 320,
+        "y": 300,
         "wires": [
             [
                 "83efeb6b5a73d7c6"
@@ -558,7 +558,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 710,
+        "x": 690,
         "y": 280,
         "wires": [
             [
@@ -571,7 +571,7 @@
         "type": "cayennelpp-decoder",
         "z": "bca4771a12cb11e6",
         "name": "decoder",
-        "x": 840,
+        "x": 820,
         "y": 280,
         "wires": [
             [
@@ -591,7 +591,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 970,
+        "x": 950,
         "y": 280,
         "wires": [
             [
@@ -615,7 +615,7 @@
         "repair": false,
         "outputs": 1,
         "x": 400,
-        "y": 320,
+        "y": 300,
         "wires": [
             [
                 "5b8d8dea5122397e"
@@ -635,7 +635,7 @@
         "finalize": "",
         "libs": [],
         "x": 140,
-        "y": 320,
+        "y": 300,
         "wires": [
             [
                 "92b7c675366c9d8d"
@@ -752,7 +752,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1090,
+        "x": 1070,
         "y": 280,
         "wires": [
             [
@@ -770,7 +770,7 @@
             "2b3434178f0ac999",
             "9b0d96a526b14c55"
         ],
-        "x": 1175,
+        "x": 1155,
         "y": 280,
         "wires": []
     },
@@ -813,10 +813,11 @@
         "mydb": "3b8e5eb93b7526d7",
         "name": " ",
         "x": 270,
-        "y": 320,
+        "y": 300,
         "wires": [
             [
-                "f41842a72cb70323"
+                "f41842a72cb70323",
+                "809d4e251a9cbaac"
             ]
         ]
     },
@@ -953,18 +954,34 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "func": "msg.deviceinfo = msg.payload[0];\nreturn msg;",
+        "func": "msg.deviceinfo = msg.payload[0];\nif(msg.deviceinfo == )\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
-        "noerr": 0,
+        "noerr": 1,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 710,
-        "y": 340,
+        "x": 690,
+        "y": 320,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "809d4e251a9cbaac",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "debug 44",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 390,
+        "y": 360,
+        "wires": []
     },
     {
         "id": "e1f5480776bb23d2",
