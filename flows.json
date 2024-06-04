@@ -1485,7 +1485,7 @@
         "z": "bca4771a12cb11e6",
         "name": "",
         "pauseType": "delay",
-        "timeout": "5",
+        "timeout": "1",
         "timeoutUnits": "seconds",
         "rate": "1",
         "nbRateUnits": "1",
