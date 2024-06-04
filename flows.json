@@ -956,7 +956,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "func": "msg.deviceinfo = msg.payload[0][0];\nmsg.topic = \"\";\nif(msg.deviceinfo.keterangan == \"RelayInput\"){\n    msg.deviceinfo[\"InputVal\"] = msg.realdata.substring(8,10);\n    if(msg.deviceinfo.InputVal == \"FF\"){\n\n    }\n    msg.deviceinfo[\"Channel\"] = msg.payload[1][0].keterangan;\n    msg.topic += \"UPDATE `Input` SET `Stat` = 1 WHERE `keterangan` = '\"+String(msg.deviceinfo.Channel)+\"';\"\n    var Relayinput = flow.get(\"RelayInput\");\n    RelayInput[]\n    flow.set(\"RelayInput\",);\n}\nreturn msg;",
+        "func": "msg.deviceinfo = msg.payload[0][0];\nmsg.topic = \"\";\nif(msg.deviceinfo.keterangan == \"RelayInput\"){\n    msg.deviceinfo[\"InputVal\"] = msg.realdata.substring(8,10);\n    if(msg.deviceinfo.InputVal == \"FF\"){\n\n    }else{\n        msg.deviceinfo[\"Channel\"] = msg.payload[1][0].keterangan;\n        msg.topic += \"UPDATE `Input` SET `Stat` = 1 WHERE `keterangan` = '\"+String(msg.deviceinfo.Channel)+\"';\"\n        var Relayinput = flow.get(\"RelayInput\");\n        RelayInput[]\n        flow.set(\"RelayInput\",);\n    }\n    \n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 2,
