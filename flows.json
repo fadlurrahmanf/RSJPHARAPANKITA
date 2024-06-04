@@ -955,7 +955,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "func": "msg.deviceinfo = msg.payload[0][0];\nif(msg.deviceinfo.keterangan == \"RelayInput\"){\n    msg.deviceinfo[\"InputVal\"] = msg.realdata.substring(8,10);\n    msg.deviceinfo[\"Channel\"] = msg.payload[1][0].keterangan;\n}\nreturn msg;",
+        "func": "msg.deviceinfo = msg.payload[0][0];\nmsg.topic = \"\";\nif(msg.deviceinfo.keterangan == \"RelayInput\"){\n    msg.deviceinfo[\"InputVal\"] = msg.realdata.substring(8,10);\n    msg.deviceinfo[\"Channel\"] = msg.payload[1][0].keterangan;\n    msg.topic += \"UPDATE `Input` SET `Stat` = 1 WHERE ``;\"\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1028,8 +1028,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 930,
-        "y": 340,
+        "x": 820,
+        "y": 320,
         "wires": []
     },
     {
