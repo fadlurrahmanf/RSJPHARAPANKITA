@@ -887,7 +887,7 @@
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
-        "topic": "select * from monitoringdata;select * from Input Order by Number ASC;",
+        "topic": "select * from monitoringdata;select * from Input Order by Number ASC;select * from Output Order by Number ASC;",
         "payload": "",
         "payloadType": "date",
         "x": 800,
