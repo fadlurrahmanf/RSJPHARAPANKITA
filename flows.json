@@ -1533,7 +1533,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": "Request Temp",
-        "func": "\nreturn msg;",
+        "func": "msg.topic = \"SELECT * FROM `devicelist` WHERE `keterangan` = 'Temp/RH,CathLab';\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1543,7 +1543,9 @@
         "x": 600,
         "y": 800,
         "wires": [
-            []
+            [
+                "b1b2db7babdaf54b"
+            ]
         ]
     },
     {
@@ -1676,6 +1678,54 @@
         "statusType": "auto",
         "x": 330,
         "y": 720,
+        "wires": []
+    },
+    {
+        "id": "b1b2db7babdaf54b",
+        "type": "mysql",
+        "z": "bca4771a12cb11e6",
+        "mydb": "3b8e5eb93b7526d7",
+        "name": " ",
+        "x": 750,
+        "y": 800,
+        "wires": [
+            [
+                "80b018645ed932c5"
+            ]
+        ]
+    },
+    {
+        "id": "3ac72ba11294aa01",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": "function 1",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "80b018645ed932c5",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "debug 50",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 890,
+        "y": 880,
         "wires": []
     },
     {
