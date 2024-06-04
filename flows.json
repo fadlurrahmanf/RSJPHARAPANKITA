@@ -1180,7 +1180,8 @@
         "y": 540,
         "wires": [
             [
-                "fa3bcb095fdfb9a7"
+                "fa3bcb095fdfb9a7",
+                "b07e4e6ebad074fb"
             ]
         ]
     },
@@ -1784,6 +1785,158 @@
                 "c3f008a339c97a2e"
             ]
         ]
+    },
+    {
+        "id": "b07e4e6ebad074fb",
+        "type": "link out",
+        "z": "bca4771a12cb11e6",
+        "name": "link out 9",
+        "mode": "link",
+        "links": [],
+        "x": 175,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "694bf36843b2868e",
+        "type": "link in",
+        "z": "bca4771a12cb11e6",
+        "name": "link in 8",
+        "links": [],
+        "x": 885,
+        "y": 600,
+        "wires": [
+            [
+                "40a624a1f8f16c78"
+            ]
+        ]
+    },
+    {
+        "id": "40a624a1f8f16c78",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "func": "var d = [];\nd.push(flow.get(\"Temp_Cathlab\"));\nd.push(flow.get(\"RH_Cathlab\"));\nd.push(flow.get(\"Temp_Machine\"));\nd.push(flow.get(\"RH_Machine\"));\nd.push(flow.get(\"Pre_Filter\"));\nd.push(flow.get(\"HEPA_Filter\"));\nreturn msg;\n\nif(d.keterangan.split(\",\")[0] == \"Temp/RH\"){\n    if(d.keterangan.split(\",\")[1] == \"CathLab\"){\n        msg.topic += \"`Temp_Cathlab` = \"+String(msg.payload.temperature_1)+\",\";\n        msg.topic += \"`RH_Cathlab` = \"+String(msg.payload.relative_humidity_1)+\";\";\n        flow.set(\"Temp_Cathlab\",[msg.payload.temperature_1,Date.now()]);\n        flow.set(\"RH_Cathlab\", [msg.payload.relative_humidity_1,Date.now()]);\n    } else if (d.keterangan.split(\",\")[1] == \"Machine\"){\n        msg.topic += \"`Temp_Machine` = \" + String(msg.payload.temperature_1) + \",\";\n        msg.topic += \"`RH_Machine` = \" + String(msg.payload.relative_humidity_1) + \";\";\n        flow.set(\"Temp_Machine\", [msg.payload.temperature_1,Date.now()]);\n        flow.set(\"RH_Machine\", [msg.payload.relative_humidity_1,Date.now()]);\n    }\n} else if (d.keterangan.split(\",\")[0] == \"Pressure\"){\n    if (d.keterangan.split(\",\")[1] == \"MediumFilter\") {\n        msg.topic += \"`Pre_Filter` = \" + String(msg.payload.barometric_pressure_1) + \";\";\n        flow.set(\"Pre_Filter\", [msg.payload.barometric_pressure_1,Date.now()]);\n    } else if (d.keterangan.split(\",\")[1] == \"HepaFilter\") {\n        msg.topic += \"`HEPA_Filter` = \" + String(msg.payload.barometric_pressure_1) + \";\";\n        flow.set(\"HEPA_Filter\", [msg.payload.barometric_pressure_1,Date.now()]);\n    }\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 600,
+        "wires": [
+            [
+                "eaea2c3e22a96a9f",
+                "042300e6b0e72670",
+                "c4f972fcf9162c5b",
+                "7ea2e7c17a42eba4",
+                "a37180a17c8d6d8e",
+                "510cccceaeed9bec"
+            ]
+        ]
+    },
+    {
+        "id": "eaea2c3e22a96a9f",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload[0]",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "a37180a17c8d6d8e",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload[1]",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "510cccceaeed9bec",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload[2]",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "7ea2e7c17a42eba4",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload[3]",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "c4f972fcf9162c5b",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload[4]",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "042300e6b0e72670",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload[5]",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 760,
+        "wires": []
     },
     {
         "id": "e1f5480776bb23d2",
