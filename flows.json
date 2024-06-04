@@ -627,7 +627,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": "Check ID",
-        "func": "msg.realdata = msg.payload;\nvar networkid = msg.payload.substring(0,2);\nvar devid = msg.payload.substring(2,4);\nvar typeid = msg.payload.substring(4,6);\nmsg.topic = \"SELECT * from `devicelist` WHERE \";\nmsg.topic += \"`networkid` = '\"+networkid+\"' AND \";\nmsg.topic += \"`devid` = '\" + devid +\"' AND \";\nmsg.topic += \"`typeid` = '\" + typeid +\"';\";\nmsg.networkid = msg.realdata.substring(0,2);\nif(msg.networkid == \"04\"){\n    msg.topic += \"SELECT * FROM `Input` WHERE `HEX` = \"+String(msg.realdata.substring(8,10))+\";\";\n}\nreturn msg;",
+        "func": "msg.realdata = msg.payload;\nvar networkid = msg.payload.substring(0,2);\nvar devid = msg.payload.substring(2,4);\nvar typeid = msg.payload.substring(4,6);\nmsg.topic = \"SELECT * from `devicelist` WHERE \";\nmsg.topic += \"`networkid` = '\"+networkid+\"' AND \";\nmsg.topic += \"`devid` = '\" + devid +\"' AND \";\nmsg.topic += \"`typeid` = '\" + typeid +\"';\";\nmsg.networkid = msg.realdata.substring(0,2);\nif(msg.networkid == \"04\"){\n    msg.topic += \"SELECT * FROM `Input` WHERE `HEX` = '\"+String(msg.realdata.substring(8,10))+\"';\";\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
