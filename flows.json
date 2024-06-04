@@ -1089,8 +1089,46 @@
         "x": 620,
         "y": 460,
         "wires": [
-            []
+            [
+                "624c82fc1ad9708f"
+            ]
         ]
+    },
+    {
+        "id": "624c82fc1ad9708f",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": "function 1",
+        "func": "msg.payload = flow.get(\"RelayInput\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 460,
+        "wires": [
+            [
+                "c09b7f80e5ac0a0c"
+            ]
+        ]
+    },
+    {
+        "id": "c09b7f80e5ac0a0c",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "debug 48",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 910,
+        "y": 460,
+        "wires": []
     },
     {
         "id": "e1f5480776bb23d2",
