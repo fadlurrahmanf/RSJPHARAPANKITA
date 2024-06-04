@@ -503,7 +503,7 @@
         "type": "link out",
         "z": "bca4771a12cb11e6",
         "g": "cbbdeba1125ca19b",
-        "name": "link out 1",
+        "name": "IncomingData",
         "mode": "link",
         "links": [
             "0cbc509033550b7f"
@@ -834,8 +834,10 @@
         "type": "link in",
         "z": "bca4771a12cb11e6",
         "g": "cbbdeba1125ca19b",
-        "name": "link in 3",
-        "links": [],
+        "name": "OutData",
+        "links": [
+            "b7a0b469689fefd3"
+        ],
         "x": 265,
         "y": 80,
         "wires": [
@@ -1710,7 +1712,10 @@
         "x": 890,
         "y": 820,
         "wires": [
-            []
+            [
+                "b7a0b469689fefd3",
+                "9d6f10db5c0fea06"
+            ]
         ]
     },
     {
@@ -1728,6 +1733,36 @@
         "statusType": "auto",
         "x": 870,
         "y": 780,
+        "wires": []
+    },
+    {
+        "id": "b7a0b469689fefd3",
+        "type": "link out",
+        "z": "bca4771a12cb11e6",
+        "name": "link out 8",
+        "mode": "link",
+        "links": [
+            "dd1e1bf4fa001f32"
+        ],
+        "x": 995,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "9d6f10db5c0fea06",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1070,
+        "y": 820,
         "wires": []
     },
     {
