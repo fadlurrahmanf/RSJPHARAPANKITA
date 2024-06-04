@@ -1177,7 +1177,9 @@
         "x": 90,
         "y": 500,
         "wires": [
-            []
+            [
+                "fa3bcb095fdfb9a7"
+            ]
         ]
     },
     {
@@ -1185,7 +1187,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "func": "\nreturn msg;",
+        "func": "var RelayInput = flow.get(\"RelayInput\");\nvar RelayOutput = flow.get(\"RelayOutput\");\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
