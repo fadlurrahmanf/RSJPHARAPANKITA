@@ -1109,7 +1109,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "func": "// Definisikan parameter PID\n\n\n\n\n// Contoh penggunaan kontrol PID untuk mengatur heater\nconst nilaiTarget = 55; // Nilai RH yang diinginkan\nlet nilaiSekarang = 70; // Nilai RH awal\n\n// Iterasi simulasi kontrol PID\nfor (let i = 0; i < 10; i++) {\n    const outputPID = kontrolPID(nilaiTarget, nilaiSekarang);\n    nilaiSekarang += outputPID; // Asumsi nilai outputPID adalah perubahan dalam nilai RH\n    console.log(\"Output PID:\", outputPID);\n    console.log(\"Nilai RH saat ini:\", nilaiSekarang);\n}\n\nreturn msg\n\n// Fungsi untuk mengatur heater dengan kontrol PID\nfunction kontrolPID(nilaiTarget, nilaiSekarang) {\n    const Kp = 0.5; // Gain proporsional\n    const Ki = 0.2; // Gain integral\n    const Kd = 0.1; // Gain derivatif\n    let errorPrev = 0;\n    let integral = 0;\n    // Hitung error saat ini\n    const error = nilaiTarget - nilaiSekarang;\n\n    // Hitung komponen PID\n    const proporsional = Kp * error;\n    integral += error;\n    const integralComp = Ki * integral;\n    const derivative = Kd * (error - errorPrev);\n\n    // Hitung output PID\n    const output = proporsional + integralComp + derivative;\n\n    // Simpan error saat ini untuk penggunaan di iterasi selanjutnya\n    errorPrev = error;\n\n    return output;\n}",
+        "func": "// Definisikan parameter PID\nconst Kp = 0.5; // Gain proporsional\nconst Ki = 0.2; // Gain integral\nconst Kd = 0.1; // Gain derivatif\n\nlet errorPrev = 0;\nlet integral = 0;\n\n// Fungsi untuk mengatur heater dengan kontrol PID\nfunction kontrolPID(nilaiTarget, nilaiSekarang) {\n    // Hitung error saat ini\n    const error = nilaiTarget - nilaiSekarang;\n\n    // Hitung komponen PID\n    const proporsional = Kp * error;\n    integral += error;\n    const integralComp = Ki * integral;\n    const derivative = Kd * (error - errorPrev);\n\n    // Hitung output PID\n    const output = proporsional + integralComp + derivative;\n\n    // Simpan error saat ini untuk penggunaan di iterasi selanjutnya\n    errorPrev = error;\n\n    return output;\n}\n\n// Contoh penggunaan kontrol PID untuk mengatur heater\nconst nilaiTarget = 55; // Nilai RH yang diinginkan\nlet nilaiSekarang = 70; // Nilai RH awal\n\n// Iterasi simulasi kontrol PID\nfor (let i = 0; i < 10; i++) {\n    const outputPID = kontrolPID(nilaiTarget, nilaiSekarang);\n    nilaiSekarang += outputPID; // Asumsi nilai outputPID adalah perubahan dalam nilai RH\n    console.log(\"Output PID:\", outputPID);\n    console.log(\"Nilai RH saat ini:\", nilaiSekarang);\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1119,9 +1119,7 @@
         "x": 410,
         "y": 1020,
         "wires": [
-            [
-                "c09b7f80e5ac0a0c"
-            ]
+            []
         ]
     },
     {
