@@ -1223,7 +1223,7 @@
         "id": "ae03f26ebfda2cf1",
         "type": "switch",
         "z": "bca4771a12cb11e6",
-        "name": "",
+        "name": " ",
         "property": "StatusIndoor",
         "propertyType": "msg",
         "rules": [
