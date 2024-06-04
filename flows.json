@@ -1804,7 +1804,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "func": "var d = [];\nd.push(flow.get(\"Temp_Cathlab\"));\nd.push(flow.get(\"RH_Cathlab\"));\nd.push(flow.get(\"Temp_Machine\"));\nd.push(flow.get(\"RH_Machine\"));\nd.push(flow.get(\"Pre_Filter\"));\nd.push(flow.get(\"HEPA_Filter\"));\nreturn msg;\n",
+        "func": "var d = [];\nd.push(flow.get(\"Temp_Cathlab\"));\nd.push(flow.get(\"RH_Cathlab\"));\nd.push(flow.get(\"Temp_Machine\"));\nd.push(flow.get(\"RH_Machine\"));\nd.push(flow.get(\"Pre_Filter\"));\nd.push(flow.get(\"HEPA_Filter\"));\nmsg.payload = d;\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
