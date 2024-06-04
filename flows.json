@@ -1406,7 +1406,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "func": "msg.cmd = flow.get(\"cmdauto\");\nmsg.statloop = flow.get(\"statloop\");\nvar BatasAtasRH = 58;\nvar BatasBawahRH = 52;\nif(msg.cmd = \"Init\"){\n    msg.cmd = \"RequestTemp\";\n    flow.set(\"cmdauto\", msg.cmd);\n}\nif(msg.cmd == \"RequestTemp\"){\n    if ((Date.now() - flow.get(\"Temp_Cathlab\")[1]) / 1000 < 10 && (Date.now() - flow.get(\"RH_Cathlab\")[1])/1000<10){\n        \n    }\n}\n\n\nreturn msg;\n",
+        "func": "msg.cmd = flow.get(\"cmdauto\");\nmsg.statloop = flow.get(\"statloop\");\nvar BatasAtasRH = 58;\nvar BatasBawahRH = 52;\nif(!msg.statloop){\n    msg.cmd = \"None\";\n}\nif(msg.cmd = \"Init\"){\n    msg.cmd = \"RequestTemp\";\n    flow.set(\"cmdauto\", msg.cmd);\n}\nif(msg.cmd == \"RequestTemp\"){\n    if ((Date.now() - flow.get(\"Temp_Cathlab\")[1]) / 1000 < 10 && (Date.now() - flow.get(\"RH_Cathlab\")[1])/1000<10){\n        \n    }\n}\n\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1465,7 +1465,7 @@
         "y": 680,
         "wires": [
             [
-                "32dded3e3ceacf4c"
+                "811d40e949e9fef1"
             ]
         ]
     },
@@ -1478,7 +1478,7 @@
         "links": [
             "996b8741f6785be0"
         ],
-        "x": 355,
+        "x": 365,
         "y": 680,
         "wires": []
     },
@@ -1499,11 +1499,11 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 270,
+        "x": 150,
         "y": 680,
         "wires": [
             [
-                "340b6dc447cb3a1f"
+                "32dded3e3ceacf4c"
             ]
         ]
     },
@@ -1957,11 +1957,11 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 140,
+        "x": 280,
         "y": 680,
         "wires": [
             [
-                "811d40e949e9fef1"
+                "340b6dc447cb3a1f"
             ]
         ]
     },
