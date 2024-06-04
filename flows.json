@@ -698,8 +698,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 100,
-        "y": 200,
+        "x": 380,
+        "y": 160,
         "wires": [
             [
                 "5f9f6b38940d4cbc"
@@ -718,8 +718,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 240,
-        "y": 200,
+        "x": 520,
+        "y": 160,
         "wires": [
             [
                 "797d03be49f87377"
@@ -747,8 +747,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 110,
-        "y": 240,
+        "x": 390,
+        "y": 200,
         "wires": [
             [
                 "dde053031226823c"
@@ -767,8 +767,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 230,
-        "y": 240,
+        "x": 510,
+        "y": 200,
         "wires": [
             [
                 "797d03be49f87377"
@@ -900,8 +900,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 400,
-        "y": 200,
+        "x": 680,
+        "y": 160,
         "wires": []
     },
     {
@@ -1239,6 +1239,35 @@
         "wires": [
             [
                 "6b0dbecee3dd961c"
+            ]
+        ]
+    },
+    {
+        "id": "aae7882546c43088",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "RelayInputAllOff",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "04020000FF",
+        "payloadType": "str",
+        "x": 120,
+        "y": 200,
+        "wires": [
+            [
+                "4c80d3fd31ff5440"
             ]
         ]
     },
