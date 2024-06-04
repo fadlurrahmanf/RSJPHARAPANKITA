@@ -1014,7 +1014,7 @@
         "id": "254b9d7070f0e133",
         "type": "inject",
         "z": "bca4771a12cb11e6",
-        "name": "RelayInputChannel1",
+        "name": "RelayInputChannel3",
         "props": [
             {
                 "p": "payload"
@@ -1029,7 +1029,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "040200007F00000079",
+        "payload": "04020000DF",
         "payloadType": "str",
         "x": 130,
         "y": 160,
