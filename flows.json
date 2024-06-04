@@ -1632,7 +1632,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "func": "flow.set(\"cmdauto\",\"Waiting\");\nreturn msg;\n",
+        "func": "msg.payload = flow.get(\"cmdauto\");\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
