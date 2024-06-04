@@ -1406,7 +1406,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "func": "msg.cmd = flow.get(\"cmdauto\");\nmsg.statloop = flow.get(\"statloop\");\nvar BatasAtasRH = 58;\nvar BatasBawahRH = 52;\nif(!msg.statloop){\n    msg.cmd = \"None\";\n}\nif(msg.cmd = \"Init\"){\n    msg.cmd = \"RequestTemp\";\n    flow.set(\"cmdauto\", msg.cmd);\n}\nif(msg.cmd == \"RequestTemp\"){\n    if ((Date.now() - flow.get(\"Temp_Cathlab\")[1]) / 1000 < 10 && (Date.now() - flow.get(\"RH_Cathlab\")[1])/1000<10){\n        \n    }\n}\n\n\nreturn msg;\n",
+        "func": "msg.cmd = flow.get(\"cmdauto\");\nmsg.statloop = flow.get(\"statloop\");\nvar BatasAtasRH = 58;\nvar BatasBawahRH = 52;\nif(!msg.statloop){\n    msg.cmd = \"None\";\n    flow.set(\"cmdauto\", msg.cmd);\n}\nif(msg.cmd = \"Init\"){\n    msg.cmd = \"RequestTemp\";\n    flow.set(\"cmdauto\", msg.cmd);\n}\nif(msg.cmd == \"RequestTemp\"){\n    if ((Date.now() - flow.get(\"Temp_Cathlab\")[1]) / 1000 < 10 && (Date.now() - flow.get(\"RH_Cathlab\")[1])/1000<10){\n        \n    }\n}\n\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
