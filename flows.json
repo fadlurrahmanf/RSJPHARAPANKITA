@@ -1602,7 +1602,8 @@
                 "ede82a4075db7adf"
             ],
             [
-                "5325683f3d621a49"
+                "5325683f3d621a49",
+                "aa65a38826eefec0"
             ],
             [
                 "dae22984db30bba3"
@@ -3484,6 +3485,31 @@
         "wires": [
             [
                 "d7f5d1cda8b9c2e4"
+            ]
+        ]
+    },
+    {
+        "id": "aa65a38826eefec0",
+        "type": "trigger",
+        "z": "bca4771a12cb11e6",
+        "name": "Waiting",
+        "op1": "",
+        "op2": "0",
+        "op1type": "nul",
+        "op2type": "str",
+        "duration": "1",
+        "extend": false,
+        "overrideDelay": true,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 460,
+        "y": 960,
+        "wires": [
+            [
+                "a88f76740bd895c4"
             ]
         ]
     },
