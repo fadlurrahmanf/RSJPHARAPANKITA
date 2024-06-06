@@ -184,7 +184,7 @@
             "4958a8f1dc7bf670",
             "a421582f2823dadb"
         ],
-        "x": 704,
+        "x": 724,
         "y": 39,
         "w": 662,
         "h": 82
@@ -199,11 +199,12 @@
         },
         "nodes": [
             "ed77b13627de379d",
-            "2b3434178f0ac999"
+            "2b3434178f0ac999",
+            "9d6f10db5c0fea06"
         ],
         "x": 484,
         "y": 39,
-        "w": 202,
+        "w": 222,
         "h": 82
     },
     {
@@ -230,7 +231,7 @@
             "a647954ae4d429aa"
         ],
         "x": 24,
-        "y": 279,
+        "y": 359,
         "w": 1192,
         "h": 162
     },
@@ -475,7 +476,8 @@
         "y": 80,
         "wires": [
             [
-                "4c80d3fd31ff5440"
+                "4c80d3fd31ff5440",
+                "2815e1177e773fe4"
             ]
         ]
     },
@@ -522,7 +524,7 @@
             "4c80d3fd31ff5440"
         ],
         "x": 65,
-        "y": 340,
+        "y": 420,
         "wires": [
             [
                 "94514e5dd76e1b4a"
@@ -566,7 +568,7 @@
         "repair": false,
         "outputs": 2,
         "x": 570,
-        "y": 340,
+        "y": 420,
         "wires": [
             [
                 "83efeb6b5a73d7c6"
@@ -590,7 +592,7 @@
         "finalize": "",
         "libs": [],
         "x": 710,
-        "y": 320,
+        "y": 400,
         "wires": [
             [
                 "df5d05325874622c"
@@ -604,7 +606,7 @@
         "g": "8be50af1826bf3eb",
         "name": "decoder",
         "x": 840,
-        "y": 320,
+        "y": 400,
         "wires": [
             [
                 "91c1d36297a0c7fd"
@@ -625,7 +627,7 @@
         "finalize": "",
         "libs": [],
         "x": 970,
-        "y": 320,
+        "y": 400,
         "wires": [
             [
                 "f20849a9ab1503b2"
@@ -649,7 +651,7 @@
         "repair": false,
         "outputs": 1,
         "x": 420,
-        "y": 340,
+        "y": 420,
         "wires": [
             [
                 "5b8d8dea5122397e"
@@ -670,7 +672,7 @@
         "finalize": "",
         "libs": [],
         "x": 160,
-        "y": 340,
+        "y": 420,
         "wires": [
             [
                 "92b7c675366c9d8d"
@@ -748,7 +750,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 390,
-        "y": 200,
+        "y": 180,
         "wires": [
             [
                 "dde053031226823c"
@@ -789,7 +791,7 @@
         "finalize": "",
         "libs": [],
         "x": 1090,
-        "y": 320,
+        "y": 400,
         "wires": [
             [
                 "a647954ae4d429aa",
@@ -809,7 +811,7 @@
             "9b0d96a526b14c55"
         ],
         "x": 1175,
-        "y": 320,
+        "y": 400,
         "wires": []
     },
     {
@@ -820,13 +822,17 @@
         "name": "link in 2",
         "links": [
             "a647954ae4d429aa",
-            "f653f7df10385059"
+            "f653f7df10385059",
+            "4c17409ddbc782a5",
+            "3fae4a69287e8867",
+            "983c5238c51828dc"
         ],
         "x": 525,
         "y": 80,
         "wires": [
             [
-                "ed77b13627de379d"
+                "ed77b13627de379d",
+                "9d6f10db5c0fea06"
             ]
         ]
     },
@@ -837,7 +843,13 @@
         "g": "cbbdeba1125ca19b",
         "name": "OutData",
         "links": [
-            "b7a0b469689fefd3"
+            "b7a0b469689fefd3",
+            "618781567775cb33",
+            "300675ed5fd9466c",
+            "022a029521e3c1dd",
+            "fe15437ea5ba0d90",
+            "fcded8e6800db872",
+            "bf104e7cca1d96a0"
         ],
         "x": 265,
         "y": 80,
@@ -855,7 +867,7 @@
         "mydb": "3b8e5eb93b7526d7",
         "name": " ",
         "x": 290,
-        "y": 340,
+        "y": 420,
         "wires": [
             [
                 "f41842a72cb70323"
@@ -929,7 +941,7 @@
         "topic": "select * from monitoringdata;select * from Input Order by Number ASC;select * from Output Order by Number ASC;",
         "payload": "",
         "payloadType": "date",
-        "x": 800,
+        "x": 820,
         "y": 80,
         "wires": [
             [
@@ -944,7 +956,7 @@
         "g": "1cbfcd06637d48ad",
         "mydb": "3b8e5eb93b7526d7",
         "name": " ",
-        "x": 920,
+        "x": 940,
         "y": 80,
         "wires": [
             [
@@ -966,7 +978,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1080,
+        "x": 1100,
         "y": 80,
         "wires": [
             [
@@ -987,7 +999,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1260,
+        "x": 1280,
         "y": 80,
         "wires": []
     },
@@ -997,7 +1009,7 @@
         "z": "bca4771a12cb11e6",
         "g": "8be50af1826bf3eb",
         "name": " Relay",
-        "func": "msg.deviceinfo = msg.payload[0];\nmsg.topic = \"\";\nif(msg.deviceinfo.keterangan == \"RelayInput\"){\n    var RelayInput = flow.get(\"RelayInput\");\n    msg.deviceinfo[\"InputVal\"] = hexToBinary(msg.realdata.substring(8,10));\n    if(msg.deviceinfo.InputVal == \"11111111\"){\n        RelayInput[0][\"Stat\"] = 1;\n        for (let index = 1; index < RelayInput.length; index++) {\n            RelayInput[index][\"Stat\"] = 0;\n        }\n        msg.topic += \"UPDATE `Input` SET `Stat` = 0;\";\n    }else{\n        RelayInput[0][\"Stat\"] = 0;\n        for (let index = 0; index < msg.deviceinfo.InputVal.length; index++) {\n            if(msg.deviceinfo.InputVal[index] == \"0\"){\n                msg.topic += \"UPDATE `Input` SET `Stat` = 1 WHERE `Number` = \"+String(index+1)+\";\";\n                RelayInput[index+1][\"Stat\"] = 1;\n            }else if(msg.deviceinfo.InputVal[index] == \"1\"){\n                msg.topic += \"UPDATE `Input` SET `Stat` = 0 WHERE `Number` = \"+String(index+1)+\";\";\n                RelayInput[index+1][\"Stat\"] = 0;\n            }\n        }\n    }\n    flow.set(\"RelayInput\", RelayInput);\n}else if(msg.deviceinfo.keterangan == \"RelayOutput\"){\n    var RelayOutput = flow.get(\"RelayOutput\");\n    msg.deviceinfo[\"OutputVal\"] = decimalToReversedBinary(msg.realdata.substring(8,10));\n    if (msg.deviceinfo.OutputVal == \"00000000\"){\n        RelayOutput[0][\"Stat\"] = 1;\n        for (let index = 1; index < RelayOutput.length; index++) {\n            RelayOutput[index][\"Stat\"] = 0;\n        }\n        msg.topic += \"UPDATE `Output` SET `Stat` = 0;\";\n    }else{\n        RelayOutput[0][\"Stat\"] = 0;\n        for (let index = 0; index < msg.deviceinfo.OutputVal.length; index++) {\n            if(msg.deviceinfo.OutputVal[index] == \"0\"){\n                msg.topic += \"UPDATE `Output` SET `Stat` = 1 WHERE `Number` = \"+String(index+1)+\";\";\n                RelayOutput[index+1][\"Stat\"] = 1;\n            }else if(msg.deviceinfo.OutputVal[index] == \"1\"){\n                msg.topic += \"UPDATE `Output` SET `Stat` = 0 WHERE `Number` = \"+String(index+1)+\";\";\n                RelayOutput[index+1][\"Stat\"] = 0;\n            }\n        }\n    }\n}\nreturn msg;\n\nfunction hexToBinary(hexString) {\n    // Parse the hexadecimal string to an integer\n    const intValue = parseInt(hexString, 16);\n\n    // Convert the integer to a binary string\n    let binaryString = intValue.toString(2);\n\n    // Pad the binary string with leading zeros if necessary\n    // Assuming each hex digit should be represented by 4 binary digits\n    const hexLength = hexString.length;\n    const expectedBinaryLength = hexLength * 4;\n    while (binaryString.length < expectedBinaryLength) {\n        binaryString = '0'.concat(binaryString);\n    }\n\n    return binaryString;\n}\n\nfunction decimalToReversedBinary(decimal) {\n    // Convert the decimal number to a binary string\n    let binaryString = decimal.toString(2);\n\n    // Pad the binary string with leading zeros to ensure it has a length of 4 bits\n    while (binaryString.length < 4) {\n        binaryString = '0'.concat(binaryString);\n    }\n\n    // Reverse the binary string\n    const reversedBinaryString = binaryString.split('').reverse().join('');\n\n    return reversedBinaryString;\n}",
+        "func": "msg.deviceinfo = msg.payload[0];\nmsg.topic = \"\";\nif(msg.deviceinfo.keterangan == \"RelayInput\"){\n    var RelayInput = flow.get(\"RelayInput\");\n    msg.deviceinfo[\"InputVal\"] = hexToBinary(msg.realdata.substring(8,10));\n    if(msg.deviceinfo.InputVal == \"11111111\"){\n        RelayInput[0][\"Stat\"] = 1;\n        for (let index = 1; index < RelayInput.length; index++) {\n            RelayInput[index][\"Stat\"] = 0;\n        }\n        msg.topic += \"UPDATE `Input` SET `Stat` = 0;\";\n    }else{\n        RelayInput[0][\"Stat\"] = 0;\n        for (let index = 0; index < msg.deviceinfo.InputVal.length; index++) {\n            if(msg.deviceinfo.InputVal[index] == \"0\"){\n                msg.topic += \"UPDATE `Input` SET `Stat` = 1 WHERE `Number` = \"+String(index+1)+\";\";\n                RelayInput[index+1][\"Stat\"] = 1;\n            }else if(msg.deviceinfo.InputVal[index] == \"1\"){\n                msg.topic += \"UPDATE `Input` SET `Stat` = 0 WHERE `Number` = \"+String(index+1)+\";\";\n                RelayInput[index+1][\"Stat\"] = 0;\n            }\n        }\n    }\n    flow.set(\"RelayInput\", RelayInput);\n}else if(msg.deviceinfo.keterangan == \"RelayOutput\"){\n    var RelayOutput = flow.get(\"RelayOutput\");\n    msg.deviceinfo[\"OutputVal\"] = decimalToReversedBinary(msg.realdata.substring(8,10));\n    if (msg.deviceinfo.OutputVal == \"00000000\"){\n        RelayOutput[0][\"Stat\"] = 1;\n        for (let index = 1; index < RelayOutput.length; index++) {\n            RelayOutput[index][\"Stat\"] = 0;\n        }\n        msg.topic += \"UPDATE `Output` SET `Stat` = 0;\";\n    }else{\n        RelayOutput[0][\"Stat\"] = 0;\n        for (let index = 0; index < msg.deviceinfo.OutputVal.length; index++) {\n            if(msg.deviceinfo.OutputVal[index] == \"0\"){\n                msg.topic += \"UPDATE `Output` SET `Stat` = 0 WHERE `Number` = \"+String(index+1)+\";\";\n                RelayOutput[index+1][\"Stat\"] = 1;\n            }else if(msg.deviceinfo.OutputVal[index] == \"1\"){\n                msg.topic += \"UPDATE `Output` SET `Stat` = 1 WHERE `Number` = \"+String(index+1)+\";\";\n                RelayOutput[index+1][\"Stat\"] = 0;\n            }\n        }\n    }\n    msg.topic += \"UPDATE `Operation` SET `Output` = \"+String(msg.realdata.substring(8,10))+\";\";\n    flow.set(\"RelayOutput\", RelayOutput);\n}\nreturn msg;\n\nfunction hexToBinary(hexString) {\n    // Parse the hexadecimal string to an integer\n    const intValue = parseInt(hexString, 16);\n\n    // Convert the integer to a binary string\n    let binaryString = intValue.toString(2);\n\n    // Pad the binary string with leading zeros if necessary\n    // Assuming each hex digit should be represented by 4 binary digits\n    const hexLength = hexString.length;\n    const expectedBinaryLength = hexLength * 4;\n    while (binaryString.length < expectedBinaryLength) {\n        binaryString = '0'.concat(binaryString);\n    }\n\n    return binaryString;\n}\n\nfunction decimalToReversedBinary(decimal) {\n    // Convert the decimal number to a binary string\n    let binaryString = decimal.toString(2);\n\n    // Pad the binary string with leading zeros to ensure it has a length of 4 bits\n    while (binaryString.length < 4) {\n        binaryString = '0'.concat(binaryString);\n    }\n\n    // Reverse the binary string\n    const reversedBinaryString = binaryString.split('').reverse().join('');\n\n    return reversedBinaryString;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1005,7 +1017,7 @@
         "finalize": "",
         "libs": [],
         "x": 710,
-        "y": 360,
+        "y": 440,
         "wires": [
             [
                 "cbe77e3b5f568059",
@@ -1057,7 +1069,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 840,
-        "y": 360,
+        "y": 440,
         "wires": []
     },
     {
@@ -1097,8 +1109,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 270,
-        "y": 1020,
+        "x": 180,
+        "y": 1120,
         "wires": [
             [
                 "624c82fc1ad9708f"
@@ -1110,15 +1122,15 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "func": "// Definisikan parameter PID\nconst Kp = 0.5; // Gain proporsional\nconst Ki = 0.2; // Gain integral\nconst Kd = 0.1; // Gain derivatif\n\nlet errorPrev = 0;\nlet integral = 0;\n\n// Fungsi untuk mengatur heater dengan kontrol PID\nfunction kontrolPID(nilaiTarget, nilaiSekarang) {\n    // Hitung error saat ini\n    const error = nilaiTarget - nilaiSekarang;\n\n    // Hitung komponen PID\n    const proporsional = Kp * error;\n    integral += error;\n    const integralComp = Ki * integral;\n    const derivative = Kd * (error - errorPrev);\n\n    // Hitung output PID\n    const output = proporsional + integralComp + derivative;\n\n    // Simpan error saat ini untuk penggunaan di iterasi selanjutnya\n    errorPrev = error;\n\n    return output;\n}\n\n// Contoh penggunaan kontrol PID untuk mengatur heater\nconst nilaiTarget = 55; // Nilai RH yang diinginkan\nlet nilaiSekarang = 70; // Nilai RH awal\n\n// Iterasi simulasi kontrol PID\nfor (let i = 0; i < 10; i++) {\n    const outputPID = kontrolPID(nilaiTarget, nilaiSekarang);\n    nilaiSekarang += outputPID; // Asumsi nilai outputPID adalah perubahan dalam nilai RH\n    console.log(\"Output PID:\", outputPID);\n    console.log(\"Nilai RH saat ini:\", nilaiSekarang);\n}\n",
+        "func": "// Definisikan parameter PID\nconst Kp = 0.5; // Gain proporsional\nconst Ki = 0.2; // Gain integral\nconst Kd = 0.1; // Gain derivatif\n\nlet errorPrev = 0;\nlet integral = 0;\n\n// Fungsi untuk mengatur heater dengan kontrol PID\nfunction kontrolPID(nilaiTarget, nilaiSekarang) {\n    // Hitung error saat ini\n    const error = nilaiTarget - nilaiSekarang;\n\n    // Hitung komponen PID\n    const proporsional = Kp * error;\n    integral += error;\n    const integralComp = Ki * integral;\n    const derivative = Kd * (error - errorPrev);\n\n    // Hitung output PID\n    const output = proporsional + integralComp + derivative;\n\n    // Simpan error saat ini untuk penggunaan di iterasi selanjutnya\n    errorPrev = error;\n\n    return output;\n}\n\n// Contoh penggunaan kontrol PID untuk mengatur heater\nconst nilaiTarget = 55; // Nilai RH yang diinginkan\nlet nilaiSekarang = 60; // Nilai RH awal\n\n// Iterasi simulasi kontrol PID\nfor (let i = 0; i < 10; i++) {\n    const outputPID = kontrolPID(nilaiTarget, nilaiSekarang);\n    nilaiSekarang += outputPID; // Asumsi nilai outputPID adalah perubahan dalam nilai RH\n    console.log(\"Output PID:\", outputPID);\n    console.log(\"Nilai RH saat ini:\", nilaiSekarang);\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 410,
-        "y": 1020,
+        "x": 320,
+        "y": 1120,
         "wires": [
             []
         ]
@@ -1135,8 +1147,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 550,
-        "y": 1020,
+        "x": 460,
+        "y": 1120,
         "wires": []
     },
     {
@@ -1151,7 +1163,7 @@
             "9b0d96a526b14c55"
         ],
         "x": 795,
-        "y": 400,
+        "y": 480,
         "wires": []
     },
     {
@@ -1176,7 +1188,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 90,
-        "y": 540,
+        "y": 580,
         "wires": [
             [
                 "fa3bcb095fdfb9a7",
@@ -1197,7 +1209,7 @@
         "finalize": "",
         "libs": [],
         "x": 210,
-        "y": 540,
+        "y": 580,
         "wires": [
             [
                 "ae03f26ebfda2cf1",
@@ -1219,7 +1231,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 350,
-        "y": 580,
+        "y": 620,
         "wires": []
     },
     {
@@ -1241,7 +1253,7 @@
         "repair": false,
         "outputs": 2,
         "x": 350,
-        "y": 540,
+        "y": 580,
         "wires": [
             [
                 "53ef936abb21b675"
@@ -1298,7 +1310,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 470,
-        "y": 520,
+        "y": 560,
         "wires": [
             [
                 "eeaad9e4a7b40fec"
@@ -1319,7 +1331,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 750,
-        "y": 520,
+        "y": 560,
         "wires": []
     },
     {
@@ -1335,7 +1347,7 @@
         "finalize": "",
         "libs": [],
         "x": 470,
-        "y": 560,
+        "y": 600,
         "wires": [
             [
                 "e824b89db0dcadfc"
@@ -1352,7 +1364,7 @@
             "5c0e450f5d574f30"
         ],
         "x": 565,
-        "y": 560,
+        "y": 600,
         "wires": []
     },
     {
@@ -1364,7 +1376,7 @@
             "e824b89db0dcadfc"
         ],
         "x": 385,
-        "y": 500,
+        "y": 540,
         "wires": [
             [
                 "53ef936abb21b675"
@@ -1381,7 +1393,7 @@
             "98d4b79922df7538"
         ],
         "x": 675,
-        "y": 520,
+        "y": 560,
         "wires": []
     },
     {
@@ -1405,7 +1417,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "func": "msg.cmd = flow.get(\"cmdauto\");\nvar BatasAtasRH = 58;\nvar BatasBawahRH = 52;\n//----------------------------------------------------\n// Definisikan parameter PID\nvar Kp = 0.5; // Gain proporsional\nvar Ki = 0.2; // Gain integral\nvar Kd = 0.1; // Gain derivatif\n\nvar errorPrev = 0;\nvar integral = 0;\n//----------------------------------------------------\nif(msg.cmd == \"Init\"){\n    msg.cmd = \"RequestTemp\";\n    flow.set(\"cmdauto\", msg.cmd);\n}\nif(msg.cmd == \"RequestTemp\"){\n    if ((Date.now() - flow.get(\"Temp_Cathlab\")[1]) / 1000 < 10 && (Date.now() - flow.get(\"RH_Cathlab\")[1])/1000<10){\n        var RH_Cathlab = flow.get(\"RH_Cathlab\")[0];\n        var dur = kontrolPID(45,RH_Cathlab);\n        if((dur*(-1))<10){\n            \n        }\n    }\n    \n}\n\nreturn msg;\n\nfunction kontrolPID(nilaiTarget, nilaiSekarang) {\n    // Hitung error saat ini\n    const error = nilaiTarget - nilaiSekarang;\n\n    // Hitung komponen PID\n    const proporsional = Kp * error;\n    integral += error;\n    const integralComp = Ki * integral;\n    const derivative = Kd * (error - errorPrev);\n\n    // Hitung output PID\n    const output = proporsional + integralComp + derivative;\n\n    // Simpan error saat ini untuk penggunaan di iterasi selanjutnya\n    errorPrev = error;\n\n    return output;\n}\n",
+        "func": "msg.cmd = flow.get(\"cmdauto\");\nvar BatasAtasRH = 58;\nvar BatasBawahRH = 52;\nvar RelayInput = flow.get(\"RelayInput\");\nvar RelayOutput = flow.get(\"RelayOutput\");\n//----------------------------------------------------\n// Definisikan parameter PID\nvar Kp = 0.5; // Gain proporsional\nvar Ki = 0.2; // Gain integral\nvar Kd = 0.1; // Gain derivatif\nvar SetPoint = 50;\n\nvar errorPrev = 0;\nvar integral = 0;\n//----------------------------------------------------\nif(msg.cmd == \"Init\"){\n    msg.cmd = \"MonitorTemp\";\n}else if(msg.cmd == \"MonitorTemp\"){\n    if ((Date.now() - flow.get(\"Temp_Cathlab\")[1]) / 1000 < 10 && (Date.now() - flow.get(\"RH_Cathlab\")[1])/1000<10){\n        var RH_Cathlab = flow.get(\"RH_Cathlab\")[0];\n        if (RH_Cathlab >= (SetPoint + 1)) {\n            var dur = kontrolPID(SetPoint,RH_Cathlab)*(-1)*60*1000;\n            if(dur<0){\n                return msg;\n            }\n            flow.set(\"DurationEH\",[Math.round(dur),Date.now()]);\n            msg.cmd = \"OnEH\"+\" =[EH1]\";\n            console.log(String(dur));\n        }\n    }\n}else if(msg.cmd == \"OnEH\"+\" =[EH1]\"){\n    for (let index = 0; index < RelayOutput.length; index++) {\n        if(RelayOutput[index].keterangan == \"EH1\" && RelayOutput[index].Stat == 1){\n            msg.cmd = \"Waiting\";\n            msg.delay = flow.get(\"DurationEH\")[0];\n        }\n    }\n} else if (msg.cmd == \"Waiting Force Done\"){\n    msg.cmd = \"MonitorTemp\";\n} else if(msg.cmd.substring(0,7) == \"Waiting\"){\n    var timeRemaining = Math.round(((flow.get(\"DurationEH\")[0]+flow.get(\"DurationEH\")[1])-Date.now())/1000);\n    msg.cmd = \"Waiting = \"+String(epochtostr(timeRemaining));\n    \n    var RH_Cathlab = flow.get(\"RH_Cathlab\")[0];\n    if (RH_Cathlab < (SetPoint+1)){\n        msg.cmd = \"Waiting Force Done\";\n        msg.reset = true;\n    }\n    console.log(\"Timeremaining : \"+String(timeRemaining));\n    console.log(\"DurationEH : \"+String((Math.round((flow.get(\"DurationEH\")[0])/1000)/2)));\n    if(timeRemaining <= (Math.round((flow.get(\"DurationEH\")[0])/1000)/2)){\n        for (let index = 0; index < RelayOutput.length; index++) {\n            if(RelayOutput[index].keterangan == \"EH2\" && RelayOutput[index].Stat == 0){\n                msg.cmd += \" =[EH2]\";\n            }\n        }\n    }\n} else if(msg.cmd == \"Timeout\"){\n    var RH_Cathlab = flow.get(\"RH_Cathlab\")[0];\n    msg.cmd = \"MonitorTemp\";\n}\nflow.set(\"cmdauto\", msg.cmd);\nreturn msg;\n\nfunction kontrolPID(nilaiTarget, nilaiSekarang) {\n    // Hitung error saat ini\n    const error = nilaiTarget - nilaiSekarang;\n\n    // Hitung komponen PID\n    const proporsional = Kp * error;\n    integral += error;\n    const integralComp = Ki * integral;\n    const derivative = Kd * (error - errorPrev);\n\n    // Hitung output PID\n    const output = proporsional + integralComp + derivative;\n\n    // Simpan error saat ini untuk penggunaan di iterasi selanjutnya\n    errorPrev = error;\n\n    return output;\n}\nfunction epochtostr(seconds) {\n    const units = [\n        { label: 'year', value: 60 * 60 * 24 * 365 },  // Approximate, not accounting for leap years\n        { label: 'month', value: 60 * 60 * 24 * 30 },  // Approximate\n        { label: 'day', value: 60 * 60 * 24 },\n        { label: 'hour', value: 60 * 60 },\n        { label: 'minute', value: 60 },\n        { label: 'second', value: 1 }\n    ];\n\n    const result = [];\n\n    for (const unit of units) {\n        const unitValue = Math.floor(seconds / unit.value);\n        if (unitValue > 0) {\n            result.push(`${unitValue} ${unit.label}${unitValue > 1 ? 's' : ''}`);\n            seconds -= unitValue * unit.value;\n        }\n    }\n\n    return result.length > 0 ? result.join(' ') : '0 seconds';\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1559,18 +1571,43 @@
         "rules": [
             {
                 "t": "eq",
-                "v": "RequestTemp",
+                "v": "MonitorTemp",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "=[EH",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Waiting",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "OffEH",
                 "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 1,
+        "outputs": 4,
         "x": 330,
-        "y": 800,
+        "y": 840,
         "wires": [
             [
                 "8f99e09dae854b85"
+            ],
+            [
+                "ede82a4075db7adf"
+            ],
+            [
+                "5325683f3d621a49",
+                "aa65a38826eefec0"
+            ],
+            [
+                "dae22984db30bba3"
             ]
         ]
     },
@@ -1620,8 +1657,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 250,
-        "y": 1080,
+        "x": 160,
+        "y": 1180,
         "wires": [
             [
                 "6173c03eee9cbf78"
@@ -1633,15 +1670,15 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "func": "msg.payload = flow.get(\"cmdauto\");\nreturn msg;\n",
+        "func": "msg.payload = binaryToHex(\"100\");\n\nreturn msg;\n\n\nfunction binaryToHex(binaryStr) {\n    // Ensure the input is a valid binary string\n    if (typeof binaryStr !== 'string' || !/^[01]+$/.test(binaryStr)) {\n        throw new Error('Input must be a valid binary string');\n    }\n\n    // Parse the binary string to a decimal number\n    const decimal = parseInt(binaryStr, 2);\n\n    // Convert the decimal number to a hexadecimal string\n    const hexStr = decimal.toString(16);\n\n    // Return the hexadecimal string (in uppercase for consistency)\n    return hexStr.toUpperCase();\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 410,
-        "y": 1080,
+        "x": 320,
+        "y": 1180,
         "wires": [
             [
                 "5bdb2b04bcd78a1f"
@@ -1660,8 +1697,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 550,
-        "y": 1080,
+        "x": 480,
+        "y": 1180,
         "wires": []
     },
     {
@@ -1692,12 +1729,10 @@
         "finalize": "",
         "libs": [],
         "x": 890,
-        "y": 820,
+        "y": 800,
         "wires": [
             [
-                "b7a0b469689fefd3",
-                "9d6f10db5c0fea06",
-                "4edd3dee5c25c875"
+                "022a029521e3c1dd"
             ]
         ]
     },
@@ -1715,7 +1750,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 870,
-        "y": 780,
+        "y": 760,
         "wires": []
     },
     {
@@ -1727,25 +1762,8 @@
         "links": [
             "dd1e1bf4fa001f32"
         ],
-        "x": 995,
-        "y": 820,
-        "wires": []
-    },
-    {
-        "id": "9d6f10db5c0fea06",
-        "type": "debug",
-        "z": "bca4771a12cb11e6",
-        "name": " ",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 1090,
-        "y": 820,
+        "x": 1075,
+        "y": 840,
         "wires": []
     },
     {
@@ -1761,7 +1779,7 @@
         "finalize": "",
         "libs": [],
         "x": 590,
-        "y": 520,
+        "y": 560,
         "wires": [
             [
                 "ba8c9cc35b114ccc",
@@ -1779,7 +1797,7 @@
             "694bf36843b2868e"
         ],
         "x": 175,
-        "y": 500,
+        "y": 540,
         "wires": []
     },
     {
@@ -1791,7 +1809,7 @@
             "b07e4e6ebad074fb"
         ],
         "x": 885,
-        "y": 600,
+        "y": 580,
         "wires": [
             [
                 "40a624a1f8f16c78",
@@ -1804,7 +1822,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "func": "var d = [];\nd.push(flow.get(\"Temp_Cathlab\"));\nd.push(flow.get(\"RH_Cathlab\"));\nd.push(flow.get(\"Temp_Machine\"));\nd.push(flow.get(\"RH_Machine\"));\nd.push(flow.get(\"Pre_Filter\"));\nd.push(flow.get(\"HEPA_Filter\"));\nmsg.payload = d;\nreturn msg;\n",
+        "func": "var d = [];\nd.push(flow.get(\"Temp_Cathlab\"));\nd.push(flow.get(\"RH_Cathlab\"));\nd.push(flow.get(\"Temp_Machine\"));\nd.push(flow.get(\"RH_Machine\"));\nd.push(flow.get(\"Pre_Filter\"));\nd.push(flow.get(\"HEPA_Filter\"));\nd.push(flow.get(\"DurationEH\"));\nmsg.payload = d;\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1812,7 +1830,7 @@
         "finalize": "",
         "libs": [],
         "x": 970,
-        "y": 600,
+        "y": 580,
         "wires": [
             [
                 "eaea2c3e22a96a9f",
@@ -1820,7 +1838,8 @@
                 "c4f972fcf9162c5b",
                 "7ea2e7c17a42eba4",
                 "a37180a17c8d6d8e",
-                "510cccceaeed9bec"
+                "510cccceaeed9bec",
+                "12622275c3de0746"
             ]
         ]
     },
@@ -1838,7 +1857,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 1180,
-        "y": 460,
+        "y": 560,
         "wires": []
     },
     {
@@ -1855,7 +1874,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 1170,
-        "y": 520,
+        "y": 600,
         "wires": []
     },
     {
@@ -1872,7 +1891,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 1180,
-        "y": 580,
+        "y": 640,
         "wires": []
     },
     {
@@ -1889,7 +1908,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 1170,
-        "y": 640,
+        "y": 680,
         "wires": []
     },
     {
@@ -1906,7 +1925,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 1160,
-        "y": 700,
+        "y": 720,
         "wires": []
     },
     {
@@ -1986,27 +2005,10 @@
         "topic": "topic",
         "outputs": 1,
         "x": 970,
-        "y": 640,
+        "y": 620,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "4edd3dee5c25c875",
-        "type": "debug",
-        "z": "bca4771a12cb11e6",
-        "name": " ",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "duration",
-        "targetType": "msg",
-        "statusVal": "duration",
-        "statusType": "auto",
-        "x": 1090,
-        "y": 880,
-        "wires": []
     },
     {
         "id": "2569110ea08f2a58",
@@ -2020,8 +2022,1512 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1270,
+        "x": 1280,
         "y": 320,
+        "wires": []
+    },
+    {
+        "id": "618781567775cb33",
+        "type": "link out",
+        "z": "bca4771a12cb11e6",
+        "name": "link out 10",
+        "mode": "link",
+        "links": [
+            "dd1e1bf4fa001f32"
+        ],
+        "x": 565,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "e891fec5ffdf34ff",
+        "type": "mqtt in",
+        "z": "bca4771a12cb11e6",
+        "d": true,
+        "name": "",
+        "topic": "iota238/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "415d098faf23ad7c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 660,
+        "y": 200,
+        "wires": [
+            [
+                "3a635d2fd0debdf4",
+                "e8850da42b358071"
+            ]
+        ]
+    },
+    {
+        "id": "9e9e4bbb0c14950b",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "debug 51",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1200,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "ede82a4075db7adf",
+        "type": "trigger",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "op1": "1",
+        "op2": "",
+        "op1type": "str",
+        "op2type": "nul",
+        "duration": "15",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 450,
+        "y": 860,
+        "wires": [
+            [
+                "db7e71f59821125d"
+            ]
+        ]
+    },
+    {
+        "id": "db7e71f59821125d",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": "Turn On EH",
+        "func": "msg.topic = \"SELECT * FROM `devicelist` WHERE `keterangan` = 'RelayOutput';\";\nmsg.topic += \"SELECT * FROM `Output` WHERE `keterangan` = 'EH1' OR `keterangan` = 'EH2';\";\nmsg.topic += \"SELECT * FROM `Operation`;\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 860,
+        "wires": [
+            [
+                "89f81b486a2b2f8d"
+            ]
+        ]
+    },
+    {
+        "id": "89f81b486a2b2f8d",
+        "type": "mysql",
+        "z": "bca4771a12cb11e6",
+        "mydb": "3b8e5eb93b7526d7",
+        "name": " ",
+        "x": 750,
+        "y": 860,
+        "wires": [
+            [
+                "4776d2059a76e625"
+            ]
+        ]
+    },
+    {
+        "id": "4776d2059a76e625",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": " On1",
+        "func": "msg.resultsql = msg.payload;\nvar d = msg.payload[0][0];\nvar cmd = \"\";\nmsg.statusEH1 = false;\nmsg.statusEH2 = false;\nfor (let index = 0; index < Object.keys(d).length - 2; index++) {\n    cmd += d[Object.keys(d)[index]];\n}\ncmd += \"01\";\nconsole.log(\"Output : \"+msg.payload[2][0].Output);\nvar binarycurrent = reverseString(decToBinary(msg.payload[2][0].Output));\nconsole.log(\"Bin : \"+binarycurrent);\nif (binarycurrent[msg.payload[1][0].Number - 1] == \"0\" && msg.cmd.includes(\"=[EH1]\")) {\n    binarycurrent[msg.payload[1][0].Number - 1] == \"1\";\n    console.log(true);\n    if(flow.get(\"RelayOutput\")[msg.payload[1][0].Number].Stat == 0){\n        msg.statusEH1 = true;\n    }else{\n        msg.statusEH1 = false;\n    }\n    msg.payload[2][0][\"Output\"] = msg.payload[2][0].Output + msg.payload[1][0].Dec;\n}\nif (binarycurrent[msg.payload[1][1].Number - 1] == \"0\" && msg.cmd.includes(\"=[EH2]\")){\n    msg.statusEH2 = true;\n}\nmsg.numberOutput = msg.payload[2][0].Output;\nvar hex = binaryToHex(reverseString(binarycurrent));\ncmd += \"0000\" + \"000\" + String(dec2hex(hex));\nmsg.payload = cmd;\nreturn msg;\n\nfunction dec2hex(decimalNumber) {\n    if (decimalNumber < 0 || decimalNumber > 15) {\n        return \"Out of range\";\n    }\n    return decimalNumber.toString(16).toUpperCase();\n}\n\nfunction decToBinary(dec) {\n    // Ensure the input is a number\n    if (typeof dec !== 'number' || isNaN(dec)) {\n        throw new Error('Input must be a valid number');\n    }\n\n    // Handle negative numbers by using two's complement representation\n    if (dec < 0) {\n        return (dec >>> 0).toString(2).padStart(32, '0');\n    }\n\n    // Convert decimal to binary using toString method\n    let binaryStr = dec.toString(2);\n\n    // Pad the binary string to 8 bits\n    return binaryStr.padStart(8, '0');\n}\nfunction reverseString(str) {\n    // Mengubah string menjadi array, membalik array, dan menggabungkan kembali menjadi string\n    return str.split('').reverse().join('');\n}\n\nfunction binaryToHex(binaryStr) {\n    // Ensure the input is a valid binary string\n    if (typeof binaryStr !== 'string' || !/^[01]+$/.test(binaryStr)) {\n        throw new Error('Input must be a valid binary string');\n    }\n\n    // Parse the binary string to a decimal number\n    const decimal = parseInt(binaryStr, 2);\n\n    // Convert the decimal number to a hexadecimal string\n    const hexStr = decimal.toString(16);\n\n    // Return the hexadecimal string (in uppercase for consistency)\n    return hexStr.toUpperCase();\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 860,
+        "wires": [
+            [
+                "e181d40ba2c883c6",
+                "7ef3d8868618eb2f",
+                "b5c3d45fb53e2072"
+            ]
+        ]
+    },
+    {
+        "id": "d7f5d1cda8b9c2e4",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": "Request Temp",
+        "func": "msg.topic = \"SELECT * FROM `devicelist` WHERE `keterangan` = 'Temp/RH,CathLab';\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 920,
+        "wires": [
+            [
+                "86d93e43ac494bd0"
+            ]
+        ]
+    },
+    {
+        "id": "86d93e43ac494bd0",
+        "type": "mysql",
+        "z": "bca4771a12cb11e6",
+        "mydb": "3b8e5eb93b7526d7",
+        "name": " ",
+        "x": 750,
+        "y": 920,
+        "wires": [
+            [
+                "ab10a2b4ace98698"
+            ]
+        ]
+    },
+    {
+        "id": "ab10a2b4ace98698",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": "Requesting",
+        "func": "var d = msg.payload[0];\nvar cmd = \"\";\nfor (let index = 0; index < Object.keys(d).length-2; index++) {\n    cmd += d[Object.keys(d)[index]];\n}\ncmd += \"00\";\ncmd += \"00000000\";\nmsg.payload = cmd;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 920,
+        "wires": [
+            [
+                "fe15437ea5ba0d90"
+            ]
+        ]
+    },
+    {
+        "id": "11a6ec30eae126da",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 1260,
+        "wires": [
+            [
+                "a9f72959fbe5bfba"
+            ]
+        ]
+    },
+    {
+        "id": "a9f72959fbe5bfba",
+        "type": "trigger",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "op1": "1",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "-1",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 540,
+        "y": 1280,
+        "wires": [
+            [
+                "bb929e060d822f19"
+            ]
+        ]
+    },
+    {
+        "id": "bb929e060d822f19",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "debug 52",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "04080a1130160b5c",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "reset",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "reset",
+                "v": "true",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 370,
+        "y": 1220,
+        "wires": [
+            [
+                "a9f72959fbe5bfba"
+            ]
+        ]
+    },
+    {
+        "id": "9f44d28a524d189a",
+        "type": "link out",
+        "z": "bca4771a12cb11e6",
+        "name": "link out 11",
+        "mode": "link",
+        "links": [
+            "74eb172db82ec21b"
+        ],
+        "x": 675,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "a88f76740bd895c4",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": "Reset",
+        "func": "msg.reset = true;\nmsg.cmd = \"Timeout\";\nflow.set(\"cmdauto\",msg.cmd);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 960,
+        "wires": [
+            [
+                "9f44d28a524d189a"
+            ]
+        ]
+    },
+    {
+        "id": "74eb172db82ec21b",
+        "type": "link in",
+        "z": "bca4771a12cb11e6",
+        "name": "link in 9",
+        "links": [
+            "9f44d28a524d189a"
+        ],
+        "x": 315,
+        "y": 920,
+        "wires": [
+            [
+                "5325683f3d621a49"
+            ]
+        ]
+    },
+    {
+        "id": "12622275c3de0746",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "DurationEH",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload[6]",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1170,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "5325683f3d621a49",
+        "type": "trigger",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "op1": "1",
+        "op2": "",
+        "op1type": "str",
+        "op2type": "nul",
+        "duration": "-30",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 450,
+        "y": 920,
+        "wires": [
+            [
+                "d7f5d1cda8b9c2e4"
+            ]
+        ]
+    },
+    {
+        "id": "3a635d2fd0debdf4",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": "Parse",
+        "func": "msg.data = msg.payload;\nvar data = msg.payload;\nvar numBytes = data.length / 2;\nvar byteArray = new Uint8Array(numBytes);\nfor (var i=0; i<numBytes; i++) {\n    byteArray[i] = parseInt(data.substr(i*2, 2), 16);\n}\nvar len = byteArray[3];\nvar byteData = new Uint8Array(len);\nfor (i=0; i<len; i++) {\n    byteData[i] = byteArray[i+4];\n}\nmsg.payload = byteData;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 220,
+        "wires": [
+            [
+                "92c487871b3e54f5"
+            ]
+        ]
+    },
+    {
+        "id": "92c487871b3e54f5",
+        "type": "cayennelpp-decoder",
+        "z": "bca4771a12cb11e6",
+        "name": "decoder",
+        "x": 940,
+        "y": 220,
+        "wires": [
+            [
+                "5607eb9495880319"
+            ]
+        ]
+    },
+    {
+        "id": "5607eb9495880319",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": " Build",
+        "func": "var data = msg.payload;\ndata.networkid = msg.data.substring(0,2);\ndata.devid = msg.data.substring(2,4);\ndata.typeid = msg.data.substring(4,6);\ndata.epoch = (Date.now());\nmsg.payload = data;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 220,
+        "wires": [
+            [
+                "9e9e4bbb0c14950b"
+            ]
+        ]
+    },
+    {
+        "id": "e8850da42b358071",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "debug 55",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "0f12a6ea891b06a6",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "func": "// Definisikan objek payload sesuai struktur\nconst payload = {\n  networkId: 3,    // uint8_t\n  deviceId: 5,     // uint8_t\n  cmd: 0,          // uint8_t\n  vParams: 1       // uint32_t\n};\n\n// Fungsi untuk mengonversi objek payload ke buffer\nfunction toBuffer(payload) {\n  const buffer = new ArrayBuffer(7); // Total 7 bytes\n  const view = new DataView(buffer);\n  \n  view.setUint8(0, payload.networkId);      // 1 byte\n  view.setUint8(1, payload.deviceId);       // 1 byte\n  view.setUint8(2, payload.cmd);            // 1 byte\n  view.setUint32(3, payload.vParams, true); // 4 bytes, little-endian\n\n  return buffer;\n}\n\n// Fungsi untuk mengonversi buffer ke array biner\nfunction bufferToBinaryArray(buffer) {\n  return new Uint8Array(buffer);\n}\n\n// Konversi payload ke buffer\nconst buffer = toBuffer(payload);\n\n// Konversi buffer ke array biner\nconst binaryArray = bufferToBinaryArray(buffer);\n\n// Menampilkan hasil\nconsole.log(binaryArray); // Output: Uint8Array(7) [3, 5, 0, 1, 0, 0, 0]\n\nmsg.payload = binaryArray;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1390,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ad16923ac117ca11",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "02020000000000",
+        "payloadType": "str",
+        "x": 330,
+        "y": 1320,
+        "wires": [
+            [
+                "618781567775cb33"
+            ]
+        ]
+    },
+    {
+        "id": "d93bd8c13a098354",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "02030000000000",
+        "payloadType": "str",
+        "x": 330,
+        "y": 1340,
+        "wires": [
+            [
+                "618781567775cb33"
+            ]
+        ]
+    },
+    {
+        "id": "452a08a2ecd000fb",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "03020000000000",
+        "payloadType": "str",
+        "x": 330,
+        "y": 1360,
+        "wires": [
+            [
+                "618781567775cb33"
+            ]
+        ]
+    },
+    {
+        "id": "81c53adc24a6b2c0",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "03030000000000",
+        "payloadType": "str",
+        "x": 330,
+        "y": 1380,
+        "wires": [
+            [
+                "618781567775cb33"
+            ]
+        ]
+    },
+    {
+        "id": "630633361be9d6e5",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "02040000000000",
+        "payloadType": "str",
+        "x": 330,
+        "y": 1420,
+        "wires": [
+            [
+                "618781567775cb33"
+            ]
+        ]
+    },
+    {
+        "id": "6740adef3e356734",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "02050000000000",
+        "payloadType": "str",
+        "x": 330,
+        "y": 1440,
+        "wires": [
+            [
+                "618781567775cb33"
+            ]
+        ]
+    },
+    {
+        "id": "8582684e34c27f05",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "03040000000000",
+        "payloadType": "str",
+        "x": 330,
+        "y": 1460,
+        "wires": [
+            [
+                "618781567775cb33"
+            ]
+        ]
+    },
+    {
+        "id": "cbc4f23132bba81b",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "03050000000000",
+        "payloadType": "str",
+        "x": 330,
+        "y": 1480,
+        "wires": [
+            [
+                "618781567775cb33"
+            ]
+        ]
+    },
+    {
+        "id": "2815e1177e773fe4",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "debug 56",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 330,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "aa65a38826eefec0",
+        "type": "trigger",
+        "z": "bca4771a12cb11e6",
+        "name": "Waiting",
+        "op1": "",
+        "op2": "0",
+        "op1type": "nul",
+        "op2type": "str",
+        "duration": "1",
+        "extend": false,
+        "overrideDelay": true,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 460,
+        "y": 960,
+        "wires": [
+            [
+                "a88f76740bd895c4"
+            ]
+        ]
+    },
+    {
+        "id": "b887391189b3c680",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 780,
+        "y": 1060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "afc24fc8811b2d55",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "reset",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "reset",
+                "v": "true",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 790,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "383f6ffac4644ac2",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "debug 57",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "dae22984db30bba3",
+        "type": "trigger",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "op1": "1",
+        "op2": "",
+        "op1type": "str",
+        "op2type": "nul",
+        "duration": "15",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 450,
+        "y": 1000,
+        "wires": [
+            [
+                "1658ac7b84089f6b"
+            ]
+        ]
+    },
+    {
+        "id": "1658ac7b84089f6b",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": "Turn Off EH",
+        "func": "msg.topic = \"SELECT * FROM `devicelist` WHERE `keterangan` = 'RelayOutput';\";\nmsg.topic += \"SELECT * FROM `Output` WHERE `keterangan` = 'EH1' OR `keterangan` = 'EH2';\";\nmsg.topic += \"SELECT * FROM `Operation`;\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 1000,
+        "wires": [
+            [
+                "0494c8d6085a4cf0"
+            ]
+        ]
+    },
+    {
+        "id": "0494c8d6085a4cf0",
+        "type": "mysql",
+        "z": "bca4771a12cb11e6",
+        "mydb": "3b8e5eb93b7526d7",
+        "name": " ",
+        "x": 750,
+        "y": 1000,
+        "wires": [
+            [
+                "01fea39265f2dc97"
+            ]
+        ]
+    },
+    {
+        "id": "01fea39265f2dc97",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": " Off1",
+        "func": "msg.resultsql = msg.payload;\nvar d = msg.payload[0][0];\nvar cmd = \"\";\nmsg.statusEH1 = false;\nmsg.statusEH2 = false;\nfor (let index = 0; index < Object.keys(d).length-2; index++) {\n    cmd += d[Object.keys(d)[index]];\n}\ncmd += \"01\";\nvar binarycurrent = reverseString(decToBinary(msg.payload[2][0].Output));\nif(binarycurrent[msg.payload[1][0].Number-1] == \"1\"){\n    binarycurrent[msg.payload[1][0].Number-1] == \"0\";\n    if(flow.get(\"RelayOutput\")[msg.payload[1][0].Number].Stat == 1){\n        msg.statusEH1 = true;\n    }else{\n        msg.statusEH1 = false;\n    }\n    msg.payload[2][0][\"Output\"] = msg.payload[2][0].Output -  msg.payload[1][0].Dec;\n}\nif(binarycurrent[msg.payload[1][1].Number-1] == \"1\"){\n    msg.statusEH2 = true;\n}\nmsg.numberOutput = msg.payload[2][0].Output;\nvar hex = binaryToHex(reverseString(binarycurrent));\ncmd += \"0000\"+\"000\"+String(dec2hex(hex));\nmsg.payload = cmd;\nreturn msg;\n\nfunction dec2hex(decimalNumber) {\n    if (decimalNumber < 0 || decimalNumber > 15) {\n        return \"Out of range\";\n    }\n    return decimalNumber.toString(16).toUpperCase();\n}\n\nfunction decToBinary(dec) {\n    // Ensure the input is a number\n    if (typeof dec !== 'number' || isNaN(dec)) {\n        throw new Error('Input must be a valid number');\n    }\n\n    // Handle negative numbers by using two's complement representation\n    if (dec < 0) {\n        return (dec >>> 0).toString(2).padStart(32, '0');\n    }\n\n    // Convert decimal to binary using toString method\n    let binaryStr = dec.toString(2);\n\n    // Pad the binary string to 8 bits\n    return binaryStr.padStart(8, '0');\n}\nfunction reverseString(str) {\n    // Mengubah string menjadi array, membalik array, dan menggabungkan kembali menjadi string\n    return str.split('').reverse().join('');\n}\n\nfunction binaryToHex(binaryStr) {\n    // Ensure the input is a valid binary string\n    if (typeof binaryStr !== 'string' || !/^[01]+$/.test(binaryStr)) {\n        throw new Error('Input must be a valid binary string');\n    }\n\n    // Parse the binary string to a decimal number\n    const decimal = parseInt(binaryStr, 2);\n\n    // Convert the decimal number to a hexadecimal string\n    const hexStr = decimal.toString(16);\n\n    // Return the hexadecimal string (in uppercase for consistency)\n    return hexStr.toUpperCase();\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 1000,
+        "wires": [
+            [
+                "710352610b5171f7",
+                "44ece0d16efb9af2"
+            ]
+        ]
+    },
+    {
+        "id": "e181d40ba2c883c6",
+        "type": "switch",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "property": "statusEH1",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 990,
+        "y": 840,
+        "wires": [
+            [
+                "b7a0b469689fefd3"
+            ]
+        ]
+    },
+    {
+        "id": "710352610b5171f7",
+        "type": "switch",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "property": "statusEH1",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 990,
+        "y": 980,
+        "wires": [
+            [
+                "fcded8e6800db872"
+            ]
+        ]
+    },
+    {
+        "id": "44ece0d16efb9af2",
+        "type": "switch",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "property": "statusEH2",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 990,
+        "y": 1020,
+        "wires": [
+            [
+                "d802d6a814ceb1d0"
+            ]
+        ]
+    },
+    {
+        "id": "ddab33048d01b3d5",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": " Off2",
+        "func": "msg.payload = msg.resultsql;\nvar d = msg.payload[0][0];\nvar cmd = \"\";\nmsg.statusEH1 = false;\nmsg.statusEH2 = false;\nfor (let index = 0; index < Object.keys(d).length-2; index++) {\n    cmd += d[Object.keys(d)[index]];\n}\ncmd += \"01\";\nvar binarycurrent = reverseString(decToBinary(msg.numberOutput));\nif (binarycurrent[msg.payload[1][1].Number -1] == \"1\"){\n    binarycurrent[msg.payload[1][1].Number -1] == \"0\";\n    if (flow.get(\"RelayOutput\")[msg.payload[1][1].Number].Stat == 1){\n        msg.statusEH2 = true;\n    }else{\n        msg.statusEH2 = false;\n    }\n   msg[\"numberOutput\"] = msg.numberOutput -  msg.payload[1][1].Dec;\n}\n\n\nvar hex = binaryToHex(reverseString(binarycurrent));\ncmd += \"0000\"+\"000\"+String(dec2hex(hex));\nmsg.payload = cmd;\nreturn msg;\n\nfunction dec2hex(decimalNumber) {\n    if (decimalNumber < 0 || decimalNumber > 15) {\n        return \"Out of range\";\n    }\n    return decimalNumber.toString(16).toUpperCase();\n}\n\nfunction decToBinary(dec) {\n    // Ensure the input is a number\n    if (typeof dec !== 'number' || isNaN(dec)) {\n        throw new Error('Input must be a valid number');\n    }\n\n    // Handle negative numbers by using two's complement representation\n    if (dec < 0) {\n        return (dec >>> 0).toString(2).padStart(32, '0');\n    }\n\n    // Convert decimal to binary using toString method\n    let binaryStr = dec.toString(2);\n\n    // Pad the binary string to 8 bits\n    return binaryStr.padStart(8, '0');\n}\nfunction reverseString(str) {\n    // Mengubah string menjadi array, membalik array, dan menggabungkan kembali menjadi string\n    return str.split('').reverse().join('');\n}\n\nfunction binaryToHex(binaryStr) {\n    // Ensure the input is a valid binary string\n    if (typeof binaryStr !== 'string' || !/^[01]+$/.test(binaryStr)) {\n        throw new Error('Input must be a valid binary string');\n    }\n\n    // Parse the binary string to a decimal number\n    const decimal = parseInt(binaryStr, 2);\n\n    // Convert the decimal number to a hexadecimal string\n    const hexStr = decimal.toString(16);\n\n    // Return the hexadecimal string (in uppercase for consistency)\n    return hexStr.toUpperCase();\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1270,
+        "y": 1020,
+        "wires": [
+            [
+                "2ee5fb66a447ff24"
+            ]
+        ]
+    },
+    {
+        "id": "d802d6a814ceb1d0",
+        "type": "delay",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1140,
+        "y": 1020,
+        "wires": [
+            [
+                "ddab33048d01b3d5"
+            ]
+        ]
+    },
+    {
+        "id": "300675ed5fd9466c",
+        "type": "link out",
+        "z": "bca4771a12cb11e6",
+        "name": "link out 12",
+        "mode": "link",
+        "links": [
+            "dd1e1bf4fa001f32"
+        ],
+        "x": 1475,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "022a029521e3c1dd",
+        "type": "link out",
+        "z": "bca4771a12cb11e6",
+        "name": "link out 13",
+        "mode": "link",
+        "links": [
+            "dd1e1bf4fa001f32"
+        ],
+        "x": 995,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "fe15437ea5ba0d90",
+        "type": "link out",
+        "z": "bca4771a12cb11e6",
+        "name": "link out 14",
+        "mode": "link",
+        "links": [
+            "dd1e1bf4fa001f32"
+        ],
+        "x": 995,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "fcded8e6800db872",
+        "type": "link out",
+        "z": "bca4771a12cb11e6",
+        "name": "link out 15",
+        "mode": "link",
+        "links": [
+            "dd1e1bf4fa001f32"
+        ],
+        "x": 1095,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "9d6f10db5c0fea06",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "g": "aadd16a462e83be5",
+        "name": " ",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 610,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "2ee5fb66a447ff24",
+        "type": "switch",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "property": "statusEH2",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1390,
+        "y": 1020,
+        "wires": [
+            [
+                "300675ed5fd9466c"
+            ]
+        ]
+    },
+    {
+        "id": "7ef3d8868618eb2f",
+        "type": "switch",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "property": "statusEH2",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 990,
+        "y": 880,
+        "wires": [
+            [
+                "8099edeb0376bcea"
+            ]
+        ]
+    },
+    {
+        "id": "8099edeb0376bcea",
+        "type": "delay",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1140,
+        "y": 880,
+        "wires": [
+            [
+                "efd4c15eee3524d0"
+            ]
+        ]
+    },
+    {
+        "id": "efd4c15eee3524d0",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": "On2",
+        "func": "msg.payload = msg.resultsql;\nvar d = msg.payload[0][0];\nvar cmd = \"\";\nmsg.statusEH1 = false;\nmsg.statusEH2 = false;\nfor (let index = 0; index < Object.keys(d).length-2; index++) {\n    cmd += d[Object.keys(d)[index]];\n}\ncmd += \"01\";\nvar binarycurrent = reverseString(decToBinary(msg.numberOutput));\nif(binarycurrent[msg.payload[1][1].Number-1] == \"0\"){\n    binarycurrent[msg.payload[1][1].Number -1] == \"1\";\n    if (flow.get(\"RelayOutput\")[msg.payload[1][1].Number].Stat == 0){\n        msg.statusEH2 = true;\n    }else{\n        msg.statusEH2 = false;\n    }\n   msg[\"numberOutput\"] = msg.numberOutput +  msg.payload[1][1].Dec;\n}\n\nvar hex = binaryToHex(reverseString(binarycurrent));\ncmd += \"0000\"+\"000\"+String(dec2hex(hex));\nmsg.payload = cmd;\nreturn msg;\n\nfunction dec2hex(decimalNumber) {\n    if (decimalNumber < 0 || decimalNumber > 15) {\n        return \"Out of range\";\n    }\n    return decimalNumber.toString(16).toUpperCase();\n}\n\nfunction decToBinary(dec) {\n    // Ensure the input is a number\n    if (typeof dec !== 'number' || isNaN(dec)) {\n        throw new Error('Input must be a valid number');\n    }\n\n    // Handle negative numbers by using two's complement representation\n    if (dec < 0) {\n        return (dec >>> 0).toString(2).padStart(32, '0');\n    }\n\n    // Convert decimal to binary using toString method\n    let binaryStr = dec.toString(2);\n\n    // Pad the binary string to 8 bits\n    return binaryStr.padStart(8, '0');\n}\nfunction reverseString(str) {\n    // Mengubah string menjadi array, membalik array, dan menggabungkan kembali menjadi string\n    return str.split('').reverse().join('');\n}\n\nfunction binaryToHex(binaryStr) {\n    // Ensure the input is a valid binary string\n    if (typeof binaryStr !== 'string' || !/^[01]+$/.test(binaryStr)) {\n        throw new Error('Input must be a valid binary string');\n    }\n\n    // Parse the binary string to a decimal number\n    const decimal = parseInt(binaryStr, 2);\n\n    // Convert the decimal number to a hexadecimal string\n    const hexStr = decimal.toString(16);\n\n    // Return the hexadecimal string (in uppercase for consistency)\n    return hexStr.toUpperCase();\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1270,
+        "y": 880,
+        "wires": [
+            [
+                "99d7acf34720e090"
+            ]
+        ]
+    },
+    {
+        "id": "99d7acf34720e090",
+        "type": "switch",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "property": "statusEH2",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1390,
+        "y": 880,
+        "wires": [
+            [
+                "bf104e7cca1d96a0"
+            ]
+        ]
+    },
+    {
+        "id": "386f9fa4386ae385",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "=EH2]",
+        "payloadType": "str",
+        "x": 920,
+        "y": 1180,
+        "wires": [
+            [
+                "a21abe22c5512c12"
+            ]
+        ]
+    },
+    {
+        "id": "a21abe22c5512c12",
+        "type": "switch",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "=[",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1080,
+        "y": 1180,
+        "wires": [
+            [
+                "f305445cebfd191f"
+            ]
+        ]
+    },
+    {
+        "id": "f305445cebfd191f",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "debug 58",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1230,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "bf104e7cca1d96a0",
+        "type": "link out",
+        "z": "bca4771a12cb11e6",
+        "name": "link out 16",
+        "mode": "link",
+        "links": [
+            "dd1e1bf4fa001f32"
+        ],
+        "x": 1475,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "46d993a4eb026271",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "EH1",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "UPDATE `Output` SET `Stat` = 1 WHERE `keterangan` = \"EH1\"; UPDATE `Operation` SET `Output` = 1;",
+        "payload": "",
+        "payloadType": "date",
+        "x": 530,
+        "y": 220,
+        "wires": [
+            [
+                "1c6ac3e90cbac996"
+            ]
+        ]
+    },
+    {
+        "id": "1c6ac3e90cbac996",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "func": "var d = flow.get(\"RelayOutput\");\nd[1][\"Stat\"] = 1;\nflow.set(\"RelayOutput\",d);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 220,
+        "wires": [
+            [
+                "3fae4a69287e8867"
+            ]
+        ]
+    },
+    {
+        "id": "c212b5b4b106485d",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "EH2",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "UPDATE `Output` SET `Stat` = 1 WHERE `keterangan` = \"EH2\"; UPDATE `Operation` SET `Output` = 2;",
+        "payload": "",
+        "payloadType": "date",
+        "x": 530,
+        "y": 260,
+        "wires": [
+            [
+                "a8b08e1705fe67e9"
+            ]
+        ]
+    },
+    {
+        "id": "a8b08e1705fe67e9",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "func": "var d = flow.get(\"RelayOutput\");\nd[2][\"Stat\"] = 1;\nflow.set(\"RelayOutput\",d);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 260,
+        "wires": [
+            [
+                "3fae4a69287e8867"
+            ]
+        ]
+    },
+    {
+        "id": "3fae4a69287e8867",
+        "type": "link out",
+        "z": "bca4771a12cb11e6",
+        "name": "link out 18",
+        "mode": "link",
+        "links": [
+            "2b3434178f0ac999"
+        ],
+        "x": 755,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "62c2245aabc41ac8",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "EH1&2",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "UPDATE `Output` SET `Stat` = 1 WHERE `keterangan` = \"EH1\" OR `keterangan` = \"EH2\"; UPDATE `Operation` SET `Output` = 3;",
+        "payload": "",
+        "payloadType": "date",
+        "x": 530,
+        "y": 300,
+        "wires": [
+            [
+                "136097ba3df47c6f"
+            ]
+        ]
+    },
+    {
+        "id": "136097ba3df47c6f",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "func": "var d = flow.get(\"RelayOutput\");\nd[0][\"Stat\"] = 1;\nd[1][\"Stat\"] = 1;\nflow.set(\"RelayOutput\",d);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 300,
+        "wires": [
+            [
+                "3fae4a69287e8867"
+            ]
+        ]
+    },
+    {
+        "id": "36daea9165702a4e",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "EH",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "UPDATE `Output` SET `Stat` = 0 WHERE `keterangan` = \"EH1\" OR `keterangan` = \"EH2\"; UPDATE `Operation` SET `Output` = 0;",
+        "payload": "",
+        "payloadType": "date",
+        "x": 530,
+        "y": 340,
+        "wires": [
+            [
+                "8fbcad44da74550e"
+            ]
+        ]
+    },
+    {
+        "id": "8fbcad44da74550e",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "func": "var d = flow.get(\"RelayOutput\");\nd[0][\"Stat\"] = 0;\nd[1][\"Stat\"] = 0;\nflow.set(\"RelayOutput\",d);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 340,
+        "wires": [
+            [
+                "3fae4a69287e8867"
+            ]
+        ]
+    },
+    {
+        "id": "b5c3d45fb53e2072",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "debug 59",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 910,
+        "y": 680,
         "wires": []
     },
     {
