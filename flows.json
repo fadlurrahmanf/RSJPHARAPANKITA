@@ -1804,7 +1804,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "func": "var d = [];\nd.push(flow.get(\"Temp_Cathlab\"));\nd.push(flow.get(\"RH_Cathlab\"));\nd.push(flow.get(\"Temp_Machine\"));\nd.push(flow.get(\"RH_Machine\"));\nd.push(flow.get(\"Pre_Filter\"));\nd.push(flow.get(\"HEPA_Filter\"));\nd.push(flow.get(\"DurationEH\"));\nmsg.payload = d;\nreturn msg;\n",
+        "func": "var d = [];\nd.push(flow.get(\"Temp_Cathlab\"));\nd.push(flow.get(\"RH_Cathlab\"));\nd.push(flow.get(\"Temp_Machine\"));\nd.push(flow.get(\"RH_Machine\"));\nd.push(flow.get(\"Pre_Filter\"));\nd.push(flow.get(\"HEPA_Filter\"));\nd.push(flow.get(\"DurationEH\"));\nd.push(flow.get(\"RelayInput\"));\nd.push(flow.get(\"RelayOutput\"));\nmsg.payload = d;\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1821,7 +1821,8 @@
                 "7ea2e7c17a42eba4",
                 "a37180a17c8d6d8e",
                 "510cccceaeed9bec",
-                "12622275c3de0746"
+                "12622275c3de0746",
+                "d6aa40b162d6b292"
             ]
         ]
     },
@@ -3552,6 +3553,66 @@
                 "618781567775cb33"
             ]
         ]
+    },
+    {
+        "id": "d6aa40b162d6b292",
+        "type": "link out",
+        "z": "bca4771a12cb11e6",
+        "name": "link out 19",
+        "mode": "link",
+        "links": [],
+        "x": 1115,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "fdb500481cbf7d01",
+        "type": "link in",
+        "z": "bca4771a12cb11e6",
+        "name": "link in 10",
+        "links": [],
+        "x": 565,
+        "y": 680,
+        "wires": [
+            [
+                "7a293eedb6b117a7",
+                "06fb4a2bad3b8364"
+            ]
+        ]
+    },
+    {
+        "id": "7a293eedb6b117a7",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "EH1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload[7][1].Stat",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 670,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "06fb4a2bad3b8364",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "EH2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload[8][2].Stat",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 670,
+        "y": 700,
+        "wires": []
     },
     {
         "id": "e1f5480776bb23d2",
