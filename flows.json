@@ -2512,7 +2512,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "03020000000000",
+        "payload": "03020300000000",
         "payloadType": "str",
         "x": 330,
         "y": 1360,
