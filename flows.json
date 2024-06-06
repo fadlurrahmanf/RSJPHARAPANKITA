@@ -3495,6 +3495,62 @@
         ]
     },
     {
+        "id": "53d8c949e6b18ef1",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "04020100000000",
+        "payloadType": "str",
+        "x": 330,
+        "y": 1520,
+        "wires": [
+            [
+                "618781567775cb33"
+            ]
+        ]
+    },
+    {
+        "id": "bee54eca56ea9045",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "03050000000000",
+        "payloadType": "str",
+        "x": 330,
+        "y": 1540,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "e1f5480776bb23d2",
         "type": "debug",
         "z": "57a8e6e09724ec39",
