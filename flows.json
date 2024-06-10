@@ -829,7 +829,8 @@
             "fe15437ea5ba0d90",
             "fcded8e6800db872",
             "bf104e7cca1d96a0",
-            "af5fad60c2799c88"
+            "af5fad60c2799c88",
+            "0b5b9c2e9892e1a5"
         ],
         "x": 265,
         "y": 80,
@@ -3749,7 +3750,7 @@
         "id": "18de5ae4ba170642",
         "type": "function",
         "z": "bca4771a12cb11e6",
-        "name": "Request Temp",
+        "name": "Request StaRelay",
         "func": "msg.topic = \"SELECT * FROM `devicelist` WHERE `keterangan` = 'RelayOutput';\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -3757,7 +3758,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 620,
+        "x": 630,
         "y": 640,
         "wires": [
             [
@@ -3771,7 +3772,7 @@
         "z": "bca4771a12cb11e6",
         "mydb": "3b8e5eb93b7526d7",
         "name": " ",
-        "x": 770,
+        "x": 790,
         "y": 640,
         "wires": [
             [
@@ -3791,11 +3792,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 910,
+        "x": 930,
         "y": 640,
         "wires": [
             [
-                "611eaf44047a9200"
+                "0b5b9c2e9892e1a5"
             ]
         ]
     },
@@ -3813,6 +3814,19 @@
         "statusType": "auto",
         "x": 990,
         "y": 700,
+        "wires": []
+    },
+    {
+        "id": "0b5b9c2e9892e1a5",
+        "type": "link out",
+        "z": "bca4771a12cb11e6",
+        "name": "link out 21",
+        "mode": "link",
+        "links": [
+            "dd1e1bf4fa001f32"
+        ],
+        "x": 1035,
+        "y": 640,
         "wires": []
     },
     {
