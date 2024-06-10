@@ -3933,7 +3933,7 @@
         "type": "switch",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "property": "statusEH2",
+        "property": "statusEF",
         "propertyType": "msg",
         "rules": [
             {
@@ -3956,7 +3956,7 @@
         "type": "switch",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "property": "statusEH1",
+        "property": "statusBooster",
         "propertyType": "msg",
         "rules": [
             {
