@@ -3258,11 +3258,12 @@
             "d6aa40b162d6b292"
         ],
         "x": 645,
-        "y": 780,
+        "y": 720,
         "wires": [
             [
                 "7a293eedb6b117a7",
-                "06fb4a2bad3b8364"
+                "06fb4a2bad3b8364",
+                "131878eb934f5207"
             ]
         ]
     },
@@ -3280,7 +3281,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 750,
-        "y": 740,
+        "y": 680,
         "wires": []
     },
     {
@@ -3297,7 +3298,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 750,
-        "y": 800,
+        "y": 720,
         "wires": []
     },
     {
@@ -4099,6 +4100,40 @@
             ],
             []
         ]
+    },
+    {
+        "id": "131878eb934f5207",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "Booster",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload[8][3].Stat",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 760,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "0527f01b52cc60a2",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "EF",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload[8][4].Stat",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 750,
+        "y": 800,
+        "wires": []
     },
     {
         "id": "ae459cb84c6fb828",
