@@ -3831,6 +3831,33 @@
         "wires": []
     },
     {
+        "id": "8124a14454ada1a6",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "04030100000002",
+        "payloadType": "str",
+        "x": 330,
+        "y": 1540,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "ae459cb84c6fb828",
         "type": "debug",
         "z": "12638c94c64653f3",
