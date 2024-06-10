@@ -830,7 +830,8 @@
             "fcded8e6800db872",
             "bf104e7cca1d96a0",
             "af5fad60c2799c88",
-            "0b5b9c2e9892e1a5"
+            "0b5b9c2e9892e1a5",
+            "fddada406f75f8fb"
         ],
         "x": 265,
         "y": 80,
@@ -1729,8 +1730,8 @@
         "links": [
             "b07e4e6ebad074fb"
         ],
-        "x": 885,
-        "y": 580,
+        "x": 1385,
+        "y": 620,
         "wires": [
             [
                 "40a624a1f8f16c78",
@@ -1750,122 +1751,20 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 970,
-        "y": 580,
+        "x": 1470,
+        "y": 620,
         "wires": [
             [
+                "d6aa40b162d6b292",
                 "eaea2c3e22a96a9f",
-                "042300e6b0e72670",
-                "c4f972fcf9162c5b",
-                "7ea2e7c17a42eba4",
                 "a37180a17c8d6d8e",
                 "510cccceaeed9bec",
-                "12622275c3de0746",
-                "d6aa40b162d6b292"
+                "7ea2e7c17a42eba4",
+                "c4f972fcf9162c5b",
+                "042300e6b0e72670",
+                "12622275c3de0746"
             ]
         ]
-    },
-    {
-        "id": "eaea2c3e22a96a9f",
-        "type": "debug",
-        "z": "bca4771a12cb11e6",
-        "name": " TempCathLab",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload[0]",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 1180,
-        "y": 560,
-        "wires": []
-    },
-    {
-        "id": "a37180a17c8d6d8e",
-        "type": "debug",
-        "z": "bca4771a12cb11e6",
-        "name": "RHCathLab",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload[1]",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 1170,
-        "y": 600,
-        "wires": []
-    },
-    {
-        "id": "510cccceaeed9bec",
-        "type": "debug",
-        "z": "bca4771a12cb11e6",
-        "name": " TempMachine",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload[2]",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 1180,
-        "y": 640,
-        "wires": []
-    },
-    {
-        "id": "7ea2e7c17a42eba4",
-        "type": "debug",
-        "z": "bca4771a12cb11e6",
-        "name": "RHMachine",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload[3]",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 1170,
-        "y": 680,
-        "wires": []
-    },
-    {
-        "id": "c4f972fcf9162c5b",
-        "type": "debug",
-        "z": "bca4771a12cb11e6",
-        "name": " Pre_Filter",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload[4]",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 1160,
-        "y": 720,
-        "wires": []
-    },
-    {
-        "id": "042300e6b0e72670",
-        "type": "debug",
-        "z": "bca4771a12cb11e6",
-        "name": " HEPA_Filter",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload[5]",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 1170,
-        "y": 760,
-        "wires": []
     },
     {
         "id": "32dded3e3ceacf4c",
@@ -1926,8 +1825,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 970,
-        "y": 540,
+        "x": 1470,
+        "y": 580,
         "wires": [
             []
         ]
@@ -2270,23 +2169,6 @@
                 "5325683f3d621a49"
             ]
         ]
-    },
-    {
-        "id": "12622275c3de0746",
-        "type": "debug",
-        "z": "bca4771a12cb11e6",
-        "name": "DurationEH",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload[6]",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 1170,
-        "y": 800,
-        "wires": []
     },
     {
         "id": "3a635d2fd0debdf4",
@@ -3361,8 +3243,8 @@
         "links": [
             "fdb500481cbf7d01"
         ],
-        "x": 1115,
-        "y": 520,
+        "x": 1615,
+        "y": 560,
         "wires": []
     },
     {
@@ -3741,93 +3623,8 @@
         "x": 470,
         "y": 640,
         "wires": [
-            [
-                "18de5ae4ba170642"
-            ]
+            []
         ]
-    },
-    {
-        "id": "18de5ae4ba170642",
-        "type": "function",
-        "z": "bca4771a12cb11e6",
-        "name": "Request StaRelay",
-        "func": "msg.topic = \"SELECT * FROM `devicelist` WHERE `keterangan` = 'RelayOutput';\";\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 630,
-        "y": 640,
-        "wires": [
-            [
-                "4dd446c2abd9cbe2"
-            ]
-        ]
-    },
-    {
-        "id": "4dd446c2abd9cbe2",
-        "type": "mysql",
-        "z": "bca4771a12cb11e6",
-        "mydb": "3b8e5eb93b7526d7",
-        "name": " ",
-        "x": 790,
-        "y": 640,
-        "wires": [
-            [
-                "52452614b6942854"
-            ]
-        ]
-    },
-    {
-        "id": "52452614b6942854",
-        "type": "function",
-        "z": "bca4771a12cb11e6",
-        "name": "Requesting",
-        "func": "var d = msg.payload[0];\nvar cmd = \"\";\nfor (let index = 0; index < Object.keys(d).length-2; index++) {\n    cmd += d[Object.keys(d)[index]];\n}\ncmd += \"00\";\ncmd += \"00000000\";\nmsg.payload = cmd;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 930,
-        "y": 640,
-        "wires": [
-            [
-                "0b5b9c2e9892e1a5"
-            ]
-        ]
-    },
-    {
-        "id": "611eaf44047a9200",
-        "type": "debug",
-        "z": "bca4771a12cb11e6",
-        "name": "debug 59",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 990,
-        "y": 700,
-        "wires": []
-    },
-    {
-        "id": "0b5b9c2e9892e1a5",
-        "type": "link out",
-        "z": "bca4771a12cb11e6",
-        "name": "link out 21",
-        "mode": "link",
-        "links": [
-            "dd1e1bf4fa001f32"
-        ],
-        "x": 1035,
-        "y": 640,
-        "wires": []
     },
     {
         "id": "8124a14454ada1a6",
@@ -3856,6 +3653,177 @@
             [
                 "618781567775cb33"
             ]
+        ]
+    },
+    {
+        "id": "eaea2c3e22a96a9f",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": " TempCathLab",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload[0]",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1680,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "a37180a17c8d6d8e",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "RHCathLab",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload[1]",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1670,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "510cccceaeed9bec",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": " TempMachine",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload[2]",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1680,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "7ea2e7c17a42eba4",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "RHMachine",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload[3]",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1670,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "c4f972fcf9162c5b",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": " Pre_Filter",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload[4]",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1660,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "042300e6b0e72670",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": " HEPA_Filter",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload[5]",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1670,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "12622275c3de0746",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "DurationEH",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload[6]",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1670,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "fbfbf9d305f0d43a",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": "Turn On Booster",
+        "func": "msg.topic = \"SELECT * FROM `devicelist` WHERE `keterangan` = 'RelayOutput';\";\nmsg.topic += \"SELECT * FROM `Output` WHERE `keterangan` = 'BoosterFan' OR `keterangan` = 'EF';\";\nmsg.topic += \"SELECT * FROM `Operation`;\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 640,
+        "wires": [
+            [
+                "4da408452df5e1e3"
+            ]
+        ]
+    },
+    {
+        "id": "4da408452df5e1e3",
+        "type": "mysql",
+        "z": "bca4771a12cb11e6",
+        "mydb": "3b8e5eb93b7526d7",
+        "name": " ",
+        "x": 770,
+        "y": 640,
+        "wires": [
+            [
+                "ea14610f882fc427"
+            ]
+        ]
+    },
+    {
+        "id": "ea14610f882fc427",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": " On1",
+        "func": "msg.resultsql = msg.payload;\nvar d = msg.payload[0][0];\nvar cmd = \"\";\nmsg.statusEH1 = false;\nmsg.statusEH2 = false;\nfor (let index = 0; index < Object.keys(d).length - 2; index++) {\n    cmd += d[Object.keys(d)[index]];\n}\ncmd += \"01\";\n\nvar binarycurrent = reverseString(decToBinary(msg.payload[2][0].Output));\nvar spt = binarycurrent.split(\"\");\nif (binarycurrent[msg.payload[1][0].Number - 1] == \"0\" && msg.cmd.includes(\"=[EH1]\")) {\n    \n    spt[msg.payload[1][0].Number - 1] = \"1\";\n    binarycurrent = spt.join(\"\");\n    if(flow.get(\"RelayOutput\")[msg.payload[1][0].Number].Stat == 0){\n        msg.statusEH1 = true;\n        \n    }else{\n        msg.statusEH1 = false;\n    }\n    \n    msg.payload[2][0][\"Output\"] = parseInt(String(msg.payload[2][0].Output)) + parseInt(String(msg.payload[1][0].Dec));\n    \n}\nif (binarycurrent[msg.payload[1][1].Number - 1] == \"0\" && msg.cmd.includes(\"=[EH2]\")){\n    msg.statusEH2 = true;\n}\n\nmsg.numberOutput = msg.payload[2][0].Output;\nvar hex = binaryToHex(reverseString(binarycurrent));\ncmd += \"0000\" + \"000\" + String(dec2hex(hex));\nmsg.payload = cmd;\nreturn msg;\n\nfunction dec2hex(decimalNumber) {\n    if (decimalNumber < 0 || decimalNumber > 15) {\n        return \"Out of range\";\n    }\n    return decimalNumber.toString(16).toUpperCase();\n}\n\nfunction decToBinary(dec) {\n    // Ensure the input is a number\n    if (typeof dec !== 'number' || isNaN(dec)) {\n        throw new Error('Input must be a valid number');\n    }\n\n    // Handle negative numbers by using two's complement representation\n    if (dec < 0) {\n        return (dec >>> 0).toString(2).padStart(32, '0');\n    }\n\n    // Convert decimal to binary using toString method\n    let binaryStr = dec.toString(2);\n\n    // Pad the binary string to 8 bits\n    return binaryStr.padStart(8, '0');\n}\nfunction reverseString(str) {\n    // Mengubah string menjadi array, membalik array, dan menggabungkan kembali menjadi string\n    return str.split('').reverse().join('');\n}\n\nfunction binaryToHex(binaryStr) {\n    // Ensure the input is a valid binary string\n    if (typeof binaryStr !== 'string' || !/^[01]+$/.test(binaryStr)) {\n        throw new Error('Input must be a valid binary string');\n    }\n\n    // Parse the binary string to a decimal number\n    const decimal = parseInt(binaryStr, 2);\n\n    // Convert the decimal number to a hexadecimal string\n    const hexStr = decimal.toString(16);\n\n    // Return the hexadecimal string (in uppercase for consistency)\n    return hexStr.toUpperCase();\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 640,
+        "wires": [
+            []
         ]
     },
     {
