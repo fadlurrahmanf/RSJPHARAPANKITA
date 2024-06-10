@@ -1163,7 +1163,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " Check",
-        "func": "var RelayInput = flow.get(\"RelayInput\");\nvar RelayOutput = flow.get(\"RelayOutput\");\nvar RunningTime = secondsToHumanReadable(Math.round((Date.now()-flow.get(\"InitTime\"))/1000));\nfor (let index = 0; index < RelayInput.length; index++) {\n    if(RelayInput[index].keterangan == \"StatusIndoor\" && RelayInput[index].Stat == 1){\n        msg[\"StatusIndoor\"] = true;\n    }else if(RelayInput[index].keterangan == \"StatusIndoor\" && RelayInput[index].Stat == 0){\n        msg[\"StatusIndoor\"] = false;\n    }\n    if(RelayInput[index].keterangan == \"StatusOutdoor\" && RelayInput[index].Stat == 1){\n        msg[\"StatusOutdoor\"] = true;\n    }else if(RelayInput[index].keterangan == \"StatusOutdoor\" && RelayInput[index].Stat == 0){\n        msg[\"StatusOutdoor\"] = false;\n    }\n}\nfor (let index = 0; index < RelayOutput.length; index++) {\n    if (RelayOutput[index].keterangan == \"BoosterFan\" && RelayOutput[index].Stat == 1){\n        msg[\"BoosterFan\"] = true;\n    } else if (RelayOutput[index].keterangan == \"BoosterFan\" && RelayOutput[index].Stat == 0){\n        msg[\"BoosterFan\"] = false;\n    }\n    if (RelayOutput[index].keterangan == \"EF\" && RelayOutput[index].Stat == 1){\n        msg[\"EF\"] = true;\n    } else if (RelayOutput[index].keterangan == \"EF\" && RelayOutput[index].Stat == 0){\n        msg[\"EF\"] = false;\n    }\n}\nif(msg.StatusIndoor && msg.StatusOutdoor && msg.BoosterFan && msg.EF){\n        msg[\"StartLoops\"] = true;\n        msg.payload = \"O-RUN-O(\"+String(RunningTime)+\")\";\n        return msg;\n    }else{  \n        flow.set(\"cmdauto\",\"None\");\n    }\nmsg.payload = \"-IDLE- (\"+String(RunningTime)+\")\";\nreturn msg;\n\nfunction secondsToHumanReadable(seconds) {\n    const units = [\n        { label: 'year', value: 60 * 60 * 24 * 365 },  // Approximate, not accounting for leap years\n        { label: 'month', value: 60 * 60 * 24 * 30 },  // Approximate\n        { label: 'day', value: 60 * 60 * 24 },\n        { label: 'hour', value: 60 * 60 },\n        { label: 'minute', value: 60 },\n        { label: 'second', value: 1 }\n    ];\n\n    const result = [];\n\n    for (const unit of units) {\n        const unitValue = Math.floor(seconds / unit.value);\n        if (unitValue > 0) {\n            result.push(`${unitValue} ${unit.label}${unitValue > 1 ? 's' : ''}`);\n            seconds -= unitValue * unit.value;\n        }\n    }\n\n    return result.length > 0 ? result.join(' ') : '0 seconds';\n}",
+        "func": "var RelayInput = flow.get(\"RelayInput\");\nvar RelayOutput = flow.get(\"RelayOutput\");\nvar RunningTime = secondsToHumanReadable(Math.round((Date.now()-flow.get(\"InitTime\"))/1000));\nfor (let index = 0; index < RelayInput.length; index++) {\n    if(RelayInput[index].keterangan == \"StatusIndoor\" && RelayInput[index].Stat == 1){\n        msg[\"StatusIndoor\"] = true;\n    }else if(RelayInput[index].keterangan == \"StatusIndoor\" && RelayInput[index].Stat == 0){\n        msg[\"StatusIndoor\"] = false;\n    }\n    if(RelayInput[index].keterangan == \"StatusOutdoor\" && RelayInput[index].Stat == 1){\n        msg[\"StatusOutdoor\"] = true;\n    }else if(RelayInput[index].keterangan == \"StatusOutdoor\" && RelayInput[index].Stat == 0){\n        msg[\"StatusOutdoor\"] = false;\n    }\n}\nfor (let index = 0; index < RelayOutput.length; index++) {\n    if (RelayOutput[index].keterangan == \"BoosterFan\" && RelayOutput[index].Stat == 1){\n        msg[\"BoosterFan\"] = true;\n    } else if (RelayOutput[index].keterangan == \"BoosterFan\" && RelayOutput[index].Stat == 0){\n        msg[\"BoosterFan\"] = false;\n    }\n    if (RelayOutput[index].keterangan == \"EF\" && RelayOutput[index].Stat == 1){\n        msg[\"EF\"] = true;\n    } else if (RelayOutput[index].keterangan == \"EF\" && RelayOutput[index].Stat == 0){\n        msg[\"EF\"] = false;\n    }\n}\nif(msg.StatusIndoor && msg.StatusOutdoor && msg.BoosterFan && msg.EF){\n        msg[\"StartLoops\"] = true;\n        msg.payload = \"O-RUN-O(\"+String(RunningTime)+\")\";\n        return msg;\n    }else{  \n        msg[\"StartLoops\"] = false;\n        flow.set(\"cmdauto\",\"None\");\n    }\nmsg.payload = \"-IDLE- (\"+String(RunningTime)+\")\";\nreturn msg;\n\nfunction secondsToHumanReadable(seconds) {\n    const units = [\n        { label: 'year', value: 60 * 60 * 24 * 365 },  // Approximate, not accounting for leap years\n        { label: 'month', value: 60 * 60 * 24 * 30 },  // Approximate\n        { label: 'day', value: 60 * 60 * 24 },\n        { label: 'hour', value: 60 * 60 },\n        { label: 'minute', value: 60 },\n        { label: 'second', value: 1 }\n    ];\n\n    const result = [];\n\n    for (const unit of units) {\n        const unitValue = Math.floor(seconds / unit.value);\n        if (unitValue > 0) {\n            result.push(`${unitValue} ${unit.label}${unitValue > 1 ? 's' : ''}`);\n            seconds -= unitValue * unit.value;\n        }\n    }\n\n    return result.length > 0 ? result.join(' ') : '0 seconds';\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1193,7 +1193,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 350,
-        "y": 620,
+        "y": 660,
         "wires": []
     },
     {
@@ -1221,7 +1221,8 @@
                 "53ef936abb21b675"
             ],
             [
-                "962ac3a3ae6cb677"
+                "962ac3a3ae6cb677",
+                "525a257b01798881"
             ]
         ]
     },
@@ -1925,7 +1926,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 970,
-        "y": 620,
+        "y": 540,
         "wires": [
             []
         ]
@@ -3371,8 +3372,8 @@
         "links": [
             "d6aa40b162d6b292"
         ],
-        "x": 565,
-        "y": 680,
+        "x": 645,
+        "y": 780,
         "wires": [
             [
                 "7a293eedb6b117a7",
@@ -3393,8 +3394,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 670,
-        "y": 640,
+        "x": 750,
+        "y": 740,
         "wires": []
     },
     {
@@ -3410,8 +3411,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 670,
-        "y": 700,
+        "x": 750,
+        "y": 800,
         "wires": []
     },
     {
@@ -3736,11 +3737,83 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 350,
-        "y": 680,
+        "x": 470,
+        "y": 640,
         "wires": [
-            []
+            [
+                "18de5ae4ba170642"
+            ]
         ]
+    },
+    {
+        "id": "18de5ae4ba170642",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": "Request Temp",
+        "func": "msg.topic = \"SELECT * FROM `devicelist` WHERE `keterangan` = 'RelayOutput';\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 640,
+        "wires": [
+            [
+                "4dd446c2abd9cbe2"
+            ]
+        ]
+    },
+    {
+        "id": "4dd446c2abd9cbe2",
+        "type": "mysql",
+        "z": "bca4771a12cb11e6",
+        "mydb": "3b8e5eb93b7526d7",
+        "name": " ",
+        "x": 770,
+        "y": 640,
+        "wires": [
+            [
+                "52452614b6942854"
+            ]
+        ]
+    },
+    {
+        "id": "52452614b6942854",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": "Requesting",
+        "func": "var d = msg.payload[0];\nvar cmd = \"\";\nfor (let index = 0; index < Object.keys(d).length-2; index++) {\n    cmd += d[Object.keys(d)[index]];\n}\ncmd += \"00\";\ncmd += \"00000000\";\nmsg.payload = cmd;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 640,
+        "wires": [
+            [
+                "611eaf44047a9200"
+            ]
+        ]
+    },
+    {
+        "id": "611eaf44047a9200",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "debug 59",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 990,
+        "y": 700,
+        "wires": []
     },
     {
         "id": "ae459cb84c6fb828",
