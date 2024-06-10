@@ -3928,7 +3928,7 @@
         "id": "efe1a2d2448d86c1",
         "type": "function",
         "z": "bca4771a12cb11e6",
-        "name": "function 1",
+        "name": "2 Bit",
         "func": "var arr = [];\narr.push(\"04030100000000\"); // 0000 0000\narr.push(\"04030100000002\"); // 0100 0000\narr.push(\"0403010000000A\"); // 0101 0000\narr.push(\"0403010000002A\"); // 0101 0100\narr.push(\"040301000000AA\"); // 0101 0101\narr.push(\"040301000000A8\"); // 0001 0101\narr.push(\"040301000000A0\"); // 0000 0101\narr.push(\"04030100000080\"); // 0000 0001\narr.push(\"04030100000000\"); // 0000 0000\nmsg.payload = arr;\nmsg[\"delay\"] = 10000;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -3936,7 +3936,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 520,
+        "x": 510,
         "y": 1720,
         "wires": [
             [
@@ -4073,15 +4073,15 @@
         "id": "13ed67235efcb4e7",
         "type": "function",
         "z": "bca4771a12cb11e6",
-        "name": "function 2",
-        "func": "var arr = [];\narr.push(\"04030100000000\"); // 0000 0000\narr.push(\"04030100000001\"); // 0100 0000\narr.push(\"04030100000003\"); // 0101 0000\narr.push(\"04030100000007\"); // 0101 0100\narr.push(\"0403010000000F\"); // 0101 0101\narr.push(\"0403010000000E\"); // 0001 0101\narr.push(\"0403010000000C\"); // 0000 0101\narr.push(\"04030100000008\"); // 0000 0001\narr.push(\"04030100000000\"); // 0000 0000\nmsg.payload = arr;\nmsg[\"delay\"] = 10000;\nreturn msg;",
+        "name": "1 Bit",
+        "func": "var arr = [];\narr.push(\"04030100000000\"); // 0000 \narr.push(\"04030100000001\"); // 1000 \narr.push(\"04030100000003\"); // 1100 \narr.push(\"04030100000007\"); // 1110 \narr.push(\"0403010000000F\"); // 1111 \narr.push(\"0403010000000E\"); // 0111 \narr.push(\"0403010000000C\"); // 0011 \narr.push(\"04030100000008\"); // 0001 \narr.push(\"04030100000000\"); // 0000 \nmsg.payload = arr;\nmsg[\"delay\"] = 10000;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 520,
+        "x": 510,
         "y": 1760,
         "wires": [
             [
