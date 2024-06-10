@@ -1088,7 +1088,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "func": "var d = \"040301000004000002\".substring(8,10);\nreturn msg;",
+        "func": "var d = \"040301000004000002\".substring(8,10);\nmsg.payload = d;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
