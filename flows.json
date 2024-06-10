@@ -3857,7 +3857,8 @@
         "y": 1720,
         "wires": [
             [
-                "efe1a2d2448d86c1"
+                "efe1a2d2448d86c1",
+                "13ed67235efcb4e7"
             ]
         ]
     },
@@ -3873,7 +3874,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 510,
+        "x": 520,
         "y": 1720,
         "wires": [
             [
@@ -4049,6 +4050,26 @@
         "x": 1115,
         "y": 620,
         "wires": []
+    },
+    {
+        "id": "13ed67235efcb4e7",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": "function 2",
+        "func": "var arr = [];\narr.push(\"04030100000000\"); // 0000 0000\narr.push(\"04030100000001\"); // 0100 0000\narr.push(\"04030100000003\"); // 0101 0000\narr.push(\"04030100000007\"); // 0101 0100\narr.push(\"0403010000000F\"); // 0101 0101\narr.push(\"0403010000000E\"); // 0001 0101\narr.push(\"0403010000000C\"); // 0000 0101\narr.push(\"04030100000008\"); // 0000 0001\narr.push(\"04030100000000\"); // 0000 0000\nmsg.payload = arr;\nmsg[\"delay\"] = 10000;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 1760,
+        "wires": [
+            [
+                "3c0def953a7880c0"
+            ]
+        ]
     },
     {
         "id": "ae459cb84c6fb828",
