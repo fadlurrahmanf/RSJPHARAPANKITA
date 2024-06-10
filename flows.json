@@ -284,33 +284,6 @@
         "sessionExpiry": ""
     },
     {
-        "id": "e7691dfa6e339e7c",
-        "type": "influxdb",
-        "hostname": "127.0.0.1",
-        "port": "8086",
-        "protocol": "http",
-        "database": "DatabaseUtama",
-        "name": "",
-        "usetls": true,
-        "tls": "",
-        "influxdbVersion": "2.0",
-        "url": "http://localhost:8086",
-        "timeout": "10",
-        "rejectUnauthorized": true
-    },
-    {
-        "id": "b9cc59e6.7e5e68",
-        "type": "influxdb",
-        "hostname": "localhost",
-        "port": "8086",
-        "protocol": "http",
-        "database": "your_database",
-        "name": "InfluxDB",
-        "usetls": false,
-        "tls": "",
-        "influxdbVersion": "1.x"
-    },
-    {
         "id": "9f7aa00f.d31ab",
         "type": "function",
         "z": "e9b71a55.b25c68",
