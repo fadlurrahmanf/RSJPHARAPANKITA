@@ -3954,7 +3954,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": "1 Bit",
-        "func": "var arr = [];\narr.push(\"04020100000000\"); // 0000 \narr.push(\"04020100000001\"); // 1000 \narr.push(\"04020100000003\"); // 1100 \narr.push(\"04020100000007\"); // 1110 \narr.push(\"0402010000000F\"); // 1111 \narr.push(\"0402010000000E\"); // 0111 \narr.push(\"0402010000000C\"); // 0011 \narr.push(\"04020100000008\"); // 0001 \narr.push(\"04020100000000\"); // 0000 \nmsg.payload = arr;\nmsg[\"delay\"] = 10000;\nreturn msg;",
+        "func": "var arr = [];\narr.push(\"04030100000000\"); // 0000 \narr.push(\"04030100000001\"); // 1000 \narr.push(\"04030100000003\"); // 1100 \narr.push(\"04030100000007\"); // 1110 \narr.push(\"0403010000000F\"); // 1111 \narr.push(\"0403010000000E\"); // 0111 \narr.push(\"0403010000000C\"); // 0011 \narr.push(\"04030100000008\"); // 0001 \narr.push(\"04030100000000\"); // 0000 \nmsg.payload = arr;\nmsg[\"delay\"] = 10000;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
