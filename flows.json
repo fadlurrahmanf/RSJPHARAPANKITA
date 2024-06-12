@@ -4155,7 +4155,7 @@
         "payload": "04030100000003",
         "payloadType": "str",
         "x": 330,
-        "y": 1500,
+        "y": 1520,
         "wires": [
             [
                 "618781567775cb33"
@@ -4184,7 +4184,7 @@
         "payload": "04030100000007",
         "payloadType": "str",
         "x": 330,
-        "y": 1520,
+        "y": 1540,
         "wires": [
             [
                 "618781567775cb33"
@@ -4203,6 +4203,35 @@
                 "618781567775cb33"
             ],
             []
+        ]
+    },
+    {
+        "id": "8e4bc2e6044ac31a",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "04030100000001",
+        "payloadType": "str",
+        "x": 330,
+        "y": 1500,
+        "wires": [
+            [
+                "618781567775cb33"
+            ]
         ]
     },
     {
