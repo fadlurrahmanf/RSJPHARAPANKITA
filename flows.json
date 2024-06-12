@@ -3193,7 +3193,8 @@
         "name": "link out 19",
         "mode": "link",
         "links": [
-            "fdb500481cbf7d01"
+            "fdb500481cbf7d01",
+            "7f8325ca8f5e07a8"
         ],
         "x": 1735,
         "y": 560,
@@ -4058,6 +4059,93 @@
             ],
             []
         ]
+    },
+    {
+        "id": "7f8325ca8f5e07a8",
+        "type": "link in",
+        "z": "bca4771a12cb11e6",
+        "name": "link in 11",
+        "links": [
+            "d6aa40b162d6b292"
+        ],
+        "x": 1815,
+        "y": 960,
+        "wires": [
+            [
+                "55557f20a1962080",
+                "c361579d7bcf203c",
+                "4b9e8cdbb6bea80b",
+                "caea8b0f760c7213"
+            ]
+        ]
+    },
+    {
+        "id": "55557f20a1962080",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "EH1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload[8][4].Stat",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1920,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "c361579d7bcf203c",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "EH2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload[8][5].Stat",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1920,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "4b9e8cdbb6bea80b",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "Booster",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload[8][6].Stat",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1930,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "caea8b0f760c7213",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "EF",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload[8][8].Stat",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1920,
+        "y": 1020,
+        "wires": []
     },
     {
         "id": "ae459cb84c6fb828",
