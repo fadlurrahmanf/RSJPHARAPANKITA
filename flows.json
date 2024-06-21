@@ -1692,7 +1692,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 480,
+        "x": 500,
         "y": 1520,
         "wires": []
     },
