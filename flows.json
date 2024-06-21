@@ -3605,7 +3605,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "0403010000000F",
+        "payload": "04030100000001",
         "payloadType": "str",
         "x": 330,
         "y": 1900,
