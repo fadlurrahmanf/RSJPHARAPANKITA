@@ -3804,7 +3804,7 @@
         "id": "0cfc111ce7166180",
         "type": "debug",
         "z": "bca4771a12cb11e6",
-        "name": " ",
+        "name": " Booster",
         "active": false,
         "tosidebar": true,
         "console": false,
@@ -3813,8 +3813,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 440,
-        "y": 460,
+        "x": 500,
+        "y": 400,
         "wires": []
     },
     {
