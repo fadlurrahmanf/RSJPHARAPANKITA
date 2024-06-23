@@ -4058,7 +4058,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "040500FF0300000002",
+        "payload": "040500DB0300000002",
         "payloadType": "str",
         "x": 120,
         "y": 400,
