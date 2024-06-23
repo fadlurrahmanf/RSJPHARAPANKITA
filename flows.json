@@ -221,7 +221,8 @@
             "dad3e82fef0faa4b",
             "adf67cd97e33ce45",
             "d5f50e537010bec1",
-            "35cb9bc2441860b6"
+            "35cb9bc2441860b6",
+            "76e681351b7ebfb1"
         ],
         "x": 44,
         "y": 419,
@@ -3709,6 +3710,65 @@
         ]
     },
     {
+        "id": "cad8d9fb0b3b7dab",
+        "type": "link in",
+        "z": "bca4771a12cb11e6",
+        "name": "link in 12",
+        "links": [
+            "76e681351b7ebfb1"
+        ],
+        "x": 1265,
+        "y": 240,
+        "wires": [
+            [
+                "f3ac2cdc7fa4373e"
+            ]
+        ]
+    },
+    {
+        "id": "f3ac2cdc7fa4373e",
+        "type": "switch",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "property": "payload.value",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1350,
+        "y": 240,
+        "wires": [
+            [
+                "02d4dc0e2995b26c"
+            ]
+        ]
+    },
+    {
+        "id": "02d4dc0e2995b26c",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "func": "var RelayInputIndoor = flow.get(\"RelayInputIndoor\");\nfor (let index = 0; index < RelayInputIndoor.length; index++) {\n    if(RelayInputIndoor[index].keterangan == \"StatusIndoor\"){\n        RelayInputIndoor[index][\"Stat\"] = msg.payload.value;\n    }\n}\nflow.set(\"RelayInputIndoor\",RelayInputIndoor);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1470,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "ae459cb84c6fb828",
         "type": "debug",
         "z": "12638c94c64653f3",
@@ -4439,7 +4499,7 @@
         "wires": [
             [
                 "784018e13e7c3854",
-                "705589f9da0afe63"
+                "76e681351b7ebfb1"
             ]
         ]
     },
@@ -4483,18 +4543,16 @@
         ]
     },
     {
-        "id": "705589f9da0afe63",
-        "type": "debug",
+        "id": "76e681351b7ebfb1",
+        "type": "link out",
         "z": "12638c94c64653f3",
-        "name": "debug 61",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1250,
+        "g": "03d26eaca8acd225",
+        "name": "Interface",
+        "mode": "link",
+        "links": [
+            "cad8d9fb0b3b7dab"
+        ],
+        "x": 885,
         "y": 620,
         "wires": []
     }
