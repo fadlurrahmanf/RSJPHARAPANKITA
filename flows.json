@@ -4228,6 +4228,35 @@
         "wires": []
     },
     {
+        "id": "a132d3a11d6a78c2",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "Compressor Nyala",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "040500000003000003",
+        "payloadType": "str",
+        "x": 130,
+        "y": 480,
+        "wires": [
+            [
+                "ab5c7999a8ec94cb"
+            ]
+        ]
+    },
+    {
         "id": "ae459cb84c6fb828",
         "type": "debug",
         "z": "12638c94c64653f3",
