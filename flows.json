@@ -4059,7 +4059,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "040500DB0300000002",
+        "payload": "04050000DB0300000002",
         "payloadType": "str",
         "x": 120,
         "y": 400,
@@ -4081,6 +4081,33 @@
         "x": 265,
         "y": 400,
         "wires": []
+    },
+    {
+        "id": "7e50a2b0ccb709a6",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "040500DB0300000002",
+        "payloadType": "str",
+        "x": 340,
+        "y": 2020,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "ae459cb84c6fb828",
