@@ -543,7 +543,6 @@
         "id": "4c80d3fd31ff5440",
         "type": "link out",
         "z": "bca4771a12cb11e6",
-        "d": true,
         "g": "cbbdeba1125ca19b",
         "name": "IncomingData",
         "mode": "link",
