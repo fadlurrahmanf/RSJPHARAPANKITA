@@ -4273,7 +4273,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "040300009B0700000002",
+        "payload": "040300009B0C00000002",
         "payloadType": "str",
         "x": 100,
         "y": 520,
