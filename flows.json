@@ -1174,7 +1174,7 @@
             "c3f008a339c97a2e"
         ],
         "x": 55,
-        "y": 820,
+        "y": 920,
         "wires": [
             [
                 "5dfb8dd8c390d971"
@@ -1194,7 +1194,7 @@
         "finalize": "",
         "libs": [],
         "x": 190,
-        "y": 820,
+        "y": 920,
         "wires": [
             [
                 "6c88cbac6c1e1314",
@@ -1213,7 +1213,7 @@
             "340b6dc447cb3a1f"
         ],
         "x": 105,
-        "y": 780,
+        "y": 880,
         "wires": [
             [
                 "5dfb8dd8c390d971"
@@ -1230,7 +1230,7 @@
             "26120895f3f84739"
         ],
         "x": 295,
-        "y": 780,
+        "y": 880,
         "wires": []
     },
     {
@@ -1242,7 +1242,7 @@
             "6c88cbac6c1e1314"
         ],
         "x": 55,
-        "y": 740,
+        "y": 840,
         "wires": [
             [
                 "32dded3e3ceacf4c"
@@ -1259,7 +1259,7 @@
             "996b8741f6785be0"
         ],
         "x": 345,
-        "y": 740,
+        "y": 840,
         "wires": []
     },
     {
@@ -1280,7 +1280,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 260,
-        "y": 740,
+        "y": 840,
         "wires": [
             [
                 "340b6dc447cb3a1f"
@@ -1305,7 +1305,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 450,
-        "y": 820,
+        "y": 920,
         "wires": [
             []
         ]
@@ -1323,7 +1323,7 @@
         "finalize": "",
         "libs": [],
         "x": 600,
-        "y": 860,
+        "y": 960,
         "wires": [
             [
                 "b1b2db7babdaf54b"
@@ -1363,7 +1363,7 @@
         "repair": false,
         "outputs": 4,
         "x": 330,
-        "y": 860,
+        "y": 960,
         "wires": [
             [
                 "8f99e09dae854b85"
@@ -1398,7 +1398,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 450,
-        "y": 860,
+        "y": 960,
         "wires": [
             [
                 "14f91a50d6904e88"
@@ -1477,7 +1477,7 @@
         "mydb": "3b8e5eb93b7526d7",
         "name": " ",
         "x": 750,
-        "y": 860,
+        "y": 960,
         "wires": [
             [
                 "3ac72ba11294aa01"
@@ -1497,7 +1497,7 @@
         "finalize": "",
         "libs": [],
         "x": 890,
-        "y": 860,
+        "y": 960,
         "wires": [
             [
                 "022a029521e3c1dd"
@@ -1514,7 +1514,7 @@
             "dd1e1bf4fa001f32"
         ],
         "x": 1075,
-        "y": 900,
+        "y": 1000,
         "wires": []
     },
     {
@@ -1615,7 +1615,7 @@
         "repair": false,
         "outputs": 1,
         "x": 140,
-        "y": 740,
+        "y": 840,
         "wires": [
             [
                 "811d40e949e9fef1"
@@ -1636,7 +1636,7 @@
         "statusVal": "cmd",
         "statusType": "auto",
         "x": 330,
-        "y": 780,
+        "y": 880,
         "wires": []
     },
     {
@@ -1693,7 +1693,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 450,
-        "y": 920,
+        "y": 1020,
         "wires": [
             [
                 "db7e71f59821125d"
@@ -1713,7 +1713,7 @@
         "finalize": "",
         "libs": [],
         "x": 590,
-        "y": 920,
+        "y": 1020,
         "wires": [
             [
                 "89f81b486a2b2f8d"
@@ -1727,7 +1727,7 @@
         "mydb": "3b8e5eb93b7526d7",
         "name": " ",
         "x": 750,
-        "y": 920,
+        "y": 1020,
         "wires": [
             [
                 "4776d2059a76e625"
@@ -1747,7 +1747,7 @@
         "finalize": "",
         "libs": [],
         "x": 870,
-        "y": 920,
+        "y": 1020,
         "wires": [
             [
                 "e181d40ba2c883c6",
@@ -1768,7 +1768,7 @@
         "finalize": "",
         "libs": [],
         "x": 600,
-        "y": 980,
+        "y": 1080,
         "wires": [
             [
                 "86d93e43ac494bd0"
@@ -1782,7 +1782,7 @@
         "mydb": "3b8e5eb93b7526d7",
         "name": " ",
         "x": 750,
-        "y": 980,
+        "y": 1080,
         "wires": [
             [
                 "ab10a2b4ace98698"
@@ -1802,7 +1802,7 @@
         "finalize": "",
         "libs": [],
         "x": 890,
-        "y": 980,
+        "y": 1080,
         "wires": [
             [
                 "fe15437ea5ba0d90"
@@ -1819,7 +1819,7 @@
             "74eb172db82ec21b"
         ],
         "x": 675,
-        "y": 1020,
+        "y": 1120,
         "wires": []
     },
     {
@@ -1835,7 +1835,7 @@
         "finalize": "",
         "libs": [],
         "x": 590,
-        "y": 1020,
+        "y": 1120,
         "wires": [
             [
                 "9f44d28a524d189a"
@@ -1851,7 +1851,7 @@
             "9f44d28a524d189a"
         ],
         "x": 315,
-        "y": 980,
+        "y": 1080,
         "wires": [
             [
                 "5325683f3d621a49"
@@ -2126,7 +2126,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 450,
-        "y": 1060,
+        "y": 1160,
         "wires": [
             [
                 "1658ac7b84089f6b"
@@ -2146,7 +2146,7 @@
         "finalize": "",
         "libs": [],
         "x": 590,
-        "y": 1060,
+        "y": 1160,
         "wires": [
             [
                 "0494c8d6085a4cf0"
@@ -2160,7 +2160,7 @@
         "mydb": "3b8e5eb93b7526d7",
         "name": " ",
         "x": 750,
-        "y": 1060,
+        "y": 1160,
         "wires": [
             [
                 "01fea39265f2dc97"
@@ -2180,7 +2180,7 @@
         "finalize": "",
         "libs": [],
         "x": 870,
-        "y": 1060,
+        "y": 1160,
         "wires": [
             [
                 "710352610b5171f7",
@@ -2205,7 +2205,7 @@
         "repair": false,
         "outputs": 1,
         "x": 990,
-        "y": 900,
+        "y": 1000,
         "wires": [
             [
                 "b7a0b469689fefd3"
@@ -2228,7 +2228,7 @@
         "repair": false,
         "outputs": 1,
         "x": 990,
-        "y": 1040,
+        "y": 1140,
         "wires": [
             [
                 "fcded8e6800db872"
@@ -2251,7 +2251,7 @@
         "repair": false,
         "outputs": 1,
         "x": 990,
-        "y": 1080,
+        "y": 1180,
         "wires": [
             [
                 "d802d6a814ceb1d0"
@@ -2271,7 +2271,7 @@
         "finalize": "",
         "libs": [],
         "x": 1270,
-        "y": 1080,
+        "y": 1180,
         "wires": [
             [
                 "2ee5fb66a447ff24"
@@ -2296,7 +2296,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1140,
-        "y": 1080,
+        "y": 1180,
         "wires": [
             [
                 "ddab33048d01b3d5"
@@ -2313,7 +2313,7 @@
             "dd1e1bf4fa001f32"
         ],
         "x": 1475,
-        "y": 1080,
+        "y": 1180,
         "wires": []
     },
     {
@@ -2326,7 +2326,7 @@
             "dd1e1bf4fa001f32"
         ],
         "x": 995,
-        "y": 860,
+        "y": 960,
         "wires": []
     },
     {
@@ -2339,7 +2339,7 @@
             "dd1e1bf4fa001f32"
         ],
         "x": 995,
-        "y": 980,
+        "y": 1080,
         "wires": []
     },
     {
@@ -2352,7 +2352,7 @@
             "dd1e1bf4fa001f32"
         ],
         "x": 1095,
-        "y": 1040,
+        "y": 1140,
         "wires": []
     },
     {
@@ -2389,7 +2389,7 @@
         "repair": false,
         "outputs": 1,
         "x": 1390,
-        "y": 1080,
+        "y": 1180,
         "wires": [
             [
                 "300675ed5fd9466c"
@@ -2412,7 +2412,7 @@
         "repair": false,
         "outputs": 1,
         "x": 990,
-        "y": 940,
+        "y": 1040,
         "wires": [
             [
                 "8099edeb0376bcea"
@@ -2437,7 +2437,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1140,
-        "y": 940,
+        "y": 1040,
         "wires": [
             [
                 "efd4c15eee3524d0"
@@ -2457,7 +2457,7 @@
         "finalize": "",
         "libs": [],
         "x": 1270,
-        "y": 940,
+        "y": 1040,
         "wires": [
             [
                 "99d7acf34720e090"
@@ -2480,7 +2480,7 @@
         "repair": false,
         "outputs": 1,
         "x": 1390,
-        "y": 940,
+        "y": 1040,
         "wires": [
             [
                 "bf104e7cca1d96a0"
@@ -2567,7 +2567,7 @@
             "dd1e1bf4fa001f32"
         ],
         "x": 1475,
-        "y": 940,
+        "y": 1040,
         "wires": []
     },
     {
@@ -2727,7 +2727,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 960,
-        "y": 1120,
+        "y": 1220,
         "wires": []
     },
     {
@@ -2819,7 +2819,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 460,
-        "y": 1020,
+        "y": 1120,
         "wires": [
             [
                 "a88f76740bd895c4"
@@ -2844,7 +2844,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 450,
-        "y": 980,
+        "y": 1080,
         "wires": [
             [
                 "d7f5d1cda8b9c2e4"
@@ -3057,7 +3057,7 @@
         "z": "bca4771a12cb11e6",
         "g": "7ff6db086b81b7e7",
         "name": "Turn On Booster",
-        "func": "msg.topic = \"SELECT * FROM `devicelist` WHERE `keterangan` = 'RelayOutput';\";\nmsg.topic += \"SELECT * FROM `Output` WHERE `keterangan` = 'BoosterFan' OR `keterangan` = 'EF';\";\nmsg.topic += \"SELECT * FROM `Operation`;\";\nreturn msg;",
+        "func": "msg.topic = \"SELECT * FROM `devicelist` WHERE `keterangan` = 'RelayOutput' OR `keterangan` = 'RelayIndoor';\";\nmsg.topic += \"SELECT * FROM `Output` WHERE `keterangan` = 'BoosterFan' OR `keterangan` = 'EF';\";\nmsg.topic += \"SELECT * FROM `Operation`;\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
