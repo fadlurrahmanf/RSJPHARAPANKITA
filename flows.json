@@ -288,7 +288,6 @@
             "39f9a81f4a104b9e",
             "a5409b65184165d3",
             "ec5ef574d79e5506",
-            "1c2dcf8730950b3f",
             "a6711d252207f1c0",
             "95c264c90bd714f9",
             "de5cfc72b0d10bf3",
@@ -3938,35 +3937,7 @@
         "x": 1050,
         "y": 720,
         "wires": [
-            [
-                "1c2dcf8730950b3f"
-            ]
-        ]
-    },
-    {
-        "id": "1c2dcf8730950b3f",
-        "type": "delay",
-        "z": "bca4771a12cb11e6",
-        "g": "7ff6db086b81b7e7",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "10",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 1180,
-        "y": 720,
-        "wires": [
-            [
-                "a6711d252207f1c0"
-            ]
+            []
         ]
     },
     {
