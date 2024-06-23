@@ -2898,7 +2898,7 @@
         "op2": "",
         "op1type": "str",
         "op2type": "nul",
-        "duration": "15",
+        "duration": "25",
         "extend": false,
         "overrideDelay": false,
         "units": "s",
