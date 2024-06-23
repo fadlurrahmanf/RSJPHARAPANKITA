@@ -69,12 +69,14 @@
             "61569cd1264aebef",
             "1ec9c25db1122edf",
             "4c80d3fd31ff5440",
-            "dd1e1bf4fa001f32"
+            "dd1e1bf4fa001f32",
+            "31ef301a128c4b66",
+            "2815e1177e773fe4"
         ],
         "x": 14,
         "y": 39,
         "w": 452,
-        "h": 82
+        "h": 162
     },
     {
         "id": "1cbfcd06637d48ad",
@@ -129,14 +131,14 @@
             "f41842a72cb70323",
             "5b8d8dea5122397e",
             "83efeb6b5a73d7c6",
-            "fb1bf2e163b3c7a9",
             "df5d05325874622c",
             "f653f7df10385059",
             "91c1d36297a0c7fd",
             "f20849a9ab1503b2",
             "a647954ae4d429aa",
             "807a19eda26da37a",
-            "9d24164ad001ee18"
+            "9d24164ad001ee18",
+            "fb1bf2e163b3c7a9"
         ],
         "x": 24,
         "y": 359,
@@ -598,8 +600,8 @@
                 "83efeb6b5a73d7c6"
             ],
             [
-                "fb1bf2e163b3c7a9",
-                "807a19eda26da37a"
+                "807a19eda26da37a",
+                "fb1bf2e163b3c7a9"
             ]
         ]
     },
@@ -707,104 +709,6 @@
         ]
     },
     {
-        "id": "09cadf8846fbce47",
-        "type": "inject",
-        "z": "bca4771a12cb11e6",
-        "name": "Pressure",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 380,
-        "y": 160,
-        "wires": [
-            [
-                "5f9f6b38940d4cbc"
-            ]
-        ]
-    },
-    {
-        "id": "5f9f6b38940d4cbc",
-        "type": "function",
-        "z": "bca4771a12cb11e6",
-        "name": "Pressure",
-        "func": "msg.payload = { temperature_1 : 27.3, barometric_pressure_1 : 1.6, networkid : \"02\", devid : \"03\", typeid : \"02\", epo:1 }\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 520,
-        "y": 160,
-        "wires": [
-            [
-                "797d03be49f87377"
-            ]
-        ]
-    },
-    {
-        "id": "a489b477160810b5",
-        "type": "inject",
-        "z": "bca4771a12cb11e6",
-        "name": "Temp",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 390,
-        "y": 180,
-        "wires": [
-            [
-                "dde053031226823c"
-            ]
-        ]
-    },
-    {
-        "id": "dde053031226823c",
-        "type": "function",
-        "z": "bca4771a12cb11e6",
-        "name": "Temp",
-        "func": "msg.payload = {\ntemperature_1: 27,\nrelative_humidity_1:60,\nbarometric_pressure_1: -913.7,\nnetworkid: \"03\",\ndevid : \"05\",\ntypeid : \"03\",\nepo:2\n}\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 510,
-        "y": 200,
-        "wires": [
-            [
-                "797d03be49f87377"
-            ]
-        ]
-    },
-    {
         "id": "f20849a9ab1503b2",
         "type": "function",
         "z": "bca4771a12cb11e6",
@@ -907,51 +811,6 @@
         ]
     },
     {
-        "id": "fd65d131d5f88239",
-        "type": "inject",
-        "z": "bca4771a12cb11e6",
-        "name": "RH_Cathlab",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "0303030B0167010E0168780173DC4F97",
-        "payloadType": "str",
-        "x": 110,
-        "y": 160,
-        "wires": [
-            [
-                "4c80d3fd31ff5440"
-            ]
-        ]
-    },
-    {
-        "id": "797d03be49f87377",
-        "type": "debug",
-        "z": "bca4771a12cb11e6",
-        "name": "debug 41",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 680,
-        "y": 160,
-        "wires": []
-    },
-    {
         "id": "7a37686efd1c39c5",
         "type": "inject",
         "z": "bca4771a12cb11e6",
@@ -1034,57 +893,6 @@
         "x": 1430,
         "y": 80,
         "wires": []
-    },
-    {
-        "id": "fb1bf2e163b3c7a9",
-        "type": "function",
-        "z": "bca4771a12cb11e6",
-        "g": "8be50af1826bf3eb",
-        "name": " Relay",
-        "func": "msg.deviceinfo = msg.payload[0];\nmsg.topic = \"\";\nif(msg.deviceinfo.keterangan == \"RelayIndoor\"){\n    var RelayInputIndoor = flow.get(\"RelayInputIndoor\");\n    msg.deviceinfo[\"InputIndoorVal\"] = reverseString(hexToBinary(msg.realdata.substring(8,10)));\n    console.log(\"Hex : \" + String((msg.realdata.substring(8, 10))));\n    console.log(\"InputIndoorVal : \" + String(msg.deviceinfo.InputIndoorVal));\n    if(msg.deviceinfo.InputIndoorVal == \"11000000\"){\n        RelayInputIndoor[0][\"Stat\"] = 1;\n        for (let index = 1; index < RelayInputIndoor.length; index++) {\n            RelayInputIndoor[index][\"Stat\"] = 0;\n        }\n        msg.topic += \"UPDATE `monitoringdata` SET `Outdoor_Unit` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `AHU_Status` = 0;\";\n    }else{\n        RelayInputIndoor[0][\"Stat\"] = 0;\n        var spt = msg.deviceinfo.InputIndoorVal.split(\"\");\n        console.log(spt);\n        for (let index = 1; index < spt.length+1; index++) {\n            if(spt[index-1] == \"0\"){\n                console.log(\"Element :\"+String(spt[index-1]));\n                console.log(\"Index : \"+String(index-1));\n                if(index==1){\n                    msg.topic += \"UPDATE `monitoringdata` SET `Outdoor_Unit` = 1;\";\n                }else if(index == 2){\n                    msg.topic += \"UPDATE `monitoringdata` SET `AHU_Status` = 1;\";\n                }\n                msg.topic += \"UPDATE `InputIndoor` SET `Stat` = 1 WHERE `Number` = \"+String(index)+\";\";          \n                RelayInputIndoor[index][\"Stat\"] = 1;\n            }else if(spt[index-1] == \"1\"){\n                // console.log(\"Element :\"+String(spt[index-1]));\n                // console.log(\"Index : \"+String(index-1));\n                if(index==1){\n                    msg.topic += \"UPDATE `monitoringdata` SET `Outdoor_Unit` = 0;\";\n                }else if(index == 2){\n                    msg.topic += \"UPDATE `monitoringdata` SET `AHU_Status` = 0;\";\n                }\n                msg.topic += \"UPDATE `InputIndoor` SET `Stat` = 0 WHERE `Number` = \"+String(index)+\";\";             \n                RelayInputIndoor[index][\"Stat\"] = 0;         \n            }\n        }\n    }\n    flow.set(\"RelayInputIndoor\", RelayInputIndoor);\n\n    var RelayOutputIndoor = flow.get(\"RelayOutputIndoor\");\n    msg.deviceinfo[\"OutputIndoorVal\"] = reverseString(hexToBinary2((msg.realdata.substring(10, 12))));\n    if (msg.deviceinfo.OutputIndoorVal == \"00000000\") {\n        RelayOutputIndoor[0][\"Stat\"] = 1;\n        for (let index = 1; index < RelayOutputIndoor.length; index++) {\n            RelayOutputIndoor[index][\"Stat\"] = 0;\n        }\n        msg.topic += \"UPDATE `OutputIndoor` SET `Stat` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `Outdoor_Unit` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `AHU_Status` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `Heater_1` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `Heater_2` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `Booster_Fan` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `Exhaust_Fan` = 0;\";\n    } else {\n        RelayOutputIndoor[0][\"Stat\"] = 0;\n        var spt = msg.deviceinfo.OutputIndoorVal.split(\"\");\n        for (let index = 1; index < spt.length + 1; index++) {\n            if (spt[index - 1] == \"0\") {\n                if (index == 1) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Heater_1` = 0;\";\n                } else if (index == 2) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Heater_2` = 0;\";\n                } else if (index == 3) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Booster_Fan` = 0;\";\n                } else if (index == 4) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Exhaust_Fan` = 0;\";\n                }\n                msg.topic += \"UPDATE `OutputIndoor` SET `Stat` = 0 WHERE `Number` = \" + String(index) + \";\";\n                RelayOutputIndoor[index][\"Stat\"] = 0;\n            } else if (spt[index - 1] == \"1\") {\n                if (index == 1) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Heater_1` = 1;\";\n                } else if (index == 2) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Heater_2` = 1;\";\n                } else if (index == 3) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Booster_Fan` = 1;\";\n                } else if (index == 4) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Exhaust_Fan` = 1;\";\n                }\n                msg.topic += \"UPDATE `OutputIndoor` SET `Stat` = 1 WHERE `Number` = \" + String(index) + \";\";\n                RelayOutputIndoor[index][\"Stat\"] = 1;\n            }\n        }\n    }\n    flow.set(\"RelayOutputIndoor\", RelayOutputIndoor);\n    msg.topic += \"UPDATE `Operation` SET `OutputIndoor` = \" + String(parseInt(msg.realdata.substring(10, 12), 16)) + \";\";\n        \n}else{\n    var RelayInput = flow.get(\"RelayInput\");\n    msg.deviceinfo[\"InputVal\"] = reverseString(hexToBinary(msg.realdata.substring(8, 10)));\n    console.log(\"Hex : \" + String((msg.realdata.substring(8, 10))));\n    console.log(\"InputVal : \" + String(msg.deviceinfo.InputVal));\n    if (msg.deviceinfo.InputVal == \"11111111\") {\n        RelayInput[0][\"Stat\"] = 1;\n        for (let index = 1; index < RelayInput.length; index++) {\n            RelayInput[index][\"Stat\"] = 0;\n        }\n        msg.topic += \"UPDATE `Input` SET `Stat` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `Outdoor_Unit` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `AHU_Status` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `Heater_1` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `Heater_2` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `Booster_Fan` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `Exhaust_Fan` = 0;\";\n    } else {\n        RelayInput[0][\"Stat\"] = 0;\n        var spt = msg.deviceinfo.InputVal.split(\"\");\n        console.log(spt);\n        for (let index = 1; index < spt.length + 1; index++) {\n            if (spt[index - 1] == \"0\") {\n                console.log(\"Element :\" + String(spt[index - 1]));\n                console.log(\"Index : \" + String(index - 1));\n                if (index == 1) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Outdoor_Unit` = 1;\";\n                } else if (index == 2) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `AHU_Status` = 1;\";\n                } else if (index == 3) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Heater_1` = 1;\";\n                } else if (index == 4) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Heater_2` = 1;\";\n                } else if (index == 5) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Booster_Fan` = 1;\";\n                } else if (index == 7) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Exhaust_Fan` = 1;\";\n                }\n                msg.topic += \"UPDATE `Input` SET `Stat` = 1 WHERE `Number` = \" + String(index) + \";\";\n                if(index == 1){\n                    msg.topic += \"UPDATE `information` SET `AutoManual` = '1' WHERE `information`.`ID` = 1;\";\n                }\n                RelayInput[index][\"Stat\"] = 1;\n            } else if (spt[index - 1] == \"1\") {\n                // console.log(\"Element :\"+String(spt[index-1]));\n                // console.log(\"Index : \"+String(index-1));\n                if (index == 1) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Outdoor_Unit` = 0;\";\n                } else if (index == 2) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `AHU_Status` = 0;\";\n                } else if (index == 3) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Heater_1` = 0;\";\n                } else if (index == 4) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Heater_2` = 0;\";\n                } else if (index == 5) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Booster_Fan` = 0;\";\n                } else if (index == 7) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Exhaust_Fan` = 0;\";\n                }\n                msg.topic += \"UPDATE `Input` SET `Stat` = 0 WHERE `Number` = \" + String(index) + \";\";\n                if(index == 1){\n                    msg.topic += \"UPDATE `information` SET `AutoManual` = '0' WHERE `information`.`ID` = 1;\";\n                }\n                RelayInput[index][\"Stat\"] = 0;\n            }\n        }\n    }\n    flow.set(\"RelayInput\", RelayInput);\n    var RelayOutput = flow.get(\"RelayOutput\");\n    msg.deviceinfo[\"OutputVal\"] = reverseString(hexToBinary2((msg.realdata.substring(10, 12))));\n    if (msg.deviceinfo.OutputVal == \"00000000\") {\n        RelayOutput[0][\"Stat\"] = 1;\n        for (let index = 1; index < RelayOutput.length; index++) {\n            RelayOutput[index][\"Stat\"] = 0;\n        }\n        msg.topic += \"UPDATE `Output` SET `Stat` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `Outdoor_Unit` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `AHU_Status` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `Heater_1` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `Heater_2` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `Booster_Fan` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `Exhaust_Fan` = 0;\";\n    } else {\n        RelayOutput[0][\"Stat\"] = 0;\n        var spt = msg.deviceinfo.OutputVal.split(\"\");\n        for (let index = 1; index < spt.length + 1; index++) {\n            if (spt[index - 1] == \"0\") {\n                if (index == 1) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Heater_1` = 0;\";\n                } else if (index == 2) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Heater_2` = 0;\";\n                } else if (index == 3) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Booster_Fan` = 0;\";\n                } else if (index == 4) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Exhaust_Fan` = 0;\";\n                }\n                msg.topic += \"UPDATE `Output` SET `Stat` = 0 WHERE `Number` = \" + String(index) + \";\";\n                RelayOutput[index][\"Stat\"] = 0;\n            } else if (spt[index - 1] == \"1\") {\n                if (index == 1) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Heater_1` = 1;\";\n                } else if (index == 2) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Heater_2` = 1;\";\n                } else if (index == 3) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Booster_Fan` = 1;\";\n                } else if (index == 4) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Exhaust_Fan` = 1;\";\n                }\n                msg.topic += \"UPDATE `Output` SET `Stat` = 1 WHERE `Number` = \" + String(index) + \";\";\n                RelayOutput[index][\"Stat\"] = 1;\n            }\n        }\n    }\n    flow.set(\"RelayOutput\", RelayOutput);\n    msg.topic += \"UPDATE `Operation` SET `Output` = \" + String(parseInt(msg.realdata.substring(10, 12), 16)) + \";\";\n}\n\n// }\nreturn msg;\n\nfunction hexToBinary(hexString) {\n    // Parse the hexadecimal string to an integer\n    const intValue = parseInt(hexString, 16);\n\n    // Convert the integer to a binary string\n    let binaryString = intValue.toString(2);\n\n    // Pad the binary string with leading zeros if necessary\n    // Assuming each hex digit should be represented by 4 binary digits\n    const hexLength = hexString.length;\n    const expectedBinaryLength = hexLength * 4;\n    while (binaryString.length < expectedBinaryLength) {\n        binaryString = '0'.concat(binaryString);\n    }\n\n    return binaryString;\n}\n\nfunction decimalToReversedBinary(decimal) {\n    // Convert the decimal number to a binary string\n    let binaryString = decimal.toString(2);\n\n    // Pad the binary string with leading zeros to ensure it has a length of 4 bits\n    while (binaryString.length < 4) {\n        binaryString = '0'.concat(binaryString);\n    }\n\n    // Reverse the binary string\n    // const reversedBinaryString = binaryString.split('').reverse().join('');\n\n    // return reversedBinaryString;\n    return binaryString;\n}\n\nfunction decToBinary(dec) {\n    // Ensure the input is a number\n    if (typeof dec !== 'number' || isNaN(dec)) {\n        throw new Error('Input must be a valid number');\n    }\n\n    // Handle negative numbers by using two's complement representation\n    if (dec < 0) {\n        return (dec >>> 0).toString(2).padStart(32, '0');\n    }\n\n    // Convert decimal to binary using toString method\n    let binaryStr = dec.toString(2);\n\n    // Pad the binary string to 8 bits\n    return binaryStr.padStart(8, '0');\n}\n\n\nfunction hexToBinary2(hexString) {\n    // Menghapus karakter spasi jika ada\n    hexString = hexString.replace(/\\s+/g, '');\n    \n    // Memastikan string heksadesimal valid dan tidak lebih dari 2 karakter\n    if (!/^[\\da-fA-F]{1,2}$/.test(hexString)) {\n        throw new Error(\"Invalid hexadecimal string. Input should be 1 or 2 hex characters.\");\n    }\n\n    // Mengonversi string heksadesimal menjadi biner dengan panjang 8 bit\n    let binaryString = parseInt(hexString, 16).toString(2).padStart(8, '0');\n\n    return binaryString;\n}\n\nfunction reverseString(str) {\n    // Mengubah string menjadi array, membalik array, dan menggabungkan kembali menjadi string\n    return str.split('').reverse().join('');\n}",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 710,
-        "y": 440,
-        "wires": [
-            [
-                "f653f7df10385059",
-                "9d24164ad001ee18"
-            ]
-        ]
-    },
-    {
-        "id": "254b9d7070f0e133",
-        "type": "inject",
-        "z": "bca4771a12cb11e6",
-        "name": "RelayInputChannel3",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "04020000DF",
-        "payloadType": "str",
-        "x": 130,
-        "y": 200,
-        "wires": [
-            [
-                "4c80d3fd31ff5440"
-            ]
-        ]
     },
     {
         "id": "89aad2163aa4df8c",
@@ -1280,35 +1088,6 @@
             [
                 "962ac3a3ae6cb677",
                 "525a257b01798881"
-            ]
-        ]
-    },
-    {
-        "id": "aae7882546c43088",
-        "type": "inject",
-        "z": "bca4771a12cb11e6",
-        "name": "RelayInputAllOff",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "04020000FF",
-        "payloadType": "str",
-        "x": 120,
-        "y": 240,
-        "wires": [
-            [
-                "4c80d3fd31ff5440"
             ]
         ]
     },
@@ -1907,45 +1686,6 @@
         "wires": []
     },
     {
-        "id": "e891fec5ffdf34ff",
-        "type": "mqtt in",
-        "z": "bca4771a12cb11e6",
-        "d": true,
-        "name": "",
-        "topic": "iota238/#",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "415d098faf23ad7c",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 660,
-        "y": 200,
-        "wires": [
-            [
-                "3a635d2fd0debdf4",
-                "e8850da42b358071"
-            ]
-        ]
-    },
-    {
-        "id": "9e9e4bbb0c14950b",
-        "type": "debug",
-        "z": "bca4771a12cb11e6",
-        "name": "debug 51",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1200,
-        "y": 220,
-        "wires": []
-    },
-    {
         "id": "ede82a4075db7adf",
         "type": "trigger",
         "z": "bca4771a12cb11e6",
@@ -2127,75 +1867,6 @@
                 "5325683f3d621a49"
             ]
         ]
-    },
-    {
-        "id": "3a635d2fd0debdf4",
-        "type": "function",
-        "z": "bca4771a12cb11e6",
-        "name": "Parse",
-        "func": "msg.data = msg.payload;\nvar data = msg.payload;\nvar numBytes = data.length / 2;\nvar byteArray = new Uint8Array(numBytes);\nfor (var i=0; i<numBytes; i++) {\n    byteArray[i] = parseInt(data.substr(i*2, 2), 16);\n}\nvar len = byteArray[3];\nvar byteData = new Uint8Array(len);\nfor (i=0; i<len; i++) {\n    byteData[i] = byteArray[i+4];\n}\nmsg.payload = byteData;\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 810,
-        "y": 220,
-        "wires": [
-            [
-                "92c487871b3e54f5"
-            ]
-        ]
-    },
-    {
-        "id": "92c487871b3e54f5",
-        "type": "cayennelpp-decoder",
-        "z": "bca4771a12cb11e6",
-        "name": "decoder",
-        "x": 940,
-        "y": 220,
-        "wires": [
-            [
-                "5607eb9495880319"
-            ]
-        ]
-    },
-    {
-        "id": "5607eb9495880319",
-        "type": "function",
-        "z": "bca4771a12cb11e6",
-        "name": " Build",
-        "func": "var data = msg.payload;\ndata.networkid = msg.data.substring(0,2);\ndata.devid = msg.data.substring(2,4);\ndata.typeid = msg.data.substring(4,6);\ndata.epoch = (Date.now());\nmsg.payload = data;\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1070,
-        "y": 220,
-        "wires": [
-            [
-                "9e9e4bbb0c14950b"
-            ]
-        ]
-    },
-    {
-        "id": "e8850da42b358071",
-        "type": "debug",
-        "z": "bca4771a12cb11e6",
-        "name": "debug 55",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 880,
-        "y": 180,
-        "wires": []
     },
     {
         "id": "ad16923ac117ca11",
@@ -2433,6 +2104,7 @@
         "id": "2815e1177e773fe4",
         "type": "debug",
         "z": "bca4771a12cb11e6",
+        "g": "cbbdeba1125ca19b",
         "name": "Receive",
         "active": true,
         "tosidebar": true,
@@ -2442,8 +2114,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 330,
-        "y": 140,
+        "x": 360,
+        "y": 160,
         "wires": []
     },
     {
@@ -2909,218 +2581,10 @@
         "wires": []
     },
     {
-        "id": "46d993a4eb026271",
-        "type": "inject",
-        "z": "bca4771a12cb11e6",
-        "name": "EH1",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "UPDATE `Output` SET `Stat` = 1 WHERE `keterangan` = \"EH1\"; UPDATE `Operation` SET `Output` = 1;",
-        "payload": "",
-        "payloadType": "date",
-        "x": 530,
-        "y": 220,
-        "wires": [
-            [
-                "1c6ac3e90cbac996"
-            ]
-        ]
-    },
-    {
-        "id": "1c6ac3e90cbac996",
-        "type": "function",
-        "z": "bca4771a12cb11e6",
-        "name": " ",
-        "func": "var d = flow.get(\"RelayOutput\");\nd[1][\"Stat\"] = 1;\nflow.set(\"RelayOutput\",d);\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 650,
-        "y": 220,
-        "wires": [
-            [
-                "3fae4a69287e8867"
-            ]
-        ]
-    },
-    {
-        "id": "c212b5b4b106485d",
-        "type": "inject",
-        "z": "bca4771a12cb11e6",
-        "name": "EH2",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "UPDATE `Output` SET `Stat` = 1 WHERE `keterangan` = \"EH2\"; UPDATE `Operation` SET `Output` = 2;",
-        "payload": "",
-        "payloadType": "date",
-        "x": 530,
-        "y": 260,
-        "wires": [
-            [
-                "a8b08e1705fe67e9"
-            ]
-        ]
-    },
-    {
-        "id": "a8b08e1705fe67e9",
-        "type": "function",
-        "z": "bca4771a12cb11e6",
-        "name": " ",
-        "func": "var d = flow.get(\"RelayOutput\");\nd[2][\"Stat\"] = 1;\nflow.set(\"RelayOutput\",d);\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 650,
-        "y": 260,
-        "wires": [
-            [
-                "3fae4a69287e8867"
-            ]
-        ]
-    },
-    {
-        "id": "3fae4a69287e8867",
-        "type": "link out",
-        "z": "bca4771a12cb11e6",
-        "name": "link out 18",
-        "mode": "link",
-        "links": [
-            "2b3434178f0ac999"
-        ],
-        "x": 755,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "62c2245aabc41ac8",
-        "type": "inject",
-        "z": "bca4771a12cb11e6",
-        "name": "EH1&2",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "UPDATE `Output` SET `Stat` = 1 WHERE `keterangan` = \"EH1\" OR `keterangan` = \"EH2\"; UPDATE `Operation` SET `Output` = 3;",
-        "payload": "",
-        "payloadType": "date",
-        "x": 530,
-        "y": 300,
-        "wires": [
-            [
-                "136097ba3df47c6f"
-            ]
-        ]
-    },
-    {
-        "id": "136097ba3df47c6f",
-        "type": "function",
-        "z": "bca4771a12cb11e6",
-        "name": " ",
-        "func": "var d = flow.get(\"RelayOutput\");\nd[0][\"Stat\"] = 1;\nd[1][\"Stat\"] = 1;\nflow.set(\"RelayOutput\",d);\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 650,
-        "y": 300,
-        "wires": [
-            [
-                "3fae4a69287e8867"
-            ]
-        ]
-    },
-    {
-        "id": "36daea9165702a4e",
-        "type": "inject",
-        "z": "bca4771a12cb11e6",
-        "name": "EH",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "UPDATE `Output` SET `Stat` = 0 WHERE `keterangan` = \"EH1\" OR `keterangan` = \"EH2\"; UPDATE `Operation` SET `Output` = 0;",
-        "payload": "",
-        "payloadType": "date",
-        "x": 530,
-        "y": 340,
-        "wires": [
-            [
-                "8fbcad44da74550e"
-            ]
-        ]
-    },
-    {
-        "id": "8fbcad44da74550e",
-        "type": "function",
-        "z": "bca4771a12cb11e6",
-        "name": " ",
-        "func": "var d = flow.get(\"RelayOutput\");\nd[0][\"Stat\"] = 0;\nd[1][\"Stat\"] = 0;\nd[2][\"Stat\"] = 0;\nd[3][\"Stat\"] = 0;\nflow.set(\"RelayOutput\",d);\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 650,
-        "y": 340,
-        "wires": [
-            [
-                "3fae4a69287e8867"
-            ]
-        ]
-    },
-    {
         "id": "31ef301a128c4b66",
         "type": "debug",
         "z": "bca4771a12cb11e6",
+        "g": "cbbdeba1125ca19b",
         "name": "CMD",
         "active": true,
         "tosidebar": true,
@@ -3130,8 +2594,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 360,
-        "y": 220,
+        "x": 350,
+        "y": 120,
         "wires": []
     },
     {
@@ -3348,93 +2812,6 @@
         "wires": []
     },
     {
-        "id": "d0a85165f470fd39",
-        "type": "inject",
-        "z": "bca4771a12cb11e6",
-        "name": "RelayInputChannel2",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "040200009F",
-        "payloadType": "str",
-        "x": 130,
-        "y": 280,
-        "wires": [
-            [
-                "4c80d3fd31ff5440"
-            ]
-        ]
-    },
-    {
-        "id": "003b0b8942ca6da0",
-        "type": "inject",
-        "z": "bca4771a12cb11e6",
-        "name": "RelayInputChannel2",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "04020100000004",
-        "payloadType": "str",
-        "x": 130,
-        "y": 320,
-        "wires": [
-            [
-                "1ec9c25db1122edf"
-            ]
-        ]
-    },
-    {
-        "id": "39c2a8c067492de4",
-        "type": "inject",
-        "z": "bca4771a12cb11e6",
-        "name": "RelayInputChannel2",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "0402010000000C",
-        "payloadType": "str",
-        "x": 130,
-        "y": 360,
-        "wires": [
-            [
-                "1ec9c25db1122edf"
-            ]
-        ]
-    },
-    {
         "id": "aa65a38826eefec0",
         "type": "trigger",
         "z": "bca4771a12cb11e6",
@@ -3507,35 +2884,6 @@
         "wires": [
             [
                 "eeaad9e4a7b40fec"
-            ]
-        ]
-    },
-    {
-        "id": "5b3df44f02efc363",
-        "type": "inject",
-        "z": "bca4771a12cb11e6",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "04020100000004",
-        "payloadType": "str",
-        "x": 380,
-        "y": 300,
-        "wires": [
-            [
-                "4c80d3fd31ff5440"
             ]
         ]
     },
@@ -4271,6 +3619,28 @@
         "wires": [
             [
                 "4958a8f1dc7bf670"
+            ]
+        ]
+    },
+    {
+        "id": "fb1bf2e163b3c7a9",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "g": "8be50af1826bf3eb",
+        "name": " Relay",
+        "func": "msg.deviceinfo = msg.payload[0];\nmsg.topic = \"\";\nif(msg.deviceinfo.keterangan == \"RelayIndoor\"){\n    var RelayInputIndoor = flow.get(\"RelayInputIndoor\");\n    msg.deviceinfo[\"InputIndoorVal\"] = reverseString(hexToBinary(msg.realdata.substring(8,10)));\n    console.log(\"Hex : \" + String((msg.realdata.substring(8, 10))));\n    console.log(\"InputIndoorVal : \" + String(msg.deviceinfo.InputIndoorVal));\n    if(msg.deviceinfo.InputIndoorVal == \"11000000\"){\n        RelayInputIndoor[0][\"Stat\"] = 1;\n        for (let index = 1; index < RelayInputIndoor.length; index++) {\n            RelayInputIndoor[index][\"Stat\"] = 0;\n        }\n        msg.topic += \"UPDATE `monitoringdata` SET `Outdoor_Unit` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `AHU_Status` = 0;\";\n    }else{\n        RelayInputIndoor[0][\"Stat\"] = 0;\n        var spt = msg.deviceinfo.InputIndoorVal.split(\"\");\n        console.log(spt);\n        for (let index = 1; index < spt.length+1; index++) {\n            if(spt[index-1] == \"0\"){\n                console.log(\"Element :\"+String(spt[index-1]));\n                console.log(\"Index : \"+String(index-1));\n                if(index==1){\n                    msg.topic += \"UPDATE `monitoringdata` SET `Outdoor_Unit` = 1;\";\n                }else if(index == 2){\n                    msg.topic += \"UPDATE `monitoringdata` SET `AHU_Status` = 1;\";\n                }\n                msg.topic += \"UPDATE `InputIndoor` SET `Stat` = 1 WHERE `Number` = \"+String(index)+\";\";          \n                RelayInputIndoor[index][\"Stat\"] = 1;\n            }else if(spt[index-1] == \"1\"){\n                // console.log(\"Element :\"+String(spt[index-1]));\n                // console.log(\"Index : \"+String(index-1));\n                if(index==1){\n                    msg.topic += \"UPDATE `monitoringdata` SET `Outdoor_Unit` = 0;\";\n                }else if(index == 2){\n                    msg.topic += \"UPDATE `monitoringdata` SET `AHU_Status` = 0;\";\n                }\n                msg.topic += \"UPDATE `InputIndoor` SET `Stat` = 0 WHERE `Number` = \"+String(index)+\";\";             \n                RelayInputIndoor[index][\"Stat\"] = 0;         \n            }\n        }\n    }\n    flow.set(\"RelayInputIndoor\", RelayInputIndoor);\n\n    var RelayOutputIndoor = flow.get(\"RelayOutputIndoor\");\n    msg.deviceinfo[\"OutputIndoorVal\"] = reverseString(hexToBinary2((msg.realdata.substring(10, 12))));\n    if (msg.deviceinfo.OutputIndoorVal == \"00000000\") {\n        RelayOutputIndoor[0][\"Stat\"] = 1;\n        for (let index = 1; index < RelayOutputIndoor.length; index++) {\n            RelayOutputIndoor[index][\"Stat\"] = 0;\n        }\n        msg.topic += \"UPDATE `OutputIndoor` SET `Stat` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `Outdoor_Unit` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `AHU_Status` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `Heater_1` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `Heater_2` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `Booster_Fan` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `Exhaust_Fan` = 0;\";\n    } else {\n        RelayOutputIndoor[0][\"Stat\"] = 0;\n        var spt = msg.deviceinfo.OutputIndoorVal.split(\"\");\n        for (let index = 1; index < spt.length + 1; index++) {\n            if (spt[index - 1] == \"0\") {\n                if (index == 1) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Heater_1` = 0;\";\n                } else if (index == 2) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Heater_2` = 0;\";\n                } else if (index == 3) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Booster_Fan` = 0;\";\n                } else if (index == 4) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Exhaust_Fan` = 0;\";\n                }\n                msg.topic += \"UPDATE `OutputIndoor` SET `Stat` = 0 WHERE `Number` = \" + String(index) + \";\";\n                RelayOutputIndoor[index][\"Stat\"] = 0;\n            } else if (spt[index - 1] == \"1\") {\n                if (index == 1) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Heater_1` = 1;\";\n                } else if (index == 2) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Heater_2` = 1;\";\n                } else if (index == 3) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Booster_Fan` = 1;\";\n                } else if (index == 4) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Exhaust_Fan` = 1;\";\n                }\n                msg.topic += \"UPDATE `OutputIndoor` SET `Stat` = 1 WHERE `Number` = \" + String(index) + \";\";\n                RelayOutputIndoor[index][\"Stat\"] = 1;\n            }\n        }\n    }\n    flow.set(\"RelayOutputIndoor\", RelayOutputIndoor);\n    msg.topic += \"UPDATE `Operation` SET `OutputIndoor` = \" + String(parseInt(msg.realdata.substring(10, 12), 16)) + \";\";\n        \n}else{\n    var RelayInput = flow.get(\"RelayInput\");\n    msg.deviceinfo[\"InputVal\"] = reverseString(hexToBinary(msg.realdata.substring(8, 10)));\n    console.log(\"Hex : \" + String((msg.realdata.substring(8, 10))));\n    console.log(\"InputVal : \" + String(msg.deviceinfo.InputVal));\n    if (msg.deviceinfo.InputVal == \"11111111\") {\n        RelayInput[0][\"Stat\"] = 1;\n        for (let index = 1; index < RelayInput.length; index++) {\n            RelayInput[index][\"Stat\"] = 0;\n        }\n        msg.topic += \"UPDATE `Input` SET `Stat` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `Outdoor_Unit` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `AHU_Status` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `Heater_1` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `Heater_2` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `Booster_Fan` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `Exhaust_Fan` = 0;\";\n    } else {\n        RelayInput[0][\"Stat\"] = 0;\n        var spt = msg.deviceinfo.InputVal.split(\"\");\n        console.log(spt);\n        for (let index = 1; index < spt.length + 1; index++) {\n            if (spt[index - 1] == \"0\") {\n                console.log(\"Element :\" + String(spt[index - 1]));\n                console.log(\"Index : \" + String(index - 1));\n                if (index == 1) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Outdoor_Unit` = 1;\";\n                } else if (index == 2) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `AHU_Status` = 1;\";\n                } else if (index == 3) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Heater_1` = 1;\";\n                } else if (index == 4) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Heater_2` = 1;\";\n                } else if (index == 5) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Booster_Fan` = 1;\";\n                } else if (index == 7) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Exhaust_Fan` = 1;\";\n                }\n                msg.topic += \"UPDATE `Input` SET `Stat` = 1 WHERE `Number` = \" + String(index) + \";\";\n                if(index == 1){\n                    msg.topic += \"UPDATE `information` SET `AutoManual` = '1' WHERE `information`.`ID` = 1;\";\n                }\n                RelayInput[index][\"Stat\"] = 1;\n            } else if (spt[index - 1] == \"1\") {\n                // console.log(\"Element :\"+String(spt[index-1]));\n                // console.log(\"Index : \"+String(index-1));\n                if (index == 1) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Outdoor_Unit` = 0;\";\n                } else if (index == 2) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `AHU_Status` = 0;\";\n                } else if (index == 3) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Heater_1` = 0;\";\n                } else if (index == 4) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Heater_2` = 0;\";\n                } else if (index == 5) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Booster_Fan` = 0;\";\n                } else if (index == 7) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Exhaust_Fan` = 0;\";\n                }\n                msg.topic += \"UPDATE `Input` SET `Stat` = 0 WHERE `Number` = \" + String(index) + \";\";\n                if(index == 1){\n                    msg.topic += \"UPDATE `information` SET `AutoManual` = '0' WHERE `information`.`ID` = 1;\";\n                }\n                RelayInput[index][\"Stat\"] = 0;\n            }\n        }\n    }\n    flow.set(\"RelayInput\", RelayInput);\n    var RelayOutput = flow.get(\"RelayOutput\");\n    msg.deviceinfo[\"OutputVal\"] = reverseString(hexToBinary2((msg.realdata.substring(10, 12))));\n    if (msg.deviceinfo.OutputVal == \"00000000\") {\n        RelayOutput[0][\"Stat\"] = 1;\n        for (let index = 1; index < RelayOutput.length; index++) {\n            RelayOutput[index][\"Stat\"] = 0;\n        }\n        msg.topic += \"UPDATE `Output` SET `Stat` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `Outdoor_Unit` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `AHU_Status` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `Heater_1` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `Heater_2` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `Booster_Fan` = 0;\";\n        msg.topic += \"UPDATE `monitoringdata` SET `Exhaust_Fan` = 0;\";\n    } else {\n        RelayOutput[0][\"Stat\"] = 0;\n        var spt = msg.deviceinfo.OutputVal.split(\"\");\n        for (let index = 1; index < spt.length + 1; index++) {\n            if (spt[index - 1] == \"0\") {\n                if (index == 1) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Heater_1` = 0;\";\n                } else if (index == 2) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Heater_2` = 0;\";\n                } else if (index == 3) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Booster_Fan` = 0;\";\n                } else if (index == 4) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Exhaust_Fan` = 0;\";\n                }\n                msg.topic += \"UPDATE `Output` SET `Stat` = 0 WHERE `Number` = \" + String(index) + \";\";\n                RelayOutput[index][\"Stat\"] = 0;\n            } else if (spt[index - 1] == \"1\") {\n                if (index == 1) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Heater_1` = 1;\";\n                } else if (index == 2) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Heater_2` = 1;\";\n                } else if (index == 3) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Booster_Fan` = 1;\";\n                } else if (index == 4) {\n                    msg.topic += \"UPDATE `monitoringdata` SET `Exhaust_Fan` = 1;\";\n                }\n                msg.topic += \"UPDATE `Output` SET `Stat` = 1 WHERE `Number` = \" + String(index) + \";\";\n                RelayOutput[index][\"Stat\"] = 1;\n            }\n        }\n    }\n    flow.set(\"RelayOutput\", RelayOutput);\n    msg.topic += \"UPDATE `Operation` SET `Output` = \" + String(parseInt(msg.realdata.substring(10, 12), 16)) + \";\";\n}\n\n// }\nreturn msg;\n\nfunction hexToBinary(hexString) {\n    // Parse the hexadecimal string to an integer\n    const intValue = parseInt(hexString, 16);\n\n    // Convert the integer to a binary string\n    let binaryString = intValue.toString(2);\n\n    // Pad the binary string with leading zeros if necessary\n    // Assuming each hex digit should be represented by 4 binary digits\n    const hexLength = hexString.length;\n    const expectedBinaryLength = hexLength * 4;\n    while (binaryString.length < expectedBinaryLength) {\n        binaryString = '0'.concat(binaryString);\n    }\n\n    return binaryString;\n}\n\nfunction decimalToReversedBinary(decimal) {\n    // Convert the decimal number to a binary string\n    let binaryString = decimal.toString(2);\n\n    // Pad the binary string with leading zeros to ensure it has a length of 4 bits\n    while (binaryString.length < 4) {\n        binaryString = '0'.concat(binaryString);\n    }\n\n    // Reverse the binary string\n    // const reversedBinaryString = binaryString.split('').reverse().join('');\n\n    // return reversedBinaryString;\n    return binaryString;\n}\n\nfunction decToBinary(dec) {\n    // Ensure the input is a number\n    if (typeof dec !== 'number' || isNaN(dec)) {\n        throw new Error('Input must be a valid number');\n    }\n\n    // Handle negative numbers by using two's complement representation\n    if (dec < 0) {\n        return (dec >>> 0).toString(2).padStart(32, '0');\n    }\n\n    // Convert decimal to binary using toString method\n    let binaryStr = dec.toString(2);\n\n    // Pad the binary string to 8 bits\n    return binaryStr.padStart(8, '0');\n}\n\n\nfunction hexToBinary2(hexString) {\n    // Menghapus karakter spasi jika ada\n    hexString = hexString.replace(/\\s+/g, '');\n    \n    // Memastikan string heksadesimal valid dan tidak lebih dari 2 karakter\n    if (!/^[\\da-fA-F]{1,2}$/.test(hexString)) {\n        throw new Error(\"Invalid hexadecimal string. Input should be 1 or 2 hex characters.\");\n    }\n\n    // Mengonversi string heksadesimal menjadi biner dengan panjang 8 bit\n    let binaryString = parseInt(hexString, 16).toString(2).padStart(8, '0');\n\n    return binaryString;\n}\n\nfunction reverseString(str) {\n    // Mengubah string menjadi array, membalik array, dan menggabungkan kembali menjadi string\n    return str.split('').reverse().join('');\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 440,
+        "wires": [
+            [
+                "f653f7df10385059",
+                "9d24164ad001ee18"
             ]
         ]
     },
