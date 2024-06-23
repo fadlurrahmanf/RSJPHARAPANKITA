@@ -3905,7 +3905,7 @@
         "type": "debug",
         "z": "bca4771a12cb11e6",
         "name": "debug 67",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4223,7 +4223,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1250,
+        "x": 1440,
         "y": 480,
         "wires": []
     },
