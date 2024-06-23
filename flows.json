@@ -4043,7 +4043,7 @@
         "id": "8232630545be6324",
         "type": "inject",
         "z": "bca4771a12cb11e6",
-        "name": "",
+        "name": "BoosterFanAktif",
         "props": [
             {
                 "p": "payload"
@@ -4058,9 +4058,9 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "04030100000004",
+        "payload": "040500FF0300000002",
         "payloadType": "str",
-        "x": 130,
+        "x": 120,
         "y": 400,
         "wires": [
             [
