@@ -4109,6 +4109,23 @@
         ]
     },
     {
+        "id": "2bf4afd396f8f7e8",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": " Booster",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "StatusIndoor",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 500,
+        "y": 440,
+        "wires": []
+    },
+    {
         "id": "ae459cb84c6fb828",
         "type": "debug",
         "z": "12638c94c64653f3",
