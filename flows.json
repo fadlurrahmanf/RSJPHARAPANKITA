@@ -91,12 +91,13 @@
             "7a37686efd1c39c5",
             "4958a8f1dc7bf670",
             "a421582f2823dadb",
-            "289303bf7764e0d3"
+            "289303bf7764e0d3",
+            "c4d434baba39c97b"
         ],
-        "x": 724,
+        "x": 714,
         "y": 39,
-        "w": 812,
-        "h": 82
+        "w": 822,
+        "h": 122
     },
     {
         "id": "aadd16a462e83be5",
@@ -832,7 +833,7 @@
         "topic": "select * from monitoringdata;select * from Input Order by Number ASC;select * from Output Order by Number ASC;select * from InputIndoor Order by Number ASC;select * from OutputIndoor Order by Number ASC;",
         "payload": "",
         "payloadType": "date",
-        "x": 820,
+        "x": 810,
         "y": 80,
         "wires": [
             [
@@ -3653,6 +3654,36 @@
         "wires": [
             [
                 "4c80d3fd31ff5440"
+            ]
+        ]
+    },
+    {
+        "id": "c4d434baba39c97b",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "g": "1cbfcd06637d48ad",
+        "name": "  ",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "select * from monitoringdata;select * from Input Order by Number ASC;select * from Output Order by Number ASC;select * from InputIndoor Order by Number ASC;select * from OutputIndoor Order by Number ASC;",
+        "payload": "",
+        "payloadType": "date",
+        "x": 810,
+        "y": 120,
+        "wires": [
+            [
+                "4958a8f1dc7bf670"
             ]
         ]
     },
