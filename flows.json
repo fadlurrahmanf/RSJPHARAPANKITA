@@ -558,7 +558,8 @@
         "g": "8be50af1826bf3eb",
         "name": "link in 1",
         "links": [
-            "4c80d3fd31ff5440"
+            "4c80d3fd31ff5440",
+            "ab5c7999a8ec94cb"
         ],
         "x": 65,
         "y": 280,
@@ -4036,6 +4037,48 @@
         ],
         "x": 1185,
         "y": 580,
+        "wires": []
+    },
+    {
+        "id": "8232630545be6324",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "04030100000004",
+        "payloadType": "str",
+        "x": 130,
+        "y": 400,
+        "wires": [
+            [
+                "ab5c7999a8ec94cb"
+            ]
+        ]
+    },
+    {
+        "id": "ab5c7999a8ec94cb",
+        "type": "link out",
+        "z": "bca4771a12cb11e6",
+        "name": "IncomingData",
+        "mode": "link",
+        "links": [
+            "0cbc509033550b7f"
+        ],
+        "x": 265,
+        "y": 400,
         "wires": []
     },
     {
