@@ -4031,7 +4031,6 @@
         "id": "de5cfc72b0d10bf3",
         "type": "link out",
         "z": "bca4771a12cb11e6",
-        "d": true,
         "g": "7ff6db086b81b7e7",
         "name": "link out 24",
         "mode": "link",
