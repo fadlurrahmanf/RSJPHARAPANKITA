@@ -154,7 +154,7 @@
         ],
         "x": 34,
         "y": 179,
-        "w": 1192,
+        "w": 1202,
         "h": 122
     },
     {
@@ -554,9 +554,9 @@
             "0e3f4cd8e2a0e530",
             "80511c5878e7f281"
         ],
-        "x": 1234,
+        "x": 1244,
         "y": 179,
-        "w": 752,
+        "w": 742,
         "h": 122
     },
     {
@@ -1407,7 +1407,7 @@
         "z": "bca4771a12cb11e6",
         "g": "8be50af1826bf3eb",
         "name": "Query",
-        "func": "var d = msg.deviceinfo;\nmsg.topic = \"UPDATE `monitoringdata` SET \";\nif(d.keterangan.split(\",\")[0] == \"Temp/RH\"){\n    if(d.keterangan.split(\",\")[1] == \"CathLab\"){\n        msg.topic += \"`Temp_Cathlab` = \"+String(msg.payload.temperature_1)+\",\";\n        msg.topic += \"`RH_Cathlab` = \"+String(msg.payload.relative_humidity_1)+\";\";\n        flow.set(\"Temp_Cathlab\",[msg.payload.temperature_1,Date.now()]);\n        flow.set(\"RH_Cathlab\", [msg.payload.relative_humidity_1,Date.now()]);\n    } else if (d.keterangan.split(\",\")[1] == \"Machine\"){\n        msg.topic += \"`Temp_Machine` = \" + String(msg.payload.temperature_1) + \",\";\n        msg.topic += \"`RH_Machine` = \" + String(msg.payload.relative_humidity_1) + \";\";\n        flow.set(\"Temp_Machine\", [msg.payload.temperature_1,Date.now()]);\n        flow.set(\"RH_Machine\", [msg.payload.relative_humidity_1,Date.now()]);\n    }\n} else if (d.keterangan.split(\",\")[0] == \"Pressure\"){\n    if (d.keterangan.split(\",\")[1] == \"MediumFilter\") {\n        msg.topic += \"`Pre_Filter` = \" + String(msg.payload.barometric_pressure_1) + \";\";\n        flow.set(\"Pre_Filter\", [msg.payload.barometric_pressure_1,Date.now()]);\n    } else if (d.keterangan.split(\",\")[1] == \"HepaFilter\") {\n        msg.topic += \"`HEPA_Filter` = \" + String(msg.payload.barometric_pressure_1) + \";\";\n        flow.set(\"HEPA_Filter\", [msg.payload.barometric_pressure_1,Date.now()]);\n    }\n}\n\nmsg.topic += \"INSERT INTO `recorddevice`(`epoch`, `networkid`, `devid`, `typeid`, `temp`, `val`) VALUES (\";\nmsg.topic += String(msg.payload.epoch)+\",\";\nmsg.topic += \"'\" + String(msg.payload.networkid) + \"',\";\nmsg.topic += \"'\" + String(msg.payload.devid) + \"',\";\nmsg.topic += \"'\" + String(msg.payload.typeid) + \"',\";\nmsg.topic += String(msg.payload.temperature_1) + \",\";\nif(msg.payload.networkid == \"02\"){\n    msg.topic += String(msg.payload.barometric_pressure_1);\n}else if(msg.payload.networkid == \"03\"){\n    msg.topic += String(msg.payload.relative_humidity_1);\n}\nmsg.topic += \");\";\nreturn msg;",
+        "func": "var d = msg.deviceinfo;\nmsg.topic = \"UPDATE `monitoringdata` SET \";\nif(d.keterangan.split(\",\")[0] == \"Temp/RH\"){\n    if(d.keterangan.split(\",\")[1] == \"CathLab\"){\n        msg.topic += \"`Temp_Cathlab` = \"+String(msg.payload.temperature_1)+\",\";\n        msg.topic += \"`RH_Cathlab` = \"+String(msg.payload.relative_humidity_1)+\";\";\n        flow.set(\"Temp_Cathlab\",[msg.payload.temperature_1,Date.now()]);\n        flow.set(\"RH_Cathlab\", [msg.payload.relative_humidity_1,Date.now()]);\n    } else if (d.keterangan.split(\",\")[1] == \"Machine\"){\n        msg.topic += \"`Temp_Machine` = \" + String(msg.payload.temperature_1) + \",\";\n        msg.topic += \"`RH_Machine` = \" + String(msg.payload.relative_humidity_1) + \";\";\n        flow.set(\"Temp_Machine\", [msg.payload.temperature_1,Date.now()]);\n        flow.set(\"RH_Machine\", [msg.payload.relative_humidity_1,Date.now()]);\n    }\n} else if (d.keterangan.split(\",\")[0] == \"Pressure\"){\n    if (d.keterangan.split(\",\")[1] == \"MediumFilter\") {\n        msg.topic += \"`Pre_Filter` = \" + String(msg.payload.barometric_pressure_1) + \";\";\n        flow.set(\"Pre_Filter\", [msg.payload.barometric_pressure_1,Date.now()]);\n    } else if (d.keterangan.split(\",\")[1] == \"HepaFilter\") {\n        msg.topic += \"`HEPA_Filter` = \" + String(msg.payload.barometric_pressure_1) + \";\";\n        flow.set(\"HEPA_Filter\", [msg.payload.barometric_pressure_1,Date.now()]);\n    }\n}\n\nmsg.topic += \"INSERT INTO `recorddevice`(`epoch`, `networkid`, `devid`, `typeid`, `temp`, `val`) VALUES (\";\nmsg.topic += String(msg.payload.epoch)+\",\";\nmsg.topic += \"'\" + String(msg.payload.networkid) + \"',\";\nmsg.topic += \"'\" + String(msg.payload.devid) + \"',\";\nmsg.topic += \"'\" + String(msg.payload.typeid) + \"',\";\nmsg.topic += String(msg.payload.temperature_1) + \",\";\nif(msg.payload.networkid == \"02\"){\n    msg.topic += String(msg.payload.barometric_pressure_1);\n}else if(msg.payload.networkid == \"03\"){\n    msg.topic += String(msg.payload.relative_humidity_1);\n}\nmsg.topic += \");\";\n\nmsg.topic += \"DELETE FROM `recorddevice` WHERE `epoch` < \" + String(Date.now()-(604800*1000))+\";\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1434,7 +1434,7 @@
             "9b0d96a526b14c55",
             "cf128b17d11f7fc7"
         ],
-        "x": 1185,
+        "x": 1195,
         "y": 220,
         "wires": []
     },
@@ -3431,7 +3431,7 @@
         "links": [
             "76e681351b7ebfb1"
         ],
-        "x": 1275,
+        "x": 1285,
         "y": 240,
         "wires": [
             [
