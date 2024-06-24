@@ -4428,6 +4428,35 @@
         "wires": []
     },
     {
+        "id": "b3f450d927ca57aa",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "AutoPanelAktif",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "04030000FE0000000002",
+        "payloadType": "str",
+        "x": 120,
+        "y": 360,
+        "wires": [
+            [
+                "ab5c7999a8ec94cb"
+            ]
+        ]
+    },
+    {
         "id": "ae459cb84c6fb828",
         "type": "debug",
         "z": "12638c94c64653f3",
