@@ -4930,7 +4930,7 @@
         "id": "e9dce8c2968fc362",
         "type": "inject",
         "z": "bca4771a12cb11e6",
-        "name": "FanIndoor Nyala",
+        "name": "FanIndoor Mati",
         "props": [
             {
                 "p": "payload"
@@ -4945,7 +4945,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "040500000201000003",
+        "payload": "040500000300000003",
         "payloadType": "str",
         "x": 800,
         "y": 1540,
@@ -5301,8 +5301,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1723,
-        "y": 1424,
+        "x": 1680,
+        "y": 1420,
         "wires": []
     },
     {
