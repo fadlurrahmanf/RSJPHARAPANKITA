@@ -95,7 +95,6 @@
             "62a153d4d974c23e",
             "4958a8f1dc7bf670",
             "a421582f2823dadb",
-            "289303bf7764e0d3",
             "1b3e437abd5cab62",
             "09187eb453511326",
             "fe9d2d5c8508a0c3",
@@ -104,7 +103,7 @@
         ],
         "x": 724,
         "y": 19,
-        "w": 1102,
+        "w": 952,
         "h": 142
     },
     {
@@ -1490,8 +1489,8 @@
         "g": "1cbfcd06637d48ad",
         "mydb": "3b8e5eb93b7526d7",
         "name": " ",
-        "x": 1380,
-        "y": 60,
+        "x": 1230,
+        "y": 80,
         "wires": [
             [
                 "a421582f2823dadb",
@@ -1505,14 +1504,14 @@
         "z": "bca4771a12cb11e6",
         "g": "1cbfcd06637d48ad",
         "name": "Init Global Variable",
-        "func": "var json = {};\nflow.set(\"InitTime\",Date.now());\nflow.set(\"RelayInput\",msg.payload[1]);\nflow.set(\"RelayOutput\",msg.payload[2]);\nflow.set(\"RelayInputIndoor\",msg.payload[3]);\nflow.set(\"RelayOutputIndoor\",msg.payload[4]);\nflow.set(\"SensorQty\",msg.payload[5]);\nfor (let index = 0; index < Object.keys(msg.payload[0][0]).length ; index++) {\n    flow.set(Object.keys(msg.payload[0][0])[index],msg.payload[0][0][Object.keys(msg.payload[0][0])[index]]) \n    json[String(Object.keys(msg.payload[0][0])[index])] = flow.get(Object.keys(msg.payload[0][0])[index]);  \n}\njson[\"Timestamp\"] = toEpochTimeInSeconds(json.Timestamp);\nmsg.payload = [json,msg.payload[1],msg.payload[2]];\nreturn msg;\n\nfunction toEpochTimeInSeconds(dateString) {\n    return Math.floor(new Date(dateString).getTime());\n}",
+        "func": "var json = {};\nflow.set(\"InitTime\",Date.now());\nflow.set(\"RelayInput\",msg.payload[1]);\nflow.set(\"RelayOutput\",msg.payload[2]);\nflow.set(\"RelayInputIndoor\",msg.payload[3]);\nflow.set(\"RelayOutputIndoor\",msg.payload[4]);\nflow.set(\"SensorQty\",msg.payload[5].length);\nfor (let index = 0; index < Object.keys(msg.payload[0][0]).length ; index++) {\n    flow.set(Object.keys(msg.payload[0][0])[index],msg.payload[0][0][Object.keys(msg.payload[0][0])[index]]) \n    json[String(Object.keys(msg.payload[0][0])[index])] = flow.get(Object.keys(msg.payload[0][0])[index]);  \n}\njson[\"Timestamp\"] = toEpochTimeInSeconds(json.Timestamp);\nmsg.payload = [json,msg.payload[1],msg.payload[2]];\nreturn msg;\n\nfunction toEpochTimeInSeconds(dateString) {\n    return Math.floor(new Date(dateString).getTime());\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1540,
+        "x": 1390,
         "y": 60,
         "wires": [
             [
@@ -1526,14 +1525,14 @@
         "z": "bca4771a12cb11e6",
         "g": "1cbfcd06637d48ad",
         "name": "debug 43",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1720,
+        "x": 1570,
         "y": 60,
         "wires": []
     },
@@ -3341,32 +3340,6 @@
         ]
     },
     {
-        "id": "289303bf7764e0d3",
-        "type": "delay",
-        "z": "bca4771a12cb11e6",
-        "g": "1cbfcd06637d48ad",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "20",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 1240,
-        "y": 80,
-        "wires": [
-            [
-                "4958a8f1dc7bf670"
-            ]
-        ]
-    },
-    {
         "id": "fb1bf2e163b3c7a9",
         "type": "function",
         "z": "bca4771a12cb11e6",
@@ -3569,7 +3542,7 @@
         "y": 80,
         "wires": [
             [
-                "289303bf7764e0d3"
+                "4958a8f1dc7bf670"
             ]
         ]
     },
@@ -5960,16 +5933,17 @@
         "type": "debug",
         "z": "bca4771a12cb11e6",
         "g": "1cbfcd06637d48ad",
-        "name": "debug 80",
-        "active": true,
+        "name": " ",
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1520,
-        "y": 120,
+        "x": 1350,
+        "y": 100,
         "wires": []
     },
     {
