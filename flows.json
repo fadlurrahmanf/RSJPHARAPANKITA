@@ -3673,16 +3673,24 @@
         "rules": [
             {
                 "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
                 "v": "1",
                 "vt": "num"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 1,
+        "outputs": 2,
         "x": 1350,
         "y": 240,
         "wires": [
+            [
+                "80511c5878e7f281"
+            ],
             [
                 "02d4dc0e2995b26c"
             ]
@@ -4451,7 +4459,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "func": "var AutoManual = msg.payload[0].AutoManual;\nmsg.payload = msg.Val;\nvar RelayInputIndoor = flow.get(\"RelayInputIndoor\");\nvar stats = false;\nfor (let index = 0; index < RelayInputIndoor.length; index++) {\n    if(RelayInputIndoor[index].keterangan == \"StatusIndoor\" && AutoManual){\n        flow.set(\"cmd\");\n        stats = true;\n    }\n}\nmsg.payload = [stats,AutoManual];\nflow.set(\"RelayInputIndoor\",RelayInputIndoor);\nreturn msg;",
+        "func": "var AutoManual = msg.payload[0].AutoManual;\nmsg.payload = msg.Val;\nvar RelayInputIndoor = flow.get(\"RelayInputIndoor\");\nvar stats = false;\nfor (let index = 0; index < RelayInputIndoor.length; index++) {\n    if(RelayInputIndoor[index].keterangan == \"StatusIndoor\" && AutoManual){\n        flow.set(\"SystemStatus\",\"ON\");\n        stats = true;\n    }\n}\nmsg.payload = [stats,AutoManual];\nflow.set(\"RelayInputIndoor\",RelayInputIndoor);\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4486,6 +4494,24 @@
         "outputs": 1,
         "x": 490,
         "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "80511c5878e7f281",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "func": "flow.set(\"SystemStatus\",\"OFF\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 240,
         "wires": [
             []
         ]
