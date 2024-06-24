@@ -4956,7 +4956,7 @@
         "id": "d00f6db0ab2d050c",
         "type": "inject",
         "z": "bca4771a12cb11e6",
-        "name": "Compressor Nyala",
+        "name": "Compressor Mati",
         "props": [
             {
                 "p": "payload"
@@ -4973,7 +4973,7 @@
         "topic": "",
         "payload": "040500000101000003",
         "payloadType": "str",
-        "x": 810,
+        "x": 800,
         "y": 1500,
         "wires": [
             [
