@@ -3729,7 +3729,7 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 1480,
+        "x": 1500,
         "y": 360,
         "wires": []
     },
