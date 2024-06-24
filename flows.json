@@ -6100,7 +6100,8 @@
         "y": 1740,
         "wires": [
             [
-                "f0927c6acb32a4c8"
+                "86c1689ffc4d0bdd",
+                "fc9c0bf7596e401b"
             ]
         ]
     },
@@ -6155,20 +6156,119 @@
         ]
     },
     {
-        "id": "f0927c6acb32a4c8",
-        "type": "debug",
+        "id": "fc9c0bf7596e401b",
+        "type": "switch",
         "z": "bca4771a12cb11e6",
         "name": " ",
+        "property": "deviceinfo.InputVal",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 530,
+        "y": 1700,
+        "wires": [
+            [
+                "54887fe9cb9508e2",
+                "cd4c866968c8600e"
+            ]
+        ]
+    },
+    {
+        "id": "86c1689ffc4d0bdd",
+        "type": "switch",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "property": "deviceinfo.InputIndoorVal",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 530,
+        "y": 1780,
+        "wires": [
+            [
+                "fd1c545222ae5127",
+                "4745d88450ac0bd9"
+            ]
+        ]
+    },
+    {
+        "id": "4745d88450ac0bd9",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "InputIndoorVal",
         "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": true,
-        "complete": "deviceinfo",
+        "complete": "deviceinfo.InputIndoorVal",
         "targetType": "msg",
-        "statusVal": "deviceinfo",
+        "statusVal": "deviceinfo.InputIndoorVal",
         "statusType": "auto",
-        "x": 530,
-        "y": 1740,
+        "x": 680,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "fd1c545222ae5127",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "OutputIndoorVal",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "deviceinfo.OutputIndoorVal",
+        "targetType": "msg",
+        "statusVal": "deviceinfo.InputIndoorVal",
+        "statusType": "auto",
+        "x": 880,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "cd4c866968c8600e",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "OutputVal",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "deviceinfo.OutputVal",
+        "targetType": "msg",
+        "statusVal": "deviceinfo.InputIndoorVal",
+        "statusType": "auto",
+        "x": 860,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "54887fe9cb9508e2",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "InputVal",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "deviceinfo.InputVal",
+        "targetType": "msg",
+        "statusVal": "deviceinfo.InputIndoorVal",
+        "statusType": "auto",
+        "x": 660,
+        "y": 1700,
         "wires": []
     },
     {
