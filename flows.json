@@ -4997,7 +4997,7 @@
         "z": "bca4771a12cb11e6",
         "g": "4a2b08a3489a859c",
         "name": " ",
-        "func": "if(flow.get(\"SystemStatus\") != \"ON\"){\n    msg.payload = null;\n}\nmsg.rate = flow.get(\"SensorQty\")*8000;\nreturn msg;",
+        "func": "if(flow.get(\"SystemStatus\") != \"ON\"){\n    msg.payload = null;\n}\nmsg.rate = (flow.get(\"SensorQty\")*8000)+2000;\nmsg.delay = msg.rate-2000;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5734,7 +5734,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1810,
+        "x": 1750,
         "y": 580,
         "wires": [
             [
@@ -5764,7 +5764,7 @@
         "z": "bca4771a12cb11e6",
         "mydb": "3b8e5eb93b7526d7",
         "name": " ",
-        "x": 1930,
+        "x": 1870,
         "y": 580,
         "wires": [
             [
@@ -5788,7 +5788,7 @@
         "y": 580,
         "wires": [
             [
-                "ee9d73a6060c9c58"
+                "f3a38b43331d2ea8"
             ]
         ]
     },
@@ -5818,7 +5818,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2050,
+        "x": 1990,
         "y": 580,
         "wires": [
             [
@@ -5929,16 +5929,59 @@
         "op2type": "str",
         "duration": "250",
         "extend": false,
-        "overrideDelay": false,
+        "overrideDelay": true,
         "units": "ms",
         "reset": "",
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1810,
+        "x": 1750,
         "y": 620,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "f3a38b43331d2ea8",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "func": "if(flow.get(\"SystemStatus\") != \"ON\"){\n    msg.payload = null;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2330,
+        "y": 680,
+        "wires": [
+            [
+                "6a72d4f3b0d96b83"
+            ]
+        ]
+    },
+    {
+        "id": "6a72d4f3b0d96b83",
+        "type": "switch",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nnull"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 2450,
+        "y": 680,
+        "wires": [
+            [
+                "ee9d73a6060c9c58"
+            ]
         ]
     },
     {
