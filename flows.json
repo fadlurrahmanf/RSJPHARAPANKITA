@@ -6273,35 +6273,6 @@
         "wires": []
     },
     {
-        "id": "159c3f34108e0fe6",
-        "type": "inject",
-        "z": "bca4771a12cb11e6",
-        "name": "Manual Panel",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "04030000FE0000000002",
-        "payloadType": "str",
-        "x": 150,
-        "y": 1620,
-        "wires": [
-            [
-                "6233b4b33cbabd1c"
-            ]
-        ]
-    },
-    {
         "id": "fb21266b670ccd2a",
         "type": "trigger",
         "z": "bca4771a12cb11e6",
@@ -6347,6 +6318,35 @@
         "y": 1660,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "f253911535b8f09a",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "FanIndoor Mati",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "040500000300000003",
+        "payloadType": "str",
+        "x": 120,
+        "y": 1640,
+        "wires": [
+            [
+                "6233b4b33cbabd1c"
+            ]
         ]
     },
     {
