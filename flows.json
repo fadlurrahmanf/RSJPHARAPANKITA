@@ -4723,8 +4723,8 @@
         "y": 1340,
         "wires": [
             [
-                "5ee28832d25a6f45",
-                "e630b236c1d2b8ee"
+                "40fa6128af8ba52d",
+                "3e2e3138c0de2877"
             ]
         ]
     },
@@ -4769,7 +4769,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1390,
+        "x": 1490,
         "y": 1340,
         "wires": [
             [
@@ -4789,7 +4789,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1580,
+        "x": 1660,
         "y": 1340,
         "wires": []
     },
@@ -4797,18 +4797,18 @@
         "id": "5ee28832d25a6f45",
         "type": "switch",
         "z": "bca4771a12cb11e6",
-        "name": " OFF",
+        "name": " ON",
         "property": "BoosterFan",
         "propertyType": "msg",
         "rules": [
             {
-                "t": "false"
+                "t": "true"
             }
         ],
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1030,
+        "x": 1130,
         "y": 1380,
         "wires": [
             [
@@ -4831,7 +4831,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1150,
+        "x": 1250,
         "y": 1380,
         "wires": [
             [
@@ -4854,7 +4854,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1270,
+        "x": 1370,
         "y": 1380,
         "wires": [
             [
@@ -4874,7 +4874,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1420,
+        "x": 1520,
         "y": 1380,
         "wires": [
             []
@@ -5024,7 +5024,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1030,
+        "x": 1130,
         "y": 1340,
         "wires": [
             [
@@ -5047,7 +5047,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1150,
+        "x": 1250,
         "y": 1340,
         "wires": [
             [
@@ -5070,7 +5070,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1270,
+        "x": 1370,
         "y": 1340,
         "wires": [
             [
@@ -5093,6 +5093,68 @@
         "statusType": "auto",
         "x": 860,
         "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "40fa6128af8ba52d",
+        "type": "switch",
+        "z": "bca4771a12cb11e6",
+        "name": " ON",
+        "property": "EF",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1010,
+        "y": 1340,
+        "wires": [
+            [
+                "e630b236c1d2b8ee"
+            ]
+        ]
+    },
+    {
+        "id": "3e2e3138c0de2877",
+        "type": "switch",
+        "z": "bca4771a12cb11e6",
+        "name": " OFF",
+        "property": "EF",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1010,
+        "y": 1380,
+        "wires": [
+            [
+                "5ee28832d25a6f45"
+            ]
+        ]
+    },
+    {
+        "id": "fba3ad7e02710121",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "debug 73",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1640,
+        "y": 1460,
         "wires": []
     },
     {
