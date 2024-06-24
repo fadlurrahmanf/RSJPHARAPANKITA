@@ -748,6 +748,26 @@
         "h": 122
     },
     {
+        "id": "50f41c72507efc6a",
+        "type": "group",
+        "z": "bca4771a12cb11e6",
+        "name": "Send to Apex",
+        "style": {
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "175cfda3e551b6a8",
+            "24ad18b1fcec6ea6",
+            "061b20a8469ffb2f"
+        ],
+        "x": 1684,
+        "y": 19,
+        "w": 422,
+        "h": 82
+    },
+    {
         "id": "266dedab938cb002",
         "type": "junction",
         "z": "bca4771a12cb11e6",
@@ -1432,7 +1452,8 @@
         "links": [
             "2b3434178f0ac999",
             "9b0d96a526b14c55",
-            "cf128b17d11f7fc7"
+            "cf128b17d11f7fc7",
+            "175cfda3e551b6a8"
         ],
         "x": 1195,
         "y": 220,
@@ -2091,8 +2112,7 @@
         "mode": "link",
         "links": [
             "694bf36843b2868e",
-            "738e22f45c2ce650",
-            "175cfda3e551b6a8"
+            "738e22f45c2ce650"
         ],
         "x": 335,
         "y": 360,
@@ -6322,14 +6342,17 @@
         "id": "175cfda3e551b6a8",
         "type": "link in",
         "z": "bca4771a12cb11e6",
+        "g": "50f41c72507efc6a",
         "name": "link in 32",
         "links": [
-            "b07e4e6ebad074fb"
+            "a647954ae4d429aa"
         ],
-        "x": 1745,
-        "y": 100,
+        "x": 1725,
+        "y": 60,
         "wires": [
-            []
+            [
+                "24ad18b1fcec6ea6"
+            ]
         ]
     },
     {
@@ -6347,6 +6370,50 @@
         "x": 550,
         "y": 1880,
         "wires": []
+    },
+    {
+        "id": "24ad18b1fcec6ea6",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "g": "50f41c72507efc6a",
+        "name": " Post To Apex",
+        "func": "function getCurrentEpochTime() {\n    return Math.floor(Date.now() / 1000);\n}\n\nmsg = {\n    method: \"POST\",\n    url: \"https://gffc6be1c389bcf-db8gk8v.adb.ap-singapore-1.oraclecloudapps.com/ords/deviotahvac/iothvac/monitoringdata\",\n    headers: {\n        \"Content-Type\": \"application/json\"\n    },\n    payload: {\n        \"ID\": getCurrentEpochTime(),  \n        \"Timestamp\": new Date().toISOString(),  \n        \"Temp_Cathlab\": flow.get(\"Temp_Cathlab\") || 0,\n        \"RH_Cathlab\": flow.get(\"RH_Cathlab\") || 0,\n        \"Temp_Machine\": flow.get(\"Temp_Machine\") || 0,\n        \"RH_Machine\": flow.get(\"RH_Machine\") || 0,\n        \"Outdoor_Unit\": flow.get(\"Outdoor_Unit\") || 0,\n        \"AHU_Status\": flow.get(\"AHU_Status\") || 0,\n        \"Pre_Filter\": flow.get(\"Pre_Filter\") || 0,\n        \"HEPA_Filter\": flow.get(\"HEPA_Filter\") || 0,\n        \"Booster_Fan\": flow.get(\"Booster_Fan\") || 0,\n        \"Exhaust_Fan\": flow.get(\"Exhaust_Fan\") || 0,\n        \"Heater_1\": flow.get(\"Heater_1\") || 0,\n        \"Heater_2\": flow.get(\"Heater_2\") || 0\n    }\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1850,
+        "y": 60,
+        "wires": [
+            [
+                "061b20a8469ffb2f"
+            ]
+        ]
+    },
+    {
+        "id": "061b20a8469ffb2f",
+        "type": "http request",
+        "z": "bca4771a12cb11e6",
+        "g": "50f41c72507efc6a",
+        "name": "",
+        "method": "use",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2010,
+        "y": 60,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "ae459cb84c6fb828",
