@@ -5778,7 +5778,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "func": "msg.delay = 8000;\nmsg.payload = flow.get(\"SensorQty\");\nreturn msg;",
+        "func": "msg[\"delay\"] = 8000;\nmsg.payload = flow.get(\"SensorQty\");\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
