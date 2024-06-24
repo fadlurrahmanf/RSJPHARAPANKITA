@@ -6101,7 +6101,9 @@
         "wires": [
             [
                 "86c1689ffc4d0bdd",
-                "fc9c0bf7596e401b"
+                "fc9c0bf7596e401b",
+                "e4c5d3fa174db226",
+                "4441faa359fd3fd4"
             ]
         ]
     },
@@ -6272,32 +6274,49 @@
         "wires": []
     },
     {
-        "id": "a8f6bb48afc960be",
-        "type": "inject",
+        "id": "e4c5d3fa174db226",
+        "type": "trigger",
         "z": "bca4771a12cb11e6",
-        "name": "FanIndoor Nyala",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "040500000201000003",
-        "payloadType": "str",
-        "x": 120,
-        "y": 1620,
+        "name": " ",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "nul",
+        "duration": "250",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 530,
+        "y": 1700,
         "wires": [
-            [
-                "6233b4b33cbabd1c"
-            ]
+            []
+        ]
+    },
+    {
+        "id": "4441faa359fd3fd4",
+        "type": "trigger",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "nul",
+        "duration": "250",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 530,
+        "y": 1780,
+        "wires": [
+            []
         ]
     },
     {
