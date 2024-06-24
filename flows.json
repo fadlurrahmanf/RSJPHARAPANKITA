@@ -5724,26 +5724,6 @@
         ]
     },
     {
-        "id": "a2a8e682fe0fb9c4",
-        "type": "function",
-        "z": "bca4771a12cb11e6",
-        "name": " ",
-        "func": "msg.topic = \"SELECT * FROM `devicelist` WHERE `keterangan` NOT LIKE 'Relay%';\";\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1750,
-        "y": 580,
-        "wires": [
-            [
-                "898d8a180b8fc477"
-            ]
-        ]
-    },
-    {
         "id": "ee9d73a6060c9c58",
         "type": "debug",
         "z": "bca4771a12cb11e6",
@@ -5755,24 +5735,9 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2620,
+        "x": 2380,
         "y": 540,
         "wires": []
-    },
-    {
-        "id": "898d8a180b8fc477",
-        "type": "mysql",
-        "z": "bca4771a12cb11e6",
-        "mydb": "3b8e5eb93b7526d7",
-        "name": " ",
-        "x": 1870,
-        "y": 580,
-        "wires": [
-            [
-                "a5b90e10b27bf285",
-                "1ad3dcc157de46ad"
-            ]
-        ]
     },
     {
         "id": "46cf92545e80c1d2",
@@ -5786,7 +5751,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2240,
+        "x": 2000,
         "y": 580,
         "wires": [
             [
@@ -5799,7 +5764,7 @@
         "type": "subflow:e9b71a55.b25c68",
         "z": "bca4771a12cb11e6",
         "name": "",
-        "x": 2110,
+        "x": 1870,
         "y": 580,
         "wires": [
             [
@@ -5820,11 +5785,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1990,
+        "x": 1750,
         "y": 580,
         "wires": [
             [
-                "eb1793a6bf455733"
+                "eb1793a6bf455733",
+                "1ad3dcc157de46ad"
             ]
         ]
     },
@@ -5849,8 +5815,8 @@
         "y": 580,
         "wires": [
             [
-                "a2a8e682fe0fb9c4",
-                "eba9e962a7d47c72"
+                "eba9e962a7d47c72",
+                "a5b90e10b27bf285"
             ]
         ]
     },
@@ -5939,7 +5905,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2370,
+        "x": 2130,
         "y": 580,
         "wires": [
             [
@@ -5962,7 +5928,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 2490,
+        "x": 2250,
         "y": 580,
         "wires": [
             [
@@ -5981,7 +5947,7 @@
         "links": [
             "dd1e1bf4fa001f32"
         ],
-        "x": 2585,
+        "x": 2345,
         "y": 580,
         "wires": []
     },
