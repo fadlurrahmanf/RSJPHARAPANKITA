@@ -6351,35 +6351,6 @@
         "wires": []
     },
     {
-        "id": "46c8f2d9b5df9836",
-        "type": "inject",
-        "z": "bca4771a12cb11e6",
-        "name": "BoosterFan Mati",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "04030000FF0000000002",
-        "payloadType": "str",
-        "x": 140,
-        "y": 1780,
-        "wires": [
-            [
-                "6233b4b33cbabd1c"
-            ]
-        ]
-    },
-    {
         "id": "e6e25cf280952d05",
         "type": "debug",
         "z": "bca4771a12cb11e6",
