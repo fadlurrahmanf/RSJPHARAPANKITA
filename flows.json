@@ -589,14 +589,11 @@
         "id": "9a2233b4c5e85c0f",
         "type": "group",
         "z": "bca4771a12cb11e6",
+        "name": "Check Relay Function",
         "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
             "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
+            "label-position": "n",
+            "color": "#000000"
         },
         "nodes": [
             "705a03382e48fbaa",
@@ -613,6 +610,78 @@
         "x": 764,
         "y": 1299,
         "w": 382,
+        "h": 202
+    },
+    {
+        "id": "73fe2eb92fbe359c",
+        "type": "group",
+        "z": "bca4771a12cb11e6",
+        "name": "Sensors",
+        "style": {
+            "label": true,
+            "color": "#000000",
+            "label-position": "n"
+        },
+        "nodes": [
+            "7ea2e7c17a42eba4",
+            "694bf36843b2868e",
+            "40a624a1f8f16c78",
+            "0394ccbdad96488f",
+            "d6aa40b162d6b292",
+            "eaea2c3e22a96a9f",
+            "a37180a17c8d6d8e",
+            "510cccceaeed9bec",
+            "c4f972fcf9162c5b",
+            "042300e6b0e72670",
+            "12622275c3de0746"
+        ],
+        "x": 1164,
+        "y": 1299,
+        "w": 462,
+        "h": 362
+    },
+    {
+        "id": "d30f8d72cc7e3f14",
+        "type": "group",
+        "z": "bca4771a12cb11e6",
+        "name": "Status Relay Base On Output Info",
+        "style": {
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "fdb500481cbf7d01",
+            "7a293eedb6b117a7",
+            "06fb4a2bad3b8364",
+            "131878eb934f5207",
+            "0527f01b52cc60a2"
+        ],
+        "x": 1644,
+        "y": 1299,
+        "w": 262,
+        "h": 202
+    },
+    {
+        "id": "02835126ba65ad94",
+        "type": "group",
+        "z": "bca4771a12cb11e6",
+        "name": "Status Relay base On Input Info",
+        "style": {
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "55557f20a1962080",
+            "7f8325ca8f5e07a8",
+            "c361579d7bcf203c",
+            "4b9e8cdbb6bea80b",
+            "caea8b0f760c7213"
+        ],
+        "x": 1924,
+        "y": 1299,
+        "w": 262,
         "h": 202
     },
     {
@@ -1344,7 +1413,6 @@
         "y": 400,
         "wires": [
             [
-                "b07e4e6ebad074fb",
                 "fa3bcb095fdfb9a7"
             ]
         ]
@@ -1368,7 +1436,8 @@
             [
                 "ae03f26ebfda2cf1",
                 "6b0dbecee3dd961c",
-                "6345195148b114ad"
+                "6345195148b114ad",
+                "b07e4e6ebad074fb"
             ]
         ]
     },
@@ -1825,9 +1894,10 @@
         "name": "link out 9",
         "mode": "link",
         "links": [
-            "694bf36843b2868e"
+            "694bf36843b2868e",
+            "738e22f45c2ce650"
         ],
-        "x": 215,
+        "x": 335,
         "y": 360,
         "wires": []
     },
@@ -1835,12 +1905,13 @@
         "id": "694bf36843b2868e",
         "type": "link in",
         "z": "bca4771a12cb11e6",
+        "g": "73fe2eb92fbe359c",
         "name": "link in 8",
         "links": [
             "b07e4e6ebad074fb"
         ],
-        "x": 2245,
-        "y": 660,
+        "x": 1205,
+        "y": 1500,
         "wires": [
             [
                 "40a624a1f8f16c78",
@@ -1852,6 +1923,7 @@
         "id": "40a624a1f8f16c78",
         "type": "function",
         "z": "bca4771a12cb11e6",
+        "g": "73fe2eb92fbe359c",
         "name": " ",
         "func": "var d = [];\nd.push(flow.get(\"Temp_Cathlab\"));\nd.push(flow.get(\"RH_Cathlab\"));\nd.push(flow.get(\"Temp_Machine\"));\nd.push(flow.get(\"RH_Machine\"));\nd.push(flow.get(\"Pre_Filter\"));\nd.push(flow.get(\"HEPA_Filter\"));\nd.push(flow.get(\"DurationEH\"));\nd.push(flow.get(\"RelayInput\"));\nd.push(flow.get(\"RelayOutput\"));\nmsg.payload = d;\nreturn msg;\n",
         "outputs": 1,
@@ -1860,8 +1932,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2330,
-        "y": 660,
+        "x": 1290,
+        "y": 1500,
         "wires": [
             [
                 "d6aa40b162d6b292",
@@ -1923,6 +1995,7 @@
         "id": "0394ccbdad96488f",
         "type": "trigger",
         "z": "bca4771a12cb11e6",
+        "g": "73fe2eb92fbe359c",
         "name": " ",
         "op1": "",
         "op2": "",
@@ -1936,8 +2009,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 2330,
-        "y": 620,
+        "x": 1290,
+        "y": 1460,
         "wires": [
             []
         ]
@@ -2141,7 +2214,7 @@
         "z": "bca4771a12cb11e6",
         "g": "cbbdeba1125ca19b",
         "name": "Receive",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -2569,7 +2642,7 @@
         "z": "bca4771a12cb11e6",
         "g": "cbbdeba1125ca19b",
         "name": "CMD",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -2585,25 +2658,27 @@
         "id": "d6aa40b162d6b292",
         "type": "link out",
         "z": "bca4771a12cb11e6",
+        "g": "73fe2eb92fbe359c",
         "name": "link out 19",
         "mode": "link",
         "links": [
             "fdb500481cbf7d01",
             "7f8325ca8f5e07a8"
         ],
-        "x": 2475,
-        "y": 600,
+        "x": 1435,
+        "y": 1340,
         "wires": []
     },
     {
         "id": "fdb500481cbf7d01",
         "type": "link in",
         "z": "bca4771a12cb11e6",
+        "g": "d30f8d72cc7e3f14",
         "name": "link in 10",
         "links": [
             "d6aa40b162d6b292"
         ],
-        "x": 2365,
+        "x": 1685,
         "y": 1400,
         "wires": [
             [
@@ -2618,6 +2693,7 @@
         "id": "7a293eedb6b117a7",
         "type": "debug",
         "z": "bca4771a12cb11e6",
+        "g": "d30f8d72cc7e3f14",
         "name": "EH1",
         "active": false,
         "tosidebar": true,
@@ -2627,7 +2703,7 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 2470,
+        "x": 1790,
         "y": 1340,
         "wires": []
     },
@@ -2635,6 +2711,7 @@
         "id": "06fb4a2bad3b8364",
         "type": "debug",
         "z": "bca4771a12cb11e6",
+        "g": "d30f8d72cc7e3f14",
         "name": "EH2",
         "active": false,
         "tosidebar": true,
@@ -2644,7 +2721,7 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 2470,
+        "x": 1790,
         "y": 1380,
         "wires": []
     },
@@ -2730,6 +2807,7 @@
         "id": "eaea2c3e22a96a9f",
         "type": "debug",
         "z": "bca4771a12cb11e6",
+        "g": "73fe2eb92fbe359c",
         "name": " TempCathLab",
         "active": false,
         "tosidebar": true,
@@ -2739,14 +2817,15 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 2540,
-        "y": 640,
+        "x": 1500,
+        "y": 1380,
         "wires": []
     },
     {
         "id": "a37180a17c8d6d8e",
         "type": "debug",
         "z": "bca4771a12cb11e6",
+        "g": "73fe2eb92fbe359c",
         "name": "RHCathLab",
         "active": false,
         "tosidebar": true,
@@ -2756,14 +2835,15 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 2530,
-        "y": 680,
+        "x": 1490,
+        "y": 1420,
         "wires": []
     },
     {
         "id": "510cccceaeed9bec",
         "type": "debug",
         "z": "bca4771a12cb11e6",
+        "g": "73fe2eb92fbe359c",
         "name": " TempMachine",
         "active": false,
         "tosidebar": true,
@@ -2773,14 +2853,15 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 2540,
-        "y": 720,
+        "x": 1500,
+        "y": 1460,
         "wires": []
     },
     {
         "id": "7ea2e7c17a42eba4",
         "type": "debug",
         "z": "bca4771a12cb11e6",
+        "g": "73fe2eb92fbe359c",
         "name": "RHMachine",
         "active": false,
         "tosidebar": true,
@@ -2790,14 +2871,15 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 2530,
-        "y": 760,
+        "x": 1490,
+        "y": 1500,
         "wires": []
     },
     {
         "id": "c4f972fcf9162c5b",
         "type": "debug",
         "z": "bca4771a12cb11e6",
+        "g": "73fe2eb92fbe359c",
         "name": " Pre_Filter",
         "active": false,
         "tosidebar": true,
@@ -2807,14 +2889,15 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 2520,
-        "y": 800,
+        "x": 1480,
+        "y": 1540,
         "wires": []
     },
     {
         "id": "042300e6b0e72670",
         "type": "debug",
         "z": "bca4771a12cb11e6",
+        "g": "73fe2eb92fbe359c",
         "name": " HEPA_Filter",
         "active": false,
         "tosidebar": true,
@@ -2824,14 +2907,15 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 2530,
-        "y": 840,
+        "x": 1490,
+        "y": 1580,
         "wires": []
     },
     {
         "id": "12622275c3de0746",
         "type": "debug",
         "z": "bca4771a12cb11e6",
+        "g": "73fe2eb92fbe359c",
         "name": "DurationEH",
         "active": false,
         "tosidebar": true,
@@ -2841,8 +2925,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 2530,
-        "y": 880,
+        "x": 1490,
+        "y": 1620,
         "wires": []
     },
     {
@@ -2951,6 +3035,7 @@
         "id": "131878eb934f5207",
         "type": "debug",
         "z": "bca4771a12cb11e6",
+        "g": "d30f8d72cc7e3f14",
         "name": "Booster",
         "active": false,
         "tosidebar": true,
@@ -2960,7 +3045,7 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 2480,
+        "x": 1800,
         "y": 1420,
         "wires": []
     },
@@ -2968,6 +3053,7 @@
         "id": "0527f01b52cc60a2",
         "type": "debug",
         "z": "bca4771a12cb11e6",
+        "g": "d30f8d72cc7e3f14",
         "name": "EF",
         "active": false,
         "tosidebar": true,
@@ -2977,7 +3063,7 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 2470,
+        "x": 1790,
         "y": 1460,
         "wires": []
     },
@@ -2985,12 +3071,13 @@
         "id": "7f8325ca8f5e07a8",
         "type": "link in",
         "z": "bca4771a12cb11e6",
+        "g": "02835126ba65ad94",
         "name": "link in 11",
         "links": [
             "d6aa40b162d6b292"
         ],
-        "x": 2605,
-        "y": 1320,
+        "x": 1965,
+        "y": 1400,
         "wires": [
             [
                 "55557f20a1962080",
@@ -3004,6 +3091,7 @@
         "id": "55557f20a1962080",
         "type": "debug",
         "z": "bca4771a12cb11e6",
+        "g": "02835126ba65ad94",
         "name": "EH1",
         "active": false,
         "tosidebar": true,
@@ -3013,14 +3101,15 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 2710,
-        "y": 1260,
+        "x": 2070,
+        "y": 1340,
         "wires": []
     },
     {
         "id": "c361579d7bcf203c",
         "type": "debug",
         "z": "bca4771a12cb11e6",
+        "g": "02835126ba65ad94",
         "name": "EH2",
         "active": false,
         "tosidebar": true,
@@ -3030,14 +3119,15 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 2710,
-        "y": 1300,
+        "x": 2070,
+        "y": 1380,
         "wires": []
     },
     {
         "id": "4b9e8cdbb6bea80b",
         "type": "debug",
         "z": "bca4771a12cb11e6",
+        "g": "02835126ba65ad94",
         "name": "Booster",
         "active": false,
         "tosidebar": true,
@@ -3047,14 +3137,15 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 2720,
-        "y": 1340,
+        "x": 2080,
+        "y": 1420,
         "wires": []
     },
     {
         "id": "caea8b0f760c7213",
         "type": "debug",
         "z": "bca4771a12cb11e6",
+        "g": "02835126ba65ad94",
         "name": "EF",
         "active": false,
         "tosidebar": true,
@@ -3064,8 +3155,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 2710,
-        "y": 1380,
+        "x": 2070,
+        "y": 1460,
         "wires": []
     },
     {
@@ -5370,6 +5461,39 @@
         ],
         "x": 2065,
         "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "738e22f45c2ce650",
+        "type": "link in",
+        "z": "bca4771a12cb11e6",
+        "name": "link in 28",
+        "links": [
+            "b07e4e6ebad074fb"
+        ],
+        "x": 65,
+        "y": 1360,
+        "wires": [
+            [
+                "c04809c8d4f3f6d5"
+            ]
+        ]
+    },
+    {
+        "id": "c04809c8d4f3f6d5",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "debug 77",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 230,
+        "y": 1360,
         "wires": []
     },
     {
