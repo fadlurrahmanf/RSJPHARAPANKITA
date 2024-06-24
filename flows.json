@@ -5762,14 +5762,14 @@
         "type": "debug",
         "z": "bca4771a12cb11e6",
         "name": "debug 77",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1940,
+        "x": 2020,
         "y": 580,
         "wires": []
     },
@@ -5783,7 +5783,7 @@
         "y": 580,
         "wires": [
             [
-                "ee9d73a6060c9c58"
+                "46cf92545e80c1d2"
             ]
         ]
     },
@@ -5813,6 +5813,26 @@
         "wires": [
             [
                 "a2a8e682fe0fb9c4"
+            ]
+        ]
+    },
+    {
+        "id": "46cf92545e80c1d2",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": "Request",
+        "func": "msg.resultsql = msg.payload;\nvar d = msg.payload[0][0];\nvar cmd = \"\";\nmsg.statusEH1 = false;\nmsg.statusEH2 = false;\nfor (let index = 0; index < Object.keys(d).length - 2; index++) {\n    cmd += d[Object.keys(d)[index]];\n}\ncmd += \"00\";\ncmd += \"0000\" + \"0000\" ;\nmsg.payload = cmd;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1860,
+        "y": 580,
+        "wires": [
+            [
+                "ee9d73a6060c9c58"
             ]
         ]
     },
