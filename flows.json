@@ -723,14 +723,11 @@
         "id": "cde1e78ea6c6202c",
         "type": "group",
         "z": "bca4771a12cb11e6",
+        "name": "Idle Request Sensor",
         "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
             "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
+            "label-position": "n",
+            "color": "#000000"
         },
         "nodes": [
             "d9cda9d21b5e59c9",
