@@ -93,12 +93,13 @@
             "a421582f2823dadb",
             "289303bf7764e0d3",
             "c4d434baba39c97b",
-            "ba7b1d820f380553"
+            "ba7b1d820f380553",
+            "1b3e437abd5cab62"
         ],
         "x": 714,
         "y": 39,
         "w": 822,
-        "h": 122
+        "h": 162
     },
     {
         "id": "aadd16a462e83be5",
@@ -4379,6 +4380,34 @@
             [
                 "780771ba20b86bbe"
             ]
+        ]
+    },
+    {
+        "id": "1b3e437abd5cab62",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "g": "1cbfcd06637d48ad",
+        "name": "  ",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "UPDATE `Input` SET `Stat` = 0;UPDATE `Output` SET `Stat` = 0;UPDATE `InputIndoor` SET `Stat` = 0;UPDATE `OutputIndoor` SET `Stat` = 0;",
+        "payload": "",
+        "payloadType": "date",
+        "x": 810,
+        "y": 160,
+        "wires": [
+            []
         ]
     },
     {
