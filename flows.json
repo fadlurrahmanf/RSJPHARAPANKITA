@@ -1041,7 +1041,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 370,
-        "y": 680,
+        "y": 700,
         "wires": []
     },
     {
@@ -4766,7 +4766,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": "Request",
-        "func": "msg.topic = \"SELECT * FROM `devicelist` WHERE `keterangan` = 'RelayOutput' OR `keterangan` = 'RelayIndoor';\";\nmsg.topic += \"SELECT * FROM `Output` WHERE `keterangan` = 'BoosterFan' OR `keterangan` = 'EF' ORDER by `Number` ASC;\";\nmsg.topic += \"SELECT * FROM `OutputIndoor` WHERE `keterangan` = 'Fan' OR `keterangan` = 'Compressor' ORDER by `Number` ASC;\";\nmsg.topic += \"SELECT * FROM `Operation`;\";\nreturn msg;",
+        "func": "var RelayInput = flow.get(\"RelayInput\");\nvar RelayInputIndoor = flow.get(\"RelayInputIndoor\");\nvar RelayOutput = flow.get(\"RelayOutput\");\nvar RelayOutputIndoor = flow.get(\"RelayOutputIndoor\");\nfor (let index = 0; index < RelayInputIndoor.length; index++) {\n    if(RelayInputIndoor[index].keterangan == \"StatusIndoor\" && RelayInputIndoor[index].Stat == 1){\n        msg[\"StatusIndoor\"] = true;\n    }else if(RelayInputIndoor[index].keterangan == \"StatusIndoor\" && RelayInputIndoor[index].Stat == 0){\n        msg[\"StatusIndoor\"] = false;\n    }\n    if(RelayInputIndoor[index].keterangan == \"StatusOutdoor\" && RelayInputIndoor[index].Stat == 1){\n        msg[\"StatusOutdoor\"] = true;\n    }else if(RelayInputIndoor[index].keterangan == \"StatusOutdoor\" && RelayInputIndoor[index].Stat == 0){\n        msg[\"StatusOutdoor\"] = false;\n    }\n}\nfor (let index = 0; index < RelayInput.length; index++) {\n    if (RelayInput[index].keterangan == \"BoosterFan\" && RelayInput[index].Stat == 1){\n        msg[\"BoosterFan\"] = true;\n    } else if (RelayInput[index].keterangan == \"BoosterFan\" && RelayInput[index].Stat == 0){\n        msg[\"BoosterFan\"] = false;\n    }\n    if (RelayInput[index].keterangan == \"EF\" && RelayInput[index].Stat == 1){\n        msg[\"EF\"] = true;\n    } else if (RelayInput[index].keterangan == \"EF\" && RelayInput[index].Stat == 0){\n        msg[\"EF\"] = false;\n    }\n}\n\nmsg.topic = \"SELECT * FROM `devicelist` WHERE `keterangan` = 'RelayOutput' OR `keterangan` = 'RelayIndoor';\";\nmsg.topic += \"SELECT * FROM `Output` WHERE `keterangan` = 'BoosterFan' OR `keterangan` = 'EF' ORDER by `Number` ASC;\";\nmsg.topic += \"SELECT * FROM `OutputIndoor` WHERE `keterangan` = 'Fan' OR `keterangan` = 'Compressor' ORDER by `Number` ASC;\";\nmsg.topic += \"SELECT * FROM `Operation`;\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4777,7 +4777,8 @@
         "y": 1340,
         "wires": [
             [
-                "79d1e5f400e8c545"
+                "79d1e5f400e8c545",
+                "5ee28832d25a6f45"
             ]
         ]
     },
@@ -4838,7 +4839,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1040,
-        "y": 1380,
+        "y": 1320,
         "wires": []
     },
     {
@@ -4873,9 +4874,76 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1240,
-        "y": 1360,
+        "x": 1220,
+        "y": 1340,
         "wires": []
+    },
+    {
+        "id": "5ee28832d25a6f45",
+        "type": "switch",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "property": "BoosterFan",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 890,
+        "y": 1380,
+        "wires": [
+            [
+                "f31779116c5bb821"
+            ]
+        ]
+    },
+    {
+        "id": "f31779116c5bb821",
+        "type": "switch",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "property": "StatusIndoor",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1010,
+        "y": 1380,
+        "wires": [
+            [
+                "b8560362bc1218d2"
+            ]
+        ]
+    },
+    {
+        "id": "b8560362bc1218d2",
+        "type": "switch",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "property": "StatusOutdoor",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1130,
+        "y": 1380,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "ae459cb84c6fb828",
