@@ -4722,8 +4722,8 @@
         "y": 1340,
         "wires": [
             [
-                "d1cda63e22d46295",
-                "5ee28832d25a6f45"
+                "5ee28832d25a6f45",
+                "e630b236c1d2b8ee"
             ]
         ]
     },
@@ -4768,7 +4768,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1030,
+        "x": 1390,
         "y": 1340,
         "wires": [
             [
@@ -4788,7 +4788,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1220,
+        "x": 1580,
         "y": 1340,
         "wires": []
     },
@@ -5005,6 +5005,75 @@
         "wires": [
             [
                 "c6ccaf078e16fab4"
+            ]
+        ]
+    },
+    {
+        "id": "e630b236c1d2b8ee",
+        "type": "switch",
+        "z": "bca4771a12cb11e6",
+        "name": " ON",
+        "property": "BoosterFan",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1030,
+        "y": 1340,
+        "wires": [
+            [
+                "1da0caa3cc640452"
+            ]
+        ]
+    },
+    {
+        "id": "1da0caa3cc640452",
+        "type": "switch",
+        "z": "bca4771a12cb11e6",
+        "name": " ON",
+        "property": "StatusIndoor",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1150,
+        "y": 1340,
+        "wires": [
+            [
+                "59463c781eab1470"
+            ]
+        ]
+    },
+    {
+        "id": "59463c781eab1470",
+        "type": "switch",
+        "z": "bca4771a12cb11e6",
+        "name": " ON",
+        "property": "StatusOutdoor",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1270,
+        "y": 1340,
+        "wires": [
+            [
+                "d1cda63e22d46295"
             ]
         ]
     },
