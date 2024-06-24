@@ -5873,7 +5873,9 @@
         "x": 1970,
         "y": 580,
         "wires": [
-            []
+            [
+                "202f41612f3507e8"
+            ]
         ]
     },
     {
@@ -5913,6 +5915,22 @@
         ],
         "x": 1115,
         "y": 460,
+        "wires": []
+    },
+    {
+        "id": "202f41612f3507e8",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "debug 78",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2100,
+        "y": 640,
         "wires": []
     },
     {
