@@ -5953,22 +5953,6 @@
         "wires": []
     },
     {
-        "id": "1ad3dcc157de46ad",
-        "type": "debug",
-        "z": "bca4771a12cb11e6",
-        "name": "debug 78",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2380,
-        "y": 720,
-        "wires": []
-    },
-    {
         "id": "a4cce0a4f8811c1e",
         "type": "trigger",
         "z": "bca4771a12cb11e6",
@@ -5988,54 +5972,6 @@
         "x": 1990,
         "y": 560,
         "wires": [
-            []
-        ]
-    },
-    {
-        "id": "5eb4b435aded52a6",
-        "type": "inject",
-        "z": "bca4771a12cb11e6",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            },
-            {
-                "p": "delay",
-                "v": "8000",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "[{\"networkid\":\"02\",\"devid\":\"04\",\"typeid\":\"02\",\"keterangan\":\"Pressure,HepaFilter\"},{\"networkid\":\"02\",\"devid\":\"05\",\"typeid\":\"02\",\"keterangan\":\"Pressure,MediumFilter\"},{\"networkid\":\"03\",\"devid\":\"04\",\"typeid\":\"03\",\"keterangan\":\"Temp/RH,CathLab\"},{\"networkid\":\"03\",\"devid\":\"05\",\"typeid\":\"03\",\"keterangan\":\"Temp/RH,Machine\"}]",
-        "payloadType": "json",
-        "x": 2080,
-        "y": 740,
-        "wires": [
-            [
-                "11413e8841201115"
-            ]
-        ]
-    },
-    {
-        "id": "11413e8841201115",
-        "type": "subflow:e9b71a55.b25c68",
-        "z": "bca4771a12cb11e6",
-        "name": "",
-        "x": 2210,
-        "y": 740,
-        "wires": [
-            [
-                "1ad3dcc157de46ad"
-            ],
             []
         ]
     },
