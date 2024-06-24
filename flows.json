@@ -3794,7 +3794,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": "function 1",
-        "func": "msg.payload = flow.get(\"RelayInputIndoor\");\nreturn msg;",
+        "func": "msg.payload = flow.get(\"RelayOutputIndoor\");\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
