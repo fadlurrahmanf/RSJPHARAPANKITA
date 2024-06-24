@@ -6272,10 +6272,10 @@
         "wires": []
     },
     {
-        "id": "db581d646277a2dd",
+        "id": "a8f6bb48afc960be",
         "type": "inject",
         "z": "bca4771a12cb11e6",
-        "name": "Auto Panel",
+        "name": "FanIndoor Nyala",
         "props": [
             {
                 "p": "payload"
@@ -6290,10 +6290,10 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "04030000FF0000000002",
+        "payload": "040500000201000003",
         "payloadType": "str",
         "x": 120,
-        "y": 1600,
+        "y": 1620,
         "wires": [
             [
                 "6233b4b33cbabd1c"
