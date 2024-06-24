@@ -154,7 +154,7 @@
         ],
         "x": 34,
         "y": 179,
-        "w": 1182,
+        "w": 1192,
         "h": 122
     },
     {
@@ -1292,7 +1292,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 570,
+        "x": 590,
         "y": 240,
         "wires": [
             [
@@ -1316,7 +1316,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 710,
+        "x": 730,
         "y": 220,
         "wires": [
             [
@@ -1330,7 +1330,7 @@
         "z": "bca4771a12cb11e6",
         "g": "8be50af1826bf3eb",
         "name": "decoder",
-        "x": 840,
+        "x": 860,
         "y": 220,
         "wires": [
             [
@@ -1351,7 +1351,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 970,
+        "x": 990,
         "y": 220,
         "wires": [
             [
@@ -1375,7 +1375,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 420,
+        "x": 440,
         "y": 240,
         "wires": [
             [
@@ -1396,7 +1396,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 160,
+        "x": 180,
         "y": 240,
         "wires": [
             [
@@ -1417,7 +1417,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1090,
+        "x": 1110,
         "y": 220,
         "wires": [
             [
@@ -1437,7 +1437,7 @@
             "9b0d96a526b14c55",
             "cf128b17d11f7fc7"
         ],
-        "x": 1175,
+        "x": 1185,
         "y": 220,
         "wires": []
     },
@@ -1508,7 +1508,7 @@
         "g": "8be50af1826bf3eb",
         "mydb": "3b8e5eb93b7526d7",
         "name": " ",
-        "x": 290,
+        "x": 310,
         "y": 240,
         "wires": [
             [
@@ -1582,7 +1582,7 @@
             "9b0d96a526b14c55",
             "cf128b17d11f7fc7"
         ],
-        "x": 795,
+        "x": 815,
         "y": 260,
         "wires": []
     },
@@ -3386,7 +3386,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 710,
+        "x": 730,
         "y": 260,
         "wires": [
             [
@@ -6045,7 +6045,8 @@
         "wires": [
             [
                 "46ba4a08bb834514",
-                "593bbb7ef5536020"
+                "593bbb7ef5536020",
+                "9577e4567cd1ce6b"
             ]
         ]
     },
@@ -6082,6 +6083,24 @@
         "x": 350,
         "y": 1680,
         "wires": []
+    },
+    {
+        "id": "9577e4567cd1ce6b",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "func": "msg.deviceinfo = msg.payload[0];\nmsg.topic = \"\";\nif(msg.deviceinfo.keterangan == \"RelayIndoor\"){\n    var RelayInputIndoor = flow.get(\"RelayInputIndoor\");\n    msg.deviceinfo[\"InputIndoorVal\"] = reverseString(hexToBinary(msg.realdata.substring(8,10)));\n    var RelayOutputIndoor = flow.get(\"RelayOutputIndoor\");\n    msg.deviceinfo[\"OutputIndoorVal\"] = reverseString(hexToBinary2((msg.realdata.substring(10, 12))));\n}else{\n    var RelayInput = flow.get(\"RelayInput\");\n    msg.deviceinfo[\"InputVal\"] = reverseString(hexToBinary(msg.realdata.substring(8, 10)));\n    var RelayOutput = flow.get(\"RelayOutput\");\n    msg.deviceinfo[\"OutputVal\"] = reverseString(hexToBinary2((msg.realdata.substring(10, 12))));\n}\n\n// }\nreturn msg;\n\nfunction hexToBinary(hexString) {\n    // Parse the hexadecimal string to an integer\n    const intValue = parseInt(hexString, 16);\n\n    // Convert the integer to a binary string\n    let binaryString = intValue.toString(2);\n\n    // Pad the binary string with leading zeros if necessary\n    // Assuming each hex digit should be represented by 4 binary digits\n    const hexLength = hexString.length;\n    const expectedBinaryLength = hexLength * 4;\n    while (binaryString.length < expectedBinaryLength) {\n        binaryString = '0'.concat(binaryString);\n    }\n\n    return binaryString;\n}\n\nfunction decimalToReversedBinary(decimal) {\n    // Convert the decimal number to a binary string\n    let binaryString = decimal.toString(2);\n\n    // Pad the binary string with leading zeros to ensure it has a length of 4 bits\n    while (binaryString.length < 4) {\n        binaryString = '0'.concat(binaryString);\n    }\n\n    // Reverse the binary string\n    // const reversedBinaryString = binaryString.split('').reverse().join('');\n\n    // return reversedBinaryString;\n    return binaryString;\n}\n\nfunction decToBinary(dec) {\n    // Ensure the input is a number\n    if (typeof dec !== 'number' || isNaN(dec)) {\n        throw new Error('Input must be a valid number');\n    }\n\n    // Handle negative numbers by using two's complement representation\n    if (dec < 0) {\n        return (dec >>> 0).toString(2).padStart(32, '0');\n    }\n\n    // Convert decimal to binary using toString method\n    let binaryStr = dec.toString(2);\n\n    // Pad the binary string to 8 bits\n    return binaryStr.padStart(8, '0');\n}\n\n\nfunction hexToBinary2(hexString) {\n    // Menghapus karakter spasi jika ada\n    hexString = hexString.replace(/\\s+/g, '');\n    \n    // Memastikan string heksadesimal valid dan tidak lebih dari 2 karakter\n    if (!/^[\\da-fA-F]{1,2}$/.test(hexString)) {\n        throw new Error(\"Invalid hexadecimal string. Input should be 1 or 2 hex characters.\");\n    }\n\n    // Mengonversi string heksadesimal menjadi biner dengan panjang 8 bit\n    let binaryString = parseInt(hexString, 16).toString(2).padStart(8, '0');\n\n    return binaryString;\n}\n\nfunction reverseString(str) {\n    // Mengubah string menjadi array, membalik array, dan menggabungkan kembali menjadi string\n    return str.split('').reverse().join('');\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 190,
+        "y": 1740,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "ae459cb84c6fb828",
