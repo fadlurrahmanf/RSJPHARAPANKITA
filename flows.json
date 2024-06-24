@@ -571,7 +571,9 @@
         "name": "link in 1",
         "links": [
             "4c80d3fd31ff5440",
-            "ab5c7999a8ec94cb"
+            "ab5c7999a8ec94cb",
+            "6776bbaf798955cd",
+            "c6ccaf078e16fab4"
         ],
         "x": 65,
         "y": 280,
@@ -2486,76 +2488,6 @@
                 "bf104e7cca1d96a0"
             ]
         ]
-    },
-    {
-        "id": "386f9fa4386ae385",
-        "type": "inject",
-        "z": "bca4771a12cb11e6",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "=EH2]",
-        "payloadType": "str",
-        "x": 920,
-        "y": 1520,
-        "wires": [
-            [
-                "a21abe22c5512c12"
-            ]
-        ]
-    },
-    {
-        "id": "a21abe22c5512c12",
-        "type": "switch",
-        "z": "bca4771a12cb11e6",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "cont",
-                "v": "=[",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1080,
-        "y": 1520,
-        "wires": [
-            [
-                "f305445cebfd191f"
-            ]
-        ]
-    },
-    {
-        "id": "f305445cebfd191f",
-        "type": "debug",
-        "z": "bca4771a12cb11e6",
-        "name": "debug 58",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1260,
-        "y": 1540,
-        "wires": []
     },
     {
         "id": "bf104e7cca1d96a0",
@@ -4963,6 +4895,135 @@
         "y": 1380,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "c6ccaf078e16fab4",
+        "type": "link out",
+        "z": "bca4771a12cb11e6",
+        "name": "IncomingData",
+        "mode": "link",
+        "links": [
+            "0cbc509033550b7f"
+        ],
+        "x": 1105,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "4870b9a1b400f946",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "BoosterFanAktif",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "04030000DB0400000002",
+        "payloadType": "str",
+        "x": 940,
+        "y": 1540,
+        "wires": [
+            [
+                "c6ccaf078e16fab4"
+            ]
+        ]
+    },
+    {
+        "id": "e9dce8c2968fc362",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "FanIndoor Nyala",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "040500000201000003",
+        "payloadType": "str",
+        "x": 940,
+        "y": 1500,
+        "wires": [
+            [
+                "c6ccaf078e16fab4"
+            ]
+        ]
+    },
+    {
+        "id": "d00f6db0ab2d050c",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "Compressor Nyala",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "040500000003000003",
+        "payloadType": "str",
+        "x": 950,
+        "y": 1460,
+        "wires": [
+            [
+                "c6ccaf078e16fab4"
+            ]
+        ]
+    },
+    {
+        "id": "04086c37d4da49b1",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "EF Nyala",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "040300009B0C00000002",
+        "payloadType": "str",
+        "x": 920,
+        "y": 1420,
+        "wires": [
+            [
+                "c6ccaf078e16fab4"
+            ]
         ]
     },
     {
