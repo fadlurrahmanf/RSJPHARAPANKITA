@@ -1378,9 +1378,7 @@
             [
                 "dae22984db30bba3"
             ],
-            [
-                "e880b0887622ca71"
-            ]
+            []
         ]
     },
     {
@@ -4666,31 +4664,6 @@
         "x": 1070,
         "y": 740,
         "wires": []
-    },
-    {
-        "id": "e880b0887622ca71",
-        "type": "trigger",
-        "z": "bca4771a12cb11e6",
-        "name": " ",
-        "op1": "1",
-        "op2": "",
-        "op1type": "str",
-        "op2type": "nul",
-        "duration": "-15",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "s",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 530,
-        "y": 1340,
-        "wires": [
-            [
-                "3f972b9577eb5b33"
-            ]
-        ]
     },
     {
         "id": "3f972b9577eb5b33",
