@@ -5217,7 +5217,7 @@
         "id": "02e193578a41d279",
         "type": "switch",
         "z": "bca4771a12cb11e6",
-        "name": " ON",
+        "name": " OFF",
         "property": "StatusOutdoor",
         "propertyType": "msg",
         "rules": [
@@ -5277,7 +5277,7 @@
         "type": "debug",
         "z": "bca4771a12cb11e6",
         "name": "debug 75",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
