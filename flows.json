@@ -5761,7 +5761,7 @@
         "z": "bca4771a12cb11e6",
         "g": "cde1e78ea6c6202c",
         "name": "Request",
-        "func": "msg.resultsql = msg.payload;\nvar d = msg.payload;\nvar cmd = \"\";\nmsg.statusEH1 = false;\nmsg.statusEH2 = false;\nfor (let index = 0; index < Object.keys(d).length - 2; index++) {\n    cmd += d[Object.keys(d)[index]];\n}\ncmd += \"00\";\ncmd += \"0000\" + \"0000\" ;\nmsg.payload = cmd;\nreturn msg;",
+        "func": "msg.resultsql = msg.payload;\nmsg.keterangan = msg.payload.keterangan;\nvar d = msg.payload;\nvar cmd = \"\";\nmsg.statusEH1 = false;\nmsg.statusEH2 = false;\nfor (let index = 0; index < Object.keys(d).length - 2; index++) {\n    cmd += d[Object.keys(d)[index]];\n}\ncmd += \"00\";\ncmd += \"0000\" + \"0000\" ;\nmsg.payload = cmd;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5772,7 +5772,8 @@
         "y": 600,
         "wires": [
             [
-                "f3a38b43331d2ea8"
+                "f3a38b43331d2ea8",
+                "a4cce0a4f8811c1e"
             ]
         ]
     },
@@ -5786,9 +5787,7 @@
         "y": 600,
         "wires": [
             [
-                "46cf92545e80c1d2",
-                "a4cce0a4f8811c1e",
-                "2952e9c1747ca3fb"
+                "46cf92545e80c1d2"
             ],
             []
         ]
@@ -5932,7 +5931,8 @@
         "y": 600,
         "wires": [
             [
-                "6a72d4f3b0d96b83"
+                "6a72d4f3b0d96b83",
+                "2952e9c1747ca3fb"
             ]
         ]
     },
@@ -5953,7 +5953,7 @@
         "repair": false,
         "outputs": 1,
         "x": 2250,
-        "y": 600,
+        "y": 580,
         "wires": [
             [
                 "f52c4ff255db8a17"
@@ -6008,12 +6008,12 @@
         "tosidebar": true,
         "console": false,
         "tostatus": true,
-        "complete": "payload.keterangan",
+        "complete": "keterangan",
         "targetType": "msg",
         "statusVal": "payload.keterangan",
         "statusType": "auto",
-        "x": 1990,
-        "y": 600,
+        "x": 2250,
+        "y": 620,
         "wires": []
     },
     {
