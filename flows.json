@@ -1168,8 +1168,8 @@
         "links": [
             "c3f008a339c97a2e"
         ],
-        "x": 55,
-        "y": 920,
+        "x": 35,
+        "y": 1120,
         "wires": [
             [
                 "5dfb8dd8c390d971"
@@ -1181,15 +1181,15 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "func": "msg.cmd = flow.get(\"cmdauto\");\nvar BatasAtasRH = 58;\nvar BatasBawahRH = 52;\nvar RelayInput = flow.get(\"RelayInput\");\nvar RelayOutput = flow.get(\"RelayOutput\");\n//----------------------------------------------------\n// Definisikan parameter PID\nvar Kp = 0.5; // Gain proporsional\nvar Ki = 0.2; // Gain integral\nvar Kd = 0.1; // Gain derivatif\nvar SetPoint = 55;\n\nvar errorPrev = 0;\nvar integral = 0;\n//----------------------------------------------------\nif(msg.cmd == \"Init\"){\n    msg.cmd = \"MonitorTemp\";\n}else if(msg.cmd == \"MonitorTemp\"){\n    if ((Date.now() - flow.get(\"Temp_Cathlab\")[1]) / 1000 < 10 && (Date.now() - flow.get(\"RH_Cathlab\")[1])/1000<10){\n        var RH_Cathlab = flow.get(\"RH_Cathlab\")[0];\n        if (RH_Cathlab >= (SetPoint + 1)) {\n            var dur = kontrolPID(SetPoint,RH_Cathlab)*(-1)*60*1000;\n            if(dur<0){\n                return msg;\n            }\n            flow.set(\"DurationEH\",[Math.round(dur),Date.now()]);\n            msg.cmd = \"OnEH\"+\" =[EH1]\";\n            console.log(String(dur));\n        }\n    }\n}else if(msg.cmd == \"OnEH\"+\" =[EH1]\"){\n    for (let index = 0; index < RelayOutput.length; index++) {\n        if(RelayOutput[index].keterangan == \"EH1\" && RelayOutput[index].Stat == 1){\n            msg.cmd = \"Waiting\";\n            msg.delay = flow.get(\"DurationEH\")[0];\n        }\n    }\n} else if (msg.cmd == \"Waiting Force Done\"){\n\n    msg.cmd = \"OffEH\";\n} else if(msg.cmd.substring(0,7) == \"Waiting\"){\n    var timeRemaining = Math.round(((flow.get(\"DurationEH\")[0]+flow.get(\"DurationEH\")[1])-Date.now())/1000);\n    msg.cmd = \"Waiting = \"+String(epochtostr(timeRemaining));\n    \n    var RH_Cathlab = flow.get(\"RH_Cathlab\")[0];\n    if (RH_Cathlab < (SetPoint+1)){\n        msg.cmd = \"Waiting Force Done\";\n        msg.reset = true;\n    }\n    console.log(\"Timeremaining : \"+String(timeRemaining));\n    console.log(\"DurationEH : \"+String((Math.round((flow.get(\"DurationEH\")[0])/1000)/2)));\n    if(timeRemaining <= (Math.round((flow.get(\"DurationEH\")[0])/1000)/2)){\n        for (let index = 0; index < RelayOutput.length; index++) {\n            if(RelayOutput[index].keterangan == \"EH2\" && RelayOutput[index].Stat == 0){\n                msg.cmd += \" =[EH2]\";\n            }\n        }\n    }\n} else if(msg.cmd == \"Timeout\"){\n    var RH_Cathlab = flow.get(\"RH_Cathlab\")[0];\n    msg.cmd = \"OffEH\";\n} else if(msg.cmd == \"OffEH\"){\n    msg.statusEH1 = false;\n    msg.statusEH2 = false;\n    for (let index = 0; index < RelayOutput.length; index++) {\n        if(RelayOutput[index].keterangan == \"EH1\" && RelayOutput[index].Stat == 0){\n            msg.statusEH1 = true;\n        }else if(RelayOutput[index].keterangan == \"EH2\" && RelayOutput[index].Stat == 0){\n            msg.statusEH2 = true;\n        }\n    }\n    if(msg.statusEH1&&msg.statusEH2){\n        msg.cmd = \"MonitorTemp\";\n    }\n}\nflow.set(\"cmdauto\", msg.cmd);\nreturn msg;\n\nfunction kontrolPID(nilaiTarget, nilaiSekarang) {\n    // Hitung error saat ini\n    const error = nilaiTarget - nilaiSekarang;\n\n    // Hitung komponen PID\n    const proporsional = Kp * error;\n    integral += error;\n    const integralComp = Ki * integral;\n    const derivative = Kd * (error - errorPrev);\n\n    // Hitung output PID\n    const output = proporsional + integralComp + derivative;\n\n    // Simpan error saat ini untuk penggunaan di iterasi selanjutnya\n    errorPrev = error;\n\n    return output;\n}\nfunction epochtostr(seconds) {\n    const units = [\n        { label: 'year', value: 60 * 60 * 24 * 365 },  // Approximate, not accounting for leap years\n        { label: 'month', value: 60 * 60 * 24 * 30 },  // Approximate\n        { label: 'day', value: 60 * 60 * 24 },\n        { label: 'hour', value: 60 * 60 },\n        { label: 'minute', value: 60 },\n        { label: 'second', value: 1 }\n    ];\n\n    const result = [];\n\n    for (const unit of units) {\n        const unitValue = Math.floor(seconds / unit.value);\n        if (unitValue > 0) {\n            result.push(`${unitValue} ${unit.label}${unitValue > 1 ? 's' : ''}`);\n            seconds -= unitValue * unit.value;\n        }\n    }\n\n    return result.length > 0 ? result.join(' ') : '0 seconds';\n}",
+        "func": "msg.cmd = flow.get(\"cmdauto\");\nvar BatasAtasRH = 58;\nvar BatasBawahRH = 52;\nvar RelayInput = flow.get(\"RelayInput\");\nvar RelayOutput = flow.get(\"RelayOutput\");\n//----------------------------------------------------\n// Definisikan parameter PID\nvar Kp = 0.5; // Gain proporsional\nvar Ki = 0.2; // Gain integral\nvar Kd = 0.1; // Gain derivatif\nvar SetPoint = 55;\n\nvar errorPrev = 0;\nvar integral = 0;\n//----------------------------------------------------\nif(flow.get(\"SystemStatus\") == \"OFF\"){\n    msg.cmd = \"Shutdown\";\n    \n}\nif(msg.cmd == \"Init\"){\n    msg.cmd = \"MonitorTemp\";\n}else if(msg.cmd == \"MonitorTemp\"){\n    if ((Date.now() - flow.get(\"Temp_Cathlab\")[1]) / 1000 < 10 && (Date.now() - flow.get(\"RH_Cathlab\")[1])/1000<10){\n        var RH_Cathlab = flow.get(\"RH_Cathlab\")[0];\n        if (RH_Cathlab >= (SetPoint + 1)) {\n            var dur = kontrolPID(SetPoint,RH_Cathlab)*(-1)*60*1000;\n            if(dur<0){\n                return msg;\n            }\n            flow.set(\"DurationEH\",[Math.round(dur),Date.now()]);\n            msg.cmd = \"OnEH\"+\" =[EH1]\";\n            console.log(String(dur));\n        }\n    }\n}else if(msg.cmd == \"OnEH\"+\" =[EH1]\"){\n    for (let index = 0; index < RelayOutput.length; index++) {\n        if(RelayOutput[index].keterangan == \"EH1\" && RelayOutput[index].Stat == 1){\n            msg.cmd = \"Waiting\";\n            msg.delay = flow.get(\"DurationEH\")[0];\n        }\n    }\n} else if (msg.cmd == \"Waiting Force Done\"){\n\n    msg.cmd = \"OffEH\";\n} else if(msg.cmd.substring(0,7) == \"Waiting\"){\n    var timeRemaining = Math.round(((flow.get(\"DurationEH\")[0]+flow.get(\"DurationEH\")[1])-Date.now())/1000);\n    msg.cmd = \"Waiting = \"+String(epochtostr(timeRemaining));\n    \n    var RH_Cathlab = flow.get(\"RH_Cathlab\")[0];\n    if (RH_Cathlab < (SetPoint+1)){\n        msg.cmd = \"Waiting Force Done\";\n        msg.reset = true;\n    }\n    console.log(\"Timeremaining : \"+String(timeRemaining));\n    console.log(\"DurationEH : \"+String((Math.round((flow.get(\"DurationEH\")[0])/1000)/2)));\n    if(timeRemaining <= (Math.round((flow.get(\"DurationEH\")[0])/1000)/2)){\n        for (let index = 0; index < RelayOutput.length; index++) {\n            if(RelayOutput[index].keterangan == \"EH2\" && RelayOutput[index].Stat == 0){\n                msg.cmd += \" =[EH2]\";\n            }\n        }\n    }\n} else if(msg.cmd == \"Timeout\"){\n    var RH_Cathlab = flow.get(\"RH_Cathlab\")[0];\n    msg.cmd = \"OffEH\";\n} else if(msg.cmd == \"OffEH\"){\n    msg.statusEH1 = false;\n    msg.statusEH2 = false;\n    for (let index = 0; index < RelayOutput.length; index++) {\n        if(RelayOutput[index].keterangan == \"EH1\" && RelayOutput[index].Stat == 0){\n            msg.statusEH1 = true;\n        }else if(RelayOutput[index].keterangan == \"EH2\" && RelayOutput[index].Stat == 0){\n            msg.statusEH2 = true;\n        }\n    }\n    if(msg.statusEH1&&msg.statusEH2){\n        msg.cmd = \"MonitorTemp\";\n    }\n}\nflow.set(\"cmdauto\", msg.cmd);\nreturn msg;\n\nfunction kontrolPID(nilaiTarget, nilaiSekarang) {\n    // Hitung error saat ini\n    const error = nilaiTarget - nilaiSekarang;\n\n    // Hitung komponen PID\n    const proporsional = Kp * error;\n    integral += error;\n    const integralComp = Ki * integral;\n    const derivative = Kd * (error - errorPrev);\n\n    // Hitung output PID\n    const output = proporsional + integralComp + derivative;\n\n    // Simpan error saat ini untuk penggunaan di iterasi selanjutnya\n    errorPrev = error;\n\n    return output;\n}\nfunction epochtostr(seconds) {\n    const units = [\n        { label: 'year', value: 60 * 60 * 24 * 365 },  // Approximate, not accounting for leap years\n        { label: 'month', value: 60 * 60 * 24 * 30 },  // Approximate\n        { label: 'day', value: 60 * 60 * 24 },\n        { label: 'hour', value: 60 * 60 },\n        { label: 'minute', value: 60 },\n        { label: 'second', value: 1 }\n    ];\n\n    const result = [];\n\n    for (const unit of units) {\n        const unitValue = Math.floor(seconds / unit.value);\n        if (unitValue > 0) {\n            result.push(`${unitValue} ${unit.label}${unitValue > 1 ? 's' : ''}`);\n            seconds -= unitValue * unit.value;\n        }\n    }\n\n    return result.length > 0 ? result.join(' ') : '0 seconds';\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 190,
-        "y": 920,
+        "x": 170,
+        "y": 1120,
         "wires": [
             [
                 "6c88cbac6c1e1314",
@@ -1207,8 +1207,8 @@
         "links": [
             "340b6dc447cb3a1f"
         ],
-        "x": 105,
-        "y": 880,
+        "x": 85,
+        "y": 1080,
         "wires": [
             [
                 "5dfb8dd8c390d971"
@@ -1224,8 +1224,8 @@
         "links": [
             "26120895f3f84739"
         ],
-        "x": 295,
-        "y": 880,
+        "x": 275,
+        "y": 1080,
         "wires": []
     },
     {
@@ -1237,7 +1237,7 @@
             "6c88cbac6c1e1314"
         ],
         "x": 55,
-        "y": 840,
+        "y": 960,
         "wires": [
             [
                 "32dded3e3ceacf4c"
@@ -1254,7 +1254,7 @@
             "996b8741f6785be0"
         ],
         "x": 345,
-        "y": 840,
+        "y": 960,
         "wires": []
     },
     {
@@ -1275,7 +1275,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 260,
-        "y": 840,
+        "y": 960,
         "wires": [
             [
                 "340b6dc447cb3a1f"
@@ -1299,8 +1299,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 450,
-        "y": 920,
+        "x": 310,
+        "y": 1120,
         "wires": [
             []
         ]
@@ -1317,8 +1317,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 600,
-        "y": 960,
+        "x": 680,
+        "y": 1080,
         "wires": [
             [
                 "b1b2db7babdaf54b"
@@ -1352,13 +1352,18 @@
                 "t": "eq",
                 "v": "OffEH",
                 "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Shutdown",
+                "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 4,
-        "x": 330,
-        "y": 960,
+        "outputs": 5,
+        "x": 290,
+        "y": 1180,
         "wires": [
             [
                 "8f99e09dae854b85"
@@ -1372,6 +1377,9 @@
             ],
             [
                 "dae22984db30bba3"
+            ],
+            [
+                "e880b0887622ca71"
             ]
         ]
     },
@@ -1392,8 +1400,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 450,
-        "y": 960,
+        "x": 530,
+        "y": 1080,
         "wires": [
             [
                 "14f91a50d6904e88"
@@ -1471,8 +1479,8 @@
         "z": "bca4771a12cb11e6",
         "mydb": "3b8e5eb93b7526d7",
         "name": " ",
-        "x": 750,
-        "y": 960,
+        "x": 830,
+        "y": 1080,
         "wires": [
             [
                 "3ac72ba11294aa01"
@@ -1491,8 +1499,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 890,
-        "y": 960,
+        "x": 970,
+        "y": 1080,
         "wires": [
             [
                 "022a029521e3c1dd"
@@ -1508,8 +1516,8 @@
         "links": [
             "dd1e1bf4fa001f32"
         ],
-        "x": 1075,
-        "y": 1000,
+        "x": 1155,
+        "y": 1120,
         "wires": []
     },
     {
@@ -1610,7 +1618,7 @@
         "repair": false,
         "outputs": 1,
         "x": 140,
-        "y": 840,
+        "y": 960,
         "wires": [
             [
                 "811d40e949e9fef1"
@@ -1630,8 +1638,8 @@
         "targetType": "msg",
         "statusVal": "cmd",
         "statusType": "auto",
-        "x": 330,
-        "y": 880,
+        "x": 310,
+        "y": 1080,
         "wires": []
     },
     {
@@ -1687,8 +1695,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 450,
-        "y": 1020,
+        "x": 530,
+        "y": 1140,
         "wires": [
             [
                 "db7e71f59821125d"
@@ -1707,8 +1715,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 590,
-        "y": 1020,
+        "x": 670,
+        "y": 1140,
         "wires": [
             [
                 "89f81b486a2b2f8d"
@@ -1721,8 +1729,8 @@
         "z": "bca4771a12cb11e6",
         "mydb": "3b8e5eb93b7526d7",
         "name": " ",
-        "x": 750,
-        "y": 1020,
+        "x": 830,
+        "y": 1140,
         "wires": [
             [
                 "4776d2059a76e625"
@@ -1741,8 +1749,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 870,
-        "y": 1020,
+        "x": 950,
+        "y": 1140,
         "wires": [
             [
                 "e181d40ba2c883c6",
@@ -1762,8 +1770,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 600,
-        "y": 1080,
+        "x": 680,
+        "y": 1200,
         "wires": [
             [
                 "86d93e43ac494bd0"
@@ -1776,8 +1784,8 @@
         "z": "bca4771a12cb11e6",
         "mydb": "3b8e5eb93b7526d7",
         "name": " ",
-        "x": 750,
-        "y": 1080,
+        "x": 830,
+        "y": 1200,
         "wires": [
             [
                 "ab10a2b4ace98698"
@@ -1796,8 +1804,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 890,
-        "y": 1080,
+        "x": 970,
+        "y": 1200,
         "wires": [
             [
                 "fe15437ea5ba0d90"
@@ -1813,8 +1821,8 @@
         "links": [
             "74eb172db82ec21b"
         ],
-        "x": 675,
-        "y": 1120,
+        "x": 755,
+        "y": 1240,
         "wires": []
     },
     {
@@ -1829,8 +1837,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 590,
-        "y": 1120,
+        "x": 670,
+        "y": 1240,
         "wires": [
             [
                 "9f44d28a524d189a"
@@ -1845,8 +1853,8 @@
         "links": [
             "9f44d28a524d189a"
         ],
-        "x": 315,
-        "y": 1080,
+        "x": 445,
+        "y": 1180,
         "wires": [
             [
                 "5325683f3d621a49"
@@ -2120,8 +2128,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 450,
-        "y": 1160,
+        "x": 530,
+        "y": 1280,
         "wires": [
             [
                 "1658ac7b84089f6b"
@@ -2140,8 +2148,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 590,
-        "y": 1160,
+        "x": 670,
+        "y": 1280,
         "wires": [
             [
                 "0494c8d6085a4cf0"
@@ -2154,8 +2162,8 @@
         "z": "bca4771a12cb11e6",
         "mydb": "3b8e5eb93b7526d7",
         "name": " ",
-        "x": 750,
-        "y": 1160,
+        "x": 830,
+        "y": 1280,
         "wires": [
             [
                 "01fea39265f2dc97"
@@ -2174,13 +2182,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 870,
-        "y": 1160,
+        "x": 950,
+        "y": 1280,
         "wires": [
             [
                 "710352610b5171f7",
-                "44ece0d16efb9af2",
-                "2721c1c23d14f32c"
+                "44ece0d16efb9af2"
             ]
         ]
     },
@@ -2199,8 +2206,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 990,
-        "y": 1000,
+        "x": 1070,
+        "y": 1120,
         "wires": [
             [
                 "b7a0b469689fefd3"
@@ -2222,8 +2229,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 990,
-        "y": 1140,
+        "x": 1070,
+        "y": 1260,
         "wires": [
             [
                 "fcded8e6800db872"
@@ -2245,8 +2252,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 990,
-        "y": 1180,
+        "x": 1070,
+        "y": 1300,
         "wires": [
             [
                 "d802d6a814ceb1d0"
@@ -2265,8 +2272,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1270,
-        "y": 1180,
+        "x": 1350,
+        "y": 1300,
         "wires": [
             [
                 "2ee5fb66a447ff24"
@@ -2290,8 +2297,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1140,
-        "y": 1180,
+        "x": 1220,
+        "y": 1300,
         "wires": [
             [
                 "ddab33048d01b3d5"
@@ -2307,8 +2314,8 @@
         "links": [
             "dd1e1bf4fa001f32"
         ],
-        "x": 1475,
-        "y": 1180,
+        "x": 1555,
+        "y": 1300,
         "wires": []
     },
     {
@@ -2320,8 +2327,8 @@
         "links": [
             "dd1e1bf4fa001f32"
         ],
-        "x": 995,
-        "y": 960,
+        "x": 1075,
+        "y": 1080,
         "wires": []
     },
     {
@@ -2333,8 +2340,8 @@
         "links": [
             "dd1e1bf4fa001f32"
         ],
-        "x": 995,
-        "y": 1080,
+        "x": 1075,
+        "y": 1200,
         "wires": []
     },
     {
@@ -2346,8 +2353,8 @@
         "links": [
             "dd1e1bf4fa001f32"
         ],
-        "x": 1095,
-        "y": 1140,
+        "x": 1175,
+        "y": 1260,
         "wires": []
     },
     {
@@ -2383,8 +2390,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1390,
-        "y": 1180,
+        "x": 1470,
+        "y": 1300,
         "wires": [
             [
                 "300675ed5fd9466c"
@@ -2406,8 +2413,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 990,
-        "y": 1040,
+        "x": 1070,
+        "y": 1160,
         "wires": [
             [
                 "8099edeb0376bcea"
@@ -2431,8 +2438,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1140,
-        "y": 1040,
+        "x": 1220,
+        "y": 1160,
         "wires": [
             [
                 "efd4c15eee3524d0"
@@ -2451,8 +2458,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1270,
-        "y": 1040,
+        "x": 1350,
+        "y": 1160,
         "wires": [
             [
                 "99d7acf34720e090"
@@ -2474,8 +2481,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1390,
-        "y": 1040,
+        "x": 1470,
+        "y": 1160,
         "wires": [
             [
                 "bf104e7cca1d96a0"
@@ -2561,8 +2568,8 @@
         "links": [
             "dd1e1bf4fa001f32"
         ],
-        "x": 1475,
-        "y": 1040,
+        "x": 1555,
+        "y": 1160,
         "wires": []
     },
     {
@@ -2709,23 +2716,6 @@
         "wires": []
     },
     {
-        "id": "2721c1c23d14f32c",
-        "type": "debug",
-        "z": "bca4771a12cb11e6",
-        "name": "ALL",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 960,
-        "y": 1220,
-        "wires": []
-    },
-    {
         "id": "d3be2e21387745e0",
         "type": "inject",
         "z": "bca4771a12cb11e6",
@@ -2813,8 +2803,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 460,
-        "y": 1120,
+        "x": 540,
+        "y": 1240,
         "wires": [
             [
                 "a88f76740bd895c4"
@@ -2838,8 +2828,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 450,
-        "y": 1080,
+        "x": 530,
+        "y": 1200,
         "wires": [
             [
                 "d7f5d1cda8b9c2e4"
@@ -4747,6 +4737,90 @@
         "x": 1070,
         "y": 740,
         "wires": []
+    },
+    {
+        "id": "e880b0887622ca71",
+        "type": "trigger",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "op1": "1",
+        "op2": "",
+        "op1type": "str",
+        "op2type": "nul",
+        "duration": "0",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 560,
+        "y": 1340,
+        "wires": [
+            [
+                "3f972b9577eb5b33"
+            ]
+        ]
+    },
+    {
+        "id": "3f972b9577eb5b33",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": "Request Temp",
+        "func": "msg.topic = \"SELECT * FROM `devicelist` WHERE `keterangan` = 'RelayOutdoor' OR `keterangan` = 'RelayIndoor';\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 1340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "79d1e5f400e8c545",
+        "type": "mysql",
+        "z": "bca4771a12cb11e6",
+        "mydb": "3b8e5eb93b7526d7",
+        "name": " ",
+        "x": 890,
+        "y": 1340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1f3740cd90f1ccbb",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 560,
+        "y": 1380,
+        "wires": [
+            [
+                "3f972b9577eb5b33"
+            ]
+        ]
     },
     {
         "id": "ae459cb84c6fb828",
