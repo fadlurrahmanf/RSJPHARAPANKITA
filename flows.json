@@ -576,13 +576,22 @@
             "4506e171551a05b6",
             "b3f450d927ca57aa",
             "04086c37d4da49b1",
-            "c6ccaf078e16fab4",
             "e9dce8c2968fc362",
-            "d00f6db0ab2d050c"
+            "d00f6db0ab2d050c",
+            "08ce2e838792223b",
+            "3f493871e6270acf",
+            "42579082ec0f3bf3",
+            "b717f2522f8a0316",
+            "fbb662a0c4d897d8",
+            "67e6722eebecb451",
+            "80365610c054e775",
+            "6010df32067d351f",
+            "0c502b1bde54a0fc",
+            "4ef7115bf6b00b61"
         ],
-        "x": 414,
+        "x": 354,
         "y": 1139,
-        "w": 332,
+        "w": 412,
         "h": 442
     },
     {
@@ -685,6 +694,32 @@
         "h": 202
     },
     {
+        "id": "bc029c22e8a19bce",
+        "type": "group",
+        "z": "bca4771a12cb11e6",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "738e22f45c2ce650",
+            "c04809c8d4f3f6d5",
+            "5644d3499103fcdb",
+            "35a58c5190c3dfd4",
+            "b851603d2bbe2e65",
+            "db1d8ffdb99c0bc7"
+        ],
+        "x": 34,
+        "y": 1139,
+        "w": 312,
+        "h": 322
+    },
+    {
         "id": "266dedab938cb002",
         "type": "junction",
         "z": "bca4771a12cb11e6",
@@ -785,6 +820,136 @@
         "wires": [
             [
                 "d4819d014b224568"
+            ]
+        ]
+    },
+    {
+        "id": "08ce2e838792223b",
+        "type": "junction",
+        "z": "bca4771a12cb11e6",
+        "g": "8198882257923722",
+        "x": 640,
+        "y": 1180,
+        "wires": [
+            [
+                "ab5c7999a8ec94cb"
+            ]
+        ]
+    },
+    {
+        "id": "3f493871e6270acf",
+        "type": "junction",
+        "z": "bca4771a12cb11e6",
+        "g": "8198882257923722",
+        "x": 640,
+        "y": 1220,
+        "wires": [
+            [
+                "ab5c7999a8ec94cb"
+            ]
+        ]
+    },
+    {
+        "id": "42579082ec0f3bf3",
+        "type": "junction",
+        "z": "bca4771a12cb11e6",
+        "g": "8198882257923722",
+        "x": 640,
+        "y": 1260,
+        "wires": [
+            [
+                "ab5c7999a8ec94cb"
+            ]
+        ]
+    },
+    {
+        "id": "b717f2522f8a0316",
+        "type": "junction",
+        "z": "bca4771a12cb11e6",
+        "g": "8198882257923722",
+        "x": 640,
+        "y": 1300,
+        "wires": [
+            [
+                "ab5c7999a8ec94cb"
+            ]
+        ]
+    },
+    {
+        "id": "fbb662a0c4d897d8",
+        "type": "junction",
+        "z": "bca4771a12cb11e6",
+        "g": "8198882257923722",
+        "x": 640,
+        "y": 1340,
+        "wires": [
+            [
+                "ab5c7999a8ec94cb"
+            ]
+        ]
+    },
+    {
+        "id": "67e6722eebecb451",
+        "type": "junction",
+        "z": "bca4771a12cb11e6",
+        "g": "8198882257923722",
+        "x": 640,
+        "y": 1380,
+        "wires": [
+            [
+                "ab5c7999a8ec94cb"
+            ]
+        ]
+    },
+    {
+        "id": "80365610c054e775",
+        "type": "junction",
+        "z": "bca4771a12cb11e6",
+        "g": "8198882257923722",
+        "x": 640,
+        "y": 1420,
+        "wires": [
+            [
+                "ab5c7999a8ec94cb"
+            ]
+        ]
+    },
+    {
+        "id": "6010df32067d351f",
+        "type": "junction",
+        "z": "bca4771a12cb11e6",
+        "g": "8198882257923722",
+        "x": 640,
+        "y": 1460,
+        "wires": [
+            [
+                "ab5c7999a8ec94cb"
+            ]
+        ]
+    },
+    {
+        "id": "0c502b1bde54a0fc",
+        "type": "junction",
+        "z": "bca4771a12cb11e6",
+        "g": "8198882257923722",
+        "x": 640,
+        "y": 1500,
+        "wires": [
+            [
+                "ab5c7999a8ec94cb"
+            ]
+        ]
+    },
+    {
+        "id": "4ef7115bf6b00b61",
+        "type": "junction",
+        "z": "bca4771a12cb11e6",
+        "g": "8198882257923722",
+        "x": 640,
+        "y": 1540,
+        "wires": [
+            [
+                "ab5c7999a8ec94cb"
             ]
         ]
     },
@@ -4229,11 +4394,11 @@
         "topic": "",
         "payload": "04030000FF0000000002",
         "payloadType": "str",
-        "x": 510,
+        "x": 450,
         "y": 1180,
         "wires": [
             [
-                "ab5c7999a8ec94cb"
+                "08ce2e838792223b"
             ]
         ]
     },
@@ -4247,8 +4412,8 @@
         "links": [
             "0cbc509033550b7f"
         ],
-        "x": 685,
-        "y": 1260,
+        "x": 725,
+        "y": 1360,
         "wires": []
     },
     {
@@ -4273,11 +4438,11 @@
         "topic": "",
         "payload": "04030000DB0400000002",
         "payloadType": "str",
-        "x": 540,
+        "x": 480,
         "y": 1260,
         "wires": [
             [
-                "ab5c7999a8ec94cb"
+                "42579082ec0f3bf3"
             ]
         ]
     },
@@ -4303,11 +4468,11 @@
         "topic": "",
         "payload": "040500000201000003",
         "payloadType": "str",
-        "x": 540,
+        "x": 480,
         "y": 1300,
         "wires": [
             [
-                "ab5c7999a8ec94cb"
+                "b717f2522f8a0316"
             ]
         ]
     },
@@ -4333,11 +4498,11 @@
         "topic": "",
         "payload": "040500000003000003",
         "payloadType": "str",
-        "x": 550,
+        "x": 490,
         "y": 1340,
         "wires": [
             [
-                "ab5c7999a8ec94cb"
+                "fbb662a0c4d897d8"
             ]
         ]
     },
@@ -4363,11 +4528,11 @@
         "topic": "",
         "payload": "040300009B0C00000002",
         "payloadType": "str",
-        "x": 520,
+        "x": 460,
         "y": 1380,
         "wires": [
             [
-                "ab5c7999a8ec94cb"
+                "67e6722eebecb451"
             ]
         ]
     },
@@ -4393,11 +4558,11 @@
         "topic": "",
         "payload": "04030000FE0000000002",
         "payloadType": "str",
-        "x": 510,
+        "x": 450,
         "y": 1220,
         "wires": [
             [
-                "ab5c7999a8ec94cb"
+                "3f493871e6270acf"
             ]
         ]
     },
@@ -4423,27 +4588,13 @@
         "topic": "",
         "payload": "04030000DB0400000002",
         "payloadType": "str",
-        "x": 510,
+        "x": 450,
         "y": 1420,
         "wires": [
             [
-                "c6ccaf078e16fab4"
+                "80365610c054e775"
             ]
         ]
-    },
-    {
-        "id": "c6ccaf078e16fab4",
-        "type": "link out",
-        "z": "bca4771a12cb11e6",
-        "g": "8198882257923722",
-        "name": "IncomingData",
-        "mode": "link",
-        "links": [
-            "0cbc509033550b7f"
-        ],
-        "x": 705,
-        "y": 1480,
-        "wires": []
     },
     {
         "id": "4870b9a1b400f946",
@@ -4467,11 +4618,11 @@
         "topic": "",
         "payload": "04030000FF0000000002",
         "payloadType": "str",
-        "x": 540,
+        "x": 480,
         "y": 1540,
         "wires": [
             [
-                "c6ccaf078e16fab4"
+                "4ef7115bf6b00b61"
             ]
         ]
     },
@@ -4497,11 +4648,11 @@
         "topic": "",
         "payload": "040500000300000003",
         "payloadType": "str",
-        "x": 540,
+        "x": 480,
         "y": 1500,
         "wires": [
             [
-                "c6ccaf078e16fab4"
+                "0c502b1bde54a0fc"
             ]
         ]
     },
@@ -4527,11 +4678,11 @@
         "topic": "",
         "payload": "040500000201000003",
         "payloadType": "str",
-        "x": 540,
+        "x": 480,
         "y": 1460,
         "wires": [
             [
-                "c6ccaf078e16fab4"
+                "6010df32067d351f"
             ]
         ]
     },
@@ -5467,12 +5618,13 @@
         "id": "738e22f45c2ce650",
         "type": "link in",
         "z": "bca4771a12cb11e6",
+        "g": "bc029c22e8a19bce",
         "name": "link in 28",
         "links": [
             "b07e4e6ebad074fb"
         ],
         "x": 75,
-        "y": 1320,
+        "y": 1300,
         "wires": [
             [
                 "c04809c8d4f3f6d5",
@@ -5487,7 +5639,8 @@
         "id": "c04809c8d4f3f6d5",
         "type": "debug",
         "z": "bca4771a12cb11e6",
-        "name": "Status Indoor (AC/Fan)",
+        "g": "bc029c22e8a19bce",
+        "name": "Status AC/Fan",
         "active": false,
         "tosidebar": true,
         "console": false,
@@ -5496,15 +5649,16 @@
         "targetType": "msg",
         "statusVal": "StatusIndoor",
         "statusType": "auto",
-        "x": 230,
-        "y": 1200,
+        "x": 200,
+        "y": 1180,
         "wires": []
     },
     {
         "id": "5644d3499103fcdb",
         "type": "debug",
         "z": "bca4771a12cb11e6",
-        "name": "Status Outdoor (Compressor)",
+        "g": "bc029c22e8a19bce",
+        "name": "Status Compressor",
         "active": false,
         "tosidebar": true,
         "console": false,
@@ -5513,14 +5667,15 @@
         "targetType": "msg",
         "statusVal": "StatusIndoor",
         "statusType": "auto",
-        "x": 250,
-        "y": 1260,
+        "x": 210,
+        "y": 1240,
         "wires": []
     },
     {
         "id": "35a58c5190c3dfd4",
         "type": "debug",
         "z": "bca4771a12cb11e6",
+        "g": "bc029c22e8a19bce",
         "name": "Status BoosterFan",
         "active": false,
         "tosidebar": true,
@@ -5531,13 +5686,14 @@
         "statusVal": "StatusIndoor",
         "statusType": "auto",
         "x": 210,
-        "y": 1320,
+        "y": 1300,
         "wires": []
     },
     {
         "id": "b851603d2bbe2e65",
         "type": "debug",
         "z": "bca4771a12cb11e6",
+        "g": "bc029c22e8a19bce",
         "name": "Status EF",
         "active": false,
         "tosidebar": true,
@@ -5548,13 +5704,14 @@
         "statusVal": "StatusIndoor",
         "statusType": "auto",
         "x": 180,
-        "y": 1380,
+        "y": 1360,
         "wires": []
     },
     {
         "id": "db1d8ffdb99c0bc7",
         "type": "debug",
         "z": "bca4771a12cb11e6",
+        "g": "bc029c22e8a19bce",
         "name": "Status StartLoops",
         "active": false,
         "tosidebar": true,
@@ -5565,7 +5722,7 @@
         "statusVal": "StatusIndoor",
         "statusType": "auto",
         "x": 210,
-        "y": 1440,
+        "y": 1420,
         "wires": []
     },
     {
