@@ -4766,7 +4766,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": "Request Temp",
-        "func": "msg.topic = \"SELECT * FROM `devicelist` WHERE `keterangan` = 'RelayOutput' OR `keterangan` = 'RelayIndoor';\";\nreturn msg;",
+        "func": "msg.topic = \"SELECT * FROM `devicelist` WHERE `keterangan` = 'RelayOutput' OR `keterangan` = 'RelayIndoor' order by `keterangan` asc;\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
