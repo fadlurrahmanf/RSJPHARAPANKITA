@@ -4708,7 +4708,8 @@
                 "3e2e3138c0de2877",
                 "1a293fbb3e81e268",
                 "42ef840fe439670f",
-                "46451fec39f8e841"
+                "46451fec39f8e841",
+                "c2895618f3b4cdb7"
             ]
         ]
     },
@@ -5455,6 +5456,147 @@
         "x": 1645,
         "y": 1460,
         "wires": []
+    },
+    {
+        "id": "c2895618f3b4cdb7",
+        "type": "switch",
+        "z": "bca4771a12cb11e6",
+        "name": " OFF",
+        "property": "EF",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1010,
+        "y": 1500,
+        "wires": [
+            [
+                "888e06c328ef570b"
+            ]
+        ]
+    },
+    {
+        "id": "888e06c328ef570b",
+        "type": "switch",
+        "z": "bca4771a12cb11e6",
+        "name": " OFF",
+        "property": "BoosterFan",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1130,
+        "y": 1500,
+        "wires": [
+            [
+                "da20796f860b477b"
+            ]
+        ]
+    },
+    {
+        "id": "da20796f860b477b",
+        "type": "switch",
+        "z": "bca4771a12cb11e6",
+        "name": " OFF",
+        "property": "StatusIndoor",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1250,
+        "y": 1500,
+        "wires": [
+            [
+                "6caf09005d5d4f8c"
+            ]
+        ]
+    },
+    {
+        "id": "6caf09005d5d4f8c",
+        "type": "switch",
+        "z": "bca4771a12cb11e6",
+        "name": " OFF",
+        "property": "StatusOutdoor",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1370,
+        "y": 1500,
+        "wires": [
+            [
+                "86889498473ea3c1"
+            ]
+        ]
+    },
+    {
+        "id": "86889498473ea3c1",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": "IDLE",
+        "func": "flow.set(\"cmdauto\", \"None\");\nmsg.reset = true;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 1500,
+        "wires": [
+            [
+                "05f650927ae5c01f"
+            ]
+        ]
+    },
+    {
+        "id": "05f650927ae5c01f",
+        "type": "link out",
+        "z": "bca4771a12cb11e6",
+        "name": "link out 31",
+        "mode": "link",
+        "links": [
+            "acd5dc2f19d30680"
+        ],
+        "x": 1575,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "acd5dc2f19d30680",
+        "type": "link in",
+        "z": "bca4771a12cb11e6",
+        "name": "link in 13",
+        "links": [
+            "05f650927ae5c01f"
+        ],
+        "x": 445,
+        "y": 1320,
+        "wires": [
+            [
+                "b4d32bd3897234eb"
+            ]
+        ]
     },
     {
         "id": "ae459cb84c6fb828",
