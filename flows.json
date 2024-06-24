@@ -5888,7 +5888,7 @@
         "timeoutUnits": "seconds",
         "rate": "1",
         "nbRateUnits": "1",
-        "rateUnits": "second",
+        "rateUnits": "day",
         "randomFirst": "1",
         "randomLast": "5",
         "randomUnits": "seconds",
