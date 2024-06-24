@@ -4878,9 +4878,7 @@
         "x": 1520,
         "y": 1380,
         "wires": [
-            [
-                "fba3ad7e02710121"
-            ]
+            []
         ]
     },
     {
@@ -5140,7 +5138,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1640,
-        "y": 1460,
+        "y": 1480,
         "wires": []
     },
     {
@@ -5238,7 +5236,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": "Off FanIndoor",
-        "func": "msg.resultsql = msg.payload;\nvar d = msg.payload[0][0];\nvar cmd = \"\";\nfor (let index = 0; index < Object.keys(d).length - 2; index++) {\n    cmd += d[Object.keys(d)[index]];\n}\ncmd += \"01\";\n\nvar binarycurrent = reverseString(decToBinary(msg.payload[3][0].OutputIndoor));\nvar spt = binarycurrent.split(\"\");\nif (binarycurrent[msg.payload[2][1].Number - 1] == \"1\") {\n    \n    spt[msg.payload[2][1].Number - 1] = \"0\";\n    binarycurrent = spt.join(\"\");\n    if(flow.get(\"RelayOutputIndoor\")[msg.payload[2][1].Number].Stat == 1){\n        msg.statusCompressor = true;\n    }else{\n        msg.statusCompressor = false;\n    }\n    msg.payload[3][0][\"OutputIndoor\"] = 1;\n    \n}\n\nmsg.numberOutput = msg.payload[3][0].OutputIndoor;\nvar hex = binaryToHex(reverseString(binarycurrent));\ncmd += \"0000\" + \"000\" + String(dec2hex(hex));\nmsg.payload = cmd;\nreturn msg;\n\nfunction dec2hex(decimalNumber) {\n    if (decimalNumber < 0 || decimalNumber > 15) {\n        return \"Out of range\";\n    }\n    return decimalNumber.toString(16).toUpperCase();\n}\n\nfunction decToBinary(dec) {\n    // Ensure the input is a number\n    if (typeof dec !== 'number' || isNaN(dec)) {\n        throw new Error('Input must be a valid number');\n    }\n\n    // Handle negative numbers by using two's complement representation\n    if (dec < 0) {\n        return (dec >>> 0).toString(2).padStart(32, '0');\n    }\n\n    // Convert decimal to binary using toString method\n    let binaryStr = dec.toString(2);\n\n    // Pad the binary string to 8 bits\n    return binaryStr.padStart(8, '0');\n}\nfunction reverseString(str) {\n    // Mengubah string menjadi array, membalik array, dan menggabungkan kembali menjadi string\n    return str.split('').reverse().join('');\n}\n\nfunction binaryToHex(binaryStr) {\n    // Ensure the input is a valid binary string\n    if (typeof binaryStr !== 'string' || !/^[01]+$/.test(binaryStr)) {\n        throw new Error('Input must be a valid binary string');\n    }\n\n    // Parse the binary string to a decimal number\n    const decimal = parseInt(binaryStr, 2);\n\n    // Convert the decimal number to a hexadecimal string\n    const hexStr = decimal.toString(16);\n\n    // Return the hexadecimal string (in uppercase for consistency)\n    return hexStr.toUpperCase();\n}",
+        "func": "msg.resultsql = msg.payload;\nvar d = msg.payload[0][0];\nvar cmd = \"\";\nfor (let index = 0; index < Object.keys(d).length - 2; index++) {\n    cmd += d[Object.keys(d)[index]];\n}\ncmd += \"01\";\n\nvar binarycurrent = reverseString(decToBinary(msg.payload[3][0].OutputIndoor));\nvar spt = binarycurrent.split(\"\");\nif (binarycurrent[msg.payload[2][0].Number - 1] == \"1\") {\n    \n    spt[msg.payload[2][0].Number - 1] = \"0\";\n    binarycurrent = spt.join(\"\");\n    if(flow.get(\"RelayOutputIndoor\")[msg.payload[2][0].Number].Stat == 1){\n        msg.statusFan = true;\n    }else{\n        msg.statusFan = false;\n    }\n    msg.payload[3][0][\"OutputIndoor\"] = 0;\n    \n}\n\nmsg.numberOutput = msg.payload[3][0].OutputIndoor;\nvar hex = binaryToHex(reverseString(binarycurrent));\ncmd += \"0000\" + \"000\" + String(dec2hex(hex));\nmsg.payload = cmd;\nreturn msg;\n\nfunction dec2hex(decimalNumber) {\n    if (decimalNumber < 0 || decimalNumber > 15) {\n        return \"Out of range\";\n    }\n    return decimalNumber.toString(16).toUpperCase();\n}\n\nfunction decToBinary(dec) {\n    // Ensure the input is a number\n    if (typeof dec !== 'number' || isNaN(dec)) {\n        throw new Error('Input must be a valid number');\n    }\n\n    // Handle negative numbers by using two's complement representation\n    if (dec < 0) {\n        return (dec >>> 0).toString(2).padStart(32, '0');\n    }\n\n    // Convert decimal to binary using toString method\n    let binaryStr = dec.toString(2);\n\n    // Pad the binary string to 8 bits\n    return binaryStr.padStart(8, '0');\n}\nfunction reverseString(str) {\n    // Mengubah string menjadi array, membalik array, dan menggabungkan kembali menjadi string\n    return str.split('').reverse().join('');\n}\n\nfunction binaryToHex(binaryStr) {\n    // Ensure the input is a valid binary string\n    if (typeof binaryStr !== 'string' || !/^[01]+$/.test(binaryStr)) {\n        throw new Error('Input must be a valid binary string');\n    }\n\n    // Parse the binary string to a decimal number\n    const decimal = parseInt(binaryStr, 2);\n\n    // Convert the decimal number to a hexadecimal string\n    const hexStr = decimal.toString(16);\n\n    // Return the hexadecimal string (in uppercase for consistency)\n    return hexStr.toUpperCase();\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5248,7 +5246,9 @@
         "x": 1520,
         "y": 1420,
         "wires": [
-            []
+            [
+                "fba3ad7e02710121"
+            ]
         ]
     },
     {
