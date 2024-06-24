@@ -6320,10 +6320,10 @@
         ]
     },
     {
-        "id": "5c9749d942b87024",
+        "id": "a12c9baa0746b3ad",
         "type": "inject",
         "z": "bca4771a12cb11e6",
-        "name": "EF Mati",
+        "name": "BoosterFan Mati",
         "props": [
             {
                 "p": "payload"
@@ -6338,10 +6338,10 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "04030000DB0400000002",
+        "payload": "04030000FF0000000002",
         "payloadType": "str",
-        "x": 130,
-        "y": 1600,
+        "x": 140,
+        "y": 1580,
         "wires": [
             [
                 "6233b4b33cbabd1c"
