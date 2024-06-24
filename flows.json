@@ -6089,7 +6089,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "func": "msg.deviceinfo = msg.payload[0];\nmsg.topic = \"\";\nif(msg.deviceinfo.keterangan == \"RelayIndoor\"){\n    var RelayInputIndoor = flow.get(\"RelayInputIndoor\");\n    msg.deviceinfo[\"InputIndoorVal\"] = (hexToBinary(msg.realdata.substring(8,10)));\n    var RelayOutputIndoor = flow.get(\"RelayOutputIndoor\");\n    msg.deviceinfo[\"OutputIndoorVal\"] = (hexToBinary2((msg.realdata.substring(10, 12))));\n}else{\n    var RelayInput = flow.get(\"RelayInput\");\n    msg.deviceinfo[\"InputVal\"] = (hexToBinary(msg.realdata.substring(8, 10)));\n    var RelayOutput = flow.get(\"RelayOutput\");\n    msg.deviceinfo[\"OutputVal\"] = (hexToBinary2((msg.realdata.substring(10, 12))));\n}\n\nreturn msg;\n\nfunction hexToBinary(hexString) {\n    // Parse the hexadecimal string to an integer\n    const intValue = parseInt(hexString, 16);\n\n    // Convert the integer to a binary string\n    let binaryString = intValue.toString(2);\n\n    // Pad the binary string with leading zeros if necessary\n    // Assuming each hex digit should be represented by 4 binary digits\n    const hexLength = hexString.length;\n    const expectedBinaryLength = hexLength * 4;\n    while (binaryString.length < expectedBinaryLength) {\n        binaryString = '0'.concat(binaryString);\n    }\n\n    return binaryString.split(\"\");\n}\n\nfunction decimalToReversedBinary(decimal) {\n    // Convert the decimal number to a binary string\n    let binaryString = decimal.toString(2);\n\n    // Pad the binary string with leading zeros to ensure it has a length of 4 bits\n    while (binaryString.length < 4) {\n        binaryString = '0'.concat(binaryString);\n    }\n\n    // Reverse the binary string\n    // const reversedBinaryString = binaryString.split('').reverse().join('');\n\n    // return reversedBinaryString;\n    return binaryString;\n}\n\nfunction decToBinary(dec) {\n    // Ensure the input is a number\n    if (typeof dec !== 'number' || isNaN(dec)) {\n        throw new Error('Input must be a valid number');\n    }\n\n    // Handle negative numbers by using two's complement representation\n    if (dec < 0) {\n        return (dec >>> 0).toString(2).padStart(32, '0');\n    }\n\n    // Convert decimal to binary using toString method\n    let binaryStr = dec.toString(2);\n\n    // Pad the binary string to 8 bits\n    return binaryStr.padStart(8, '0');\n}\n\n\nfunction hexToBinary2(hexString) {\n    // Menghapus karakter spasi jika ada\n    hexString = hexString.replace(/\\s+/g, '');\n    \n    // Memastikan string heksadesimal valid dan tidak lebih dari 2 karakter\n    if (!/^[\\da-fA-F]{1,2}$/.test(hexString)) {\n        throw new Error(\"Invalid hexadecimal string. Input should be 1 or 2 hex characters.\");\n    }\n\n    // Mengonversi string heksadesimal menjadi biner dengan panjang 8 bit\n    let binaryString = parseInt(hexString, 16).toString(2).padStart(8, '0');\n\n    return binaryString.split(\"\");\n}\n\nfunction reverseString(str) {\n    // Mengubah string menjadi array, membalik array, dan menggabungkan kembali menjadi string\n    return str.split('').reverse().join('');\n}",
+        "func": "msg.deviceinfo = msg.payload[0];\nmsg.topic = \"\";\nif(msg.deviceinfo.keterangan == \"RelayIndoor\"){\n    var RelayInputIndoor = flow.get(\"RelayInputIndoor\");\n    msg.deviceinfo[\"InputIndoorVal\"] = (hexToBinary(msg.realdata.substring(8,10)));\n    var RelayOutputIndoor = flow.get(\"RelayOutputIndoor\");\n    msg.deviceinfo[\"OutputIndoorVal\"] = (hexToBinary2((msg.realdata.substring(10, 12))));\n}else{\n    var RelayInput = flow.get(\"RelayInput\");\n    msg.deviceinfo[\"InputVal\"] = (hexToBinary(msg.realdata.substring(8, 10)));\n    var RelayOutput = flow.get(\"RelayOutput\");\n    msg.deviceinfo[\"OutputVal\"] = (hexToBinary2((msg.realdata.substring(10, 12))));\n}\n\nreturn msg;\n\nfunction hexToBinary(hexString) {\n    // Parse the hexadecimal string to an integer\n    const intValue = parseInt(hexString, 16);\n\n    // Convert the integer to a binary string\n    let binaryString = intValue.toString(2);\n\n    // Pad the binary string with leading zeros if necessary\n    // Assuming each hex digit should be represented by 4 binary digits\n    const hexLength = hexString.length;\n    const expectedBinaryLength = hexLength * 4;\n    while (binaryString.length < expectedBinaryLength) {\n        binaryString = '0'.concat(binaryString);\n    }\n\n    return binaryString;\n}\n\nfunction decimalToReversedBinary(decimal) {\n    // Convert the decimal number to a binary string\n    let binaryString = decimal.toString(2);\n\n    // Pad the binary string with leading zeros to ensure it has a length of 4 bits\n    while (binaryString.length < 4) {\n        binaryString = '0'.concat(binaryString);\n    }\n\n    // Reverse the binary string\n    // const reversedBinaryString = binaryString.split('').reverse().join('');\n\n    // return reversedBinaryString;\n    return binaryString;\n}\n\nfunction decToBinary(dec) {\n    // Ensure the input is a number\n    if (typeof dec !== 'number' || isNaN(dec)) {\n        throw new Error('Input must be a valid number');\n    }\n\n    // Handle negative numbers by using two's complement representation\n    if (dec < 0) {\n        return (dec >>> 0).toString(2).padStart(32, '0');\n    }\n\n    // Convert decimal to binary using toString method\n    let binaryStr = dec.toString(2);\n\n    // Pad the binary string to 8 bits\n    return binaryStr.padStart(8, '0');\n}\n\n\nfunction hexToBinary2(hexString) {\n    // Menghapus karakter spasi jika ada\n    hexString = hexString.replace(/\\s+/g, '');\n    \n    // Memastikan string heksadesimal valid dan tidak lebih dari 2 karakter\n    if (!/^[\\da-fA-F]{1,2}$/.test(hexString)) {\n        throw new Error(\"Invalid hexadecimal string. Input should be 1 or 2 hex characters.\");\n    }\n\n    // Mengonversi string heksadesimal menjadi biner dengan panjang 8 bit\n    let binaryString = parseInt(hexString, 16).toString(2).padStart(8, '0');\n\n    return binaryString;\n}\n\nfunction reverseString(str) {\n    // Mengubah string menjadi array, membalik array, dan menggabungkan kembali menjadi string\n    return str.split('').reverse().join('');\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6320,35 +6320,6 @@
         ]
     },
     {
-        "id": "e721900aeb5905ea",
-        "type": "inject",
-        "z": "bca4771a12cb11e6",
-        "name": "FanIndoor Mati",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "040500000300000003",
-        "payloadType": "str",
-        "x": 160,
-        "y": 1840,
-        "wires": [
-            [
-                "6233b4b33cbabd1c"
-            ]
-        ]
-    },
-    {
         "id": "4b66960374ee5eaa",
         "type": "inject",
         "z": "bca4771a12cb11e6",
@@ -6371,6 +6342,35 @@
         "payloadType": "str",
         "x": 150,
         "y": 1560,
+        "wires": [
+            [
+                "6233b4b33cbabd1c"
+            ]
+        ]
+    },
+    {
+        "id": "e721900aeb5905ea",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "FanIndoor Mati",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "040500000300000003",
+        "payloadType": "str",
+        "x": 160,
+        "y": 1840,
         "wires": [
             [
                 "6233b4b33cbabd1c"
