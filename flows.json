@@ -5822,7 +5822,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": "Request",
-        "func": "msg.resultsql = msg.payload;\nvar d = msg.payload[0][0];\nvar cmd = \"\";\nmsg.statusEH1 = false;\nmsg.statusEH2 = false;\nfor (let index = 0; index < Object.keys(d).length - 2; index++) {\n    cmd += d[Object.keys(d)[index]];\n}\ncmd += \"00\";\ncmd += \"0000\" + \"0000\" ;\nmsg.payload = cmd;\nreturn msg;",
+        "func": "msg.resultsql = msg.payload;\nvar d = msg.payload[0];\nvar cmd = \"\";\nmsg.statusEH1 = false;\nmsg.statusEH2 = false;\nfor (let index = 0; index < Object.keys(d).length - 2; index++) {\n    cmd += d[Object.keys(d)[index]];\n}\ncmd += \"00\";\ncmd += \"0000\" + \"0000\" ;\nmsg.payload = cmd;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
