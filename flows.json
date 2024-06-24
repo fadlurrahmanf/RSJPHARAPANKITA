@@ -6320,10 +6320,10 @@
         ]
     },
     {
-        "id": "cbbd9b3b09b56896",
+        "id": "5c9749d942b87024",
         "type": "inject",
         "z": "bca4771a12cb11e6",
-        "name": "EF Nyala",
+        "name": "EF Mati",
         "props": [
             {
                 "p": "payload"
@@ -6338,10 +6338,10 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "040300009B0C00000002",
+        "payload": "04030000DB0400000002",
         "payloadType": "str",
-        "x": 120,
-        "y": 1580,
+        "x": 130,
+        "y": 1600,
         "wires": [
             [
                 "6233b4b33cbabd1c"
