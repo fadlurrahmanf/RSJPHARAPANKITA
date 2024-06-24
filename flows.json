@@ -6320,35 +6320,6 @@
         ]
     },
     {
-        "id": "456457f25823f12a",
-        "type": "inject",
-        "z": "bca4771a12cb11e6",
-        "name": "Manual Panel",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "04030000FE0000000002",
-        "payloadType": "str",
-        "x": 110,
-        "y": 1580,
-        "wires": [
-            [
-                "6233b4b33cbabd1c"
-            ]
-        ]
-    },
-    {
         "id": "ae459cb84c6fb828",
         "type": "debug",
         "z": "12638c94c64653f3",
