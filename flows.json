@@ -1379,7 +1379,7 @@
                 "dae22984db30bba3"
             ],
             [
-                "e880b0887622ca71"
+                "b4d32bd3897234eb"
             ]
         ]
     },
@@ -5410,32 +5410,6 @@
         "wires": []
     },
     {
-        "id": "e880b0887622ca71",
-        "type": "trigger",
-        "z": "bca4771a12cb11e6",
-        "name": " ",
-        "op1": "1",
-        "op2": "",
-        "op1type": "str",
-        "op2type": "nul",
-        "duration": "-15",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "s",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 530,
-        "y": 1340,
-        "wires": [
-            [
-                "3f972b9577eb5b33",
-                "a040cdd296f89df4"
-            ]
-        ]
-    },
-    {
         "id": "a040cdd296f89df4",
         "type": "trigger",
         "z": "bca4771a12cb11e6",
@@ -5456,6 +5430,32 @@
         "y": 1400,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "b4d32bd3897234eb",
+        "type": "delay",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "15",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 530,
+        "y": 1340,
+        "wires": [
+            [
+                "3f972b9577eb5b33",
+                "a040cdd296f89df4"
+            ]
         ]
     },
     {
