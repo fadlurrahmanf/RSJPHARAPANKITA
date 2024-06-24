@@ -5434,7 +5434,8 @@
         "name": "link out 39",
         "mode": "link",
         "links": [
-            "5936f1df53932369"
+            "5936f1df53932369",
+            "d9cda9d21b5e59c9"
         ],
         "x": 455,
         "y": 440,
@@ -5720,6 +5721,58 @@
         "statusType": "auto",
         "x": 210,
         "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "d9cda9d21b5e59c9",
+        "type": "link in",
+        "z": "bca4771a12cb11e6",
+        "name": "link in 29",
+        "links": [
+            "5a9616ba520d413a"
+        ],
+        "x": 1525,
+        "y": 580,
+        "wires": [
+            [
+                "a2a8e682fe0fb9c4"
+            ]
+        ]
+    },
+    {
+        "id": "a2a8e682fe0fb9c4",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "func": "msg.topic = \"SELECT `Pressure,HepaFilter`,`Pressure,MediumFilter`,`Temp/RH,CathLab`,`Temp/RH,Machine` FROM `devicelist`;\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1610,
+        "y": 580,
+        "wires": [
+            [
+                "ee9d73a6060c9c58"
+            ]
+        ]
+    },
+    {
+        "id": "ee9d73a6060c9c58",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": "debug 77",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1760,
+        "y": 580,
         "wires": []
     },
     {
