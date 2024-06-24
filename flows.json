@@ -71,12 +71,13 @@
             "4c80d3fd31ff5440",
             "dd1e1bf4fa001f32",
             "31ef301a128c4b66",
-            "2815e1177e773fe4"
+            "2815e1177e773fe4",
+            "d98271f4f071f32e"
         ],
-        "x": 24,
+        "x": 34,
         "y": 19,
-        "w": 452,
-        "h": 162
+        "w": 442,
+        "h": 142
     },
     {
         "id": "1cbfcd06637d48ad",
@@ -112,12 +113,13 @@
         "nodes": [
             "ed77b13627de379d",
             "2b3434178f0ac999",
-            "9d6f10db5c0fea06"
+            "9d6f10db5c0fea06",
+            "cf128b17d11f7fc7"
         ],
-        "x": 494,
+        "x": 484,
         "y": 19,
         "w": 222,
-        "h": 82
+        "h": 142
     },
     {
         "id": "8be50af1826bf3eb",
@@ -139,14 +141,12 @@
             "91c1d36297a0c7fd",
             "f20849a9ab1503b2",
             "a647954ae4d429aa",
-            "807a19eda26da37a",
-            "9d24164ad001ee18",
             "fb1bf2e163b3c7a9"
         ],
-        "x": 24,
-        "y": 219,
-        "w": 1192,
-        "h": 142
+        "x": 34,
+        "y": 179,
+        "w": 1182,
+        "h": 122
     },
     {
         "id": "61b2c6fee1e1e6a8",
@@ -254,6 +254,278 @@
         "id": "7ff6db086b81b7e7",
         "type": "group",
         "z": "bca4771a12cb11e6",
+        "name": "SystemClock",
+        "style": {
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "cc64b14b4d983e3f",
+            "fa3bcb095fdfb9a7",
+            "b07e4e6ebad074fb",
+            "ae03f26ebfda2cf1",
+            "6b0dbecee3dd961c",
+            "53ef936abb21b675",
+            "962ac3a3ae6cb677",
+            "5c0e450f5d574f30",
+            "eeaad9e4a7b40fec",
+            "e824b89db0dcadfc",
+            "c3f008a339c97a2e",
+            "78f55615c04a1769",
+            "6345195148b114ad",
+            "5a9616ba520d413a",
+            "3b2a44cd4136616d"
+        ],
+        "x": 34,
+        "y": 319,
+        "w": 702,
+        "h": 302
+    },
+    {
+        "id": "94afd02c3878fc20",
+        "type": "group",
+        "z": "bca4771a12cb11e6",
+        "name": "Run Loop",
+        "style": {
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "98d4b79922df7538",
+            "5dfb8dd8c390d971",
+            "996b8741f6785be0",
+            "6c88cbac6c1e1314",
+            "26120895f3f84739",
+            "340b6dc447cb3a1f",
+            "811d40e949e9fef1",
+            "c7d1752efe372b78",
+            "f76630c041b6c74a",
+            "32dded3e3ceacf4c",
+            "53fcd0a658899b61",
+            "d1d6d888207e0204",
+            "4d48619bf5bbadca",
+            "b1e9832db3a61f1b",
+            "c476e780880d1b2d",
+            "0a7ea2c4e927a1bd"
+        ],
+        "x": 34,
+        "y": 659,
+        "w": 492,
+        "h": 342
+    },
+    {
+        "id": "b2cfefbaa250692d",
+        "type": "group",
+        "z": "bca4771a12cb11e6",
+        "name": "MonitoringTempRH",
+        "style": {
+            "label": true,
+            "color": "#000000",
+            "label-position": "n"
+        },
+        "nodes": [
+            "8f99e09dae854b85",
+            "14f91a50d6904e88",
+            "b1b2db7babdaf54b",
+            "3ac72ba11294aa01",
+            "022a029521e3c1dd",
+            "699bc22c1a819a76",
+            "88395c793067a2e5"
+        ],
+        "x": 544,
+        "y": 659,
+        "w": 712,
+        "h": 122
+    },
+    {
+        "id": "6a72c936b627e910",
+        "type": "group",
+        "z": "bca4771a12cb11e6",
+        "name": "Turn On Heater",
+        "style": {
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "b7a0b469689fefd3",
+            "ede82a4075db7adf",
+            "db7e71f59821125d",
+            "89f81b486a2b2f8d",
+            "4776d2059a76e625",
+            "e181d40ba2c883c6",
+            "7ef3d8868618eb2f",
+            "8099edeb0376bcea",
+            "efd4c15eee3524d0",
+            "99d7acf34720e090",
+            "bf104e7cca1d96a0",
+            "16853bc05e3e9d02",
+            "6a4f334d1f97ed84"
+        ],
+        "x": 544,
+        "y": 799,
+        "w": 1192,
+        "h": 142
+    },
+    {
+        "id": "efd67cff70aea370",
+        "type": "group",
+        "z": "bca4771a12cb11e6",
+        "name": "Running Heater",
+        "style": {
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "86d93e43ac494bd0",
+            "74eb172db82ec21b",
+            "5325683f3d621a49",
+            "9e6d9789580139b4",
+            "d7f5d1cda8b9c2e4",
+            "aa65a38826eefec0",
+            "a88f76740bd895c4",
+            "ab10a2b4ace98698",
+            "9f44d28a524d189a",
+            "fe15437ea5ba0d90",
+            "07348a1e922e2081"
+        ],
+        "x": 544,
+        "y": 959,
+        "w": 732,
+        "h": 162
+    },
+    {
+        "id": "1aacce764e0ed47b",
+        "type": "group",
+        "z": "bca4771a12cb11e6",
+        "name": "Turn Off Heater",
+        "style": {
+            "label": true,
+            "color": "#000000",
+            "label-position": "n"
+        },
+        "nodes": [
+            "1658ac7b84089f6b",
+            "a432e9a4cfafa890",
+            "dae22984db30bba3",
+            "0494c8d6085a4cf0",
+            "01fea39265f2dc97",
+            "710352610b5171f7",
+            "44ece0d16efb9af2",
+            "fcded8e6800db872",
+            "d802d6a814ceb1d0",
+            "ddab33048d01b3d5",
+            "2ee5fb66a447ff24",
+            "300675ed5fd9466c",
+            "b48cfcb16da97cdb"
+        ],
+        "x": 544,
+        "y": 1139,
+        "w": 1212,
+        "h": 142
+    },
+    {
+        "id": "9965847832a173f9",
+        "type": "group",
+        "z": "bca4771a12cb11e6",
+        "name": "Shutdown",
+        "style": {
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "3f972b9577eb5b33",
+            "6d5f07b04733e577",
+            "b4d32bd3897234eb",
+            "a040cdd296f89df4",
+            "79d1e5f400e8c545",
+            "40fa6128af8ba52d",
+            "3e2e3138c0de2877",
+            "1a293fbb3e81e268",
+            "42ef840fe439670f",
+            "46451fec39f8e841",
+            "c2895618f3b4cdb7",
+            "e630b236c1d2b8ee",
+            "5ee28832d25a6f45",
+            "feb7c55006e92cde",
+            "3e9c807a44ff9c54",
+            "888e06c328ef570b",
+            "1da0caa3cc640452",
+            "f31779116c5bb821",
+            "804d088f9d9f9e16",
+            "1dda750ca3d657ba",
+            "da20796f860b477b",
+            "59463c781eab1470",
+            "b8560362bc1218d2",
+            "02e193578a41d279",
+            "35702a825d7ea7f1",
+            "6caf09005d5d4f8c",
+            "d1cda63e22d46295",
+            "6a6b80ccb9539197",
+            "b8b6158225a70a1c",
+            "2138ff8d3224b227",
+            "86889498473ea3c1",
+            "f9f4bd8039c3fbc8",
+            "b5539273c8b7b27c",
+            "d6ec50e49909a835",
+            "6c8877aeb5ae2bf4",
+            "05f650927ae5c01f",
+            "4cfc816ed42ed14a",
+            "05fbb05ae3d0d88a"
+        ],
+        "x": 544,
+        "y": 1299,
+        "w": 1302,
+        "h": 282
+    },
+    {
+        "id": "4a2b08a3489a859c",
+        "type": "group",
+        "z": "bca4771a12cb11e6",
+        "name": "Pre Run Loop",
+        "style": {
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "35a56d8a804f6957",
+            "1c505eaeda7d6b6a",
+            "9a489bd4e0857cbf",
+            "525a257b01798881",
+            "fbfbf9d305f0d43a",
+            "4da408452df5e1e3",
+            "ea14610f882fc427",
+            "77b2cba796d2f531",
+            "4043dbbf93d75df2",
+            "a5409b65184165d3",
+            "ec5ef574d79e5506",
+            "a27a7d74181d73f9",
+            "a1807d9433fd3b20",
+            "8f7f8be627e7f4d2",
+            "1c2dcf8730950b3f",
+            "62b6001d94bcac60",
+            "a6711d252207f1c0",
+            "95c264c90bd714f9",
+            "5936f1df53932369",
+            "266dedab938cb002",
+            "09a3b6a802023dc8",
+            "631a5792b3f53e2e",
+            "96bdfb3b96f0e2d1"
+        ],
+        "x": 764,
+        "y": 339,
+        "w": 1472,
+        "h": 202
+    },
+    {
+        "id": "a31f151e4e5d7b60",
+        "type": "group",
+        "z": "bca4771a12cb11e6",
         "style": {
             "stroke": "#999999",
             "stroke-opacity": "1",
@@ -264,53 +536,70 @@
             "color": "#a4a4a4"
         },
         "nodes": [
-            "cc64b14b4d983e3f",
-            "fa3bcb095fdfb9a7",
-            "b07e4e6ebad074fb",
-            "ae03f26ebfda2cf1",
-            "6b0dbecee3dd961c",
-            "53ef936abb21b675",
-            "962ac3a3ae6cb677",
-            "525a257b01798881",
-            "5c0e450f5d574f30",
-            "eeaad9e4a7b40fec",
-            "e824b89db0dcadfc",
-            "fbfbf9d305f0d43a",
-            "ba8c9cc35b114ccc",
-            "c3f008a339c97a2e",
-            "4da408452df5e1e3",
-            "ea14610f882fc427",
-            "77b2cba796d2f531",
-            "4043dbbf93d75df2",
-            "31d2b08316816f13",
-            "62b6001d94bcac60",
-            "d1bcd9574d203e14",
-            "78f55615c04a1769",
-            "a5409b65184165d3",
-            "ec5ef574d79e5506",
-            "a6711d252207f1c0",
-            "95c264c90bd714f9",
-            "de5cfc72b0d10bf3",
-            "8f7f8be627e7f4d2",
-            "a27a7d74181d73f9",
-            "a1807d9433fd3b20",
-            "1c2dcf8730950b3f",
-            "3b2a44cd4136616d",
-            "35a56d8a804f6957",
-            "1c505eaeda7d6b6a",
-            "9a489bd4e0857cbf",
-            "4effa488929dfcaa",
-            "b4b8ddc7a2ba1e52",
-            "3b9ce4460378ed67",
-            "7f552092d1c45c95",
-            "1cd1b33e97737dba",
-            "c550d656797c4a3f",
-            "6345195148b114ad"
+            "cad8d9fb0b3b7dab",
+            "f3ac2cdc7fa4373e",
+            "02d4dc0e2995b26c",
+            "8cb74b9b019d03ca",
+            "92f4b7d9aa20de7b",
+            "0e3f4cd8e2a0e530",
+            "80511c5878e7f281"
         ],
-        "x": 34,
-        "y": 519,
-        "w": 1762,
-        "h": 362
+        "x": 1234,
+        "y": 179,
+        "w": 752,
+        "h": 122
+    },
+    {
+        "id": "266dedab938cb002",
+        "type": "junction",
+        "z": "bca4771a12cb11e6",
+        "g": "4a2b08a3489a859c",
+        "x": 2140,
+        "y": 380,
+        "wires": [
+            [
+                "95c264c90bd714f9"
+            ]
+        ]
+    },
+    {
+        "id": "09a3b6a802023dc8",
+        "type": "junction",
+        "z": "bca4771a12cb11e6",
+        "g": "4a2b08a3489a859c",
+        "x": 2140,
+        "y": 420,
+        "wires": [
+            [
+                "95c264c90bd714f9"
+            ]
+        ]
+    },
+    {
+        "id": "631a5792b3f53e2e",
+        "type": "junction",
+        "z": "bca4771a12cb11e6",
+        "g": "4a2b08a3489a859c",
+        "x": 2140,
+        "y": 460,
+        "wires": [
+            [
+                "95c264c90bd714f9"
+            ]
+        ]
+    },
+    {
+        "id": "96bdfb3b96f0e2d1",
+        "type": "junction",
+        "z": "bca4771a12cb11e6",
+        "g": "4a2b08a3489a859c",
+        "x": 2140,
+        "y": 500,
+        "wires": [
+            [
+                "95c264c90bd714f9"
+            ]
+        ]
     },
     {
         "id": "3b8e5eb93b7526d7",
@@ -522,12 +811,11 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 120,
+        "x": 130,
         "y": 60,
         "wires": [
             [
-                "4c80d3fd31ff5440",
-                "2815e1177e773fe4"
+                "4c80d3fd31ff5440"
             ]
         ]
     },
@@ -558,9 +846,10 @@
         "name": "IncomingData",
         "mode": "link",
         "links": [
-            "0cbc509033550b7f"
+            "0cbc509033550b7f",
+            "d98271f4f071f32e"
         ],
-        "x": 225,
+        "x": 235,
         "y": 60,
         "wires": []
     },
@@ -576,8 +865,8 @@
             "6776bbaf798955cd",
             "c6ccaf078e16fab4"
         ],
-        "x": 65,
-        "y": 280,
+        "x": 75,
+        "y": 240,
         "wires": [
             [
                 "94514e5dd76e1b4a"
@@ -591,7 +880,7 @@
         "g": "aadd16a462e83be5",
         "mydb": "3b8e5eb93b7526d7",
         "name": " ",
-        "x": 620,
+        "x": 610,
         "y": 60,
         "wires": [
             []
@@ -621,13 +910,12 @@
         "repair": false,
         "outputs": 2,
         "x": 570,
-        "y": 280,
+        "y": 240,
         "wires": [
             [
                 "83efeb6b5a73d7c6"
             ],
             [
-                "807a19eda26da37a",
                 "fb1bf2e163b3c7a9"
             ]
         ]
@@ -646,7 +934,7 @@
         "finalize": "",
         "libs": [],
         "x": 710,
-        "y": 260,
+        "y": 220,
         "wires": [
             [
                 "df5d05325874622c"
@@ -660,7 +948,7 @@
         "g": "8be50af1826bf3eb",
         "name": "decoder",
         "x": 840,
-        "y": 260,
+        "y": 220,
         "wires": [
             [
                 "91c1d36297a0c7fd"
@@ -681,7 +969,7 @@
         "finalize": "",
         "libs": [],
         "x": 970,
-        "y": 260,
+        "y": 220,
         "wires": [
             [
                 "f20849a9ab1503b2"
@@ -705,11 +993,10 @@
         "repair": false,
         "outputs": 1,
         "x": 420,
-        "y": 280,
+        "y": 240,
         "wires": [
             [
-                "5b8d8dea5122397e",
-                "807a19eda26da37a"
+                "5b8d8dea5122397e"
             ]
         ]
     },
@@ -727,11 +1014,10 @@
         "finalize": "",
         "libs": [],
         "x": 160,
-        "y": 280,
+        "y": 240,
         "wires": [
             [
-                "92b7c675366c9d8d",
-                "807a19eda26da37a"
+                "92b7c675366c9d8d"
             ]
         ]
     },
@@ -749,7 +1035,7 @@
         "finalize": "",
         "libs": [],
         "x": 1090,
-        "y": 260,
+        "y": 220,
         "wires": [
             [
                 "a647954ae4d429aa"
@@ -765,10 +1051,11 @@
         "mode": "link",
         "links": [
             "2b3434178f0ac999",
-            "9b0d96a526b14c55"
+            "9b0d96a526b14c55",
+            "cf128b17d11f7fc7"
         ],
         "x": 1175,
-        "y": 260,
+        "y": 220,
         "wires": []
     },
     {
@@ -785,12 +1072,11 @@
             "983c5238c51828dc",
             "09187eb453511326"
         ],
-        "x": 535,
+        "x": 525,
         "y": 60,
         "wires": [
             [
-                "ed77b13627de379d",
-                "9d6f10db5c0fea06"
+                "ed77b13627de379d"
             ]
         ]
     },
@@ -836,7 +1122,7 @@
         "mydb": "3b8e5eb93b7526d7",
         "name": " ",
         "x": 290,
-        "y": 280,
+        "y": 240,
         "wires": [
             [
                 "f41842a72cb70323"
@@ -905,10 +1191,11 @@
         "mode": "link",
         "links": [
             "2b3434178f0ac999",
-            "9b0d96a526b14c55"
+            "9b0d96a526b14c55",
+            "cf128b17d11f7fc7"
         ],
-        "x": 805,
-        "y": 320,
+        "x": 795,
+        "y": 260,
         "wires": []
     },
     {
@@ -934,7 +1221,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 130,
-        "y": 620,
+        "y": 400,
         "wires": [
             [
                 "b07e4e6ebad074fb",
@@ -956,7 +1243,7 @@
         "finalize": "",
         "libs": [],
         "x": 250,
-        "y": 620,
+        "y": 400,
         "wires": [
             [
                 "ae03f26ebfda2cf1",
@@ -980,7 +1267,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 370,
-        "y": 700,
+        "y": 580,
         "wires": []
     },
     {
@@ -1003,35 +1290,17 @@
         "repair": false,
         "outputs": 2,
         "x": 370,
-        "y": 620,
+        "y": 400,
         "wires": [
             [
                 "53ef936abb21b675"
             ],
             [
                 "962ac3a3ae6cb677",
-                "3b2a44cd4136616d",
-                "35a56d8a804f6957"
+                "5a9616ba520d413a",
+                "3b2a44cd4136616d"
             ]
         ]
-    },
-    {
-        "id": "ba8c9cc35b114ccc",
-        "type": "debug",
-        "z": "bca4771a12cb11e6",
-        "g": "7ff6db086b81b7e7",
-        "name": " ",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "cmd",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 790,
-        "y": 580,
-        "wires": []
     },
     {
         "id": "962ac3a3ae6cb677",
@@ -1047,7 +1316,7 @@
         "finalize": "",
         "libs": [],
         "x": 490,
-        "y": 620,
+        "y": 400,
         "wires": [
             [
                 "e824b89db0dcadfc"
@@ -1065,7 +1334,7 @@
             "5c0e450f5d574f30"
         ],
         "x": 575,
-        "y": 620,
+        "y": 400,
         "wires": []
     },
     {
@@ -1078,7 +1347,7 @@
             "e824b89db0dcadfc"
         ],
         "x": 405,
-        "y": 580,
+        "y": 360,
         "wires": [
             [
                 "53ef936abb21b675"
@@ -1096,19 +1365,20 @@
             "98d4b79922df7538"
         ],
         "x": 695,
-        "y": 580,
+        "y": 360,
         "wires": []
     },
     {
         "id": "98d4b79922df7538",
         "type": "link in",
         "z": "bca4771a12cb11e6",
+        "g": "94afd02c3878fc20",
         "name": "link in 5",
         "links": [
             "c3f008a339c97a2e"
         ],
-        "x": 115,
-        "y": 1640,
+        "x": 75,
+        "y": 820,
         "wires": [
             [
                 "5dfb8dd8c390d971"
@@ -1119,6 +1389,7 @@
         "id": "5dfb8dd8c390d971",
         "type": "function",
         "z": "bca4771a12cb11e6",
+        "g": "94afd02c3878fc20",
         "name": " ",
         "func": "msg.cmd = flow.get(\"cmdauto\");\nvar BatasAtasRH = 58;\nvar BatasBawahRH = 52;\nvar RelayInput = flow.get(\"RelayInput\");\nvar RelayOutput = flow.get(\"RelayOutput\");\n//----------------------------------------------------\n// Definisikan parameter PID\nvar Kp = 0.5; // Gain proporsional\nvar Ki = 0.2; // Gain integral\nvar Kd = 0.1; // Gain derivatif\nvar SetPoint = 50;\n\nvar errorPrev = 0;\nvar integral = 0;\n//----------------------------------------------------\nif(flow.get(\"SystemStatus\") == \"OFF\" && msg.cmd != \"None\"){\n    msg.cmd = \"Shutdown\";\n}\nif(msg.cmd == \"Init\"){\n    msg.cmd = \"MonitorTemp\";\n}else if(msg.cmd == \"MonitorTemp\"){\n    if ((Date.now() - flow.get(\"Temp_Cathlab\")[1]) / 1000 < 10 && (Date.now() - flow.get(\"RH_Cathlab\")[1])/1000<10){\n        var RH_Cathlab = flow.get(\"RH_Cathlab\")[0];\n        \n        if (RH_Cathlab >= (SetPoint + 1)) {\n            var dur = kontrolPID(SetPoint,RH_Cathlab)*(-1)*60*1000;\n            if(dur<0){\n                return msg;\n            }\n            flow.set(\"DurationEH\",[Math.round(dur),Date.now()]);\n            msg.cmd = \"OnEH\"+\" =[EH1]\";\n            console.log(String(dur));\n        }\n    }\n}else if(msg.cmd == \"OnEH\"+\" =[EH1]\"){\n    for (let index = 0; index < RelayOutput.length; index++) {\n        if(RelayOutput[index].keterangan == \"EH1\" && RelayOutput[index].Stat == 1){\n            msg.cmd = \"Waiting\";\n            msg.delay = flow.get(\"DurationEH\")[0];\n        }\n    }\n} else if (msg.cmd == \"Waiting Force Done\"){\n\n    msg.cmd = \"OffEH\";\n} else if(msg.cmd.substring(0,7) == \"Waiting\"){\n    var timeRemaining = Math.round(((flow.get(\"DurationEH\")[0]+flow.get(\"DurationEH\")[1])-Date.now())/1000);\n    msg.cmd = \"Waiting = \"+String(epochtostr(timeRemaining));\n    \n    var RH_Cathlab = flow.get(\"RH_Cathlab\")[0];\n    if (RH_Cathlab < (SetPoint+1)){\n        msg.cmd = \"Waiting Force Done\";\n        msg.reset = true;\n    }\n    console.log(\"Timeremaining : \"+String(timeRemaining));\n    console.log(\"DurationEH : \"+String((Math.round((flow.get(\"DurationEH\")[0])/1000)/2)));\n    if(timeRemaining <= (Math.round((flow.get(\"DurationEH\")[0])/1000)/2)){\n        for (let index = 0; index < RelayOutput.length; index++) {\n            if(RelayOutput[index].keterangan == \"EH2\" && RelayOutput[index].Stat == 0){\n                msg.cmd += \" =[EH2]\";\n            }\n        }\n    }\n} else if(msg.cmd == \"Timeout\"){\n    var RH_Cathlab = flow.get(\"RH_Cathlab\")[0];\n    msg.cmd = \"OffEH\";\n} else if(msg.cmd == \"OffEH\"){\n    msg.statusEH1 = false;\n    msg.statusEH2 = false;\n    for (let index = 0; index < RelayOutput.length; index++) {\n        if(RelayOutput[index].keterangan == \"EH1\" && RelayOutput[index].Stat == 0){\n            msg.statusEH1 = true;\n        }else if(RelayOutput[index].keterangan == \"EH2\" && RelayOutput[index].Stat == 0){\n            msg.statusEH2 = true;\n        }\n    }\n    if(msg.statusEH1&&msg.statusEH2){\n        msg.cmd = \"MonitorTemp\";\n    }\n}\nflow.set(\"cmdauto\", msg.cmd);\nreturn msg;\n\nfunction kontrolPID(nilaiTarget, nilaiSekarang) {\n    // Hitung error saat ini\n    const error = nilaiTarget - nilaiSekarang;\n\n    // Hitung komponen PID\n    const proporsional = Kp * error;\n    integral += error;\n    const integralComp = Ki * integral;\n    const derivative = Kd * (error - errorPrev);\n\n    // Hitung output PID\n    const output = proporsional + integralComp + derivative;\n\n    // Simpan error saat ini untuk penggunaan di iterasi selanjutnya\n    errorPrev = error;\n\n    return output;\n}\nfunction epochtostr(seconds) {\n    const units = [\n        { label: 'year', value: 60 * 60 * 24 * 365 },  // Approximate, not accounting for leap years\n        { label: 'month', value: 60 * 60 * 24 * 30 },  // Approximate\n        { label: 'day', value: 60 * 60 * 24 },\n        { label: 'hour', value: 60 * 60 },\n        { label: 'minute', value: 60 },\n        { label: 'second', value: 1 }\n    ];\n\n    const result = [];\n\n    for (const unit of units) {\n        const unitValue = Math.floor(seconds / unit.value);\n        if (unitValue > 0) {\n            result.push(`${unitValue} ${unit.label}${unitValue > 1 ? 's' : ''}`);\n            seconds -= unitValue * unit.value;\n        }\n    }\n\n    return result.length > 0 ? result.join(' ') : '0 seconds';\n}",
         "outputs": 1,
@@ -1127,8 +1398,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 250,
-        "y": 1640,
+        "x": 210,
+        "y": 820,
         "wires": [
             [
                 "6c88cbac6c1e1314",
@@ -1142,12 +1413,13 @@
         "id": "996b8741f6785be0",
         "type": "link in",
         "z": "bca4771a12cb11e6",
+        "g": "94afd02c3878fc20",
         "name": "link in 6",
         "links": [
             "340b6dc447cb3a1f"
         ],
-        "x": 165,
-        "y": 1600,
+        "x": 125,
+        "y": 780,
         "wires": [
             [
                 "5dfb8dd8c390d971"
@@ -1158,25 +1430,27 @@
         "id": "6c88cbac6c1e1314",
         "type": "link out",
         "z": "bca4771a12cb11e6",
+        "g": "94afd02c3878fc20",
         "name": "link out 6",
         "mode": "link",
         "links": [
             "26120895f3f84739"
         ],
-        "x": 355,
-        "y": 1600,
+        "x": 315,
+        "y": 780,
         "wires": []
     },
     {
         "id": "26120895f3f84739",
         "type": "link in",
         "z": "bca4771a12cb11e6",
+        "g": "94afd02c3878fc20",
         "name": "link in 7",
         "links": [
             "6c88cbac6c1e1314"
         ],
-        "x": 45,
-        "y": 1040,
+        "x": 105,
+        "y": 700,
         "wires": [
             [
                 "32dded3e3ceacf4c"
@@ -1187,19 +1461,21 @@
         "id": "340b6dc447cb3a1f",
         "type": "link out",
         "z": "bca4771a12cb11e6",
+        "g": "94afd02c3878fc20",
         "name": "link out 7",
         "mode": "link",
         "links": [
             "996b8741f6785be0"
         ],
-        "x": 335,
-        "y": 1040,
+        "x": 395,
+        "y": 700,
         "wires": []
     },
     {
         "id": "811d40e949e9fef1",
         "type": "delay",
         "z": "bca4771a12cb11e6",
+        "g": "94afd02c3878fc20",
         "name": " ",
         "pauseType": "delay",
         "timeout": "1",
@@ -1213,8 +1489,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 250,
-        "y": 1040,
+        "x": 310,
+        "y": 700,
         "wires": [
             [
                 "340b6dc447cb3a1f"
@@ -1225,6 +1501,7 @@
         "id": "c7d1752efe372b78",
         "type": "trigger",
         "z": "bca4771a12cb11e6",
+        "g": "94afd02c3878fc20",
         "name": " ",
         "op1": "",
         "op2": "",
@@ -1238,8 +1515,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 390,
-        "y": 1640,
+        "x": 350,
+        "y": 820,
         "wires": [
             []
         ]
@@ -1248,6 +1525,7 @@
         "id": "14f91a50d6904e88",
         "type": "function",
         "z": "bca4771a12cb11e6",
+        "g": "b2cfefbaa250692d",
         "name": "Request Temp",
         "func": "msg.topic = \"SELECT * FROM `devicelist` WHERE `keterangan` = 'Temp/RH,CathLab';\";\nreturn msg;",
         "outputs": 1,
@@ -1256,8 +1534,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 920,
-        "y": 1000,
+        "x": 820,
+        "y": 700,
         "wires": [
             [
                 "b1b2db7babdaf54b"
@@ -1268,6 +1546,7 @@
         "id": "f76630c041b6c74a",
         "type": "switch",
         "z": "bca4771a12cb11e6",
+        "g": "94afd02c3878fc20",
         "name": " ",
         "property": "cmd",
         "propertyType": "msg",
@@ -1301,8 +1580,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 5,
-        "x": 370,
-        "y": 1700,
+        "x": 330,
+        "y": 880,
         "wires": [
             [
                 "d1d6d888207e0204"
@@ -1325,6 +1604,7 @@
         "id": "8f99e09dae854b85",
         "type": "trigger",
         "z": "bca4771a12cb11e6",
+        "g": "b2cfefbaa250692d",
         "name": " ",
         "op1": "1",
         "op2": "",
@@ -1338,8 +1618,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 770,
-        "y": 1000,
+        "x": 670,
+        "y": 700,
         "wires": [
             [
                 "14f91a50d6904e88"
@@ -1350,10 +1630,11 @@
         "id": "b1b2db7babdaf54b",
         "type": "mysql",
         "z": "bca4771a12cb11e6",
+        "g": "b2cfefbaa250692d",
         "mydb": "3b8e5eb93b7526d7",
         "name": " ",
-        "x": 1070,
-        "y": 1000,
+        "x": 970,
+        "y": 700,
         "wires": [
             [
                 "3ac72ba11294aa01"
@@ -1364,6 +1645,7 @@
         "id": "3ac72ba11294aa01",
         "type": "function",
         "z": "bca4771a12cb11e6",
+        "g": "b2cfefbaa250692d",
         "name": "Requesting",
         "func": "var d = msg.payload[0];\nvar cmd = \"\";\nfor (let index = 0; index < Object.keys(d).length-2; index++) {\n    cmd += d[Object.keys(d)[index]];\n}\ncmd += \"00\";\ncmd += \"00000000\";\nmsg.payload = cmd;\nreturn msg;",
         "outputs": 1,
@@ -1372,8 +1654,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1210,
-        "y": 1000,
+        "x": 1110,
+        "y": 700,
         "wires": [
             [
                 "022a029521e3c1dd"
@@ -1384,13 +1666,14 @@
         "id": "b7a0b469689fefd3",
         "type": "link out",
         "z": "bca4771a12cb11e6",
+        "g": "6a72c936b627e910",
         "name": "link out 8",
         "mode": "link",
         "links": [
             "dd1e1bf4fa001f32"
         ],
-        "x": 1155,
-        "y": 1120,
+        "x": 1315,
+        "y": 840,
         "wires": []
     },
     {
@@ -1407,10 +1690,9 @@
         "finalize": "",
         "libs": [],
         "x": 610,
-        "y": 580,
+        "y": 360,
         "wires": [
             [
-                "ba8c9cc35b114ccc",
                 "c3f008a339c97a2e"
             ]
         ]
@@ -1426,7 +1708,7 @@
             "694bf36843b2868e"
         ],
         "x": 215,
-        "y": 580,
+        "y": 360,
         "wires": []
     },
     {
@@ -1437,8 +1719,8 @@
         "links": [
             "b07e4e6ebad074fb"
         ],
-        "x": 1845,
-        "y": 580,
+        "x": 2245,
+        "y": 660,
         "wires": [
             [
                 "40a624a1f8f16c78",
@@ -1458,8 +1740,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1930,
-        "y": 580,
+        "x": 2330,
+        "y": 660,
         "wires": [
             [
                 "d6aa40b162d6b292",
@@ -1477,6 +1759,7 @@
         "id": "32dded3e3ceacf4c",
         "type": "switch",
         "z": "bca4771a12cb11e6",
+        "g": "94afd02c3878fc20",
         "name": " ",
         "property": "cmd",
         "propertyType": "msg",
@@ -1490,8 +1773,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 130,
-        "y": 1040,
+        "x": 190,
+        "y": 700,
         "wires": [
             [
                 "811d40e949e9fef1"
@@ -1502,6 +1785,7 @@
         "id": "53fcd0a658899b61",
         "type": "debug",
         "z": "bca4771a12cb11e6",
+        "g": "94afd02c3878fc20",
         "name": " ",
         "active": false,
         "tosidebar": true,
@@ -1511,8 +1795,8 @@
         "targetType": "msg",
         "statusVal": "cmd",
         "statusType": "auto",
-        "x": 390,
-        "y": 1600,
+        "x": 350,
+        "y": 780,
         "wires": []
     },
     {
@@ -1532,8 +1816,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1930,
-        "y": 540,
+        "x": 2330,
+        "y": 620,
         "wires": [
             []
         ]
@@ -1542,6 +1826,7 @@
         "id": "ede82a4075db7adf",
         "type": "trigger",
         "z": "bca4771a12cb11e6",
+        "g": "6a72c936b627e910",
         "name": " ",
         "op1": "1",
         "op2": "",
@@ -1555,8 +1840,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 530,
-        "y": 1140,
+        "x": 680,
+        "y": 860,
         "wires": [
             [
                 "db7e71f59821125d"
@@ -1567,6 +1852,7 @@
         "id": "db7e71f59821125d",
         "type": "function",
         "z": "bca4771a12cb11e6",
+        "g": "6a72c936b627e910",
         "name": "Turn On EH",
         "func": "msg.topic = \"SELECT * FROM `devicelist` WHERE `keterangan` = 'RelayOutput';\";\nmsg.topic += \"SELECT * FROM `Output` WHERE `keterangan` = 'EH1' OR `keterangan` = 'EH2';\";\nmsg.topic += \"SELECT * FROM `Operation`;\";\nreturn msg;",
         "outputs": 1,
@@ -1575,8 +1861,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 670,
-        "y": 1140,
+        "x": 820,
+        "y": 860,
         "wires": [
             [
                 "89f81b486a2b2f8d"
@@ -1587,10 +1873,11 @@
         "id": "89f81b486a2b2f8d",
         "type": "mysql",
         "z": "bca4771a12cb11e6",
+        "g": "6a72c936b627e910",
         "mydb": "3b8e5eb93b7526d7",
         "name": " ",
-        "x": 830,
-        "y": 1140,
+        "x": 970,
+        "y": 860,
         "wires": [
             [
                 "4776d2059a76e625"
@@ -1601,6 +1888,7 @@
         "id": "4776d2059a76e625",
         "type": "function",
         "z": "bca4771a12cb11e6",
+        "g": "6a72c936b627e910",
         "name": " On1",
         "func": "msg.resultsql = msg.payload;\nvar d = msg.payload[0][0];\nvar cmd = \"\";\nmsg.statusEH1 = false;\nmsg.statusEH2 = false;\nfor (let index = 0; index < Object.keys(d).length - 2; index++) {\n    cmd += d[Object.keys(d)[index]];\n}\ncmd += \"01\";\n\nvar binarycurrent = reverseString(decToBinary(msg.payload[2][0].Output));\nvar spt = binarycurrent.split(\"\");\nif (binarycurrent[msg.payload[1][0].Number - 1] == \"0\" && msg.cmd.includes(\"=[EH1]\")) {\n    \n    spt[msg.payload[1][0].Number - 1] = \"1\";\n    binarycurrent = spt.join(\"\");\n    if(flow.get(\"RelayOutput\")[msg.payload[1][0].Number].Stat == 0){\n        msg.statusEH1 = true;\n        \n    }else{\n        msg.statusEH1 = false;\n    }\n    \n    msg.payload[2][0][\"Output\"] = parseInt(String(msg.payload[2][0].Output)) + parseInt(String(msg.payload[1][0].Dec));\n    \n}\nif (binarycurrent[msg.payload[1][1].Number - 1] == \"0\" && msg.cmd.includes(\"=[EH2]\")){\n    msg.statusEH2 = true;\n}\n\nmsg.numberOutput = msg.payload[2][0].Output;\nvar hex = binaryToHex(reverseString(binarycurrent));\ncmd += \"0000\" + \"000\" + String(dec2hex(hex));\nmsg.payload = cmd;\nreturn msg;\n\nfunction dec2hex(decimalNumber) {\n    if (decimalNumber < 0 || decimalNumber > 15) {\n        return \"Out of range\";\n    }\n    return decimalNumber.toString(16).toUpperCase();\n}\n\nfunction decToBinary(dec) {\n    // Ensure the input is a number\n    if (typeof dec !== 'number' || isNaN(dec)) {\n        throw new Error('Input must be a valid number');\n    }\n\n    // Handle negative numbers by using two's complement representation\n    if (dec < 0) {\n        return (dec >>> 0).toString(2).padStart(32, '0');\n    }\n\n    // Convert decimal to binary using toString method\n    let binaryStr = dec.toString(2);\n\n    // Pad the binary string to 8 bits\n    return binaryStr.padStart(8, '0');\n}\nfunction reverseString(str) {\n    // Mengubah string menjadi array, membalik array, dan menggabungkan kembali menjadi string\n    return str.split('').reverse().join('');\n}\n\nfunction binaryToHex(binaryStr) {\n    // Ensure the input is a valid binary string\n    if (typeof binaryStr !== 'string' || !/^[01]+$/.test(binaryStr)) {\n        throw new Error('Input must be a valid binary string');\n    }\n\n    // Parse the binary string to a decimal number\n    const decimal = parseInt(binaryStr, 2);\n\n    // Convert the decimal number to a hexadecimal string\n    const hexStr = decimal.toString(16);\n\n    // Return the hexadecimal string (in uppercase for consistency)\n    return hexStr.toUpperCase();\n}",
         "outputs": 1,
@@ -1609,8 +1897,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 950,
-        "y": 1140,
+        "x": 1090,
+        "y": 860,
         "wires": [
             [
                 "e181d40ba2c883c6",
@@ -1622,6 +1910,7 @@
         "id": "d7f5d1cda8b9c2e4",
         "type": "function",
         "z": "bca4771a12cb11e6",
+        "g": "efd67cff70aea370",
         "name": "Request Temp",
         "func": "msg.topic = \"SELECT * FROM `devicelist` WHERE `keterangan` = 'Temp/RH,CathLab';\";\nreturn msg;",
         "outputs": 1,
@@ -1630,8 +1919,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 680,
-        "y": 1200,
+        "x": 840,
+        "y": 1000,
         "wires": [
             [
                 "86d93e43ac494bd0"
@@ -1642,10 +1931,11 @@
         "id": "86d93e43ac494bd0",
         "type": "mysql",
         "z": "bca4771a12cb11e6",
+        "g": "efd67cff70aea370",
         "mydb": "3b8e5eb93b7526d7",
         "name": " ",
-        "x": 830,
-        "y": 1200,
+        "x": 990,
+        "y": 1000,
         "wires": [
             [
                 "ab10a2b4ace98698"
@@ -1656,6 +1946,7 @@
         "id": "ab10a2b4ace98698",
         "type": "function",
         "z": "bca4771a12cb11e6",
+        "g": "efd67cff70aea370",
         "name": "Requesting",
         "func": "var d = msg.payload[0];\nvar cmd = \"\";\nfor (let index = 0; index < Object.keys(d).length-2; index++) {\n    cmd += d[Object.keys(d)[index]];\n}\ncmd += \"00\";\ncmd += \"00000000\";\nmsg.payload = cmd;\nreturn msg;",
         "outputs": 1,
@@ -1664,8 +1955,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 970,
-        "y": 1200,
+        "x": 1130,
+        "y": 1000,
         "wires": [
             [
                 "fe15437ea5ba0d90"
@@ -1676,19 +1967,21 @@
         "id": "9f44d28a524d189a",
         "type": "link out",
         "z": "bca4771a12cb11e6",
+        "g": "efd67cff70aea370",
         "name": "link out 11",
         "mode": "link",
         "links": [
             "74eb172db82ec21b"
         ],
-        "x": 755,
-        "y": 1240,
+        "x": 915,
+        "y": 1040,
         "wires": []
     },
     {
         "id": "a88f76740bd895c4",
         "type": "function",
         "z": "bca4771a12cb11e6",
+        "g": "efd67cff70aea370",
         "name": "Reset",
         "func": "msg.reset = true;\nmsg.cmd = \"Timeout\";\nflow.set(\"cmdauto\",msg.cmd);\nreturn msg;",
         "outputs": 1,
@@ -1697,8 +1990,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 670,
-        "y": 1240,
+        "x": 830,
+        "y": 1040,
         "wires": [
             [
                 "9f44d28a524d189a"
@@ -1709,12 +2002,13 @@
         "id": "74eb172db82ec21b",
         "type": "link in",
         "z": "bca4771a12cb11e6",
+        "g": "efd67cff70aea370",
         "name": "link in 9",
         "links": [
             "9f44d28a524d189a"
         ],
-        "x": 435,
-        "y": 1180,
+        "x": 585,
+        "y": 1000,
         "wires": [
             [
                 "5325683f3d621a49"
@@ -1735,14 +2029,15 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 370,
-        "y": 140,
+        "x": 180,
+        "y": 120,
         "wires": []
     },
     {
         "id": "dae22984db30bba3",
         "type": "trigger",
         "z": "bca4771a12cb11e6",
+        "g": "1aacce764e0ed47b",
         "name": " ",
         "op1": "1",
         "op2": "",
@@ -1756,8 +2051,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 530,
-        "y": 1280,
+        "x": 690,
+        "y": 1200,
         "wires": [
             [
                 "1658ac7b84089f6b"
@@ -1768,6 +2063,7 @@
         "id": "1658ac7b84089f6b",
         "type": "function",
         "z": "bca4771a12cb11e6",
+        "g": "1aacce764e0ed47b",
         "name": "Turn Off EH",
         "func": "msg.topic = \"SELECT * FROM `devicelist` WHERE `keterangan` = 'RelayOutput';\";\nmsg.topic += \"SELECT * FROM `Output` WHERE `keterangan` = 'EH1' OR `keterangan` = 'EH2';\";\nmsg.topic += \"SELECT * FROM `Operation`;\";\nreturn msg;",
         "outputs": 1,
@@ -1776,8 +2072,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 670,
-        "y": 1280,
+        "x": 830,
+        "y": 1200,
         "wires": [
             [
                 "0494c8d6085a4cf0"
@@ -1788,10 +2084,11 @@
         "id": "0494c8d6085a4cf0",
         "type": "mysql",
         "z": "bca4771a12cb11e6",
+        "g": "1aacce764e0ed47b",
         "mydb": "3b8e5eb93b7526d7",
         "name": " ",
-        "x": 830,
-        "y": 1280,
+        "x": 990,
+        "y": 1200,
         "wires": [
             [
                 "01fea39265f2dc97"
@@ -1802,6 +2099,7 @@
         "id": "01fea39265f2dc97",
         "type": "function",
         "z": "bca4771a12cb11e6",
+        "g": "1aacce764e0ed47b",
         "name": " Off1",
         "func": "msg.resultsql = msg.payload;\nvar d = msg.payload[0][0];\nvar cmd = \"\";\nmsg.statusEH1 = false;\nmsg.statusEH2 = false;\nfor (let index = 0; index < Object.keys(d).length-2; index++) {\n    cmd += d[Object.keys(d)[index]];\n}\ncmd += \"01\";\nvar binarycurrent = reverseString(decToBinary(msg.payload[2][0].Output));\nvar spt = binarycurrent.split(\"\");\nif(binarycurrent[msg.payload[1][0].Number-1] == \"1\"){\n    spt[msg.payload[1][0].Number - 1] = \"0\";\n    binarycurrent = spt.join(\"\");\n    if(flow.get(\"RelayOutput\")[msg.payload[1][0].Number].Stat == 1){\n        msg.statusEH1 = true;\n    }else{\n        msg.statusEH1 = false;\n    }\n    msg.payload[2][0][\"Output\"] = parseInt(String(msg.payload[2][0].Output)) -  parseInt(String(msg.payload[1][0].Dec));\n}\nif(binarycurrent[msg.payload[1][1].Number-1] == \"1\"){\n    msg.statusEH2 = true;\n}\nmsg.numberOutput = msg.payload[2][0].Output;\nvar hex = binaryToHex(reverseString(binarycurrent));\ncmd += \"0000\"+\"000\"+String(dec2hex(hex));\nmsg.payload = cmd;\nreturn msg;\n\nfunction dec2hex(decimalNumber) {\n    if (decimalNumber < 0 || decimalNumber > 15) {\n        return \"Out of range\";\n    }\n    return decimalNumber.toString(16).toUpperCase();\n}\n\nfunction decToBinary(dec) {\n    // Ensure the input is a number\n    if (typeof dec !== 'number' || isNaN(dec)) {\n        throw new Error('Input must be a valid number');\n    }\n\n    // Handle negative numbers by using two's complement representation\n    if (dec < 0) {\n        return (dec >>> 0).toString(2).padStart(32, '0');\n    }\n\n    // Convert decimal to binary using toString method\n    let binaryStr = dec.toString(2);\n\n    // Pad the binary string to 8 bits\n    return binaryStr.padStart(8, '0');\n}\nfunction reverseString(str) {\n    // Mengubah string menjadi array, membalik array, dan menggabungkan kembali menjadi string\n    return str.split('').reverse().join('');\n}\n\nfunction binaryToHex(binaryStr) {\n    // Ensure the input is a valid binary string\n    if (typeof binaryStr !== 'string' || !/^[01]+$/.test(binaryStr)) {\n        throw new Error('Input must be a valid binary string');\n    }\n\n    // Parse the binary string to a decimal number\n    const decimal = parseInt(binaryStr, 2);\n\n    // Convert the decimal number to a hexadecimal string\n    const hexStr = decimal.toString(16);\n\n    // Return the hexadecimal string (in uppercase for consistency)\n    return hexStr.toUpperCase();\n}",
         "outputs": 1,
@@ -1810,8 +2108,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 950,
-        "y": 1280,
+        "x": 1110,
+        "y": 1200,
         "wires": [
             [
                 "710352610b5171f7",
@@ -1823,6 +2121,7 @@
         "id": "e181d40ba2c883c6",
         "type": "switch",
         "z": "bca4771a12cb11e6",
+        "g": "6a72c936b627e910",
         "name": " ",
         "property": "statusEH1",
         "propertyType": "msg",
@@ -1834,8 +2133,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1070,
-        "y": 1120,
+        "x": 1220,
+        "y": 840,
         "wires": [
             [
                 "b7a0b469689fefd3"
@@ -1846,6 +2145,7 @@
         "id": "710352610b5171f7",
         "type": "switch",
         "z": "bca4771a12cb11e6",
+        "g": "1aacce764e0ed47b",
         "name": " ",
         "property": "statusEH1",
         "propertyType": "msg",
@@ -1857,8 +2157,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1070,
-        "y": 1260,
+        "x": 1230,
+        "y": 1180,
         "wires": [
             [
                 "fcded8e6800db872"
@@ -1869,6 +2169,7 @@
         "id": "44ece0d16efb9af2",
         "type": "switch",
         "z": "bca4771a12cb11e6",
+        "g": "1aacce764e0ed47b",
         "name": " ",
         "property": "statusEH2",
         "propertyType": "msg",
@@ -1880,8 +2181,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1070,
-        "y": 1300,
+        "x": 1230,
+        "y": 1220,
         "wires": [
             [
                 "d802d6a814ceb1d0"
@@ -1892,6 +2193,7 @@
         "id": "ddab33048d01b3d5",
         "type": "function",
         "z": "bca4771a12cb11e6",
+        "g": "1aacce764e0ed47b",
         "name": " Off2",
         "func": "msg.payload = msg.resultsql;\nvar d = msg.payload[0][0];\nvar cmd = \"\";\nmsg.statusEH1 = false;\nmsg.statusEH2 = false;\nfor (let index = 0; index < Object.keys(d).length-2; index++) {\n    cmd += d[Object.keys(d)[index]];\n}\ncmd += \"01\";\nvar binarycurrent = reverseString(decToBinary(msg.numberOutput));\nvar spt = binarycurrent.split(\"\");\nif (binarycurrent[msg.payload[1][1].Number -1] == \"1\"){\n    \n    spt[msg.payload[1][1].Number - 1] = \"0\";\n    binarycurrent = spt.join(\"\");\n    if (flow.get(\"RelayOutput\")[msg.payload[1][1].Number].Stat == 1){\n        msg.statusEH2 = true;\n    }else{\n        msg.statusEH2 = false;\n    }\n   msg[\"numberOutput\"] = parseInt(String(msg.numberOutput)) -  parseInt(String(msg.payload[1][1].Dec));\n}\n\n\nvar hex = binaryToHex(reverseString(binarycurrent));\ncmd += \"0000\"+\"000\"+String(dec2hex(hex));\nmsg.payload = cmd;\nreturn msg;\n\nfunction dec2hex(decimalNumber) {\n    if (decimalNumber < 0 || decimalNumber > 15) {\n        return \"Out of range\";\n    }\n    return decimalNumber.toString(16).toUpperCase();\n}\n\nfunction decToBinary(dec) {\n    // Ensure the input is a number\n    if (typeof dec !== 'number' || isNaN(dec)) {\n        throw new Error('Input must be a valid number');\n    }\n\n    // Handle negative numbers by using two's complement representation\n    if (dec < 0) {\n        return (dec >>> 0).toString(2).padStart(32, '0');\n    }\n\n    // Convert decimal to binary using toString method\n    let binaryStr = dec.toString(2);\n\n    // Pad the binary string to 8 bits\n    return binaryStr.padStart(8, '0');\n}\nfunction reverseString(str) {\n    // Mengubah string menjadi array, membalik array, dan menggabungkan kembali menjadi string\n    return str.split('').reverse().join('');\n}\n\nfunction binaryToHex(binaryStr) {\n    // Ensure the input is a valid binary string\n    if (typeof binaryStr !== 'string' || !/^[01]+$/.test(binaryStr)) {\n        throw new Error('Input must be a valid binary string');\n    }\n\n    // Parse the binary string to a decimal number\n    const decimal = parseInt(binaryStr, 2);\n\n    // Convert the decimal number to a hexadecimal string\n    const hexStr = decimal.toString(16);\n\n    // Return the hexadecimal string (in uppercase for consistency)\n    return hexStr.toUpperCase();\n}",
         "outputs": 1,
@@ -1900,8 +2202,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1350,
-        "y": 1300,
+        "x": 1510,
+        "y": 1220,
         "wires": [
             [
                 "2ee5fb66a447ff24"
@@ -1912,6 +2214,7 @@
         "id": "d802d6a814ceb1d0",
         "type": "delay",
         "z": "bca4771a12cb11e6",
+        "g": "1aacce764e0ed47b",
         "name": "",
         "pauseType": "delay",
         "timeout": "10",
@@ -1925,8 +2228,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1220,
-        "y": 1300,
+        "x": 1380,
+        "y": 1220,
         "wires": [
             [
                 "ddab33048d01b3d5"
@@ -1937,52 +2240,56 @@
         "id": "300675ed5fd9466c",
         "type": "link out",
         "z": "bca4771a12cb11e6",
+        "g": "1aacce764e0ed47b",
         "name": "link out 12",
         "mode": "link",
         "links": [
             "dd1e1bf4fa001f32"
         ],
-        "x": 1555,
-        "y": 1300,
+        "x": 1715,
+        "y": 1220,
         "wires": []
     },
     {
         "id": "022a029521e3c1dd",
         "type": "link out",
         "z": "bca4771a12cb11e6",
+        "g": "b2cfefbaa250692d",
         "name": "link out 13",
         "mode": "link",
         "links": [
             "dd1e1bf4fa001f32"
         ],
-        "x": 1315,
-        "y": 1000,
+        "x": 1215,
+        "y": 700,
         "wires": []
     },
     {
         "id": "fe15437ea5ba0d90",
         "type": "link out",
         "z": "bca4771a12cb11e6",
+        "g": "efd67cff70aea370",
         "name": "link out 14",
         "mode": "link",
         "links": [
             "dd1e1bf4fa001f32"
         ],
-        "x": 1075,
-        "y": 1200,
+        "x": 1235,
+        "y": 1000,
         "wires": []
     },
     {
         "id": "fcded8e6800db872",
         "type": "link out",
         "z": "bca4771a12cb11e6",
+        "g": "1aacce764e0ed47b",
         "name": "link out 15",
         "mode": "link",
         "links": [
             "dd1e1bf4fa001f32"
         ],
-        "x": 1175,
-        "y": 1260,
+        "x": 1335,
+        "y": 1180,
         "wires": []
     },
     {
@@ -1991,22 +2298,23 @@
         "z": "bca4771a12cb11e6",
         "g": "aadd16a462e83be5",
         "name": " ",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": true,
-        "complete": "payload",
+        "complete": "topic.split(\" \")[0]",
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 620,
-        "y": 60,
+        "x": 610,
+        "y": 120,
         "wires": []
     },
     {
         "id": "2ee5fb66a447ff24",
         "type": "switch",
         "z": "bca4771a12cb11e6",
+        "g": "1aacce764e0ed47b",
         "name": " ",
         "property": "statusEH2",
         "propertyType": "msg",
@@ -2018,8 +2326,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1470,
-        "y": 1300,
+        "x": 1630,
+        "y": 1220,
         "wires": [
             [
                 "300675ed5fd9466c"
@@ -2030,6 +2338,7 @@
         "id": "7ef3d8868618eb2f",
         "type": "switch",
         "z": "bca4771a12cb11e6",
+        "g": "6a72c936b627e910",
         "name": " ",
         "property": "statusEH2",
         "propertyType": "msg",
@@ -2041,8 +2350,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1070,
-        "y": 1160,
+        "x": 1220,
+        "y": 880,
         "wires": [
             [
                 "8099edeb0376bcea"
@@ -2053,6 +2362,7 @@
         "id": "8099edeb0376bcea",
         "type": "delay",
         "z": "bca4771a12cb11e6",
+        "g": "6a72c936b627e910",
         "name": "",
         "pauseType": "delay",
         "timeout": "5",
@@ -2066,8 +2376,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1220,
-        "y": 1160,
+        "x": 1360,
+        "y": 880,
         "wires": [
             [
                 "efd4c15eee3524d0"
@@ -2078,6 +2388,7 @@
         "id": "efd4c15eee3524d0",
         "type": "function",
         "z": "bca4771a12cb11e6",
+        "g": "6a72c936b627e910",
         "name": "On2",
         "func": "msg.payload = msg.resultsql;\nvar d = msg.payload[0][0];\nvar cmd = \"\";\nmsg.statusEH1 = false;\nmsg.statusEH2 = false;\nfor (let index = 0; index < Object.keys(d).length-2; index++) {\n    cmd += d[Object.keys(d)[index]];\n}\ncmd += \"01\";\n\nvar binarycurrent = reverseString(decToBinary(msg.numberOutput));\nvar spt = binarycurrent.split(\"\");\nif(binarycurrent[msg.payload[1][1].Number-1] == \"0\"){\n    \n    spt[msg.payload[1][1].Number - 1] = \"1\";\n    binarycurrent = spt.join(\"\");\n    if (flow.get(\"RelayOutput\")[msg.payload[1][1].Number].Stat == 0){\n        msg.statusEH2 = true;\n    }else{\n        msg.statusEH2 = false;\n    }\n   msg[\"numberOutput\"] = parseInt(String(msg.numberOutput)) +  parseInt(String(msg.payload[1][1].Dec));\n}\n\nvar hex = binaryToHex(reverseString(binarycurrent));\ncmd += \"0000\"+\"000\"+String(dec2hex(hex));\nmsg.payload = cmd;\nreturn msg;\n\nfunction dec2hex(decimalNumber) {\n    if (decimalNumber < 0 || decimalNumber > 15) {\n        return \"Out of range\";\n    }\n    return decimalNumber.toString(16).toUpperCase();\n}\n\nfunction decToBinary(dec) {\n    // Ensure the input is a number\n    if (typeof dec !== 'number' || isNaN(dec)) {\n        throw new Error('Input must be a valid number');\n    }\n\n    // Handle negative numbers by using two's complement representation\n    if (dec < 0) {\n        return (dec >>> 0).toString(2).padStart(32, '0');\n    }\n\n    // Convert decimal to binary using toString method\n    let binaryStr = dec.toString(2);\n\n    // Pad the binary string to 8 bits\n    return binaryStr.padStart(8, '0');\n}\nfunction reverseString(str) {\n    // Mengubah string menjadi array, membalik array, dan menggabungkan kembali menjadi string\n    return str.split('').reverse().join('');\n}\n\nfunction binaryToHex(binaryStr) {\n    // Ensure the input is a valid binary string\n    if (typeof binaryStr !== 'string' || !/^[01]+$/.test(binaryStr)) {\n        throw new Error('Input must be a valid binary string');\n    }\n\n    // Parse the binary string to a decimal number\n    const decimal = parseInt(binaryStr, 2);\n\n    // Convert the decimal number to a hexadecimal string\n    const hexStr = decimal.toString(16);\n\n    // Return the hexadecimal string (in uppercase for consistency)\n    return hexStr.toUpperCase();\n}",
         "outputs": 1,
@@ -2086,8 +2397,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1350,
-        "y": 1160,
+        "x": 1490,
+        "y": 880,
         "wires": [
             [
                 "99d7acf34720e090"
@@ -2098,6 +2409,7 @@
         "id": "99d7acf34720e090",
         "type": "switch",
         "z": "bca4771a12cb11e6",
+        "g": "6a72c936b627e910",
         "name": " ",
         "property": "statusEH2",
         "propertyType": "msg",
@@ -2109,8 +2421,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1470,
-        "y": 1160,
+        "x": 1610,
+        "y": 880,
         "wires": [
             [
                 "bf104e7cca1d96a0"
@@ -2121,13 +2433,14 @@
         "id": "bf104e7cca1d96a0",
         "type": "link out",
         "z": "bca4771a12cb11e6",
+        "g": "6a72c936b627e910",
         "name": "link out 16",
         "mode": "link",
         "links": [
             "dd1e1bf4fa001f32"
         ],
-        "x": 1555,
-        "y": 1160,
+        "x": 1695,
+        "y": 880,
         "wires": []
     },
     {
@@ -2144,8 +2457,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 360,
-        "y": 100,
+        "x": 370,
+        "y": 120,
         "wires": []
     },
     {
@@ -2158,8 +2471,8 @@
             "fdb500481cbf7d01",
             "7f8325ca8f5e07a8"
         ],
-        "x": 2075,
-        "y": 520,
+        "x": 2475,
+        "y": 600,
         "wires": []
     },
     {
@@ -2170,8 +2483,8 @@
         "links": [
             "d6aa40b162d6b292"
         ],
-        "x": 1595,
-        "y": 1100,
+        "x": 1895,
+        "y": 1180,
         "wires": [
             [
                 "7a293eedb6b117a7",
@@ -2194,8 +2507,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 1700,
-        "y": 1040,
+        "x": 2000,
+        "y": 880,
         "wires": []
     },
     {
@@ -2211,14 +2524,15 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 1700,
-        "y": 1080,
+        "x": 2000,
+        "y": 920,
         "wires": []
     },
     {
         "id": "aa65a38826eefec0",
         "type": "trigger",
         "z": "bca4771a12cb11e6",
+        "g": "efd67cff70aea370",
         "name": "Waiting",
         "op1": "",
         "op2": "0",
@@ -2232,8 +2546,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 540,
-        "y": 1240,
+        "x": 700,
+        "y": 1040,
         "wires": [
             [
                 "a88f76740bd895c4"
@@ -2244,6 +2558,7 @@
         "id": "5325683f3d621a49",
         "type": "trigger",
         "z": "bca4771a12cb11e6",
+        "g": "efd67cff70aea370",
         "name": " ",
         "op1": "1",
         "op2": "",
@@ -2257,8 +2572,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 530,
-        "y": 1200,
+        "x": 690,
+        "y": 1000,
         "wires": [
             [
                 "d7f5d1cda8b9c2e4"
@@ -2284,36 +2599,10 @@
         "topic": "topic",
         "outputs": 1,
         "x": 490,
-        "y": 580,
+        "y": 360,
         "wires": [
             [
                 "eeaad9e4a7b40fec"
-            ]
-        ]
-    },
-    {
-        "id": "525a257b01798881",
-        "type": "trigger",
-        "z": "bca4771a12cb11e6",
-        "g": "7ff6db086b81b7e7",
-        "name": " ",
-        "op1": "1",
-        "op2": "",
-        "op1type": "str",
-        "op2type": "nul",
-        "duration": "7",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "s",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 730,
-        "y": 660,
-        "wires": [
-            [
-                "fbfbf9d305f0d43a"
             ]
         ]
     },
@@ -2330,8 +2619,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 2140,
-        "y": 560,
+        "x": 2540,
+        "y": 640,
         "wires": []
     },
     {
@@ -2347,8 +2636,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 2130,
-        "y": 600,
+        "x": 2530,
+        "y": 680,
         "wires": []
     },
     {
@@ -2364,8 +2653,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 2140,
-        "y": 640,
+        "x": 2540,
+        "y": 720,
         "wires": []
     },
     {
@@ -2381,8 +2670,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 2130,
-        "y": 680,
+        "x": 2530,
+        "y": 760,
         "wires": []
     },
     {
@@ -2398,8 +2687,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 2120,
-        "y": 720,
+        "x": 2520,
+        "y": 800,
         "wires": []
     },
     {
@@ -2415,8 +2704,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 2130,
-        "y": 760,
+        "x": 2530,
+        "y": 840,
         "wires": []
     },
     {
@@ -2432,71 +2721,9 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 2130,
-        "y": 800,
+        "x": 2530,
+        "y": 880,
         "wires": []
-    },
-    {
-        "id": "fbfbf9d305f0d43a",
-        "type": "function",
-        "z": "bca4771a12cb11e6",
-        "g": "7ff6db086b81b7e7",
-        "name": "Turn On Booster",
-        "func": "msg.topic = \"SELECT * FROM `devicelist` WHERE `keterangan` = 'RelayOutput' OR `keterangan` = 'RelayIndoor';\";\nmsg.topic += \"SELECT * FROM `Output` WHERE `keterangan` = 'BoosterFan' OR `keterangan` = 'EF';\";\nmsg.topic += \"SELECT * FROM `OutputIndoor` WHERE `keterangan` = 'Fan' OR `keterangan` = 'Compressor';\";\nmsg.topic += \"SELECT * FROM `Operation`;\";\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 890,
-        "y": 660,
-        "wires": [
-            [
-                "4da408452df5e1e3"
-            ]
-        ]
-    },
-    {
-        "id": "4da408452df5e1e3",
-        "type": "mysql",
-        "z": "bca4771a12cb11e6",
-        "g": "7ff6db086b81b7e7",
-        "mydb": "3b8e5eb93b7526d7",
-        "name": " ",
-        "x": 1050,
-        "y": 660,
-        "wires": [
-            [
-                "ea14610f882fc427",
-                "c550d656797c4a3f"
-            ]
-        ]
-    },
-    {
-        "id": "ea14610f882fc427",
-        "type": "function",
-        "z": "bca4771a12cb11e6",
-        "g": "7ff6db086b81b7e7",
-        "name": " On1",
-        "func": "msg.resultsql = msg.payload;\nvar binarycurrent = \"\";\nif(!msg.BoosterFan){\n    var d = msg.payload[0][1];\n    var cmd = \"\";\n    msg.statusEH1 = false;\n    msg.statusEH2 = false;\n    for (let index = 0; index < Object.keys(d).length - 2; index++) {\n        cmd += d[Object.keys(d)[index]];\n    }\n    cmd += \"01\";\n    binarycurrent = reverseString(decToBinary(msg.payload[3][0].Output));\n    var spt = binarycurrent.split(\"\");\n    if (spt[msg.payload[1][0].Number - 1] == \"0\" && !msg.BoosterFan && flow.get(\"SystemStatus\") == \"ON\") {\n        \n        spt[msg.payload[1][0].Number - 1] = \"1\";\n        binarycurrent = spt.join(\"\");\n        if(flow.get(\"RelayOutput\")[msg.payload[1][0].Number].Stat == 0){\n            msg.statusBooster = true;\n        }else{\n            msg.statusBooster = false;\n        }\n        msg.payload[3][0][\"Output\"] = parseInt(String(msg.payload[3][0].Output)) + parseInt(String(msg.payload[1][0].Dec));\n    }\n    spt = binarycurrent.split(\"\");\n    \n    if (spt[msg.payload[1][1].Number - 1] == \"0\" && !msg.EF && msg.StatusIndoor && msg.BoosterFan && msg.StatusOutdoor){\n        msg.statusEF = true;\n    }\n    msg.numberOutput = msg.payload[3][0].Output;\n    var hex = binaryToHex(reverseString(binarycurrent));\n    cmd += \"0000\" + \"000\" + String(dec2hex(hex));\n    msg.payload = cmd;\n    return msg;\n} else if (!msg.EF && msg.StatusIndoor && msg.BoosterFan && msg.StatusOutdoor){\n    var d = msg.payload[0][1];\n    var cmd = \"\";\n    msg.statusEH1 = false;\n    msg.statusEH2 = false;\n    for (let index = 0; index < Object.keys(d).length - 2; index++) {\n        cmd += d[Object.keys(d)[index]];\n    }\n    cmd += \"01\";\n    binarycurrent = reverseString(decToBinary(msg.payload[3][0].Output));\n    var spt = binarycurrent.split(\"\");\n    if (spt[msg.payload[1][0].Number - 1] == \"0\" && !msg.BoosterFan && msg.StatusIndoor) {\n\n        spt[msg.payload[1][0].Number - 1] = \"1\";\n        binarycurrent = spt.join(\"\");\n        if (flow.get(\"RelayOutput\")[msg.payload[1][0].Number].Stat == 0) {\n            msg.statusBooster = true;\n        } else {\n            msg.statusBooster = false;\n        }\n        msg.payload[3][0][\"Output\"] = parseInt(String(msg.payload[3][0].Output)) + parseInt(String(msg.payload[1][0].Dec));\n    }\n    spt = binarycurrent.split(\"\");\n\n    if (spt[msg.payload[1][1].Number - 1] == \"0\") {\n        msg.statusEF = true;\n    }\n    msg.numberOutput = msg.payload[3][0].Output;\n    var hex = binaryToHex(reverseString(binarycurrent));\n    cmd += \"0000\" + \"000\" + String(dec2hex(hex));\n    msg.payload = cmd;\n    return msg;\n}else{\n    var d = msg.payload[0][0];\n    var cmd = \"\";\n    \n    for (let index = 0; index < Object.keys(d).length - 2; index++) {\n        cmd += d[Object.keys(d)[index]];\n    }\n    cmd += \"01\";\n    \n    binarycurrent = reverseString(decToBinary(msg.payload[3][0].OutputIndoor));\n    var spt = binarycurrent.split(\"\");\n    console.log(spt);\n    console.log(msg.payload[2][0].Number - 1);\n    console.log(spt[msg.payload[2][0].Number - 1]);\n    if (spt[msg.payload[2][0].Number - 1] == \"0\" && msg.BoosterFan) {\n        console.log(binarycurrent);\n        spt[msg.payload[2][0].Number - 1] = \"1\";\n        binarycurrent = spt.join(\"\");\n        console.log(binarycurrent);\n        if(flow.get(\"RelayOutputIndoor\")[msg.payload[1][0].Number].Stat == 0){\n            msg.statusFan = true;\n        }else{\n            msg.statusFan = false;\n        }\n        \n        msg.payload[3][0][\"OutputIndoor\"] = parseInt(String(msg.payload[3][0].OutputIndoor)) + parseInt(String(msg.payload[2][0].Dec));\n    }\n    if (binarycurrent[msg.payload[2][1].Number - 1] == \"0\" && !msg.statusFan && !msg.StatusOutdoor){\n        msg.statusCompressor = true;\n    }else{\n        msg.statusCompressor = false;\n    }\n    msg.numberOutputIndoor = msg.payload[3][0].OutputIndoor;\n    var hex = binaryToHex(reverseString(binarycurrent));\n    cmd += \"0000\" + \"000\" + String(dec2hex(hex));\n    msg.payload = cmd;\n    return msg;\n}\n\n\n\n\nfunction dec2hex(decimalNumber) {\n    if (decimalNumber < 0 || decimalNumber > 15) {\n        return \"Out of range\";\n    }\n    return decimalNumber.toString(16).toUpperCase();\n}\n\nfunction decToBinary(dec) {\n    // Ensure the input is a number\n    if (typeof dec !== 'number' || isNaN(dec)) {\n        throw new Error('Input must be a valid number');\n    }\n\n    // Handle negative numbers by using two's complement representation\n    if (dec < 0) {\n        return (dec >>> 0).toString(2).padStart(32, '0');\n    }\n\n    // Convert decimal to binary using toString method\n    let binaryStr = dec.toString(2);\n\n    // Pad the binary string to 8 bits\n    return binaryStr.padStart(8, '0');\n}\nfunction reverseString(str) {\n    // Mengubah string menjadi array, membalik array, dan menggabungkan kembali menjadi string\n    return str.split('').reverse().join('');\n}\n\nfunction binaryToHex(binaryStr) {\n    // Ensure the input is a valid binary string\n    if (typeof binaryStr !== 'string' || !/^[01]+$/.test(binaryStr)) {\n        throw new Error('Input must be a valid binary string');\n    }\n\n    // Parse the binary string to a decimal number\n    const decimal = parseInt(binaryStr, 2);\n\n    // Convert the decimal number to a hexadecimal string\n    const hexStr = decimal.toString(16);\n\n    // Return the hexadecimal string (in uppercase for consistency)\n    return hexStr.toUpperCase();\n}",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1170,
-        "y": 660,
-        "wires": [
-            [
-                "77b2cba796d2f531",
-                "4043dbbf93d75df2",
-                "cf95375054ff8035",
-                "a5409b65184165d3",
-                "ec5ef574d79e5506"
-            ]
-        ]
     },
     {
         "id": "705a03382e48fbaa",
@@ -2546,93 +2773,6 @@
                 "3c0def953a7880c0"
             ]
         ]
-    },
-    {
-        "id": "4043dbbf93d75df2",
-        "type": "switch",
-        "z": "bca4771a12cb11e6",
-        "g": "7ff6db086b81b7e7",
-        "name": " On EF",
-        "property": "statusEF",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1290,
-        "y": 760,
-        "wires": [
-            [
-                "a1807d9433fd3b20",
-                "3b9ce4460378ed67"
-            ]
-        ]
-    },
-    {
-        "id": "77b2cba796d2f531",
-        "type": "switch",
-        "z": "bca4771a12cb11e6",
-        "g": "7ff6db086b81b7e7",
-        "name": " On Booster",
-        "property": "statusBooster",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1310,
-        "y": 680,
-        "wires": [
-            [
-                "a27a7d74181d73f9",
-                "b4b8ddc7a2ba1e52"
-            ]
-        ]
-    },
-    {
-        "id": "62b6001d94bcac60",
-        "type": "function",
-        "z": "bca4771a12cb11e6",
-        "g": "7ff6db086b81b7e7",
-        "name": "On EF",
-        "func": "msg.payload = msg.resultsql;\nvar d = msg.payload[0][1];\nvar cmd = \"\";\nmsg.statusEH1 = false;\nmsg.statusEH2 = false;\nfor (let index = 0; index < Object.keys(d).length-2; index++) {\n    cmd += d[Object.keys(d)[index]];\n}\ncmd += \"01\";\n\nvar binarycurrent = reverseString(decToBinary(msg.numberOutput));\nvar spt = binarycurrent.split(\"\");\nif(binarycurrent[msg.payload[1][1].Number-1] == \"0\"){\n    \n    spt[msg.payload[1][1].Number - 1] = \"1\";\n    binarycurrent = spt.join(\"\");\n    if (flow.get(\"RelayOutput\")[msg.payload[1][1].Number].Stat == 0){\n        msg.statusEH2 = true;\n    }else{\n        msg.statusEH2 = false;\n    }\n    console.log(parseInt(String(msg.payload[1][1].Dec)));\n   msg[\"numberOutput\"] = parseInt(String(msg.numberOutput)) +  parseInt(String(msg.payload[1][1].Dec));\n}\n\nvar hex = binaryToHex(reverseString(binarycurrent));\ncmd += \"0000\"+\"000\"+String(dec2hex(hex));\nmsg.payload = cmd;\nreturn msg;\n\nfunction dec2hex(decimalNumber) {\n    if (decimalNumber < 0 || decimalNumber > 15) {\n        return \"Out of range\";\n    }\n    return decimalNumber.toString(16).toUpperCase();\n}\n\nfunction decToBinary(dec) {\n    // Ensure the input is a number\n    if (typeof dec !== 'number' || isNaN(dec)) {\n        throw new Error('Input must be a valid number');\n    }\n\n    // Handle negative numbers by using two's complement representation\n    if (dec < 0) {\n        return (dec >>> 0).toString(2).padStart(32, '0');\n    }\n\n    // Convert decimal to binary using toString method\n    let binaryStr = dec.toString(2);\n\n    // Pad the binary string to 8 bits\n    return binaryStr.padStart(8, '0');\n}\nfunction reverseString(str) {\n    // Mengubah string menjadi array, membalik array, dan menggabungkan kembali menjadi string\n    return str.split('').reverse().join('');\n}\n\nfunction binaryToHex(binaryStr) {\n    // Ensure the input is a valid binary string\n    if (typeof binaryStr !== 'string' || !/^[01]+$/.test(binaryStr)) {\n        throw new Error('Input must be a valid binary string');\n    }\n\n    // Parse the binary string to a decimal number\n    const decimal = parseInt(binaryStr, 2);\n\n    // Convert the decimal number to a hexadecimal string\n    const hexStr = decimal.toString(16);\n\n    // Return the hexadecimal string (in uppercase for consistency)\n    return hexStr.toUpperCase();\n}",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1550,
-        "y": 760,
-        "wires": [
-            [
-                "d1bcd9574d203e14",
-                "d65b735173563993"
-            ]
-        ]
-    },
-    {
-        "id": "31d2b08316816f13",
-        "type": "link out",
-        "z": "bca4771a12cb11e6",
-        "d": true,
-        "g": "7ff6db086b81b7e7",
-        "name": "link out 21",
-        "mode": "link",
-        "links": [
-            "dd1e1bf4fa001f32"
-        ],
-        "x": 1615,
-        "y": 680,
-        "wires": []
     },
     {
         "id": "13ed67235efcb4e7",
@@ -2696,8 +2836,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 1710,
-        "y": 1120,
+        "x": 2010,
+        "y": 960,
         "wires": []
     },
     {
@@ -2713,23 +2853,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 1700,
-        "y": 1160,
-        "wires": []
-    },
-    {
-        "id": "d1bcd9574d203e14",
-        "type": "link out",
-        "z": "bca4771a12cb11e6",
-        "d": true,
-        "g": "7ff6db086b81b7e7",
-        "name": "link out 22",
-        "mode": "link",
-        "links": [
-            "dd1e1bf4fa001f32"
-        ],
-        "x": 1695,
-        "y": 760,
+        "x": 2000,
+        "y": 1000,
         "wires": []
     },
     {
@@ -2740,8 +2865,8 @@
         "links": [
             "d6aa40b162d6b292"
         ],
-        "x": 1825,
-        "y": 1100,
+        "x": 2125,
+        "y": 940,
         "wires": [
             [
                 "55557f20a1962080",
@@ -2764,8 +2889,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 1930,
-        "y": 1040,
+        "x": 2230,
+        "y": 880,
         "wires": []
     },
     {
@@ -2781,8 +2906,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 1930,
-        "y": 1080,
+        "x": 2230,
+        "y": 920,
         "wires": []
     },
     {
@@ -2798,8 +2923,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 1940,
-        "y": 1120,
+        "x": 2240,
+        "y": 960,
         "wires": []
     },
     {
@@ -2815,8 +2940,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 1930,
-        "y": 1160,
+        "x": 2230,
+        "y": 1000,
         "wires": []
     },
     {
@@ -2830,40 +2955,6 @@
             [],
             []
         ]
-    },
-    {
-        "id": "807a19eda26da37a",
-        "type": "debug",
-        "z": "bca4771a12cb11e6",
-        "g": "8be50af1826bf3eb",
-        "name": "debug 59",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 560,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "9d24164ad001ee18",
-        "type": "debug",
-        "z": "bca4771a12cb11e6",
-        "g": "8be50af1826bf3eb",
-        "name": "debug 60",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 950,
-        "y": 320,
-        "wires": []
     },
     {
         "id": "289303bf7764e0d3",
@@ -2905,11 +2996,10 @@
         "finalize": "",
         "libs": [],
         "x": 710,
-        "y": 300,
+        "y": 260,
         "wires": [
             [
-                "f653f7df10385059",
-                "9d24164ad001ee18"
+                "f653f7df10385059"
             ]
         ]
     },
@@ -2936,7 +3026,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 130,
-        "y": 680,
+        "y": 440,
         "wires": [
             [
                 "fa3bcb095fdfb9a7"
@@ -2947,11 +3037,12 @@
         "id": "cad8d9fb0b3b7dab",
         "type": "link in",
         "z": "bca4771a12cb11e6",
+        "g": "a31f151e4e5d7b60",
         "name": "link in 12",
         "links": [
             "76e681351b7ebfb1"
         ],
-        "x": 1265,
+        "x": 1275,
         "y": 240,
         "wires": [
             [
@@ -2963,6 +3054,7 @@
         "id": "f3ac2cdc7fa4373e",
         "type": "switch",
         "z": "bca4771a12cb11e6",
+        "g": "a31f151e4e5d7b60",
         "name": " ",
         "property": "payload.value",
         "propertyType": "msg",
@@ -2981,7 +3073,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1350,
+        "x": 1370,
         "y": 240,
         "wires": [
             [
@@ -2996,6 +3088,7 @@
         "id": "02d4dc0e2995b26c",
         "type": "function",
         "z": "bca4771a12cb11e6",
+        "g": "a31f151e4e5d7b60",
         "name": " ",
         "func": "msg[\"Val\"] = msg.payload;\nmsg.topic = \"SELECT `AutoManual` FROM `information`;\";\n// var RelayInputIndoor = flow.get(\"RelayInputIndoor\");\n// for (let index = 0; index < RelayInputIndoor.length; index++) {\n//     if(RelayInputIndoor[index].keterangan == \"StatusIndoor\"){\n//         RelayInputIndoor[index][\"Stat\"] = msg.payload.value;\n//     }\n// }\n// flow.set(\"RelayInputIndoor\",RelayInputIndoor);\nreturn msg;",
         "outputs": 1,
@@ -3004,8 +3097,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1350,
-        "y": 280,
+        "x": 1510,
+        "y": 260,
         "wires": [
             [
                 "92f4b7d9aa20de7b"
@@ -3016,6 +3109,7 @@
         "id": "8cb74b9b019d03ca",
         "type": "debug",
         "z": "bca4771a12cb11e6",
+        "g": "a31f151e4e5d7b60",
         "name": "debug 63",
         "active": true,
         "tosidebar": true,
@@ -3025,251 +3119,9 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 1500,
-        "y": 360,
+        "x": 1880,
+        "y": 260,
         "wires": []
-    },
-    {
-        "id": "cf95375054ff8035",
-        "type": "debug",
-        "z": "bca4771a12cb11e6",
-        "name": "debug 67",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 1300,
-        "y": 500,
-        "wires": []
-    },
-    {
-        "id": "a5409b65184165d3",
-        "type": "switch",
-        "z": "bca4771a12cb11e6",
-        "g": "7ff6db086b81b7e7",
-        "name": " On Fan",
-        "property": "statusFan",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1300,
-        "y": 600,
-        "wires": [
-            [
-                "8f7f8be627e7f4d2",
-                "4effa488929dfcaa"
-            ]
-        ]
-    },
-    {
-        "id": "ec5ef574d79e5506",
-        "type": "switch",
-        "z": "bca4771a12cb11e6",
-        "g": "7ff6db086b81b7e7",
-        "name": " On Compressor",
-        "property": "statusCompressor",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1320,
-        "y": 840,
-        "wires": [
-            [
-                "1c2dcf8730950b3f",
-                "7f552092d1c45c95"
-            ]
-        ]
-    },
-    {
-        "id": "a6711d252207f1c0",
-        "type": "function",
-        "z": "bca4771a12cb11e6",
-        "g": "7ff6db086b81b7e7",
-        "name": "On Compressor",
-        "func": "msg.payload = msg.resultsql;\nvar d = msg.payload[0][0];\nvar cmd = \"\";\nmsg.statusEH1 = false;\nmsg.statusEH2 = false;\nfor (let index = 0; index < Object.keys(d).length-2; index++) {\n    cmd += d[Object.keys(d)[index]];\n}\ncmd += \"01\";\n\nvar binarycurrent = reverseString(decToBinary(msg.numberOutputIndoor));\nvar spt = binarycurrent.split(\"\");\nif(binarycurrent[msg.payload[1][1].Number-1] == \"0\"){\n    \n    spt[msg.payload[2][1].Number - 1] = \"1\";\n    binarycurrent = spt.join(\"\");\n    \n   msg[\"numberOutputIndoor\"] = parseInt(String(msg.numberOutputIndoor)) +  parseInt(String(msg.payload[2][1].Dec));\n}\n\nvar hex = binaryToHex(reverseString(binarycurrent));\ncmd += \"0000\"+\"000\"+String(dec2hex(hex));\nmsg.payload = cmd;\nreturn msg;\n\nfunction dec2hex(decimalNumber) {\n    if (decimalNumber < 0 || decimalNumber > 15) {\n        return \"Out of range\";\n    }\n    return decimalNumber.toString(16).toUpperCase();\n}\n\nfunction decToBinary(dec) {\n    // Ensure the input is a number\n    if (typeof dec !== 'number' || isNaN(dec)) {\n        throw new Error('Input must be a valid number');\n    }\n\n    // Handle negative numbers by using two's complement representation\n    if (dec < 0) {\n        return (dec >>> 0).toString(2).padStart(32, '0');\n    }\n\n    // Convert decimal to binary using toString method\n    let binaryStr = dec.toString(2);\n\n    // Pad the binary string to 8 bits\n    return binaryStr.padStart(8, '0');\n}\nfunction reverseString(str) {\n    // Mengubah string menjadi array, membalik array, dan menggabungkan kembali menjadi string\n    return str.split('').reverse().join('');\n}\n\nfunction binaryToHex(binaryStr) {\n    // Ensure the input is a valid binary string\n    if (typeof binaryStr !== 'string' || !/^[01]+$/.test(binaryStr)) {\n        throw new Error('Input must be a valid binary string');\n    }\n\n    // Parse the binary string to a decimal number\n    const decimal = parseInt(binaryStr, 2);\n\n    // Convert the decimal number to a hexadecimal string\n    const hexStr = decimal.toString(16);\n\n    // Return the hexadecimal string (in uppercase for consistency)\n    return hexStr.toUpperCase();\n}",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1640,
-        "y": 840,
-        "wires": [
-            [
-                "95c264c90bd714f9",
-                "d65b735173563993"
-            ]
-        ]
-    },
-    {
-        "id": "95c264c90bd714f9",
-        "type": "link out",
-        "z": "bca4771a12cb11e6",
-        "d": true,
-        "g": "7ff6db086b81b7e7",
-        "name": "link out 23",
-        "mode": "link",
-        "links": [
-            "dd1e1bf4fa001f32"
-        ],
-        "x": 1755,
-        "y": 840,
-        "wires": []
-    },
-    {
-        "id": "de5cfc72b0d10bf3",
-        "type": "link out",
-        "z": "bca4771a12cb11e6",
-        "d": true,
-        "g": "7ff6db086b81b7e7",
-        "name": "link out 24",
-        "mode": "link",
-        "links": [
-            "dd1e1bf4fa001f32"
-        ],
-        "x": 1615,
-        "y": 600,
-        "wires": []
-    },
-    {
-        "id": "8f7f8be627e7f4d2",
-        "type": "delay",
-        "z": "bca4771a12cb11e6",
-        "g": "7ff6db086b81b7e7",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 1460,
-        "y": 600,
-        "wires": [
-            [
-                "de5cfc72b0d10bf3",
-                "d65b735173563993"
-            ]
-        ]
-    },
-    {
-        "id": "a27a7d74181d73f9",
-        "type": "delay",
-        "z": "bca4771a12cb11e6",
-        "g": "7ff6db086b81b7e7",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 1460,
-        "y": 680,
-        "wires": [
-            [
-                "31d2b08316816f13",
-                "d65b735173563993"
-            ]
-        ]
-    },
-    {
-        "id": "d65b735173563993",
-        "type": "debug",
-        "z": "bca4771a12cb11e6",
-        "name": "debug 68",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 1680,
-        "y": 480,
-        "wires": []
-    },
-    {
-        "id": "a1807d9433fd3b20",
-        "type": "delay",
-        "z": "bca4771a12cb11e6",
-        "g": "7ff6db086b81b7e7",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 1420,
-        "y": 760,
-        "wires": [
-            [
-                "62b6001d94bcac60"
-            ]
-        ]
-    },
-    {
-        "id": "1c2dcf8730950b3f",
-        "type": "delay",
-        "z": "bca4771a12cb11e6",
-        "g": "7ff6db086b81b7e7",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 1480,
-        "y": 840,
-        "wires": [
-            [
-                "a6711d252207f1c0"
-            ]
-        ]
     },
     {
         "id": "1b3e437abd5cab62",
@@ -3294,7 +3146,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 830,
-        "y": 60,
+        "y": 80,
         "wires": [
             [
                 "b772f366ad097492"
@@ -3309,7 +3161,8 @@
         "name": "link out 26",
         "mode": "link",
         "links": [
-            "2b3434178f0ac999"
+            "2b3434178f0ac999",
+            "cf128b17d11f7fc7"
         ],
         "x": 1075,
         "y": 100,
@@ -3340,10 +3193,11 @@
         "id": "92f4b7d9aa20de7b",
         "type": "mysql",
         "z": "bca4771a12cb11e6",
+        "g": "a31f151e4e5d7b60",
         "mydb": "3b8e5eb93b7526d7",
         "name": " ",
-        "x": 1350,
-        "y": 320,
+        "x": 1630,
+        "y": 260,
         "wires": [
             [
                 "0e3f4cd8e2a0e530"
@@ -3354,6 +3208,7 @@
         "id": "0e3f4cd8e2a0e530",
         "type": "function",
         "z": "bca4771a12cb11e6",
+        "g": "a31f151e4e5d7b60",
         "name": " ",
         "func": "var AutoManual = msg.payload[0].AutoManual;\nmsg.payload = msg.Val;\nvar RelayInputIndoor = flow.get(\"RelayInputIndoor\");\nvar stats = false;\nfor (let index = 0; index < RelayInputIndoor.length; index++) {\n    if(RelayInputIndoor[index].keterangan == \"StatusIndoor\" && AutoManual){\n        flow.set(\"SystemStatus\",\"ON\");\n        stats = true;\n    }\n}\nmsg.payload = [stats,AutoManual];\nflow.set(\"RelayInputIndoor\",RelayInputIndoor);\nreturn msg;",
         "outputs": 1,
@@ -3362,8 +3217,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1350,
-        "y": 360,
+        "x": 1750,
+        "y": 260,
         "wires": [
             [
                 "8cb74b9b019d03ca"
@@ -3371,33 +3226,10 @@
         ]
     },
     {
-        "id": "3b2a44cd4136616d",
-        "type": "trigger",
-        "z": "bca4771a12cb11e6",
-        "g": "7ff6db086b81b7e7",
-        "name": " ",
-        "op1": "",
-        "op2": "",
-        "op1type": "nul",
-        "op2type": "nul",
-        "duration": "250",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "ms",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 490,
-        "y": 700,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "80511c5878e7f281",
         "type": "function",
         "z": "bca4771a12cb11e6",
+        "g": "a31f151e4e5d7b60",
         "name": " ",
         "func": "flow.set(\"SystemStatus\",\"OFF\");\nreturn msg;",
         "outputs": 1,
@@ -3406,234 +3238,17 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1490,
-        "y": 240,
+        "x": 1510,
+        "y": 220,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "35a56d8a804f6957",
-        "type": "function",
-        "z": "bca4771a12cb11e6",
-        "g": "7ff6db086b81b7e7",
-        "name": " ",
-        "func": "if(flow.get(\"SystemStatus\") != \"ON\"){\n    msg.payload = null;\n}\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 490,
-        "y": 660,
-        "wires": [
-            [
-                "1c505eaeda7d6b6a"
-            ]
-        ]
-    },
-    {
-        "id": "1c505eaeda7d6b6a",
-        "type": "switch",
-        "z": "bca4771a12cb11e6",
-        "g": "7ff6db086b81b7e7",
-        "name": " ",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "nnull"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 610,
-        "y": 660,
-        "wires": [
-            [
-                "9a489bd4e0857cbf",
-                "525a257b01798881"
-            ]
-        ]
-    },
-    {
-        "id": "9a489bd4e0857cbf",
-        "type": "trigger",
-        "z": "bca4771a12cb11e6",
-        "g": "7ff6db086b81b7e7",
-        "name": " ",
-        "op1": "",
-        "op2": "",
-        "op1type": "nul",
-        "op2type": "nul",
-        "duration": "250",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "ms",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 730,
-        "y": 700,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "4effa488929dfcaa",
-        "type": "trigger",
-        "z": "bca4771a12cb11e6",
-        "g": "7ff6db086b81b7e7",
-        "name": " ",
-        "op1": "1",
-        "op2": "",
-        "op1type": "str",
-        "op2type": "nul",
-        "duration": "25",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "s",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 1450,
-        "y": 560,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b4b8ddc7a2ba1e52",
-        "type": "trigger",
-        "z": "bca4771a12cb11e6",
-        "g": "7ff6db086b81b7e7",
-        "name": " ",
-        "op1": "1",
-        "op2": "",
-        "op1type": "str",
-        "op2type": "nul",
-        "duration": "25",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "s",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 1450,
-        "y": 640,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "3b9ce4460378ed67",
-        "type": "trigger",
-        "z": "bca4771a12cb11e6",
-        "g": "7ff6db086b81b7e7",
-        "name": " ",
-        "op1": "1",
-        "op2": "",
-        "op1type": "str",
-        "op2type": "nul",
-        "duration": "25",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "s",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 1410,
-        "y": 720,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7f552092d1c45c95",
-        "type": "trigger",
-        "z": "bca4771a12cb11e6",
-        "g": "7ff6db086b81b7e7",
-        "name": " ",
-        "op1": "1",
-        "op2": "",
-        "op1type": "str",
-        "op2type": "nul",
-        "duration": "25",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "s",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 1470,
-        "y": 800,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "1cd1b33e97737dba",
-        "type": "inject",
-        "z": "bca4771a12cb11e6",
-        "g": "7ff6db086b81b7e7",
-        "name": " ",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            },
-            {
-                "p": "reset",
-                "v": "true",
-                "vt": "bool"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 600,
-        "y": 780,
-        "wires": [
-            [
-                "525a257b01798881"
-            ]
-        ]
-    },
-    {
-        "id": "c550d656797c4a3f",
-        "type": "debug",
-        "z": "bca4771a12cb11e6",
-        "g": "7ff6db086b81b7e7",
-        "name": "debug 69",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1070,
-        "y": 740,
-        "wires": []
     },
     {
         "id": "3f972b9577eb5b33",
         "type": "function",
         "z": "bca4771a12cb11e6",
+        "g": "9965847832a173f9",
         "name": "Request",
         "func": "var RelayInput = flow.get(\"RelayInput\");\nvar RelayInputIndoor = flow.get(\"RelayInputIndoor\");\nvar RelayOutput = flow.get(\"RelayOutput\");\nvar RelayOutputIndoor = flow.get(\"RelayOutputIndoor\");\nfor (let index = 0; index < RelayInputIndoor.length; index++) {\n    if(RelayInputIndoor[index].keterangan == \"StatusIndoor\" && RelayInputIndoor[index].Stat == 1){\n        msg[\"StatusIndoor\"] = true;\n    }else if(RelayInputIndoor[index].keterangan == \"StatusIndoor\" && RelayInputIndoor[index].Stat == 0){\n        msg[\"StatusIndoor\"] = false;\n    }\n    if(RelayInputIndoor[index].keterangan == \"StatusOutdoor\" && RelayInputIndoor[index].Stat == 1){\n        msg[\"StatusOutdoor\"] = true;\n    }else if(RelayInputIndoor[index].keterangan == \"StatusOutdoor\" && RelayInputIndoor[index].Stat == 0){\n        msg[\"StatusOutdoor\"] = false;\n    }\n}\nfor (let index = 0; index < RelayInput.length; index++) {\n    if (RelayInput[index].keterangan == \"BoosterFan\" && RelayInput[index].Stat == 1){\n        msg[\"BoosterFan\"] = true;\n    } else if (RelayInput[index].keterangan == \"BoosterFan\" && RelayInput[index].Stat == 0){\n        msg[\"BoosterFan\"] = false;\n    }\n    if (RelayInput[index].keterangan == \"EF\" && RelayInput[index].Stat == 1){\n        msg[\"EF\"] = true;\n    } else if (RelayInput[index].keterangan == \"EF\" && RelayInput[index].Stat == 0){\n        msg[\"EF\"] = false;\n    }\n}\n\nmsg.topic = \"SELECT * FROM `devicelist` WHERE `keterangan` = 'RelayOutput' OR `keterangan` = 'RelayIndoor';\";\nmsg.topic += \"SELECT * FROM `Output` WHERE `keterangan` = 'BoosterFan' OR `keterangan` = 'EF' ORDER by `Number` ASC;\";\nmsg.topic += \"SELECT * FROM `OutputIndoor` WHERE `keterangan` = 'Fan' OR `keterangan` = 'Compressor' ORDER by `Number` ASC;\";\nmsg.topic += \"SELECT * FROM `Operation`;\";\nreturn msg;",
         "outputs": 1,
@@ -3642,7 +3257,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 680,
+        "x": 840,
         "y": 1420,
         "wires": [
             [
@@ -3654,9 +3269,10 @@
         "id": "79d1e5f400e8c545",
         "type": "mysql",
         "z": "bca4771a12cb11e6",
+        "g": "9965847832a173f9",
         "mydb": "3b8e5eb93b7526d7",
         "name": " ",
-        "x": 850,
+        "x": 1010,
         "y": 1420,
         "wires": [
             [
@@ -3673,6 +3289,7 @@
         "id": "d1cda63e22d46295",
         "type": "function",
         "z": "bca4771a12cb11e6",
+        "g": "9965847832a173f9",
         "name": "Off EF",
         "func": "msg.resultsql = msg.payload;\nvar d = msg.payload[0][1];\nvar cmd = \"\";\nfor (let index = 0; index < Object.keys(d).length - 2; index++) {\n    cmd += d[Object.keys(d)[index]];\n}\ncmd += \"01\";\n\nvar binarycurrent = reverseString(decToBinary(msg.payload[3][0].Output));\nvar spt = binarycurrent.split(\"\");\nif (binarycurrent[msg.payload[1][1].Number - 1] == \"1\") {\n    \n    spt[msg.payload[1][1].Number - 1] = \"0\";\n    binarycurrent = spt.join(\"\");\n    if(flow.get(\"RelayOutput\")[msg.payload[1][1].Number].Stat == 1){\n        msg.statusEF = true;\n    }else{\n        msg.statusEF = false;\n    }\n    msg.payload[3][0][\"Output\"] = 4;\n    \n}\n\nmsg.numberOutput = msg.payload[3][0].Output;\nvar hex = binaryToHex(reverseString(binarycurrent));\ncmd += \"0000\" + \"000\" + String(dec2hex(hex));\nmsg.payload = cmd;\nreturn msg;\n\nfunction dec2hex(decimalNumber) {\n    if (decimalNumber < 0 || decimalNumber > 15) {\n        return \"Out of range\";\n    }\n    return decimalNumber.toString(16).toUpperCase();\n}\n\nfunction decToBinary(dec) {\n    // Ensure the input is a number\n    if (typeof dec !== 'number' || isNaN(dec)) {\n        throw new Error('Input must be a valid number');\n    }\n\n    // Handle negative numbers by using two's complement representation\n    if (dec < 0) {\n        return (dec >>> 0).toString(2).padStart(32, '0');\n    }\n\n    // Convert decimal to binary using toString method\n    let binaryStr = dec.toString(2);\n\n    // Pad the binary string to 8 bits\n    return binaryStr.padStart(8, '0');\n}\nfunction reverseString(str) {\n    // Mengubah string menjadi array, membalik array, dan menggabungkan kembali menjadi string\n    return str.split('').reverse().join('');\n}\n\nfunction binaryToHex(binaryStr) {\n    // Ensure the input is a valid binary string\n    if (typeof binaryStr !== 'string' || !/^[01]+$/.test(binaryStr)) {\n        throw new Error('Input must be a valid binary string');\n    }\n\n    // Parse the binary string to a decimal number\n    const decimal = parseInt(binaryStr, 2);\n\n    // Convert the decimal number to a hexadecimal string\n    const hexStr = decimal.toString(16);\n\n    // Return the hexadecimal string (in uppercase for consistency)\n    return hexStr.toUpperCase();\n}",
         "outputs": 1,
@@ -3681,7 +3298,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1490,
+        "x": 1650,
         "y": 1340,
         "wires": [
             [
@@ -3693,6 +3310,7 @@
         "id": "5ee28832d25a6f45",
         "type": "switch",
         "z": "bca4771a12cb11e6",
+        "g": "9965847832a173f9",
         "name": " ON",
         "property": "BoosterFan",
         "propertyType": "msg",
@@ -3704,7 +3322,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1130,
+        "x": 1290,
         "y": 1380,
         "wires": [
             [
@@ -3716,6 +3334,7 @@
         "id": "f31779116c5bb821",
         "type": "switch",
         "z": "bca4771a12cb11e6",
+        "g": "9965847832a173f9",
         "name": " ON",
         "property": "StatusIndoor",
         "propertyType": "msg",
@@ -3727,7 +3346,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1250,
+        "x": 1410,
         "y": 1380,
         "wires": [
             [
@@ -3739,6 +3358,7 @@
         "id": "b8560362bc1218d2",
         "type": "switch",
         "z": "bca4771a12cb11e6",
+        "g": "9965847832a173f9",
         "name": " ON",
         "property": "StatusOutdoor",
         "propertyType": "msg",
@@ -3750,7 +3370,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1370,
+        "x": 1530,
         "y": 1380,
         "wires": [
             [
@@ -3762,6 +3382,7 @@
         "id": "6a6b80ccb9539197",
         "type": "function",
         "z": "bca4771a12cb11e6",
+        "g": "9965847832a173f9",
         "name": "Off Compressor",
         "func": "msg.resultsql = msg.payload;\nvar d = msg.payload[0][0];\nvar cmd = \"\";\nfor (let index = 0; index < Object.keys(d).length - 2; index++) {\n    cmd += d[Object.keys(d)[index]];\n}\ncmd += \"01\";\n\nvar binarycurrent = reverseString(decToBinary(msg.payload[3][0].OutputIndoor));\nvar spt = binarycurrent.split(\"\");\nif (binarycurrent[msg.payload[2][1].Number - 1] == \"1\") {\n    \n    spt[msg.payload[2][1].Number - 1] = \"0\";\n    binarycurrent = spt.join(\"\");\n    if(flow.get(\"RelayOutputIndoor\")[msg.payload[2][1].Number].Stat == 1){\n        msg.statusCompressor = true;\n    }else{\n        msg.statusCompressor = false;\n    }\n    msg.payload[3][0][\"OutputIndoor\"] = 1;\n    \n}\n\nmsg.numberOutput = msg.payload[3][0].OutputIndoor;\nvar hex = binaryToHex(reverseString(binarycurrent));\ncmd += \"0000\" + \"000\" + String(dec2hex(hex));\nmsg.payload = cmd;\nreturn msg;\n\nfunction dec2hex(decimalNumber) {\n    if (decimalNumber < 0 || decimalNumber > 15) {\n        return \"Out of range\";\n    }\n    return decimalNumber.toString(16).toUpperCase();\n}\n\nfunction decToBinary(dec) {\n    // Ensure the input is a number\n    if (typeof dec !== 'number' || isNaN(dec)) {\n        throw new Error('Input must be a valid number');\n    }\n\n    // Handle negative numbers by using two's complement representation\n    if (dec < 0) {\n        return (dec >>> 0).toString(2).padStart(32, '0');\n    }\n\n    // Convert decimal to binary using toString method\n    let binaryStr = dec.toString(2);\n\n    // Pad the binary string to 8 bits\n    return binaryStr.padStart(8, '0');\n}\nfunction reverseString(str) {\n    // Mengubah string menjadi array, membalik array, dan menggabungkan kembali menjadi string\n    return str.split('').reverse().join('');\n}\n\nfunction binaryToHex(binaryStr) {\n    // Ensure the input is a valid binary string\n    if (typeof binaryStr !== 'string' || !/^[01]+$/.test(binaryStr)) {\n        throw new Error('Input must be a valid binary string');\n    }\n\n    // Parse the binary string to a decimal number\n    const decimal = parseInt(binaryStr, 2);\n\n    // Convert the decimal number to a hexadecimal string\n    const hexStr = decimal.toString(16);\n\n    // Return the hexadecimal string (in uppercase for consistency)\n    return hexStr.toUpperCase();\n}",
         "outputs": 1,
@@ -3770,7 +3391,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1520,
+        "x": 1680,
         "y": 1380,
         "wires": [
             [
@@ -3782,6 +3403,7 @@
         "id": "e630b236c1d2b8ee",
         "type": "switch",
         "z": "bca4771a12cb11e6",
+        "g": "9965847832a173f9",
         "name": " ON",
         "property": "BoosterFan",
         "propertyType": "msg",
@@ -3793,7 +3415,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1130,
+        "x": 1290,
         "y": 1340,
         "wires": [
             [
@@ -3805,6 +3427,7 @@
         "id": "1da0caa3cc640452",
         "type": "switch",
         "z": "bca4771a12cb11e6",
+        "g": "9965847832a173f9",
         "name": " ON",
         "property": "StatusIndoor",
         "propertyType": "msg",
@@ -3816,7 +3439,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1250,
+        "x": 1410,
         "y": 1340,
         "wires": [
             [
@@ -3828,6 +3451,7 @@
         "id": "59463c781eab1470",
         "type": "switch",
         "z": "bca4771a12cb11e6",
+        "g": "9965847832a173f9",
         "name": " ON",
         "property": "StatusOutdoor",
         "propertyType": "msg",
@@ -3839,7 +3463,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1370,
+        "x": 1530,
         "y": 1340,
         "wires": [
             [
@@ -3851,6 +3475,7 @@
         "id": "40fa6128af8ba52d",
         "type": "switch",
         "z": "bca4771a12cb11e6",
+        "g": "9965847832a173f9",
         "name": " ON",
         "property": "EF",
         "propertyType": "msg",
@@ -3862,7 +3487,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1010,
+        "x": 1170,
         "y": 1340,
         "wires": [
             [
@@ -3874,6 +3499,7 @@
         "id": "3e2e3138c0de2877",
         "type": "switch",
         "z": "bca4771a12cb11e6",
+        "g": "9965847832a173f9",
         "name": " OFF",
         "property": "EF",
         "propertyType": "msg",
@@ -3885,7 +3511,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1010,
+        "x": 1170,
         "y": 1380,
         "wires": [
             [
@@ -3897,6 +3523,7 @@
         "id": "1a293fbb3e81e268",
         "type": "switch",
         "z": "bca4771a12cb11e6",
+        "g": "9965847832a173f9",
         "name": " OFF",
         "property": "EF",
         "propertyType": "msg",
@@ -3908,7 +3535,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1010,
+        "x": 1170,
         "y": 1420,
         "wires": [
             [
@@ -3920,6 +3547,7 @@
         "id": "feb7c55006e92cde",
         "type": "switch",
         "z": "bca4771a12cb11e6",
+        "g": "9965847832a173f9",
         "name": " ON",
         "property": "BoosterFan",
         "propertyType": "msg",
@@ -3931,7 +3559,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1130,
+        "x": 1290,
         "y": 1420,
         "wires": [
             [
@@ -3943,6 +3571,7 @@
         "id": "804d088f9d9f9e16",
         "type": "switch",
         "z": "bca4771a12cb11e6",
+        "g": "9965847832a173f9",
         "name": " ON",
         "property": "StatusIndoor",
         "propertyType": "msg",
@@ -3954,7 +3583,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1250,
+        "x": 1410,
         "y": 1420,
         "wires": [
             [
@@ -3966,6 +3595,7 @@
         "id": "02e193578a41d279",
         "type": "switch",
         "z": "bca4771a12cb11e6",
+        "g": "9965847832a173f9",
         "name": " OFF",
         "property": "StatusOutdoor",
         "propertyType": "msg",
@@ -3977,7 +3607,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1370,
+        "x": 1530,
         "y": 1420,
         "wires": [
             [
@@ -3989,6 +3619,7 @@
         "id": "b8b6158225a70a1c",
         "type": "function",
         "z": "bca4771a12cb11e6",
+        "g": "9965847832a173f9",
         "name": "Off FanIndoor",
         "func": "msg.resultsql = msg.payload;\nvar d = msg.payload[0][0];\nvar cmd = \"\";\nfor (let index = 0; index < Object.keys(d).length - 2; index++) {\n    cmd += d[Object.keys(d)[index]];\n}\ncmd += \"01\";\n\nvar binarycurrent = reverseString(decToBinary(msg.payload[3][0].OutputIndoor));\nvar spt = binarycurrent.split(\"\");\nif (binarycurrent[msg.payload[2][0].Number - 1] == \"1\") {\n    \n    spt[msg.payload[2][0].Number - 1] = \"0\";\n    binarycurrent = spt.join(\"\");\n    if(flow.get(\"RelayOutputIndoor\")[msg.payload[2][0].Number].Stat == 1){\n        msg.statusFan = true;\n    }else{\n        msg.statusFan = false;\n    }\n    msg.payload[3][0][\"OutputIndoor\"] = 0;\n    \n}\n\nmsg.numberOutput = msg.payload[3][0].OutputIndoor;\nvar hex = binaryToHex(reverseString(binarycurrent));\ncmd += \"0000\" + \"000\" + String(dec2hex(hex));\nmsg.payload = cmd;\nreturn msg;\n\nfunction dec2hex(decimalNumber) {\n    if (decimalNumber < 0 || decimalNumber > 15) {\n        return \"Out of range\";\n    }\n    return decimalNumber.toString(16).toUpperCase();\n}\n\nfunction decToBinary(dec) {\n    // Ensure the input is a number\n    if (typeof dec !== 'number' || isNaN(dec)) {\n        throw new Error('Input must be a valid number');\n    }\n\n    // Handle negative numbers by using two's complement representation\n    if (dec < 0) {\n        return (dec >>> 0).toString(2).padStart(32, '0');\n    }\n\n    // Convert decimal to binary using toString method\n    let binaryStr = dec.toString(2);\n\n    // Pad the binary string to 8 bits\n    return binaryStr.padStart(8, '0');\n}\nfunction reverseString(str) {\n    // Mengubah string menjadi array, membalik array, dan menggabungkan kembali menjadi string\n    return str.split('').reverse().join('');\n}\n\nfunction binaryToHex(binaryStr) {\n    // Ensure the input is a valid binary string\n    if (typeof binaryStr !== 'string' || !/^[01]+$/.test(binaryStr)) {\n        throw new Error('Input must be a valid binary string');\n    }\n\n    // Parse the binary string to a decimal number\n    const decimal = parseInt(binaryStr, 2);\n\n    // Convert the decimal number to a hexadecimal string\n    const hexStr = decimal.toString(16);\n\n    // Return the hexadecimal string (in uppercase for consistency)\n    return hexStr.toUpperCase();\n}",
         "outputs": 1,
@@ -3997,7 +3628,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1520,
+        "x": 1680,
         "y": 1420,
         "wires": [
             [
@@ -4009,6 +3640,7 @@
         "id": "42ef840fe439670f",
         "type": "debug",
         "z": "bca4771a12cb11e6",
+        "g": "9965847832a173f9",
         "name": "debug 74",
         "active": false,
         "tosidebar": true,
@@ -4017,7 +3649,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1000,
+        "x": 1160,
         "y": 1540,
         "wires": []
     },
@@ -4025,6 +3657,7 @@
         "id": "46451fec39f8e841",
         "type": "switch",
         "z": "bca4771a12cb11e6",
+        "g": "9965847832a173f9",
         "name": " OFF",
         "property": "EF",
         "propertyType": "msg",
@@ -4036,7 +3669,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1010,
+        "x": 1170,
         "y": 1460,
         "wires": [
             [
@@ -4048,6 +3681,7 @@
         "id": "3e9c807a44ff9c54",
         "type": "switch",
         "z": "bca4771a12cb11e6",
+        "g": "9965847832a173f9",
         "name": " ON",
         "property": "BoosterFan",
         "propertyType": "msg",
@@ -4059,7 +3693,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1130,
+        "x": 1290,
         "y": 1460,
         "wires": [
             [
@@ -4071,6 +3705,7 @@
         "id": "1dda750ca3d657ba",
         "type": "switch",
         "z": "bca4771a12cb11e6",
+        "g": "9965847832a173f9",
         "name": " OFF",
         "property": "StatusIndoor",
         "propertyType": "msg",
@@ -4082,7 +3717,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1250,
+        "x": 1410,
         "y": 1460,
         "wires": [
             [
@@ -4094,6 +3729,7 @@
         "id": "35702a825d7ea7f1",
         "type": "switch",
         "z": "bca4771a12cb11e6",
+        "g": "9965847832a173f9",
         "name": " OFF",
         "property": "StatusOutdoor",
         "propertyType": "msg",
@@ -4105,7 +3741,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1370,
+        "x": 1530,
         "y": 1460,
         "wires": [
             [
@@ -4117,6 +3753,7 @@
         "id": "2138ff8d3224b227",
         "type": "function",
         "z": "bca4771a12cb11e6",
+        "g": "9965847832a173f9",
         "name": "Off BoosterFan",
         "func": "msg.resultsql = msg.payload;\nvar d = msg.payload[0][1];\nvar cmd = \"\";\nfor (let index = 0; index < Object.keys(d).length - 2; index++) {\n    cmd += d[Object.keys(d)[index]];\n}\ncmd += \"01\";\n\nvar binarycurrent = reverseString(decToBinary(msg.payload[3][0].Output));\nvar spt = binarycurrent.split(\"\");\nif (binarycurrent[msg.payload[1][0].Number - 1] == \"1\") {\n    \n    spt[msg.payload[1][0].Number - 1] = \"0\";\n    binarycurrent = spt.join(\"\");\n    if(flow.get(\"RelayOutput\")[msg.payload[1][0].Number].Stat == 1){\n        msg.statusBoosterFan = true;\n    }else{\n        msg.statusBoosterFan = false;\n    }\n    msg.payload[3][0][\"Output\"] = 0;\n}\n\nmsg.numberOutput = msg.payload[3][0].Output;\nvar hex = binaryToHex(reverseString(binarycurrent));\ncmd += \"0000\" + \"000\" + String(dec2hex(hex));\nmsg.payload = cmd;\nreturn msg;\n\nfunction dec2hex(decimalNumber) {\n    if (decimalNumber < 0 || decimalNumber > 15) {\n        return \"Out of range\";\n    }\n    return decimalNumber.toString(16).toUpperCase();\n}\n\nfunction decToBinary(dec) {\n    // Ensure the input is a number\n    if (typeof dec !== 'number' || isNaN(dec)) {\n        throw new Error('Input must be a valid number');\n    }\n\n    // Handle negative numbers by using two's complement representation\n    if (dec < 0) {\n        return (dec >>> 0).toString(2).padStart(32, '0');\n    }\n\n    // Convert decimal to binary using toString method\n    let binaryStr = dec.toString(2);\n\n    // Pad the binary string to 8 bits\n    return binaryStr.padStart(8, '0');\n}\nfunction reverseString(str) {\n    // Mengubah string menjadi array, membalik array, dan menggabungkan kembali menjadi string\n    return str.split('').reverse().join('');\n}\n\nfunction binaryToHex(binaryStr) {\n    // Ensure the input is a valid binary string\n    if (typeof binaryStr !== 'string' || !/^[01]+$/.test(binaryStr)) {\n        throw new Error('Input must be a valid binary string');\n    }\n\n    // Parse the binary string to a decimal number\n    const decimal = parseInt(binaryStr, 2);\n\n    // Convert the decimal number to a hexadecimal string\n    const hexStr = decimal.toString(16);\n\n    // Return the hexadecimal string (in uppercase for consistency)\n    return hexStr.toUpperCase();\n}",
         "outputs": 1,
@@ -4125,7 +3762,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1520,
+        "x": 1680,
         "y": 1460,
         "wires": [
             [
@@ -4137,6 +3774,7 @@
         "id": "a040cdd296f89df4",
         "type": "trigger",
         "z": "bca4771a12cb11e6",
+        "g": "9965847832a173f9",
         "name": " ",
         "op1": "",
         "op2": "",
@@ -4150,7 +3788,7 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 670,
+        "x": 830,
         "y": 1460,
         "wires": [
             []
@@ -4160,6 +3798,7 @@
         "id": "b4d32bd3897234eb",
         "type": "delay",
         "z": "bca4771a12cb11e6",
+        "g": "9965847832a173f9",
         "name": " ",
         "pauseType": "rate",
         "timeout": "5",
@@ -4173,7 +3812,7 @@
         "drop": true,
         "allowrate": false,
         "outputs": 1,
-        "x": 530,
+        "x": 690,
         "y": 1420,
         "wires": [
             [
@@ -4187,12 +3826,13 @@
         "type": "link out",
         "z": "bca4771a12cb11e6",
         "d": true,
+        "g": "9965847832a173f9",
         "name": "link out 27",
         "mode": "link",
         "links": [
             "dd1e1bf4fa001f32"
         ],
-        "x": 1645,
+        "x": 1805,
         "y": 1340,
         "wires": []
     },
@@ -4201,12 +3841,13 @@
         "type": "link out",
         "z": "bca4771a12cb11e6",
         "d": true,
+        "g": "9965847832a173f9",
         "name": "link out 28",
         "mode": "link",
         "links": [
             "dd1e1bf4fa001f32"
         ],
-        "x": 1645,
+        "x": 1805,
         "y": 1380,
         "wires": []
     },
@@ -4215,12 +3856,13 @@
         "type": "link out",
         "z": "bca4771a12cb11e6",
         "d": true,
+        "g": "9965847832a173f9",
         "name": "link out 29",
         "mode": "link",
         "links": [
             "dd1e1bf4fa001f32"
         ],
-        "x": 1645,
+        "x": 1805,
         "y": 1420,
         "wires": []
     },
@@ -4229,12 +3871,13 @@
         "type": "link out",
         "z": "bca4771a12cb11e6",
         "d": true,
+        "g": "9965847832a173f9",
         "name": "link out 30",
         "mode": "link",
         "links": [
             "dd1e1bf4fa001f32"
         ],
-        "x": 1645,
+        "x": 1805,
         "y": 1460,
         "wires": []
     },
@@ -4242,6 +3885,7 @@
         "id": "c2895618f3b4cdb7",
         "type": "switch",
         "z": "bca4771a12cb11e6",
+        "g": "9965847832a173f9",
         "name": " OFF",
         "property": "EF",
         "propertyType": "msg",
@@ -4253,7 +3897,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1010,
+        "x": 1170,
         "y": 1500,
         "wires": [
             [
@@ -4265,6 +3909,7 @@
         "id": "888e06c328ef570b",
         "type": "switch",
         "z": "bca4771a12cb11e6",
+        "g": "9965847832a173f9",
         "name": " OFF",
         "property": "BoosterFan",
         "propertyType": "msg",
@@ -4276,7 +3921,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1130,
+        "x": 1290,
         "y": 1500,
         "wires": [
             [
@@ -4288,6 +3933,7 @@
         "id": "da20796f860b477b",
         "type": "switch",
         "z": "bca4771a12cb11e6",
+        "g": "9965847832a173f9",
         "name": " OFF",
         "property": "StatusIndoor",
         "propertyType": "msg",
@@ -4299,7 +3945,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1250,
+        "x": 1410,
         "y": 1500,
         "wires": [
             [
@@ -4311,6 +3957,7 @@
         "id": "6caf09005d5d4f8c",
         "type": "switch",
         "z": "bca4771a12cb11e6",
+        "g": "9965847832a173f9",
         "name": " OFF",
         "property": "StatusOutdoor",
         "propertyType": "msg",
@@ -4322,7 +3969,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1370,
+        "x": 1530,
         "y": 1500,
         "wires": [
             [
@@ -4334,6 +3981,7 @@
         "id": "86889498473ea3c1",
         "type": "function",
         "z": "bca4771a12cb11e6",
+        "g": "9965847832a173f9",
         "name": "IDLE",
         "func": "flow.set(\"cmdauto\", \"None\");\nmsg.reset = true;\nreturn msg;",
         "outputs": 1,
@@ -4342,7 +3990,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1490,
+        "x": 1650,
         "y": 1500,
         "wires": [
             [
@@ -4355,13 +4003,14 @@
         "id": "05f650927ae5c01f",
         "type": "link out",
         "z": "bca4771a12cb11e6",
+        "g": "9965847832a173f9",
         "name": "link out 31",
         "mode": "link",
         "links": [
             "acd5dc2f19d30680",
             "6d5f07b04733e577"
         ],
-        "x": 1575,
+        "x": 1735,
         "y": 1500,
         "wires": []
     },
@@ -4369,6 +4018,7 @@
         "id": "4cfc816ed42ed14a",
         "type": "debug",
         "z": "bca4771a12cb11e6",
+        "g": "9965847832a173f9",
         "name": "debug 76",
         "active": true,
         "tosidebar": true,
@@ -4377,7 +4027,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1490,
+        "x": 1650,
         "y": 1540,
         "wires": []
     },
@@ -4396,7 +4046,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 370,
-        "y": 760,
+        "y": 520,
         "wires": []
     },
     {
@@ -4420,8 +4070,8 @@
         "topic": "",
         "payload": "04030000FF0000000002",
         "payloadType": "str",
-        "x": 1150,
-        "y": 1800,
+        "x": 930,
+        "y": 2160,
         "wires": [
             [
                 "ab5c7999a8ec94cb"
@@ -4437,8 +4087,8 @@
         "links": [
             "0cbc509033550b7f"
         ],
-        "x": 1325,
-        "y": 1880,
+        "x": 1105,
+        "y": 2240,
         "wires": []
     },
     {
@@ -4462,8 +4112,8 @@
         "topic": "",
         "payload": "04030000DB0400000002",
         "payloadType": "str",
-        "x": 1180,
-        "y": 1880,
+        "x": 960,
+        "y": 2240,
         "wires": [
             [
                 "ab5c7999a8ec94cb"
@@ -4491,8 +4141,8 @@
         "topic": "",
         "payload": "040500000201000003",
         "payloadType": "str",
-        "x": 1180,
-        "y": 1920,
+        "x": 960,
+        "y": 2280,
         "wires": [
             [
                 "ab5c7999a8ec94cb"
@@ -4520,8 +4170,8 @@
         "topic": "",
         "payload": "040500000003000003",
         "payloadType": "str",
-        "x": 1190,
-        "y": 1960,
+        "x": 970,
+        "y": 2320,
         "wires": [
             [
                 "ab5c7999a8ec94cb"
@@ -4549,8 +4199,8 @@
         "topic": "",
         "payload": "040300009B0C00000002",
         "payloadType": "str",
-        "x": 1160,
-        "y": 2000,
+        "x": 940,
+        "y": 2360,
         "wires": [
             [
                 "ab5c7999a8ec94cb"
@@ -4578,8 +4228,8 @@
         "topic": "",
         "payload": "04030000FE0000000002",
         "payloadType": "str",
-        "x": 1150,
-        "y": 1840,
+        "x": 930,
+        "y": 2200,
         "wires": [
             [
                 "ab5c7999a8ec94cb"
@@ -4607,8 +4257,8 @@
         "topic": "",
         "payload": "04030000DB0400000002",
         "payloadType": "str",
-        "x": 1150,
-        "y": 2040,
+        "x": 930,
+        "y": 2400,
         "wires": [
             [
                 "c6ccaf078e16fab4"
@@ -4624,8 +4274,8 @@
         "links": [
             "0cbc509033550b7f"
         ],
-        "x": 1345,
-        "y": 2100,
+        "x": 1125,
+        "y": 2460,
         "wires": []
     },
     {
@@ -4649,8 +4299,8 @@
         "topic": "",
         "payload": "04030000FF0000000002",
         "payloadType": "str",
-        "x": 1180,
-        "y": 2160,
+        "x": 960,
+        "y": 2520,
         "wires": [
             [
                 "c6ccaf078e16fab4"
@@ -4678,8 +4328,8 @@
         "topic": "",
         "payload": "040500000300000003",
         "payloadType": "str",
-        "x": 1180,
-        "y": 2120,
+        "x": 960,
+        "y": 2480,
         "wires": [
             [
                 "c6ccaf078e16fab4"
@@ -4707,8 +4357,8 @@
         "topic": "",
         "payload": "040500000201000003",
         "payloadType": "str",
-        "x": 1180,
-        "y": 2080,
+        "x": 960,
+        "y": 2440,
         "wires": [
             [
                 "c6ccaf078e16fab4"
@@ -4719,15 +4369,17 @@
         "id": "699bc22c1a819a76",
         "type": "link in",
         "z": "bca4771a12cb11e6",
+        "g": "b2cfefbaa250692d",
         "name": "link in 14",
         "links": [
             "d1d6d888207e0204"
         ],
-        "x": 685,
-        "y": 1000,
+        "x": 585,
+        "y": 700,
         "wires": [
             [
-                "8f99e09dae854b85"
+                "8f99e09dae854b85",
+                "88395c793067a2e5"
             ]
         ]
     },
@@ -4735,41 +4387,45 @@
         "id": "d1d6d888207e0204",
         "type": "link out",
         "z": "bca4771a12cb11e6",
+        "g": "94afd02c3878fc20",
         "name": "link out 32",
         "mode": "link",
         "links": [
             "699bc22c1a819a76"
         ],
-        "x": 525,
-        "y": 1620,
+        "x": 485,
+        "y": 800,
         "wires": []
     },
     {
         "id": "4d48619bf5bbadca",
         "type": "link out",
         "z": "bca4771a12cb11e6",
+        "g": "94afd02c3878fc20",
         "name": "link out 35",
         "mode": "link",
         "links": [
             "16853bc05e3e9d02"
         ],
-        "x": 525,
-        "y": 1660,
+        "x": 485,
+        "y": 840,
         "wires": []
     },
     {
         "id": "16853bc05e3e9d02",
         "type": "link in",
         "z": "bca4771a12cb11e6",
+        "g": "6a72c936b627e910",
         "name": "link in 17",
         "links": [
             "4d48619bf5bbadca"
         ],
-        "x": 435,
-        "y": 1140,
+        "x": 585,
+        "y": 860,
         "wires": [
             [
-                "ede82a4075db7adf"
+                "ede82a4075db7adf",
+                "6a4f334d1f97ed84"
             ]
         ]
     },
@@ -4777,29 +4433,32 @@
         "id": "b1e9832db3a61f1b",
         "type": "link out",
         "z": "bca4771a12cb11e6",
+        "g": "94afd02c3878fc20",
         "name": "link out 36",
         "mode": "link",
         "links": [
             "9e6d9789580139b4"
         ],
-        "x": 525,
-        "y": 1700,
+        "x": 485,
+        "y": 880,
         "wires": []
     },
     {
         "id": "9e6d9789580139b4",
         "type": "link in",
         "z": "bca4771a12cb11e6",
+        "g": "efd67cff70aea370",
         "name": "link in 18",
         "links": [
             "b1e9832db3a61f1b"
         ],
-        "x": 435,
-        "y": 1220,
+        "x": 585,
+        "y": 1040,
         "wires": [
             [
                 "5325683f3d621a49",
-                "aa65a38826eefec0"
+                "aa65a38826eefec0",
+                "07348a1e922e2081"
             ]
         ]
     },
@@ -4807,28 +4466,31 @@
         "id": "c476e780880d1b2d",
         "type": "link out",
         "z": "bca4771a12cb11e6",
+        "g": "94afd02c3878fc20",
         "name": "link out 37",
         "mode": "link",
         "links": [
             "a432e9a4cfafa890"
         ],
-        "x": 525,
-        "y": 1740,
+        "x": 485,
+        "y": 920,
         "wires": []
     },
     {
         "id": "a432e9a4cfafa890",
         "type": "link in",
         "z": "bca4771a12cb11e6",
+        "g": "1aacce764e0ed47b",
         "name": "link in 19",
         "links": [
             "c476e780880d1b2d"
         ],
-        "x": 435,
-        "y": 1280,
+        "x": 585,
+        "y": 1200,
         "wires": [
             [
-                "dae22984db30bba3"
+                "dae22984db30bba3",
+                "b48cfcb16da97cdb"
             ]
         ]
     },
@@ -4836,29 +4498,32 @@
         "id": "0a7ea2c4e927a1bd",
         "type": "link out",
         "z": "bca4771a12cb11e6",
+        "g": "94afd02c3878fc20",
         "name": "link out 38",
         "mode": "link",
         "links": [
             "6d5f07b04733e577"
         ],
-        "x": 525,
-        "y": 1780,
+        "x": 485,
+        "y": 960,
         "wires": []
     },
     {
         "id": "6d5f07b04733e577",
         "type": "link in",
         "z": "bca4771a12cb11e6",
+        "g": "9965847832a173f9",
         "name": "link in 20",
         "links": [
             "0a7ea2c4e927a1bd",
             "05f650927ae5c01f"
         ],
-        "x": 435,
+        "x": 585,
         "y": 1420,
         "wires": [
             [
-                "b4d32bd3897234eb"
+                "b4d32bd3897234eb",
+                "05fbb05ae3d0d88a"
             ]
         ]
     },
@@ -4881,11 +4546,638 @@
         "allowrate": false,
         "outputs": 1,
         "x": 960,
-        "y": 60,
+        "y": 80,
         "wires": [
             [
                 "09187eb453511326",
                 "fe9d2d5c8508a0c3"
+            ]
+        ]
+    },
+    {
+        "id": "d98271f4f071f32e",
+        "type": "link in",
+        "z": "bca4771a12cb11e6",
+        "g": "cbbdeba1125ca19b",
+        "name": "link in 21",
+        "links": [
+            "4c80d3fd31ff5440"
+        ],
+        "x": 75,
+        "y": 120,
+        "wires": [
+            [
+                "2815e1177e773fe4"
+            ]
+        ]
+    },
+    {
+        "id": "88395c793067a2e5",
+        "type": "trigger",
+        "z": "bca4771a12cb11e6",
+        "g": "b2cfefbaa250692d",
+        "name": " ",
+        "op1": "1",
+        "op2": "",
+        "op1type": "str",
+        "op2type": "nul",
+        "duration": "500",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 670,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6a4f334d1f97ed84",
+        "type": "trigger",
+        "z": "bca4771a12cb11e6",
+        "g": "6a72c936b627e910",
+        "name": " ",
+        "op1": "1",
+        "op2": "",
+        "op1type": "str",
+        "op2type": "nul",
+        "duration": "500",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 670,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "07348a1e922e2081",
+        "type": "trigger",
+        "z": "bca4771a12cb11e6",
+        "g": "efd67cff70aea370",
+        "name": " ",
+        "op1": "1",
+        "op2": "",
+        "op1type": "str",
+        "op2type": "nul",
+        "duration": "500",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 690,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b48cfcb16da97cdb",
+        "type": "trigger",
+        "z": "bca4771a12cb11e6",
+        "g": "1aacce764e0ed47b",
+        "name": " ",
+        "op1": "1",
+        "op2": "",
+        "op1type": "str",
+        "op2type": "nul",
+        "duration": "500",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 690,
+        "y": 1240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "05fbb05ae3d0d88a",
+        "type": "trigger",
+        "z": "bca4771a12cb11e6",
+        "g": "9965847832a173f9",
+        "name": " ",
+        "op1": "1",
+        "op2": "",
+        "op1type": "str",
+        "op2type": "nul",
+        "duration": "500",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 690,
+        "y": 1460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "35a56d8a804f6957",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "g": "4a2b08a3489a859c",
+        "name": " ",
+        "func": "if(flow.get(\"SystemStatus\") != \"ON\"){\n    msg.payload = null;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 460,
+        "wires": [
+            [
+                "1c505eaeda7d6b6a"
+            ]
+        ]
+    },
+    {
+        "id": "1c505eaeda7d6b6a",
+        "type": "switch",
+        "z": "bca4771a12cb11e6",
+        "g": "4a2b08a3489a859c",
+        "name": " ",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nnull"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1010,
+        "y": 460,
+        "wires": [
+            [
+                "9a489bd4e0857cbf",
+                "525a257b01798881"
+            ]
+        ]
+    },
+    {
+        "id": "9a489bd4e0857cbf",
+        "type": "trigger",
+        "z": "bca4771a12cb11e6",
+        "g": "4a2b08a3489a859c",
+        "name": " ",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "nul",
+        "duration": "250",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1130,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "525a257b01798881",
+        "type": "trigger",
+        "z": "bca4771a12cb11e6",
+        "g": "4a2b08a3489a859c",
+        "name": " ",
+        "op1": "1",
+        "op2": "",
+        "op1type": "str",
+        "op2type": "nul",
+        "duration": "7",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1130,
+        "y": 440,
+        "wires": [
+            [
+                "fbfbf9d305f0d43a"
+            ]
+        ]
+    },
+    {
+        "id": "fbfbf9d305f0d43a",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "g": "4a2b08a3489a859c",
+        "name": "Turn On Booster",
+        "func": "msg.topic = \"SELECT * FROM `devicelist` WHERE `keterangan` = 'RelayOutput' OR `keterangan` = 'RelayIndoor';\";\nmsg.topic += \"SELECT * FROM `Output` WHERE `keterangan` = 'BoosterFan' OR `keterangan` = 'EF';\";\nmsg.topic += \"SELECT * FROM `OutputIndoor` WHERE `keterangan` = 'Fan' OR `keterangan` = 'Compressor';\";\nmsg.topic += \"SELECT * FROM `Operation`;\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1290,
+        "y": 440,
+        "wires": [
+            [
+                "4da408452df5e1e3"
+            ]
+        ]
+    },
+    {
+        "id": "4da408452df5e1e3",
+        "type": "mysql",
+        "z": "bca4771a12cb11e6",
+        "g": "4a2b08a3489a859c",
+        "mydb": "3b8e5eb93b7526d7",
+        "name": " ",
+        "x": 1450,
+        "y": 440,
+        "wires": [
+            [
+                "ea14610f882fc427"
+            ]
+        ]
+    },
+    {
+        "id": "ea14610f882fc427",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "g": "4a2b08a3489a859c",
+        "name": " On1",
+        "func": "msg.resultsql = msg.payload;\nvar binarycurrent = \"\";\nif(!msg.BoosterFan){\n    var d = msg.payload[0][1];\n    var cmd = \"\";\n    msg.statusEH1 = false;\n    msg.statusEH2 = false;\n    for (let index = 0; index < Object.keys(d).length - 2; index++) {\n        cmd += d[Object.keys(d)[index]];\n    }\n    cmd += \"01\";\n    binarycurrent = reverseString(decToBinary(msg.payload[3][0].Output));\n    var spt = binarycurrent.split(\"\");\n    if (spt[msg.payload[1][0].Number - 1] == \"0\" && !msg.BoosterFan && flow.get(\"SystemStatus\") == \"ON\") {\n        \n        spt[msg.payload[1][0].Number - 1] = \"1\";\n        binarycurrent = spt.join(\"\");\n        if(flow.get(\"RelayOutput\")[msg.payload[1][0].Number].Stat == 0){\n            msg.statusBooster = true;\n        }else{\n            msg.statusBooster = false;\n        }\n        msg.payload[3][0][\"Output\"] = parseInt(String(msg.payload[3][0].Output)) + parseInt(String(msg.payload[1][0].Dec));\n    }\n    spt = binarycurrent.split(\"\");\n    \n    if (spt[msg.payload[1][1].Number - 1] == \"0\" && !msg.EF && msg.StatusIndoor && msg.BoosterFan && msg.StatusOutdoor){\n        msg.statusEF = true;\n    }\n    msg.numberOutput = msg.payload[3][0].Output;\n    var hex = binaryToHex(reverseString(binarycurrent));\n    cmd += \"0000\" + \"000\" + String(dec2hex(hex));\n    msg.payload = cmd;\n    return msg;\n} else if (!msg.EF && msg.StatusIndoor && msg.BoosterFan && msg.StatusOutdoor){\n    var d = msg.payload[0][1];\n    var cmd = \"\";\n    msg.statusEH1 = false;\n    msg.statusEH2 = false;\n    for (let index = 0; index < Object.keys(d).length - 2; index++) {\n        cmd += d[Object.keys(d)[index]];\n    }\n    cmd += \"01\";\n    binarycurrent = reverseString(decToBinary(msg.payload[3][0].Output));\n    var spt = binarycurrent.split(\"\");\n    if (spt[msg.payload[1][0].Number - 1] == \"0\" && !msg.BoosterFan && msg.StatusIndoor) {\n\n        spt[msg.payload[1][0].Number - 1] = \"1\";\n        binarycurrent = spt.join(\"\");\n        if (flow.get(\"RelayOutput\")[msg.payload[1][0].Number].Stat == 0) {\n            msg.statusBooster = true;\n        } else {\n            msg.statusBooster = false;\n        }\n        msg.payload[3][0][\"Output\"] = parseInt(String(msg.payload[3][0].Output)) + parseInt(String(msg.payload[1][0].Dec));\n    }\n    spt = binarycurrent.split(\"\");\n\n    if (spt[msg.payload[1][1].Number - 1] == \"0\") {\n        msg.statusEF = true;\n    }\n    msg.numberOutput = msg.payload[3][0].Output;\n    var hex = binaryToHex(reverseString(binarycurrent));\n    cmd += \"0000\" + \"000\" + String(dec2hex(hex));\n    msg.payload = cmd;\n    return msg;\n}else{\n    var d = msg.payload[0][0];\n    var cmd = \"\";\n    \n    for (let index = 0; index < Object.keys(d).length - 2; index++) {\n        cmd += d[Object.keys(d)[index]];\n    }\n    cmd += \"01\";\n    \n    binarycurrent = reverseString(decToBinary(msg.payload[3][0].OutputIndoor));\n    var spt = binarycurrent.split(\"\");\n    console.log(spt);\n    console.log(msg.payload[2][0].Number - 1);\n    console.log(spt[msg.payload[2][0].Number - 1]);\n    if (spt[msg.payload[2][0].Number - 1] == \"0\" && msg.BoosterFan) {\n        console.log(binarycurrent);\n        spt[msg.payload[2][0].Number - 1] = \"1\";\n        binarycurrent = spt.join(\"\");\n        console.log(binarycurrent);\n        if(flow.get(\"RelayOutputIndoor\")[msg.payload[1][0].Number].Stat == 0){\n            msg.statusFan = true;\n        }else{\n            msg.statusFan = false;\n        }\n        \n        msg.payload[3][0][\"OutputIndoor\"] = parseInt(String(msg.payload[3][0].OutputIndoor)) + parseInt(String(msg.payload[2][0].Dec));\n    }\n    if (binarycurrent[msg.payload[2][1].Number - 1] == \"0\" && !msg.statusFan && !msg.StatusOutdoor){\n        msg.statusCompressor = true;\n    }else{\n        msg.statusCompressor = false;\n    }\n    msg.numberOutputIndoor = msg.payload[3][0].OutputIndoor;\n    var hex = binaryToHex(reverseString(binarycurrent));\n    cmd += \"0000\" + \"000\" + String(dec2hex(hex));\n    msg.payload = cmd;\n    return msg;\n}\n\n\n\n\nfunction dec2hex(decimalNumber) {\n    if (decimalNumber < 0 || decimalNumber > 15) {\n        return \"Out of range\";\n    }\n    return decimalNumber.toString(16).toUpperCase();\n}\n\nfunction decToBinary(dec) {\n    // Ensure the input is a number\n    if (typeof dec !== 'number' || isNaN(dec)) {\n        throw new Error('Input must be a valid number');\n    }\n\n    // Handle negative numbers by using two's complement representation\n    if (dec < 0) {\n        return (dec >>> 0).toString(2).padStart(32, '0');\n    }\n\n    // Convert decimal to binary using toString method\n    let binaryStr = dec.toString(2);\n\n    // Pad the binary string to 8 bits\n    return binaryStr.padStart(8, '0');\n}\nfunction reverseString(str) {\n    // Mengubah string menjadi array, membalik array, dan menggabungkan kembali menjadi string\n    return str.split('').reverse().join('');\n}\n\nfunction binaryToHex(binaryStr) {\n    // Ensure the input is a valid binary string\n    if (typeof binaryStr !== 'string' || !/^[01]+$/.test(binaryStr)) {\n        throw new Error('Input must be a valid binary string');\n    }\n\n    // Parse the binary string to a decimal number\n    const decimal = parseInt(binaryStr, 2);\n\n    // Convert the decimal number to a hexadecimal string\n    const hexStr = decimal.toString(16);\n\n    // Return the hexadecimal string (in uppercase for consistency)\n    return hexStr.toUpperCase();\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1570,
+        "y": 440,
+        "wires": [
+            [
+                "77b2cba796d2f531",
+                "4043dbbf93d75df2",
+                "a5409b65184165d3",
+                "ec5ef574d79e5506"
+            ]
+        ]
+    },
+    {
+        "id": "77b2cba796d2f531",
+        "type": "switch",
+        "z": "bca4771a12cb11e6",
+        "g": "4a2b08a3489a859c",
+        "name": " On Booster",
+        "property": "statusBooster",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1730,
+        "y": 420,
+        "wires": [
+            [
+                "a27a7d74181d73f9"
+            ]
+        ]
+    },
+    {
+        "id": "4043dbbf93d75df2",
+        "type": "switch",
+        "z": "bca4771a12cb11e6",
+        "g": "4a2b08a3489a859c",
+        "name": " On EF",
+        "property": "statusEF",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1710,
+        "y": 460,
+        "wires": [
+            [
+                "a1807d9433fd3b20"
+            ]
+        ]
+    },
+    {
+        "id": "a5409b65184165d3",
+        "type": "switch",
+        "z": "bca4771a12cb11e6",
+        "g": "4a2b08a3489a859c",
+        "name": " On Fan",
+        "property": "statusFan",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1720,
+        "y": 380,
+        "wires": [
+            [
+                "8f7f8be627e7f4d2"
+            ]
+        ]
+    },
+    {
+        "id": "ec5ef574d79e5506",
+        "type": "switch",
+        "z": "bca4771a12cb11e6",
+        "g": "4a2b08a3489a859c",
+        "name": " On Compressor",
+        "property": "statusCompressor",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1740,
+        "y": 500,
+        "wires": [
+            [
+                "1c2dcf8730950b3f"
+            ]
+        ]
+    },
+    {
+        "id": "a27a7d74181d73f9",
+        "type": "delay",
+        "z": "bca4771a12cb11e6",
+        "g": "4a2b08a3489a859c",
+        "name": " ",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1890,
+        "y": 420,
+        "wires": [
+            [
+                "09a3b6a802023dc8"
+            ]
+        ]
+    },
+    {
+        "id": "a1807d9433fd3b20",
+        "type": "delay",
+        "z": "bca4771a12cb11e6",
+        "g": "4a2b08a3489a859c",
+        "name": " ",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1890,
+        "y": 460,
+        "wires": [
+            [
+                "62b6001d94bcac60"
+            ]
+        ]
+    },
+    {
+        "id": "8f7f8be627e7f4d2",
+        "type": "delay",
+        "z": "bca4771a12cb11e6",
+        "g": "4a2b08a3489a859c",
+        "name": " ",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1890,
+        "y": 380,
+        "wires": [
+            [
+                "266dedab938cb002"
+            ]
+        ]
+    },
+    {
+        "id": "1c2dcf8730950b3f",
+        "type": "delay",
+        "z": "bca4771a12cb11e6",
+        "g": "4a2b08a3489a859c",
+        "name": " ",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1890,
+        "y": 500,
+        "wires": [
+            [
+                "a6711d252207f1c0"
+            ]
+        ]
+    },
+    {
+        "id": "62b6001d94bcac60",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "g": "4a2b08a3489a859c",
+        "name": "On EF",
+        "func": "msg.payload = msg.resultsql;\nvar d = msg.payload[0][1];\nvar cmd = \"\";\nmsg.statusEH1 = false;\nmsg.statusEH2 = false;\nfor (let index = 0; index < Object.keys(d).length-2; index++) {\n    cmd += d[Object.keys(d)[index]];\n}\ncmd += \"01\";\n\nvar binarycurrent = reverseString(decToBinary(msg.numberOutput));\nvar spt = binarycurrent.split(\"\");\nif(binarycurrent[msg.payload[1][1].Number-1] == \"0\"){\n    \n    spt[msg.payload[1][1].Number - 1] = \"1\";\n    binarycurrent = spt.join(\"\");\n    if (flow.get(\"RelayOutput\")[msg.payload[1][1].Number].Stat == 0){\n        msg.statusEH2 = true;\n    }else{\n        msg.statusEH2 = false;\n    }\n    console.log(parseInt(String(msg.payload[1][1].Dec)));\n   msg[\"numberOutput\"] = parseInt(String(msg.numberOutput)) +  parseInt(String(msg.payload[1][1].Dec));\n}\n\nvar hex = binaryToHex(reverseString(binarycurrent));\ncmd += \"0000\"+\"000\"+String(dec2hex(hex));\nmsg.payload = cmd;\nreturn msg;\n\nfunction dec2hex(decimalNumber) {\n    if (decimalNumber < 0 || decimalNumber > 15) {\n        return \"Out of range\";\n    }\n    return decimalNumber.toString(16).toUpperCase();\n}\n\nfunction decToBinary(dec) {\n    // Ensure the input is a number\n    if (typeof dec !== 'number' || isNaN(dec)) {\n        throw new Error('Input must be a valid number');\n    }\n\n    // Handle negative numbers by using two's complement representation\n    if (dec < 0) {\n        return (dec >>> 0).toString(2).padStart(32, '0');\n    }\n\n    // Convert decimal to binary using toString method\n    let binaryStr = dec.toString(2);\n\n    // Pad the binary string to 8 bits\n    return binaryStr.padStart(8, '0');\n}\nfunction reverseString(str) {\n    // Mengubah string menjadi array, membalik array, dan menggabungkan kembali menjadi string\n    return str.split('').reverse().join('');\n}\n\nfunction binaryToHex(binaryStr) {\n    // Ensure the input is a valid binary string\n    if (typeof binaryStr !== 'string' || !/^[01]+$/.test(binaryStr)) {\n        throw new Error('Input must be a valid binary string');\n    }\n\n    // Parse the binary string to a decimal number\n    const decimal = parseInt(binaryStr, 2);\n\n    // Convert the decimal number to a hexadecimal string\n    const hexStr = decimal.toString(16);\n\n    // Return the hexadecimal string (in uppercase for consistency)\n    return hexStr.toUpperCase();\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2010,
+        "y": 460,
+        "wires": [
+            [
+                "631a5792b3f53e2e"
+            ]
+        ]
+    },
+    {
+        "id": "a6711d252207f1c0",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "g": "4a2b08a3489a859c",
+        "name": "On Compressor",
+        "func": "msg.payload = msg.resultsql;\nvar d = msg.payload[0][0];\nvar cmd = \"\";\nmsg.statusEH1 = false;\nmsg.statusEH2 = false;\nfor (let index = 0; index < Object.keys(d).length-2; index++) {\n    cmd += d[Object.keys(d)[index]];\n}\ncmd += \"01\";\n\nvar binarycurrent = reverseString(decToBinary(msg.numberOutputIndoor));\nvar spt = binarycurrent.split(\"\");\nif(binarycurrent[msg.payload[1][1].Number-1] == \"0\"){\n    \n    spt[msg.payload[2][1].Number - 1] = \"1\";\n    binarycurrent = spt.join(\"\");\n    \n   msg[\"numberOutputIndoor\"] = parseInt(String(msg.numberOutputIndoor)) +  parseInt(String(msg.payload[2][1].Dec));\n}\n\nvar hex = binaryToHex(reverseString(binarycurrent));\ncmd += \"0000\"+\"000\"+String(dec2hex(hex));\nmsg.payload = cmd;\nreturn msg;\n\nfunction dec2hex(decimalNumber) {\n    if (decimalNumber < 0 || decimalNumber > 15) {\n        return \"Out of range\";\n    }\n    return decimalNumber.toString(16).toUpperCase();\n}\n\nfunction decToBinary(dec) {\n    // Ensure the input is a number\n    if (typeof dec !== 'number' || isNaN(dec)) {\n        throw new Error('Input must be a valid number');\n    }\n\n    // Handle negative numbers by using two's complement representation\n    if (dec < 0) {\n        return (dec >>> 0).toString(2).padStart(32, '0');\n    }\n\n    // Convert decimal to binary using toString method\n    let binaryStr = dec.toString(2);\n\n    // Pad the binary string to 8 bits\n    return binaryStr.padStart(8, '0');\n}\nfunction reverseString(str) {\n    // Mengubah string menjadi array, membalik array, dan menggabungkan kembali menjadi string\n    return str.split('').reverse().join('');\n}\n\nfunction binaryToHex(binaryStr) {\n    // Ensure the input is a valid binary string\n    if (typeof binaryStr !== 'string' || !/^[01]+$/.test(binaryStr)) {\n        throw new Error('Input must be a valid binary string');\n    }\n\n    // Parse the binary string to a decimal number\n    const decimal = parseInt(binaryStr, 2);\n\n    // Convert the decimal number to a hexadecimal string\n    const hexStr = decimal.toString(16);\n\n    // Return the hexadecimal string (in uppercase for consistency)\n    return hexStr.toUpperCase();\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2040,
+        "y": 500,
+        "wires": [
+            [
+                "96bdfb3b96f0e2d1"
+            ]
+        ]
+    },
+    {
+        "id": "95c264c90bd714f9",
+        "type": "link out",
+        "z": "bca4771a12cb11e6",
+        "d": true,
+        "g": "4a2b08a3489a859c",
+        "name": "link out 23",
+        "mode": "link",
+        "links": [
+            "dd1e1bf4fa001f32"
+        ],
+        "x": 2195,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "5a9616ba520d413a",
+        "type": "link out",
+        "z": "bca4771a12cb11e6",
+        "g": "7ff6db086b81b7e7",
+        "name": "link out 39",
+        "mode": "link",
+        "links": [
+            "5936f1df53932369"
+        ],
+        "x": 455,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "5936f1df53932369",
+        "type": "link in",
+        "z": "bca4771a12cb11e6",
+        "g": "4a2b08a3489a859c",
+        "name": "link in 22",
+        "links": [
+            "5a9616ba520d413a"
+        ],
+        "x": 805,
+        "y": 460,
+        "wires": [
+            [
+                "35a56d8a804f6957"
+            ]
+        ]
+    },
+    {
+        "id": "3b2a44cd4136616d",
+        "type": "trigger",
+        "z": "bca4771a12cb11e6",
+        "g": "7ff6db086b81b7e7",
+        "name": " ",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "nul",
+        "duration": "250",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 490,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cf128b17d11f7fc7",
+        "type": "link in",
+        "z": "bca4771a12cb11e6",
+        "g": "aadd16a462e83be5",
+        "name": "link in 23",
+        "links": [
+            "a647954ae4d429aa",
+            "f653f7df10385059",
+            "4c17409ddbc782a5",
+            "3fae4a69287e8867",
+            "983c5238c51828dc",
+            "09187eb453511326"
+        ],
+        "x": 525,
+        "y": 120,
+        "wires": [
+            [
+                "9d6f10db5c0fea06"
             ]
         ]
     },
