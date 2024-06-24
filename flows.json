@@ -5899,7 +5899,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "func": "if(flow.get(\"SystemStatus\") != \"ON\"){\n    msg.payload = null;\n}\nreturn msg;",
+        "func": "if(flow.get(\"SystemStatus\") != \"OFF\"){\n    msg.payload = null;\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
