@@ -4021,7 +4021,7 @@
         "payload": "04030000DB0400000002",
         "payloadType": "str",
         "x": 120,
-        "y": 400,
+        "y": 480,
         "wires": [
             [
                 "ab5c7999a8ec94cb"
@@ -4038,7 +4038,7 @@
             "0cbc509033550b7f"
         ],
         "x": 265,
-        "y": 400,
+        "y": 480,
         "wires": []
     },
     {
@@ -4107,7 +4107,7 @@
         "payload": "040500000201000003",
         "payloadType": "str",
         "x": 120,
-        "y": 440,
+        "y": 520,
         "wires": [
             [
                 "ab5c7999a8ec94cb"
@@ -4207,7 +4207,7 @@
         "payload": "040500000003000003",
         "payloadType": "str",
         "x": 130,
-        "y": 480,
+        "y": 560,
         "wires": [
             [
                 "ab5c7999a8ec94cb"
@@ -4279,7 +4279,7 @@
         "payload": "040300009B0C00000002",
         "payloadType": "str",
         "x": 100,
-        "y": 520,
+        "y": 600,
         "wires": [
             [
                 "ab5c7999a8ec94cb"
@@ -4449,7 +4449,36 @@
         "payload": "04030000FE0000000002",
         "payloadType": "str",
         "x": 120,
-        "y": 360,
+        "y": 440,
+        "wires": [
+            [
+                "ab5c7999a8ec94cb"
+            ]
+        ]
+    },
+    {
+        "id": "93ed58172caefb99",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": "AutoPanelMati",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "04030000FF0000000002",
+        "payloadType": "str",
+        "x": 120,
+        "y": 400,
         "wires": [
             [
                 "ab5c7999a8ec94cb"
