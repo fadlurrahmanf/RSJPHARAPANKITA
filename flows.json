@@ -5021,7 +5021,7 @@
         "z": "bca4771a12cb11e6",
         "g": "4a2b08a3489a859c",
         "name": " ",
-        "func": "if(flow.get(\"SystemStatus\") != \"ON\"){\n    msg.payload = null;\n}\nreturn msg;",
+        "func": "if(flow.get(\"SystemStatus\") != \"ON\"){\n    msg.payload = null;\n}\nmsg.rate = flow.get(\"SensorQty\")*8000;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
