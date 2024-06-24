@@ -5755,7 +5755,7 @@
         "y": 580,
         "wires": [
             [
-                "ee9d73a6060c9c58"
+                "898d8a180b8fc477"
             ]
         ]
     },
@@ -5764,16 +5764,30 @@
         "type": "debug",
         "z": "bca4771a12cb11e6",
         "name": "debug 77",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1760,
+        "x": 1940,
         "y": 580,
         "wires": []
+    },
+    {
+        "id": "898d8a180b8fc477",
+        "type": "mysql",
+        "z": "bca4771a12cb11e6",
+        "mydb": "3b8e5eb93b7526d7",
+        "name": " ",
+        "x": 1730,
+        "y": 580,
+        "wires": [
+            [
+                "ee9d73a6060c9c58"
+            ]
+        ]
     },
     {
         "id": "ae459cb84c6fb828",
