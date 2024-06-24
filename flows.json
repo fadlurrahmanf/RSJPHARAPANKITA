@@ -4349,7 +4349,7 @@
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
-        "topic": "UPDATE `Input` SET `Stat` = 0;UPDATE `Output` SET `Stat` = 0;UPDATE `InputIndoor` SET `Stat` = 0;UPDATE `OutputIndoor` SET `Stat` = 0;",
+        "topic": "UPDATE `Input` SET `Stat` = 0;UPDATE `Output` SET `Stat` = 0;UPDATE `InputIndoor` SET `Stat` = 0;UPDATE `OutputIndoor` SET `Stat` = 0;UPDATE `Operation` SET `Output` = 0, `OutputIndoor` = 0;",
         "payload": "",
         "payloadType": "date",
         "x": 830,
