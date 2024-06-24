@@ -6041,7 +6041,7 @@
         "links": [
             "a29a20efc26fe0fd"
         ],
-        "x": 95,
+        "x": 85,
         "y": 1680,
         "wires": [
             [
@@ -6063,7 +6063,7 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 190,
+        "x": 170,
         "y": 1680,
         "wires": []
     },
@@ -6080,7 +6080,7 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 350,
+        "x": 290,
         "y": 1680,
         "wires": []
     },
@@ -6097,7 +6097,7 @@
         "finalize": "",
         "libs": [],
         "x": 410,
-        "y": 1760,
+        "y": 1740,
         "wires": [
             [
                 "f0927c6acb32a4c8"
@@ -6117,7 +6117,7 @@
         "finalize": "",
         "libs": [],
         "x": 170,
-        "y": 1760,
+        "y": 1740,
         "wires": [
             [
                 "ecda2cfb9a527cbf"
@@ -6131,7 +6131,7 @@
         "mydb": "3b8e5eb93b7526d7",
         "name": " ",
         "x": 290,
-        "y": 1760,
+        "y": 1740,
         "wires": [
             [
                 "9577e4567cd1ce6b"
@@ -6147,7 +6147,7 @@
             "ab5c7999a8ec94cb"
         ],
         "x": 85,
-        "y": 1760,
+        "y": 1740,
         "wires": [
             [
                 "6233b4b33cbabd1c"
@@ -6168,7 +6168,7 @@
         "statusVal": "deviceinfo",
         "statusType": "auto",
         "x": 530,
-        "y": 1760,
+        "y": 1740,
         "wires": []
     },
     {
