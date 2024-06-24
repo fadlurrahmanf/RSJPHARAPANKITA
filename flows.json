@@ -697,14 +697,11 @@
         "id": "bc029c22e8a19bce",
         "type": "group",
         "z": "bca4771a12cb11e6",
+        "name": "StatusRelay",
         "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
             "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
+            "label-position": "n",
+            "color": "#000000"
         },
         "nodes": [
             "738e22f45c2ce650",
