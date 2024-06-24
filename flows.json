@@ -4425,7 +4425,7 @@
         "z": "bca4771a12cb11e6",
         "g": "1cbfcd06637d48ad",
         "name": " ",
-        "func": "msg.topic = \"select * from monitoringdata;select * from Input Order by Number ASC;select * from Output Order by Number ASC;select * from InputIndoor Order by Number ASC;select * from OutputIndoor Order by Number ASC;\";\nreturn msg;",
+        "func": "msg.topic = \"select * from monitoringdata;select * from Input Order by Number ASC;select * from Output Order by Number ASC;select * from InputIndoor Order by Number ASC;select * from OutputIndoor Order by Number ASC;\";\nflow.set(\"SystemStatus\",\"OFF\");\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
