@@ -719,6 +719,37 @@
         "h": 322
     },
     {
+        "id": "cde1e78ea6c6202c",
+        "type": "group",
+        "z": "bca4771a12cb11e6",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "d9cda9d21b5e59c9",
+            "0de2a9fe6eca8de8",
+            "eba9e962a7d47c72",
+            "a5b90e10b27bf285",
+            "eb1793a6bf455733",
+            "46cf92545e80c1d2",
+            "a4cce0a4f8811c1e",
+            "2952e9c1747ca3fb",
+            "f3a38b43331d2ea8",
+            "6a72d4f3b0d96b83",
+            "f52c4ff255db8a17"
+        ],
+        "x": 1484,
+        "y": 539,
+        "w": 892,
+        "h": 122
+    },
+    {
         "id": "266dedab938cb002",
         "type": "junction",
         "z": "bca4771a12cb11e6",
@@ -5711,6 +5742,7 @@
         "id": "d9cda9d21b5e59c9",
         "type": "link in",
         "z": "bca4771a12cb11e6",
+        "g": "cde1e78ea6c6202c",
         "name": "link in 29",
         "links": [
             "3b732ba5f038697e"
@@ -5724,25 +5756,10 @@
         ]
     },
     {
-        "id": "ee9d73a6060c9c58",
-        "type": "debug",
-        "z": "bca4771a12cb11e6",
-        "name": "debug 77",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2380,
-        "y": 540,
-        "wires": []
-    },
-    {
         "id": "46cf92545e80c1d2",
         "type": "function",
         "z": "bca4771a12cb11e6",
+        "g": "cde1e78ea6c6202c",
         "name": "Request",
         "func": "msg.resultsql = msg.payload;\nvar d = msg.payload;\nvar cmd = \"\";\nmsg.statusEH1 = false;\nmsg.statusEH2 = false;\nfor (let index = 0; index < Object.keys(d).length - 2; index++) {\n    cmd += d[Object.keys(d)[index]];\n}\ncmd += \"00\";\ncmd += \"0000\" + \"0000\" ;\nmsg.payload = cmd;\nreturn msg;",
         "outputs": 1,
@@ -5763,6 +5780,7 @@
         "id": "eb1793a6bf455733",
         "type": "subflow:e9b71a55.b25c68",
         "z": "bca4771a12cb11e6",
+        "g": "cde1e78ea6c6202c",
         "name": "",
         "x": 1870,
         "y": 600,
@@ -5779,6 +5797,7 @@
         "id": "a5b90e10b27bf285",
         "type": "function",
         "z": "bca4771a12cb11e6",
+        "g": "cde1e78ea6c6202c",
         "name": " ",
         "func": "msg[\"delay\"] = 8000;\nmsg.payload = flow.get(\"SensorQty\");\nreturn msg;",
         "outputs": 1,
@@ -5799,6 +5818,7 @@
         "id": "0de2a9fe6eca8de8",
         "type": "delay",
         "z": "bca4771a12cb11e6",
+        "g": "cde1e78ea6c6202c",
         "name": " ",
         "pauseType": "rate",
         "timeout": "5",
@@ -5875,6 +5895,7 @@
         "id": "eba9e962a7d47c72",
         "type": "trigger",
         "z": "bca4771a12cb11e6",
+        "g": "cde1e78ea6c6202c",
         "name": " ",
         "op1": "1",
         "op2": "0",
@@ -5898,6 +5919,7 @@
         "id": "f3a38b43331d2ea8",
         "type": "function",
         "z": "bca4771a12cb11e6",
+        "g": "cde1e78ea6c6202c",
         "name": " ",
         "func": "if(flow.get(\"SystemStatus\") != \"OFF\"){\n    msg.payload = null;\n}\nreturn msg;",
         "outputs": 1,
@@ -5918,6 +5940,7 @@
         "id": "6a72d4f3b0d96b83",
         "type": "switch",
         "z": "bca4771a12cb11e6",
+        "g": "cde1e78ea6c6202c",
         "name": " ",
         "property": "payload",
         "propertyType": "msg",
@@ -5933,7 +5956,6 @@
         "y": 600,
         "wires": [
             [
-                "ee9d73a6060c9c58",
                 "f52c4ff255db8a17"
             ]
         ]
@@ -5942,13 +5964,13 @@
         "id": "f52c4ff255db8a17",
         "type": "link out",
         "z": "bca4771a12cb11e6",
-        "d": true,
+        "g": "cde1e78ea6c6202c",
         "name": "link out 45",
         "mode": "link",
         "links": [
             "dd1e1bf4fa001f32"
         ],
-        "x": 2345,
+        "x": 2335,
         "y": 600,
         "wires": []
     },
@@ -5956,6 +5978,7 @@
         "id": "a4cce0a4f8811c1e",
         "type": "trigger",
         "z": "bca4771a12cb11e6",
+        "g": "cde1e78ea6c6202c",
         "name": " ",
         "op1": "",
         "op2": "",
@@ -5969,8 +5992,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1990,
-        "y": 560,
+        "x": 2130,
+        "y": 600,
         "wires": [
             []
         ]
@@ -5979,7 +6002,8 @@
         "id": "2952e9c1747ca3fb",
         "type": "debug",
         "z": "bca4771a12cb11e6",
-        "name": "debug 79",
+        "g": "cde1e78ea6c6202c",
+        "name": " ",
         "active": false,
         "tosidebar": true,
         "console": false,
@@ -5988,8 +6012,8 @@
         "targetType": "msg",
         "statusVal": "payload.keterangan",
         "statusType": "auto",
-        "x": 2010,
-        "y": 640,
+        "x": 1990,
+        "y": 600,
         "wires": []
     },
     {
