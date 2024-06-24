@@ -5742,7 +5742,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "func": "msg.topic = \"SELECT `Pressure,HepaFilter`,`Pressure,MediumFilter`,`Temp/RH,CathLab`,`Temp/RH,Machine` FROM `devicelist`;\";\nreturn msg;",
+        "func": "msg.topic = \"SELECT * FROM `devicelist` WHERE `keterangan` NOT LIKE 'Relay%';\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5784,6 +5784,35 @@
         "wires": [
             [
                 "ee9d73a6060c9c58"
+            ]
+        ]
+    },
+    {
+        "id": "bfeedf2c426fc9a7",
+        "type": "inject",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1590,
+        "y": 640,
+        "wires": [
+            [
+                "a2a8e682fe0fb9c4"
             ]
         ]
     },
