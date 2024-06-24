@@ -812,7 +812,11 @@
             "de5cfc72b0d10bf3",
             "fcded8e6800db872",
             "fe15437ea5ba0d90",
-            "780771ba20b86bbe"
+            "780771ba20b86bbe",
+            "f9f4bd8039c3fbc8",
+            "b5539273c8b7b27c",
+            "d6ec50e49909a835",
+            "6c8877aeb5ae2bf4"
         ],
         "x": 275,
         "y": 60,
@@ -4751,25 +4755,9 @@
         "y": 1340,
         "wires": [
             [
-                "8c496062830471e2"
+                "f9f4bd8039c3fbc8"
             ]
         ]
-    },
-    {
-        "id": "8c496062830471e2",
-        "type": "debug",
-        "z": "bca4771a12cb11e6",
-        "name": "debug 71",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1660,
-        "y": 1340,
-        "wires": []
     },
     {
         "id": "5ee28832d25a6f45",
@@ -4856,7 +4844,7 @@
         "y": 1380,
         "wires": [
             [
-                "fba3ad7e02710121"
+                "b5539273c8b7b27c"
             ]
         ]
     },
@@ -5105,22 +5093,6 @@
         ]
     },
     {
-        "id": "fba3ad7e02710121",
-        "type": "debug",
-        "z": "bca4771a12cb11e6",
-        "name": "debug 73",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1680,
-        "y": 1380,
-        "wires": []
-    },
-    {
         "id": "1a293fbb3e81e268",
         "type": "switch",
         "z": "bca4771a12cb11e6",
@@ -5228,7 +5200,7 @@
         "y": 1420,
         "wires": [
             [
-                "d515ed10ae5d2469"
+                "d6ec50e49909a835"
             ]
         ]
     },
@@ -5263,22 +5235,6 @@
         "statusType": "auto",
         "x": 810,
         "y": 1380,
-        "wires": []
-    },
-    {
-        "id": "d515ed10ae5d2469",
-        "type": "debug",
-        "z": "bca4771a12cb11e6",
-        "name": "debug 76",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1680,
-        "y": 1420,
         "wires": []
     },
     {
@@ -5389,25 +5345,9 @@
         "y": 1460,
         "wires": [
             [
-                "1c5495b8fd1f0b15"
+                "6c8877aeb5ae2bf4"
             ]
         ]
-    },
-    {
-        "id": "1c5495b8fd1f0b15",
-        "type": "debug",
-        "z": "bca4771a12cb11e6",
-        "name": "debug 77",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1680,
-        "y": 1460,
-        "wires": []
     },
     {
         "id": "a040cdd296f89df4",
@@ -5457,6 +5397,62 @@
                 "a040cdd296f89df4"
             ]
         ]
+    },
+    {
+        "id": "f9f4bd8039c3fbc8",
+        "type": "link out",
+        "z": "bca4771a12cb11e6",
+        "d": true,
+        "name": "link out 27",
+        "mode": "link",
+        "links": [
+            "dd1e1bf4fa001f32"
+        ],
+        "x": 1645,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "b5539273c8b7b27c",
+        "type": "link out",
+        "z": "bca4771a12cb11e6",
+        "d": true,
+        "name": "link out 28",
+        "mode": "link",
+        "links": [
+            "dd1e1bf4fa001f32"
+        ],
+        "x": 1645,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "d6ec50e49909a835",
+        "type": "link out",
+        "z": "bca4771a12cb11e6",
+        "d": true,
+        "name": "link out 29",
+        "mode": "link",
+        "links": [
+            "dd1e1bf4fa001f32"
+        ],
+        "x": 1645,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "6c8877aeb5ae2bf4",
+        "type": "link out",
+        "z": "bca4771a12cb11e6",
+        "d": true,
+        "name": "link out 30",
+        "mode": "link",
+        "links": [
+            "dd1e1bf4fa001f32"
+        ],
+        "x": 1645,
+        "y": 1460,
+        "wires": []
     },
     {
         "id": "ae459cb84c6fb828",
