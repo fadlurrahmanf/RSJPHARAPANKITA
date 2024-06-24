@@ -1627,7 +1627,8 @@
         "y": 960,
         "wires": [
             [
-                "811d40e949e9fef1"
+                "811d40e949e9fef1",
+                "7893d3cabe6dccd5"
             ]
         ]
     },
@@ -5597,6 +5598,23 @@
                 "b4d32bd3897234eb"
             ]
         ]
+    },
+    {
+        "id": "7893d3cabe6dccd5",
+        "type": "debug",
+        "z": "bca4771a12cb11e6",
+        "name": " ",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "cmd",
+        "targetType": "msg",
+        "statusVal": "cmd",
+        "statusType": "auto",
+        "x": 250,
+        "y": 1000,
+        "wires": []
     },
     {
         "id": "ae459cb84c6fb828",
