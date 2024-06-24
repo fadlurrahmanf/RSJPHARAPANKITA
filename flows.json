@@ -73,8 +73,8 @@
             "31ef301a128c4b66",
             "2815e1177e773fe4"
         ],
-        "x": 14,
-        "y": 39,
+        "x": 24,
+        "y": 19,
         "w": 452,
         "h": 162
     },
@@ -88,19 +88,18 @@
         },
         "nodes": [
             "62a153d4d974c23e",
-            "7a37686efd1c39c5",
             "4958a8f1dc7bf670",
             "a421582f2823dadb",
             "289303bf7764e0d3",
-            "c4d434baba39c97b",
             "ba7b1d820f380553",
             "1b3e437abd5cab62",
-            "09187eb453511326"
+            "09187eb453511326",
+            "fe9d2d5c8508a0c3"
         ],
-        "x": 714,
-        "y": 39,
-        "w": 822,
-        "h": 162
+        "x": 734,
+        "y": 19,
+        "w": 942,
+        "h": 122
     },
     {
         "id": "aadd16a462e83be5",
@@ -115,8 +114,8 @@
             "2b3434178f0ac999",
             "9d6f10db5c0fea06"
         ],
-        "x": 484,
-        "y": 39,
+        "x": 494,
+        "y": 19,
         "w": 222,
         "h": 82
     },
@@ -513,8 +512,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 110,
-        "y": 80,
+        "x": 120,
+        "y": 60,
         "wires": [
             [
                 "4c80d3fd31ff5440",
@@ -537,8 +536,8 @@
         "correl": "",
         "expiry": "",
         "broker": "415d098faf23ad7c",
-        "x": 370,
-        "y": 80,
+        "x": 380,
+        "y": 60,
         "wires": []
     },
     {
@@ -551,8 +550,8 @@
         "links": [
             "0cbc509033550b7f"
         ],
-        "x": 215,
-        "y": 80,
+        "x": 225,
+        "y": 60,
         "wires": []
     },
     {
@@ -580,8 +579,8 @@
         "g": "aadd16a462e83be5",
         "mydb": "3b8e5eb93b7526d7",
         "name": " ",
-        "x": 610,
-        "y": 80,
+        "x": 620,
+        "y": 60,
         "wires": [
             []
         ]
@@ -774,8 +773,8 @@
             "983c5238c51828dc",
             "09187eb453511326"
         ],
-        "x": 525,
-        "y": 80,
+        "x": 535,
+        "y": 60,
         "wires": [
             [
                 "ed77b13627de379d",
@@ -804,8 +803,8 @@
             "fe15437ea5ba0d90",
             "780771ba20b86bbe"
         ],
-        "x": 265,
-        "y": 80,
+        "x": 275,
+        "y": 60,
         "wires": [
             [
                 "1ec9c25db1122edf",
@@ -829,42 +828,14 @@
         ]
     },
     {
-        "id": "7a37686efd1c39c5",
-        "type": "inject",
-        "z": "bca4771a12cb11e6",
-        "g": "1cbfcd06637d48ad",
-        "name": "  ",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "select * from monitoringdata;select * from Input Order by Number ASC;select * from Output Order by Number ASC;select * from InputIndoor Order by Number ASC;select * from OutputIndoor Order by Number ASC;",
-        "payload": "",
-        "payloadType": "date",
-        "x": 810,
-        "y": 80,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "4958a8f1dc7bf670",
         "type": "mysql",
         "z": "bca4771a12cb11e6",
         "g": "1cbfcd06637d48ad",
         "mydb": "3b8e5eb93b7526d7",
         "name": " ",
-        "x": 1090,
-        "y": 80,
+        "x": 1230,
+        "y": 60,
         "wires": [
             [
                 "a421582f2823dadb",
@@ -885,8 +856,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1250,
-        "y": 80,
+        "x": 1390,
+        "y": 60,
         "wires": [
             [
                 "62a153d4d974c23e"
@@ -906,8 +877,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1430,
-        "y": 80,
+        "x": 1570,
+        "y": 60,
         "wires": []
     },
     {
@@ -2118,8 +2089,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 360,
-        "y": 160,
+        "x": 370,
+        "y": 140,
         "wires": []
     },
     {
@@ -2383,8 +2354,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 610,
-        "y": 80,
+        "x": 620,
+        "y": 60,
         "wires": []
     },
     {
@@ -2598,8 +2569,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 350,
-        "y": 120,
+        "x": 360,
+        "y": 100,
         "wires": []
     },
     {
@@ -3599,8 +3570,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 960,
-        "y": 80,
+        "x": 1080,
+        "y": 60,
         "wires": [
             [
                 "4958a8f1dc7bf670"
@@ -3630,36 +3601,6 @@
         ]
     },
     {
-        "id": "c4d434baba39c97b",
-        "type": "inject",
-        "z": "bca4771a12cb11e6",
-        "g": "1cbfcd06637d48ad",
-        "name": "  ",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "select * from monitoringdata;select * from Input Order by Number ASC;select * from Output Order by Number ASC;select * from InputIndoor Order by Number ASC;select * from OutputIndoor Order by Number ASC;",
-        "payload": "",
-        "payloadType": "date",
-        "x": 810,
-        "y": 120,
-        "wires": [
-            [
-                "4958a8f1dc7bf670"
-            ]
-        ]
-    },
-    {
         "id": "ba7b1d820f380553",
         "type": "debug",
         "z": "bca4771a12cb11e6",
@@ -3672,8 +3613,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1220,
-        "y": 120,
+        "x": 1360,
+        "y": 100,
         "wires": []
     },
     {
@@ -4400,16 +4341,17 @@
         ],
         "repeat": "",
         "crontab": "",
-        "once": false,
+        "once": true,
         "onceDelay": 0.1,
         "topic": "UPDATE `Input` SET `Stat` = 0;UPDATE `Output` SET `Stat` = 0;UPDATE `InputIndoor` SET `Stat` = 0;UPDATE `OutputIndoor` SET `Stat` = 0;",
         "payload": "",
         "payloadType": "date",
-        "x": 810,
-        "y": 160,
+        "x": 830,
+        "y": 60,
         "wires": [
             [
-                "09187eb453511326"
+                "09187eb453511326",
+                "fe9d2d5c8508a0c3"
             ]
         ]
     },
@@ -4424,7 +4366,7 @@
             "2b3434178f0ac999"
         ],
         "x": 915,
-        "y": 160,
+        "y": 100,
         "wires": []
     },
     {
@@ -4482,6 +4424,27 @@
         "wires": [
             [
                 "ab5c7999a8ec94cb"
+            ]
+        ]
+    },
+    {
+        "id": "fe9d2d5c8508a0c3",
+        "type": "function",
+        "z": "bca4771a12cb11e6",
+        "g": "1cbfcd06637d48ad",
+        "name": " ",
+        "func": "msg.topic = \"select * from monitoringdata;select * from Input Order by Number ASC;select * from Output Order by Number ASC;select * from InputIndoor Order by Number ASC;select * from OutputIndoor Order by Number ASC;\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 60,
+        "wires": [
+            [
+                "289303bf7764e0d3"
             ]
         ]
     },
