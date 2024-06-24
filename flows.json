@@ -2806,7 +2806,7 @@
         "op2": "",
         "op1type": "str",
         "op2type": "nul",
-        "duration": "25",
+        "duration": "7",
         "extend": false,
         "overrideDelay": false,
         "units": "s",
