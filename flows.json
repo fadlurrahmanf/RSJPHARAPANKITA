@@ -4431,7 +4431,7 @@
         "id": "b3f450d927ca57aa",
         "type": "inject",
         "z": "bca4771a12cb11e6",
-        "name": "AutoPanelAktif",
+        "name": "Manual",
         "props": [
             {
                 "p": "payload"
@@ -4448,7 +4448,7 @@
         "topic": "",
         "payload": "04030000FE0000000002",
         "payloadType": "str",
-        "x": 120,
+        "x": 90,
         "y": 440,
         "wires": [
             [
@@ -4460,7 +4460,7 @@
         "id": "93ed58172caefb99",
         "type": "inject",
         "z": "bca4771a12cb11e6",
-        "name": "AutoPanelMati",
+        "name": "Auto",
         "props": [
             {
                 "p": "payload"
@@ -4477,7 +4477,7 @@
         "topic": "",
         "payload": "04030000FF0000000002",
         "payloadType": "str",
-        "x": 120,
+        "x": 90,
         "y": 400,
         "wires": [
             [
