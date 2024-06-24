@@ -5000,7 +5000,7 @@
         "id": "04086c37d4da49b1",
         "type": "inject",
         "z": "bca4771a12cb11e6",
-        "name": "EF Nyala",
+        "name": "EF Mati",
         "props": [
             {
                 "p": "payload"
@@ -5017,7 +5017,7 @@
         "topic": "",
         "payload": "04030000DB0400000002",
         "payloadType": "str",
-        "x": 780,
+        "x": 770,
         "y": 1460,
         "wires": [
             [
