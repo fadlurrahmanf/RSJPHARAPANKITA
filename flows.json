@@ -2692,7 +2692,7 @@
         "tosidebar": true,
         "console": false,
         "tostatus": true,
-        "complete": "topic.split(\" \")[0]",
+        "complete": "topic",
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
