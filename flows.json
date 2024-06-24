@@ -4449,7 +4449,7 @@
         "type": "function",
         "z": "bca4771a12cb11e6",
         "name": " ",
-        "func": "var AutoManual = msg.payload[0].AutoManual;\nmsg.payload = msg.Val;\nvar RelayInputIndoor = flow.get(\"RelayInputIndoor\");\nvar stats = false;\nfor (let index = 0; index < RelayInputIndoor.length; index++) {\n    if(RelayInputIndoor[index].keterangan == \"StatusIndoor\" && AutoManual){\n        RelayInputIndoor[index][\"Stat\"] = msg.payload.value;\n        stats = true;\n    }\n}\nmsg.payload = [stats,AutoManual];\nflow.set(\"RelayInputIndoor\",RelayInputIndoor);\nreturn msg;",
+        "func": "var AutoManual = msg.payload[0].AutoManual;\nmsg.payload = msg.Val;\nvar RelayInputIndoor = flow.get(\"RelayInputIndoor\");\nvar stats = false;\nfor (let index = 0; index < RelayInputIndoor.length; index++) {\n    if(RelayInputIndoor[index].keterangan == \"StatusIndoor\" && AutoManual){\n        flow.set(\"cmd\");\n        stats = true;\n    }\n}\nmsg.payload = [stats,AutoManual];\nflow.set(\"RelayInputIndoor\",RelayInputIndoor);\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
