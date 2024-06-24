@@ -6369,53 +6369,6 @@
         "wires": []
     },
     {
-        "id": "9115b9e5f4e7d6c5",
-        "type": "inject",
-        "z": "bca4771a12cb11e6",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 830,
-        "y": 1940,
-        "wires": [
-            [
-                "f88f447a64d42bdd"
-            ]
-        ]
-    },
-    {
-        "id": "f88f447a64d42bdd",
-        "type": "function",
-        "z": "bca4771a12cb11e6",
-        "name": "function 1",
-        "func": "function hexToDecimal(hex) {\n    return parseInt(hex, 16);\n}\n\nfor (let i = 0x00; i <= 0xFF; i++) {\n    let hexString = i.toString(16).toUpperCase().padStart(2, '0'); // Format menjadi string hex\n    let decimalValue = hexToDecimal(hexString);\n    console.log(`Hex: 0x${hexString} => Decimal: ${decimalValue}`);\n}\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1050,
-        "y": 1940,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "ae459cb84c6fb828",
         "type": "debug",
         "z": "12638c94c64653f3",
