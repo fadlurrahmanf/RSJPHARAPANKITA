@@ -1532,7 +1532,7 @@
         "z": "bca4771a12cb11e6",
         "g": "7ff6db086b81b7e7",
         "name": " ",
-        "func": "flow.set(\"cmdauto\",\"Init\");\nreturn msg;",
+        "func": "flow.set(\"cmdauto\",\"Init\");\nmsg.cmd = \"Init\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
