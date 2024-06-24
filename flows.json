@@ -2091,7 +2091,8 @@
         "mode": "link",
         "links": [
             "694bf36843b2868e",
-            "738e22f45c2ce650"
+            "738e22f45c2ce650",
+            "175cfda3e551b6a8"
         ],
         "x": 335,
         "y": 360,
@@ -3562,7 +3563,7 @@
         "z": "bca4771a12cb11e6",
         "g": "1cbfcd06637d48ad",
         "name": " ",
-        "func": "msg.topic = \"select * from monitoringdata;select * from Input Order by Number ASC;select * from Output Order by Number ASC;select * from InputIndoor Order by Number ASC;select * from OutputIndoor Order by Number ASC;\";\nmsg.topic += \"SELECT * FROM `devicelist` WHERE `keterangan` NOT LIKE 'Relay%';\";\nflow.set(\"SystemStatus\",\"OFF\");\nreturn msg;",
+        "func": "msg.topic = \"select * from monitoringdata;select * from Input Order by Number ASC;select * from Output Order by Number ASC;select * from InputIndoor Order by Number ASC;select * from OutputIndoor Order by Number ASC;\";\nmsg.topic += \"SELECT * FROM `devicelist` WHERE `keterangan` NOT LIKE 'Relay%';\";\nmsg.topic += \"DELETE FROM `recorddevice` WHERE `epoch` < \" + String(Date.now()-(604800*1000))+\";\";\nflow.set(\"SystemStatus\",\"OFF\");\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6312,6 +6313,20 @@
         "outputs": 1,
         "x": 630,
         "y": 1620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "175cfda3e551b6a8",
+        "type": "link in",
+        "z": "bca4771a12cb11e6",
+        "name": "link in 32",
+        "links": [
+            "b07e4e6ebad074fb"
+        ],
+        "x": 1745,
+        "y": 100,
         "wires": [
             []
         ]
